@@ -1,0 +1,27 @@
+networks:
+  n8n:
+
+services:
+  n8n-alliance-trucks:
+    ports:
+      - "${N8N_PORT}:${N8N_PORT}"
+    container_name: n8n-alliance-trucks
+    image: docker.n8n.io/n8nio/n8n:latest
+    environment:
+      - N8N_HOST=${DOMAIN_NAME}
+      - WEBHOOK_URL=${HTTP}://${DOMAIN_NAME}${CATALOG}
+      - N8N_PATH=${CATALOG}
+      - N8N_PORT=${N8N_PORT}
+      - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
+      - N8N_SECURE_COOKIE=false
+
+    volumes:
+      - ./data:/home/node/.n8n
+    restart: unless-stopped
+    networks:
+      - n8n
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"
