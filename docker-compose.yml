@@ -1,6 +1,6 @@
 networks:
   vn1:
-
+  
 services:
   n8n-vn1:
     ports:
