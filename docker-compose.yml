@@ -1,11 +1,11 @@
 networks:
-  n8n:
+  vn1:
 
 services:
-  n8n-alliance-trucks:
+  n8n-vn1:
     ports:
       - "${N8N_PORT}:${N8N_PORT}"
-    container_name: n8n-alliance-trucks
+    container_name: n8n-vn1
     image: docker.n8n.io/n8nio/n8n:latest
     environment:
       - N8N_HOST=${DOMAIN_NAME}
@@ -19,7 +19,7 @@ services:
       - ./data:/home/node/.n8n
     restart: unless-stopped
     networks:
-      - n8n
+      - vn1
     logging:
       driver: "json-file"
       options:
