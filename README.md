@@ -2,7 +2,7 @@
 
 ## клонируем репо по SSH
 
-ssh-keygen -t ed25519 -C "deor_dima@alliance-trucks"
+ssh-keygen -t ed25519 -C "deor_dima@vn-1"
 cat ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
 
@@ -10,9 +10,11 @@ ssh -T git@github.com
 
 sudo apt update
 sudo apt install -y git
-/opt$ sudo chown -R deor_dima:deor_dima ./
-git clone git@github.com:ORG/REPO.git
+sudo chown -R deor_dima:deor_dima ./
 
+git clone git@github.com:ORG/REPO.git /opt/REPO
+
+git@github.com:deorditse/vn1_bot.git /opt/vn1_bot
 ## установка докер
 
 https://docs.docker.com/engine/install/debian/
