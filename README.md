@@ -24,6 +24,11 @@ sudo apt-get install docker-compose-plugin
 
 sudo docker ps
 
+### пересобрать только один, например n8n-alliance:
+
+sudo docker compose restart n8n-vn1
+sudo docker compose up -d --build n8n-vn1
+
 ### обновление завсиимостей
 
 # 1. Обновить образ

@@ -14,6 +14,8 @@ services:
       - N8N_PORT=${N8N_PORT}
       - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
       - N8N_SECURE_COOKIE=false
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_RUNNERS_ENABLED=true
 
     volumes:
       - ./data:/home/node/.n8n
