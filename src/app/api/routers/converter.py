@@ -7,9 +7,9 @@ router = APIRouter()
 
 
 @router.get("/")
-async def check(thread_id: str):
+async def check():
     return JSONResponse(
-        {"ok": True, "msg": f"chat_check: thread_id: {thread_id}"},
+        {"ok": True, "message": "Converter service is running."},
         status_code=status.HTTP_200_OK,
     )
     
