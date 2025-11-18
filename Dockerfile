@@ -1,9 +1,21 @@
-FROM docker.n8n.io/n8nio/n8n:latest
+FROM python:3.11-slim AS base
 
-USER root
+# Устанавливаем uv
+RUN pip install uv
 
-# Для Alpine нужный пакет pandoc называется "pandoc"
-RUN apk update && \
-    apk add --no-cache pandoc
+WORKDIR /app
 
-USER node
+# Копируем pyproject.toml
+COPY pyproject.toml ./
+
+# Устанавливаем зависимости
+RUN uv sync --no-dev
+
+# Копируем исходники
+COPY src ./src
+
+# Чтобы Python видел пакеты из src/
+ENV PYTHONPATH=/app/src
+
+# Точка входа
+CMD ["uv", "run", "python3", "src/app/run.py"]
