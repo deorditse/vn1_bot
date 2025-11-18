@@ -1,0 +1,11 @@
+[project]
+name = "vn1-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.121.2",
+    "pandoc>=2.4",
+    "rich>=14.2.0",
+]
