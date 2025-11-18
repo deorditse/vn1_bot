@@ -1,0 +1,14 @@
+18-11 17:41:31 uvicorn.error:INFO   | Started server process [25185]
+18-11 17:41:31 uvicorn.error:INFO   | Waiting for application startup.
+18-11 17:41:31 uvicorn.error:INFO   | Application startup complete.
+18-11 17:41:31 uvicorn.error:INFO   | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+18-11 17:41:46 uvicorn.access:INFO   | 127.0.0.1:51463 - "GET / HTTP/1.1" 404
+18-11 17:41:47 uvicorn.access:INFO   | 127.0.0.1:51463 - "GET /favicon.ico HTTP/1.1" 404
+18-11 17:41:55 uvicorn.access:INFO   | 127.0.0.1:51464 - "GET /converter HTTP/1.1" 307
+18-11 17:41:55 uvicorn.access:INFO   | 127.0.0.1:51464 - "GET /converter/ HTTP/1.1" 422
+18-11 17:42:01 uvicorn.access:INFO   | 127.0.0.1:51515 - "GET /converter/docx HTTP/1.1" 404
+18-11 17:42:25 uvicorn.access:INFO   | 127.0.0.1:51532 - "GET /converter/ HTTP/1.1" 422
+18-11 17:42:39 uvicorn.error:INFO   | Shutting down
+18-11 17:42:39 uvicorn.error:INFO   | Waiting for application shutdown.
+18-11 17:42:39 uvicorn.error:INFO   | Application shutdown complete.
+18-11 17:42:39 uvicorn.error:INFO   | Finished server process [25185]

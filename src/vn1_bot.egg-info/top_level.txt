@@ -1,0 +1,6 @@
+app
+common
+docs
+domain
+infrastructure
+interfaces
