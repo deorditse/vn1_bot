@@ -1,29 +1,67 @@
 networks:
-  vn1:
-  
-services:
-  n8n-vn1:
-    ports:
-      - "${N8N_PORT}:${N8N_PORT}"
-    container_name: n8n-vn1
-    image: docker.n8n.io/n8nio/n8n:latest
-    environment:
-      - N8N_HOST=${DOMAIN_NAME}
-      - WEBHOOK_URL=${HTTP}://${DOMAIN_NAME}${CATALOG}
-      - N8N_PATH=${CATALOG}
-      - N8N_PORT=${N8N_PORT}
-      - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
-      - N8N_SECURE_COOKIE=false
-      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
-      - N8N_RUNNERS_ENABLED=true
+    vn1:
 
-    volumes:
-      - ./data:/home/node/.n8n
-    restart: unless-stopped
-    networks:
-      - vn1
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "5m"
-        max-file: "1"
+services:
+    n8n-vn1:
+        ports:
+            - "${N8N_PORT}:${N8N_PORT}"
+        container_name: n8n-vn1
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - N8N_HOST=${DOMAIN_NAME}
+            - WEBHOOK_URL=${HTTP}://${DOMAIN_NAME}${CATALOG}
+            - N8N_PATH=${CATALOG}
+            - N8N_PORT=${N8N_PORT}
+            - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
+            - N8N_SECURE_COOKIE=false
+            - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+            - N8N_RUNNERS_ENABLED=true
+        volumes:
+            - ./data:/home/node/.n8n
+            - ./shared:/data
+            - /var/run/docker.sock:/var/run/docker.sock
+        restart: unless-stopped
+        networks:
+            - vn1
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "5m"
+                max-file: "1"
+# networks:
+#     vn1:
+
+# services:
+#     n8n-vn1:
+#         ports:
+#             - "${N8N_PORT}:${N8N_PORT}"
+#         container_name: n8n-vn1
+#         # image: docker.n8n.io/n8nio/n8n:latest
+#         build:
+#             context: .
+#             dockerfile: Dockerfile
+#         environment:
+#             - N8N_HOST=${DOMAIN_NAME}
+#             - WEBHOOK_URL=${HTTP}://${DOMAIN_NAME}${CATALOG}
+#             - N8N_PATH=${CATALOG}
+#             - N8N_PORT=${N8N_PORT}
+#             - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
+#             - N8N_SECURE_COOKIE=false
+#             - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+#             - N8N_RUNNERS_ENABLED=true
+
+#         volumes:
+#             - ./data:/home/node/.n8n
+#             - ./shared:/data
+#             - /var/run/docker.sock:/var/run/docker.sock
+#         restart: unless-stopped
+#         networks:
+#             - vn1
+#         logging:
+#             driver: "json-file"
+#             options:
+#                 max-size: "5m"
+#                 max-file: "1"
+
