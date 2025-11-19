@@ -17,7 +17,7 @@ async def check():
     )
     
     
-@router.post("/", description="Перевод docx to markdown",    status_code=status.HTTP_200_OK,)
+@router.post("/docx", description="Перевод docx to markdown",    status_code=status.HTTP_200_OK,)
 async def docx_to_markdown(file_bytes: bytes = Body(...)):
     """
     Эндпоинт принимает сырой docx-файл как bytes в теле запроса.
