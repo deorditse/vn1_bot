@@ -40,7 +40,7 @@ Routers
 ===================================================================================================================
 """
 
-app.include_router(converter.router, prefix="/converter", tags=['docx']),
+app.include_router(converter.router, prefix="/converter", tags=['converter']),
 
 
 """
