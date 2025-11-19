@@ -1,3 +1,4 @@
+import traceback
 from fastapi import APIRouter, Body, File, UploadFile
 from fastapi.responses import JSONResponse
 from starlette import status
@@ -23,7 +24,11 @@ async def docx_to_markdown(file: UploadFile = File(...)):
     Эндпоинт принимает сырой docx-файл как bytes в теле запроса.
     Content-Type: application/octet-stream
     """
-    
-    use_case = ConverterUseCase(converter=DocxConverter())
-    result = use_case.convert(file=file)
-    return {"markdown": result}
+    try:
+        use_case = ConverterUseCase(converter=DocxConverter())
+        result = await use_case.convert(file=file)
+        return {"markdown": result}
+    except Exception as e:
+        print("ERROR:", e)
+        traceback.print_exc()
+        raise

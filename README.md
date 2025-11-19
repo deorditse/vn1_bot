@@ -42,10 +42,11 @@ docker image prune -f
 # 2. Пересоздать контейнер с новым образом
 
 sudo docker compose down
+sudo docker compose up --build -d
+
 sudo docker compose up -d
 
 
-sudo docker compose up --build -d
 
 ###### Запуск API
 

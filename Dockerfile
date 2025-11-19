@@ -1,14 +1,17 @@
 FROM python:3.11-slim AS base
 
+# Устанавливаем pandoc (обязательно)
+RUN apt-get update && apt-get install -y pandoc && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Устанавливаем uv
 RUN pip install uv
 
 WORKDIR /app
 
-# Копируем pyproject.toml
+# Сначала копируем pyproject.toml
 COPY pyproject.toml ./
 
-# Устанавливаем зависимости
+# Устанавливаем зависимости через uv
 RUN uv sync --no-dev
 
 # Копируем исходники
