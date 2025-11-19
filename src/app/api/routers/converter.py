@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, File, UploadFile
 from fastapi.responses import JSONResponse
 from starlette import status
 
@@ -18,12 +18,12 @@ async def check():
     
     
 @router.post("/docx", description="Перевод docx to markdown",    status_code=status.HTTP_200_OK,)
-async def docx_to_markdown(file_bytes: bytes = Body(...)):
+async def docx_to_markdown(file: UploadFile = File(...)):
     """
     Эндпоинт принимает сырой docx-файл как bytes в теле запроса.
     Content-Type: application/octet-stream
     """
     
     use_case = ConverterUseCase(converter=DocxConverter())
-    result = use_case.convert(file_bytes=file_bytes)
+    result = use_case.convert(file=file)
     return {"markdown": result}
