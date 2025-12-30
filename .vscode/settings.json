@@ -1,5 +1,5 @@
 {
-    "cSpell.words": [
-        "dotenv"
-    ]
+    "cSpell.words": ["dotenv"],
+    "python.analysis.extraPaths": ["src"],
+    "python.envFile": "${workspaceFolder}/.env"
 }
