@@ -1,12 +1,7 @@
-
-
-
-
-from typing import Any, TypedDict
+from typing import Any, TypedDict, Dict
 from langgraph.graph import StateGraph, START, END
 
 from infrastructure.llm.llm import LLMService
-
 
 
 # =======================================================
@@ -15,41 +10,87 @@ from infrastructure.llm.llm import LLMService
 
 
 class GraphState(TypedDict, total=False):
-   file: bytes
-   html_menu: str
-   html_content: str
-   
-   # validation
-   html_is_valid: bool
-   html_validation_errors: list[str] 
-    
+    file: bytes
+    html_menu: str
+    html_content: str
+
+    # validation
+    html_is_valid: bool
+    html_validation_errors: list[str]
+
+
+def generate_doc_to_md(state: GraphState) -> GraphState:
+    print(state)
+    return state
+
+
+def generate_html_menu(state: GraphState) -> GraphState:
+    print(state)
+    return state
+
+
+def generate_html_content(state: GraphState) -> GraphState:
+    print(state)
+    return state
+
+
+def validate_html(state: GraphState) -> GraphState:
+    is_valid = True  # ← здесь реальная проверка
+    return {
+        **state,
+        "html_is_valid": is_valid,
+        "html_validation_errors": [] if is_valid else ["error"]
+    }
+
+
+def summarize(state: GraphState) -> GraphState:
+    print(state)
+    return state
+
+
+def validation_router(state: GraphState) -> str:
+    return "summarize" if state.get("html_is_valid") else "content"
+
+
 # =======================================================
 # Graph builder
 # =======================================================
 
+async def build_docx_to_html_graph(file: bytes) -> Dict:
+    # llm = LLMService().openai()
 
-
-
-def build_docx_to_html_graph(
-        llm: Any
-) -> StateGraph:
+    initState = GraphState(file=file)
     graph = StateGraph(GraphState)
-    
+
+    graph.add_node("doc_to_md", generate_doc_to_md)
     graph.add_node("menu", generate_html_menu)
     graph.add_node("content", generate_html_content)
-    graph.add_node("validate_html", validate_html_content)
-    
-    graph.add_edge(START, "menu")
-    graph.add_edge("menu", "content")
+    graph.add_node("validate_html", validate_html)
+    graph.add_node("summarize", summarize)
+
+    graph.add_edge(START, "doc_to_md")
+    graph.add_edge("doc_to_md", "menu")
+    graph.add_edge("menu", 'summarize')
+    graph.add_edge("doc_to_md", "content")
     graph.add_edge("content", "validate_html")
-    graph.add_edge("validate_html", END)
-    
-    return graph
 
+    graph.add_conditional_edges(
+        "validate_html",
+        validation_router,
+        {
+            "content": "content",
+            "summarize": "summarize",
+        },
+    )
+    graph.add_edge("summarize", END)
 
+    app = graph.compile()
 
-docx_to_html_graph = build_docx_to_html_graph(
-    llm=LLMService().openai(),
-)
+    png_bytes = app.get_graph().draw_mermaid_png()
+    # Сохранить граф
+    with open("graph.png", "wb") as f:
+        f.write(png_bytes)
 
-comparison_app = docx_to_html_graph.compile()
+    result_generated = await app.ainvoke(initState)
+
+    return {}
