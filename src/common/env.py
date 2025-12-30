@@ -1,8 +1,6 @@
 import logging as pylog
 
 from . import ApiMode
-
-from .errors import CoreError
 from .utils import get_env
 
 # load_dotenv()

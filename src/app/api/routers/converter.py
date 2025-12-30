@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from starlette import status
 
 from app.use_cases.converter.converter import ConverterUseCase
-from infrastructure.converters.pandoc_docx_converter.pandoc_docx_converter import DocxConverter
+from infrastructure.converters.pandoc_docx_converter.pandoc_docx_converter import DocxToMdConverter
 
 
 router = APIRouter()
@@ -24,7 +24,7 @@ async def docx_to_markdown(file: UploadFile = File(...)):
     Эндпоинт принимает сырой docx-файл как bytes в теле запроса.
     """
     try:
-        use_case = ConverterUseCase(converter=DocxConverter())
+        use_case = ConverterUseCase(converter=DocxToMdConverter())
         return await use_case.convert(file=file)
     except Exception as e:
         print("ERROR:", e)

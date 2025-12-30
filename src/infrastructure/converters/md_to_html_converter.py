@@ -4,7 +4,7 @@ import subprocess
 import tempfile
 import os
 
-class DocxToMdConverter(Converter):
+class MdToHtmlConverter(Converter):
     def convert(self, file_bytes: bytes) -> str:
         with tempfile.TemporaryDirectory() as tmpdir:
             docx_path = os.path.join(tmpdir, "input.docx")

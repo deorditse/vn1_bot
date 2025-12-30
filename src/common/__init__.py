@@ -18,3 +18,6 @@ from .enums import (
     AuthMethod,
 )
 
+from .env import (
+    api_key_openai
+)
