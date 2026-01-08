@@ -1,4 +1,6 @@
-from typing import Any, TypedDict, Dict
+from typing import Any, TypedDict, Dict, Annotated
+
+from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
 
 from infrastructure.llm.llm import LLMService
@@ -10,56 +12,58 @@ from infrastructure.llm.llm import LLMService
 
 
 class GraphState(TypedDict, total=False):
-    mdFile: str
+    # mdFile: str
+    mdFile: Annotated[str, LastValue]
     html_menu: str
     html_content: str
 
     # validation
     html_content_is_valid: bool
-    html_validation_errors: list[str]
 
 
 def generate_menu_html(state: GraphState) -> GraphState:
     md = state["mdFile"]
-    state['html_menu'] = "html_menu"
-    print(state)
+    print(f"generate_content_html: {state}")
 
-    return state
+    return {
+        "mdFile": state["mdFile"],
+        "html_menu": "html_menu",
+    }
 
 
 def generate_content_html(state: GraphState) -> GraphState:
     md = state["mdFile"]
-    state['html_content'] = "html_content"
-    print(state)
+    print(f"generate_content_html: {state}")
 
-    return state
+    return {'html_content': "html_content"}
 
 
 def validate_content_html(state: GraphState) -> GraphState:
     is_valid = True  # ← здесь реальная проверка
+
     return {
-        **state,
-        "html_content_is_valid": is_valid,
-        "html_validation_errors": [] if is_valid else ["error"]
+        "html_content_is_valid": is_valid
     }
 
 
 def summarize(state: GraphState) -> GraphState:
     print(state)
-    return state
+    return {}
+
+    # =======================================================
+    # Graph builder
+    # =======================================================
 
 
-# =======================================================
-# Graph builder
-# =======================================================
+llm = LLMService().openai()
+
 
 async def build_docx_to_html_graph(file: bytes) -> Dict:
-    llm = LLMService().openai()
-
     # convert file to MD
-    md = ''''''
-
-    initState = GraphState(mdFile=md)
+    md = '''create todo: MD convert'''
+    initState = {
+        "mdFile": md,
+    }
     graph = StateGraph(GraphState)
 
     graph.add_node("generate_menu_html", generate_menu_html)
@@ -68,9 +72,7 @@ async def build_docx_to_html_graph(file: bytes) -> Dict:
     graph.add_node("summarize", summarize)
 
     graph.add_edge(START, "generate_menu_html")
-    graph.add_edge("generate_menu_html", 'summarize')
-
-    graph.add_edge(START, "generate_content_html")
+    graph.add_edge("generate_menu_html", 'generate_content_html')
     graph.add_edge("generate_content_html", "validate_content_html")
 
     def validation_router(state: GraphState) -> str:
@@ -88,6 +90,9 @@ async def build_docx_to_html_graph(file: bytes) -> Dict:
     )
     graph.add_edge("summarize", END)
 
+    graph.set_entry_point("generate_menu_html")
+    graph.set_finish_point("summarize")
+
     app = graph.compile()
 
     png_bytes = app.get_graph().draw_mermaid_png()
@@ -97,4 +102,4 @@ async def build_docx_to_html_graph(file: bytes) -> Dict:
 
     result_generated = await app.ainvoke(initState)
 
-    return {}
+    return result_generated
