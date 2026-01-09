@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "md_to_html_grapth": "src/app/use_cases/docx_to_html_graph/docx_to_html_grapth.py:compile_md_to_html_graph"
+  },
+  "env": "./.env"
+}

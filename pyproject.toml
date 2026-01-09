@@ -3,13 +3,14 @@ name = "vn1-bot"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "dotenv>=0.9.9",
     "fastapi>=0.121.2",
     "langchain>=1.2.2",
     "langchain-openai>=1.1.6",
     "langgraph>=1.0.5",
+    "langgraph-cli[inmem]>=0.4.11",
     "langsmith>=0.5.1",
     "make>=0.1.6.post2",
     "pandoc>=2.4",
@@ -26,3 +27,6 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
