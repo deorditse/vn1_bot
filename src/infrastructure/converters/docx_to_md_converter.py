@@ -6,7 +6,7 @@ import os
 
 
 class DocxToMdConverter(Converter):
-    def convert(self, file_bytes: bytes) -> str:
+    async def convert(self, file_bytes: bytes) -> str:
         with tempfile.TemporaryDirectory() as tmpdir:
             docx_path = os.path.join(tmpdir, "input.docx")
             md_path = os.path.join(tmpdir, "output.md")

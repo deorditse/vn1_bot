@@ -1,9 +1,13 @@
-from typing import Any, TypedDict, Dict, Annotated
+from typing import TypedDict, Annotated
 
 from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
+from starlette.responses import JSONResponse
 
+from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
+
+llm = LLMService().openai()
 
 
 # =======================================================
@@ -16,15 +20,16 @@ class GraphState(TypedDict, total=False):
     mdFile: Annotated[str, LastValue]
     html_menu: str
     html_content: str
-    validation_attempts: Annotated[str, LastValue]
+    validation_attempts: Annotated[int, LastValue]
 
     # validation
     html_content_is_valid: bool
 
 
 def generate_menu_html(state: GraphState) -> GraphState:
-    # md = state["mdFile"]
-    print(f"generate_menu_html: {state}")
+    _log()
+
+    md = state["mdFile"]
 
     return {
         "html_menu": "html_menu",
@@ -32,15 +37,19 @@ def generate_menu_html(state: GraphState) -> GraphState:
 
 
 def generate_content_html(state: GraphState) -> GraphState:
+    _log()
+
     md = state["mdFile"]
-    print(f"generate_content_html: {state}")
 
     return {'html_content': "html_content"}
 
 
 def validate_content_html(state: GraphState) -> GraphState:
-    is_valid = False  # допустим, иногда false
+    _log()
 
+    html = state["html_content"]
+
+    is_valid = False  # допустим, иногда false
     return {
         "html_content_is_valid": is_valid,
         "validation_attempts": state.get("validation_attempts", 0) + 1
@@ -48,7 +57,7 @@ def validate_content_html(state: GraphState) -> GraphState:
 
 
 def summarize(state: GraphState) -> GraphState:
-    print(state)
+    _log()
     return state
 
     # =======================================================
@@ -70,9 +79,6 @@ class ValidationRouter:
             return "summarize"  # или END / error-node
 
         return "generate_content_html"
-
-
-llm = LLMService().openai()
 
 
 def build_graph() -> StateGraph:
@@ -105,5 +111,24 @@ def build_graph() -> StateGraph:
 
 
 md_to_html_graph = build_graph()
-
 compile_md_to_html_graph = md_to_html_graph.compile()
+
+import sys
+import logging
+logger = logging.getLogger(__name__)
+
+def _log():
+    fn = sys._getframe(1).f_code.co_name
+    print("call: def", fn)
+
+
+class ToHtmlConverterUseCase:
+    def __init__(self, converter: Converter):
+        self._converter = converter
+
+    async def convert(self, file_bytes: bytes) -> JSONResponse:
+        md: str = await self._converter.convert(file_bytes=file_bytes)
+        result = await compile_md_to_html_graph.ainvoke(
+            {"mdFile": md}
+        )
+        return JSONResponse({"html_menu": result.get('html_menu'), "html_content": result.get('html_content')})
