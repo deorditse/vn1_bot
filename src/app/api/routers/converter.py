@@ -3,7 +3,7 @@ from fastapi import APIRouter, Body, File, UploadFile
 from fastapi.responses import JSONResponse
 from starlette import status
 
-from app.use_cases.docx_to_html_graph.docx_to_html_grapth import DocxToHtmlConverterUseCase, ToHtmlConverterUseCase
+from app.use_cases.docx_to_html_graph.docx_to_html import ToHtmlConverterUseCase
 from infrastructure.converters.docx_to_md_converter import DocxToMdConverter
 
 router = APIRouter()
