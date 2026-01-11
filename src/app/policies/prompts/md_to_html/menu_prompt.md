@@ -142,12 +142,12 @@ ___
 
 Input Markdown
 
-```
+'''
 {markdown_example}
-```
+'''
 
 Output HTML MENU
 
-```html
+'''
 {html_menu_example}
-```
+'''

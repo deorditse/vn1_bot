@@ -142,12 +142,12 @@ ___
 
 Input Markdown
 
-```
+'''
 {markdown_example}
-```
+'''
 
 Output HTML CONTENT
 
-```html
+'''
 {html_content_example}
-```
+'''

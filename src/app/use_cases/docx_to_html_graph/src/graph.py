@@ -40,11 +40,9 @@ async def generate_menu_html(state: GraphState) -> GraphState:
 
     response = await _llm_menu.ainvoke(
         [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
-         HumanMessage(content=state["mdFile"]),
+         HumanMessage(content=state.get("mdFile")),
          ]
     )
-
-    print(response)
 
     return {
         "html_menu": response.content,
@@ -62,10 +60,8 @@ async def generate_content_html(state: GraphState) -> GraphState:
 
     response = await _llm_content.ainvoke([
         SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT),
-        HumanMessage(content=state["html_content"] if state.get("html_content") is None else state["mdFile"]),
+        HumanMessage(content=state.get('mdFile') if state.get("html_content") is None else state.get("html_content")),
     ])
-
-    print(response)
 
     return {'html_content': response.content}
 
