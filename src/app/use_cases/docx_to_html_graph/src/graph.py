@@ -1,13 +1,15 @@
 from typing import TypedDict, Annotated
 
+from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
+from pyexpat.errors import messages
 from starlette.responses import JSONResponse
 
+from app.policies.policies_loader import load_prompt
+from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
 from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
-
-llm = LLMService().openai()
 
 
 # =======================================================
@@ -21,38 +23,70 @@ class GraphState(TypedDict, total=False):
     html_menu: str
     html_content: str
     validation_attempts: Annotated[int, LastValue]
+    validation_errors: list[str]
 
     # validation
     html_content_is_valid: bool
 
 
-def generate_menu_html(state: GraphState) -> GraphState:
+DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(markdown_example=md_example,
+                                                                          html_menu_example=menu_example,
+                                                                          )
+_llm_menu = LLMService().openai()
+
+
+async def generate_menu_html(state: GraphState) -> GraphState:
     _log()
 
-    md = state["mdFile"]
+    response = await _llm_menu.ainvoke(
+        [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
+         HumanMessage(content=state["mdFile"]),
+         ]
+    )
+
+    print(response)
 
     return {
-        "html_menu": "html_menu",
+        "html_menu": response.content,
     }
 
 
-def generate_content_html(state: GraphState) -> GraphState:
+DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
+                                                                                html_content_example=content_example)
+_llm_content = LLMService().openai()
+
+
+async def generate_content_html(state: GraphState) -> GraphState:
     _log()
+    is_valid = state.get("html_content_is_valid", True)
 
-    md = state["mdFile"]
+    response = await _llm_content.ainvoke([
+        SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT),
+        HumanMessage(content=state["html_content"] if state.get("html_content") is None else state["mdFile"]),
+    ])
 
-    return {'html_content': "html_content"}
+    print(response)
+
+    return {'html_content': response.content}
 
 
 def validate_content_html(state: GraphState) -> GraphState:
-    _log()
+    errors: list[str] = []
 
     html = state["html_content"]
 
-    is_valid = False  # допустим, иногда false
+    # TODO: add validation
+
+    if not errors:
+        return {
+            "html_content_is_valid": True,
+            "validation_errors": []
+        }
+
     return {
-        "html_content_is_valid": is_valid,
-        "validation_attempts": state.get("validation_attempts", 0) + 1
+        "html_content_is_valid": False,
+        "validation_errors": errors,
+        "validation_attempts": state.get("validation_attempts", 0) + 1,
     }
 
 
@@ -115,7 +149,10 @@ compile_md_to_html_graph = md_to_html_graph.compile()
 
 import sys
 import logging
+
 logger = logging.getLogger(__name__)
+
+
 def _log():
     fn = sys._getframe(1).f_code.co_name
     print("call: def", fn)
