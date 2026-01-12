@@ -47,7 +47,7 @@ services:
             - PYTHONUNBUFFERED=1
             - API_PORT=8010
             - API_MODE=prod
-            - OPENAI_API_KEY=${secrets.OPENAI_API_KEY}
+            - OPENAI_API_KEY=${OPENAI_API_KEY}
         restart: unless-stopped
         networks:
             - vn1
