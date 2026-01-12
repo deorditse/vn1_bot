@@ -1,12 +1,6 @@
 networks:
     vn1:
 
-x-common-env:
-  DOMAIN_NAME: ${DOMAIN_NAME}
-  HTTP: ${HTTP}
-  CATALOG: ${CATALOG}
-  N8N_PORT: ${N8N_PORT}
-
 services:
     n8n-vn1:
         ports:
