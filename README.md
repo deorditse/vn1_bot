@@ -56,7 +56,7 @@ uv run python3 src/app/run.py
 ```
 
 🔹 2. Удалить старые образы вручную:
-docker image prune
+sudo docker image prune -a
 
 docker-compose down
 sudo docker compose pull
