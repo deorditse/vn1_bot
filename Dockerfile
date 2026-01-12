@@ -1,24 +1,25 @@
 FROM python:3.11-slim AS base
 
-# Устанавливаем pandoc (обязательно)
-RUN apt-get update && apt-get install -y pandoc && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    pandoc \
+    build-essential \
+    clang \
+    pkg-config \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
-# Устанавливаем uv
+# uv
 RUN pip install uv
 
 WORKDIR /app
 
-# Сначала копируем pyproject.toml
 COPY pyproject.toml ./
 
-# Устанавливаем зависимости через uv
+# Установка зависимостей
 RUN uv sync --no-dev
 
-# Копируем исходники
 COPY src ./src
 
-# Чтобы Python видел пакеты из src/
 ENV PYTHONPATH=/app/src
 
-# Точка входа
-CMD ["uv", "run", "python3", "src/app/run.py"]
+CMD ["uv", "run", "python", "src/app/run.py"]
