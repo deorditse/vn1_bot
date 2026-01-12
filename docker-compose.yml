@@ -8,7 +8,7 @@ services:
         container_name: n8n-vn1
         image: docker.n8n.io/n8nio/n8n:latest
         env_file:
-            - .env-open
+            - .env.open
         environment:
             - N8N_HOST=${DOMAIN_NAME}
             - WEBHOOK_URL=${HTTP}://${DOMAIN_NAME}${CATALOG}
