@@ -6,6 +6,23 @@ from app.policies.policies_loader import load_prompt
 from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
 from infrastructure.llm.llm import LLMService
 
+_llm_menu = None
+_llm_content = None
+
+
+def get_llm_menu():
+    global _llm_menu
+    if _llm_menu is None:
+        _llm_menu = LLMService().openai()
+    return _llm_menu
+
+
+def get_llm_content():
+    global _llm_content
+    if _llm_content is None:
+        _llm_content = LLMService().openai()
+    return _llm_content
+
 
 # =======================================================
 # Graph state
@@ -27,13 +44,14 @@ class GraphState(TypedDict, total=False):
 DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(markdown_example=md_example,
                                                                           html_menu_example=menu_example,
                                                                           )
-_llm_menu = LLMService().openai()
 
 
 async def generate_menu_html(state: GraphState) -> GraphState:
     _log()
 
-    response = await _llm_menu.ainvoke(
+    llm = get_llm_menu()
+
+    response = await llm.ainvoke(
         [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
          HumanMessage(content=state.get("mdFile")),
          ]
@@ -46,14 +64,13 @@ async def generate_menu_html(state: GraphState) -> GraphState:
 
 DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
                                                                                 html_content_example=content_example)
-_llm_content = LLMService().openai()
 
 
 async def generate_content_html(state: GraphState) -> GraphState:
     _log()
     is_valid = state.get("html_content_is_valid", True)
-
-    response = await _llm_content.ainvoke([
+    llm = get_llm_content()
+    response = await llm.ainvoke([
         SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT),
         HumanMessage(content=state.get('mdFile') if state.get("html_content") is None else state.get("html_content")),
     ])

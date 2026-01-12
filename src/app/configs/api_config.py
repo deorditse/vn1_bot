@@ -1,5 +1,4 @@
 from pydantic_settings import BaseSettings
-
 from app import __version__
 from common import env
 

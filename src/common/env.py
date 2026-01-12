@@ -22,7 +22,7 @@ def api_mode() -> ApiMode | None:
 
 
 def api_port() -> int:
-    return int(get_env('API_PORT', default=8000))
+    return int(get_env('API_PORT', default=8010))
 
 
 def api_root() -> str:
