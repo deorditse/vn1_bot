@@ -4,7 +4,7 @@ networks:
 services:
     n8n-vn1:
         ports:
-            - "${N8N_PORT}:${N8N_PORT}"
+            - "5678:5678"
         container_name: n8n-vn1
         image: docker.n8n.io/n8nio/n8n:latest
         environment:
