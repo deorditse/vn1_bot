@@ -23,4 +23,4 @@ class DocxToMdConverter(Converter):
 
             # Читаем markdown
             with open(md_path, "r", encoding="utf-8") as f:
-                return f.read()
+                return f.read().replace('---', '-')

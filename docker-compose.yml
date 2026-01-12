@@ -7,6 +7,8 @@ services:
             - "${N8N_PORT}:${N8N_PORT}"
         container_name: n8n-vn1
         image: docker.n8n.io/n8nio/n8n:latest
+        env_file:
+            - .env-open
         environment:
             - N8N_HOST=${DOMAIN_NAME}
             - WEBHOOK_URL=${HTTP}://${DOMAIN_NAME}${CATALOG}
@@ -45,6 +47,7 @@ services:
             - PYTHONUNBUFFERED=1
             - API_PORT=8010
             - API_MODE=prod
+            - OPENAI_API_KEY=${secrets.OPENAI_API_KEY}
         restart: unless-stopped
         networks:
             - vn1

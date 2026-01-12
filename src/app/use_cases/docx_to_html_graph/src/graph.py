@@ -1,14 +1,9 @@
 from typing import TypedDict, Annotated
-
 from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
-from pyexpat.errors import messages
-from starlette.responses import JSONResponse
-
 from app.policies.policies_loader import load_prompt
 from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
-from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
 
 
