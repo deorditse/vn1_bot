@@ -49,10 +49,16 @@ async def generate_content_html(state: GraphState) -> GraphState:
     _log()
     is_valid = state.get("html_content_is_valid", True)
     llm = get_llm_content()
-    response = await llm.ainvoke([
-        SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT),
-        HumanMessage(content=state.get('mdFile') if state.get("html_content") is None else state.get("html_content")),
-    ])
+    if state.get("html_content") is None:
+        await llm.ainvoke([
+            SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
+        ])
+    messages = [
+        SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
+        HumanMessage(content=state.get('mdFile') if state.get("html_content") is None else state.get("html_content"))
+    ]
+    response = await llm.ainvoke(messages)
+    _print(response.content)
 
     return {'html_content': response.content}
 
@@ -86,13 +92,14 @@ DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(html_m
 async def generate_menu_html(state: GraphState) -> GraphState:
     _log()
 
-    llm = get_llm_content()
+    llm = get_llm_validation()
     # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
     response = await llm.ainvoke(
-        [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
+        [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT.strip()),
          HumanMessage(content=state.get("html_content")),
          ]
     )
+    _print(response.content)
 
     return {
         "html_menu": response.content,
@@ -164,3 +171,13 @@ logger = logging.getLogger(__name__)
 def _log():
     fn = sys._getframe(1).f_code.co_name
     print("call: def", fn)
+
+
+def _print(data):
+    pass
+    # from textwrap import indent, fill
+    #
+    # print(indent(
+    #     fill(data, width=100),
+    #     prefix="│ "
+    # ))

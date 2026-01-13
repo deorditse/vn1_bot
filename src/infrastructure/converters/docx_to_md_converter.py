@@ -34,14 +34,11 @@ class DocxToMdConverter(Converter):
 import re
 
 NORMALIZATION_RULES: Iterable[Tuple[str, str]] = [
-    # Long dashes → hyphen
-    (r"[—–]", "-"),
-
-    # HTML dash entities → hyphen
-    (r"&mdash;|&ndash;|&#8212;", "-"),
-
     # Collapse 2+ hyphens into one
     (r"-{2,}", "-"),
+
+    # Collapse 2+ spaces into one space
+    (r" {2,}", " "),
 ]
 
 
@@ -55,4 +52,6 @@ def normalize_markdown(md: str) -> str:
     for pattern, replacement in NORMALIZATION_RULES:
         normalized = re.sub(pattern, replacement, normalized)
 
+    with open("result.md", "w") as f:
+        f.write(normalized)
     return normalized
