@@ -14,25 +14,23 @@ class DocxToMdConverter(Converter):
     async def convert(self, file_bytes: bytes) -> str:
         with tempfile.TemporaryDirectory() as tmpdir:
             docx_path = os.path.join(tmpdir, "input.docx")
-            md_path = os.path.join(tmpdir, "output.md")
 
-            # Записываем DOCX на диск
+            # 1. Записываем DOCX (pandoc принимает файл)
             with open(docx_path, "wb") as f:
                 f.write(file_bytes)
 
-            # pandoc → markdown
-            subprocess.run(
-                ["pandoc", docx_path, "-t", "markdown", "-o", md_path],
-                check=True
+            # 2. Pandoc → Markdown через stdout
+            result = subprocess.run(
+                ["pandoc", docx_path, "-t", "markdown"],
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
             )
 
-            if self.mode == ApiMode.DEV:
-                # read markdown
-                with open(md_path, "r", encoding="utf-8") as f:
-                    raw_md = f.read()
+            raw_md = result.stdout
 
-                # normalize markdown
-            return normalize_markdown(raw_md)
+        return normalize_markdown(raw_md)
 
 
 import re
