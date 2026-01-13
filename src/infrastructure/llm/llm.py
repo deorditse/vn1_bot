@@ -21,11 +21,13 @@ class LLMService:
     #         streaming=True
     #     )
 
-    def openai(self) -> ChatOpenAI:
+    def openai(self, model: str = "gpt-4.1") -> ChatOpenAI:
         from common.env import api_key_openai
 
         return ChatOpenAI(
             api_key=api_key_openai(),
+            model=model,
+            max_tokens=32000,  # КРИТИЧНО
         )
 
     def deepseek(self) -> ChatOpenAI:

@@ -49,14 +49,19 @@ async def generate_content_html(state: GraphState) -> GraphState:
     _log()
     is_valid = state.get("html_content_is_valid", True)
     llm = get_llm_content()
-    if state.get("html_content") is None:
-        await llm.ainvoke([
-            SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
-        ])
+
     messages = [
         SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
-        HumanMessage(content=state.get('mdFile') if state.get("html_content") is None else state.get("html_content"))
+        HumanMessage(content=state["mdFile"])
     ]
+    if state.get("validation_errors"):
+        messages.append(
+            HumanMessage(
+                content="Fix the following validation errors:\n"
+                        + "\n".join(state["validation_errors"])
+            )
+        )
+
     response = await llm.ainvoke(messages)
     _print(response.content)
 
