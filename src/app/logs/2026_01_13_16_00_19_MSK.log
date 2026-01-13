@@ -1,0 +1,12 @@
+13-01 16:00:19 uvicorn.error:INFO   | Started server process [5830]
+13-01 16:00:19 uvicorn.error:INFO   | Waiting for application startup.
+13-01 16:00:19 uvicorn.error:INFO   | Application startup complete.
+13-01 16:00:19 uvicorn.error:INFO   | Uvicorn running on http://0.0.0.0:8010 (Press CTRL+C to quit)
+13-01 16:00:21 uvicorn.access:INFO   | 127.0.0.1:50290 - "GET / HTTP/1.1" 404
+13-01 16:00:21 uvicorn.access:INFO   | 127.0.0.1:50290 - "GET /favicon.ico HTTP/1.1" 404
+13-01 16:00:26 uvicorn.access:INFO   | 127.0.0.1:50291 - "GET /docs HTTP/1.1" 200
+13-01 16:00:27 uvicorn.access:INFO   | 127.0.0.1:50291 - "GET /openapi.json HTTP/1.1" 200
+13-01 16:01:16 httpx:INFO   | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+13-01 16:01:31 httpx:INFO   | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+13-01 16:01:31 uvicorn.access:INFO   | 127.0.0.1:50343 - "POST /converter/docx HTTP/1.1" 200
+13-01 16:04:05 uvicorn.error:INFO   | Shutting down

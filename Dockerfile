@@ -22,4 +22,4 @@ COPY src ./src
 
 ENV PYTHONPATH=/app/src
 
-CMD ["uv", "run", "python", "src/app/run.py"]
+CMD ["uv", "run", "uvicorn", "src.app.api.api:app", "--host", "0.0.0.0", "--port", "8010"]
