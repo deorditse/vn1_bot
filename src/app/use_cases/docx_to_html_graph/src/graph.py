@@ -6,15 +6,15 @@ from app.policies.policies_loader import load_prompt
 from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
 from infrastructure.llm.llm import LLMService
 
-_llm_menu = None
+_llm_validation = None
 _llm_content = None
 
 
-def get_llm_menu():
-    global _llm_menu
-    if _llm_menu is None:
-        _llm_menu = LLMService().openai()
-    return _llm_menu
+def get_llm_validation():
+    global _llm_validation
+    if _llm_validation is None:
+        _llm_validation = LLMService().openai()
+    return _llm_validation
 
 
 def get_llm_content():
@@ -41,27 +41,6 @@ class GraphState(TypedDict, total=False):
     html_content_is_valid: bool
 
 
-DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(markdown_example=md_example,
-                                                                          html_menu_example=menu_example,
-                                                                          )
-
-
-async def generate_menu_html(state: GraphState) -> GraphState:
-    _log()
-
-    llm = get_llm_menu()
-
-    response = await llm.ainvoke(
-        [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
-         HumanMessage(content=state.get("mdFile")),
-         ]
-    )
-
-    return {
-        "html_menu": response.content,
-    }
-
-
 DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
                                                                                 html_content_example=content_example)
 
@@ -79,6 +58,7 @@ async def generate_content_html(state: GraphState) -> GraphState:
 
 
 def validate_content_html(state: GraphState) -> GraphState:
+    _log()
     errors: list[str] = []
 
     html = state["html_content"]
@@ -95,6 +75,25 @@ def validate_content_html(state: GraphState) -> GraphState:
         "html_content_is_valid": False,
         "validation_errors": errors,
         "validation_attempts": state.get("validation_attempts", 0) + 1,
+    }
+
+
+async def generate_menu_html(state: GraphState) -> GraphState:
+    DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(markdown_example=md_example,
+                                                                              html_example=state.get("html_menu"),
+                                                                              )
+    _log()
+
+    llm = get_llm_content()
+    # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
+    response = await llm.ainvoke(
+        [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
+         HumanMessage(content=state.get("mdFile")),
+         ]
+    )
+
+    return {
+        "html_menu": response.content,
     }
 
 
@@ -115,10 +114,10 @@ class ValidationRouter:
         attempts = state.get("validation_attempts", 0)
 
         if state.get("html_content_is_valid"):
-            return "summarize"
+            return "generate_menu_html"
 
         if attempts >= self.max_attempts:
-            return "summarize"  # или END / error-node
+            return "generate_menu_html"  # или END / error-node
 
         return "generate_content_html"
 
@@ -127,13 +126,10 @@ def build_graph() -> StateGraph:
     # convert file to MD
     graph = StateGraph(GraphState)
 
-    graph.add_node("generate_menu_html", generate_menu_html)
     graph.add_node("generate_content_html", generate_content_html)
     graph.add_node("validate_content_html", validate_content_html)
+    graph.add_node("generate_menu_html", generate_menu_html)
     graph.add_node("summarize", summarize)
-
-    graph.add_edge(START, "generate_menu_html")
-    graph.add_edge('generate_menu_html', "summarize")
 
     graph.add_edge(START, "generate_content_html")
     graph.add_edge("generate_content_html", "validate_content_html")
@@ -143,9 +139,11 @@ def build_graph() -> StateGraph:
         ValidationRouter(),
         {
             "generate_content_html": "generate_content_html",
-            "summarize": "summarize",
+            "generate_menu_html": "generate_menu_html",
         },
     )
+
+    graph.add_edge("generate_menu_html", "summarize")
 
     graph.add_edge("summarize", END)
 
