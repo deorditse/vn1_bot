@@ -78,17 +78,19 @@ def validate_content_html(state: GraphState) -> GraphState:
     }
 
 
+DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(html_menu_example=menu_example,
+                                                                          html_input_example=content_example,
+                                                                          )
+
+
 async def generate_menu_html(state: GraphState) -> GraphState:
-    DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(markdown_example=md_example,
-                                                                              html_example=state.get("html_menu"),
-                                                                              )
     _log()
 
     llm = get_llm_content()
     # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
     response = await llm.ainvoke(
         [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT),
-         HumanMessage(content=state.get("mdFile")),
+         HumanMessage(content=state.get("html_content")),
          ]
     )
 
