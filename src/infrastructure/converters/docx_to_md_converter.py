@@ -1,5 +1,6 @@
 from typing import Iterable, Tuple
 
+from common import ApiMode, env
 from domain.services.converter import Converter
 
 import subprocess
@@ -8,6 +9,8 @@ import os
 
 
 class DocxToMdConverter(Converter):
+    mode: ApiMode = env.api_mode()
+
     async def convert(self, file_bytes: bytes) -> str:
         with tempfile.TemporaryDirectory() as tmpdir:
             docx_path = os.path.join(tmpdir, "input.docx")
@@ -23,11 +26,12 @@ class DocxToMdConverter(Converter):
                 check=True
             )
 
-            # read markdown
-            with open(md_path, "r", encoding="utf-8") as f:
-                raw_md = f.read()
+            if self.mode == ApiMode.DEV:
+                # read markdown
+                with open(md_path, "r", encoding="utf-8") as f:
+                    raw_md = f.read()
 
-            # normalize markdown
+                # normalize markdown
             return normalize_markdown(raw_md)
 
 

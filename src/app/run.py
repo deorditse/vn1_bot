@@ -3,8 +3,8 @@ import platform
 import uvicorn
 from app.configs import config
 from dotenv import load_dotenv
-load_dotenv()
 
+load_dotenv()
 
 if __name__ == '__main__':
     try:

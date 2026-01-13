@@ -1,0 +1,230 @@
+13-01 15:16:25 uvicorn.error:INFO   | Started server process [63558]
+13-01 15:16:25 uvicorn.error:INFO   | Waiting for application startup.
+13-01 15:16:25 uvicorn.error:INFO   | Application startup complete.
+13-01 15:16:25 uvicorn.error:INFO   | Uvicorn running on http://0.0.0.0:8010 (Press CTRL+C to quit)
+13-01 15:16:27 uvicorn.access:INFO   | 127.0.0.1:56747 - "GET / HTTP/1.1" 404
+13-01 15:16:31 uvicorn.access:INFO   | 127.0.0.1:56747 - "GET /docs HTTP/1.1" 200
+13-01 15:16:31 uvicorn.access:INFO   | 127.0.0.1:56747 - "GET /openapi.json HTTP/1.1" 200
+13-01 15:17:22 httpx:INFO   | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+13-01 15:17:33 httpx:INFO   | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+13-01 15:17:33 root:CRITICAL| Unknown TypeError: TypeError: Object of type JSONResponse is not JSON serializable
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/src/app/api/api.py", line 81, in check_is_frozen
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/src/app/api/routers/converter.py", line 30, in docx_to_markdown
+    return JSONResponse(result)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/responses.py", line 189, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/responses.py", line 46, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/responses.py", line 192, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+
+13-01 15:17:33 uvicorn.error:ERROR  | Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/src/app/api/api.py", line 81, in check_is_frozen
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/src/app/api/routers/converter.py", line 30, in docx_to_markdown
+    return JSONResponse(result)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/responses.py", line 189, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/responses.py", line 46, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/responses.py", line 192, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/dmitrijdeordice/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 178, in __call__
+    response = await run_in_threadpool(self.handler, request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/src/app/api/api.py", line 101, in exception_response
+    MyLogger.exception(err)
+    ~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/dmitrijdeordice/Developer/Git_all_repositories/apteka/vn1_bot/src/common/logger/my_logger.py", line 49, in exception
+    cls._notify(f'exception\ndetails: {details}')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MyLogger._notify() missing 1 required positional argument: 'message'
+13-01 15:17:33 uvicorn.access:INFO   | 127.0.0.1:56748 - "POST /converter/docx HTTP/1.1" 500
+13-01 15:19:59 uvicorn.error:INFO   | Shutting down
+13-01 15:19:59 uvicorn.error:INFO   | Waiting for application shutdown.
+13-01 15:19:59 uvicorn.error:INFO   | Application shutdown complete.
+13-01 15:19:59 uvicorn.error:INFO   | Finished server process [63558]

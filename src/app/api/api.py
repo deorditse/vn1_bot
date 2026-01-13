@@ -6,7 +6,7 @@ from starlette.responses import JSONResponse
 from app.api.dependencies.rate_limiting import set_limiter
 from app.api.schemas.result import ErrorModel
 from app.configs import info
-from common import MyBaseError
+from common import MyBaseError, ApiMode, env
 from app.configs import config
 from app.api.routers import converter
 from common.logger.my_logger import MyLogger
@@ -25,12 +25,15 @@ Api
 ===================================================================================================================
 """
 
+mode: ApiMode = env.api_mode()
+
 app = FastAPI(
     title=f"✒️ ParserAPI",
     description=info.description,
     version=info.api_version,
     openapi_tags=info.tags_metadata,
     root_path=config.api_root,
+    docs_url='/docs' if mode is ApiMode.DEV else None,
     debug=False,
 )
 
@@ -41,7 +44,6 @@ Routers
 """
 
 app.include_router(converter.router, prefix="/converter", tags=['converter']),
-
 
 """
 ===================================================================================================================

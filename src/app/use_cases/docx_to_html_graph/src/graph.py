@@ -4,7 +4,10 @@ from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
 from app.policies.policies_loader import load_prompt
 from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
+from common import ApiMode, env
 from infrastructure.llm.llm import LLMService
+
+mode: ApiMode = env.api_mode()
 
 _llm_validation = None
 _llm_content = None

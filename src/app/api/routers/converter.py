@@ -27,7 +27,7 @@ async def docx_to_markdown(file: UploadFile = File(...)):
 
         use_case = ToHtmlConverterUseCase(DocxToMdConverter())
         result = await use_case.convert(file_bytes)
-        return JSONResponse(result)
+        return result
     except Exception as e:
         print("ERROR:", e)
         traceback.print_exc()

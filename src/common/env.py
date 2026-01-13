@@ -12,7 +12,7 @@ Environment variables
 
 
 def api_mode() -> ApiMode | None:
-    match get_env('API_MODE', default='DEV'):
+    match get_env('API_MODE', default='PROD'):
         case 'DEV':
             return ApiMode.DEV
         case 'PROD':
