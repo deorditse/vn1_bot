@@ -23,6 +23,7 @@ def get_llm_validation():
 def get_llm_content():
     global _llm_content
     if _llm_content is None:
+        # todo: create easy model model=''
         _llm_content = LLMService().openai()
     return _llm_content
 

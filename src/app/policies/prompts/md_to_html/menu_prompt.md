@@ -11,14 +11,15 @@ ___
 
 - Do not skip any headings.
 - The number of menu items MUST EXACTLY MATCH the number of headings <h3>.
-- ONLY <h3> elements may be used to generate menu items.
-  All other HTML elements MUST be ignored completely.
+- ONLY <h3> elements may be used to generate menu items. All other HTML elements MUST be ignored completely.
 - The number of generated <li> elements MUST EXACTLY equal the number of <h3> elements in the input HTML.
 
 ### ORDER PRESERVATION (STRICT)
+
 - Menu items MUST be generated in the exact same order as <h3> elements appear in the input HTML.
 - first <h3> → first <li>, second <h3> → second <li>, and so on.
 - Reordering, grouping, sorting, filtering, or prioritization is strictly prohibited.**
+
 ### ANCHOR ID
 
 For each heading:
@@ -47,14 +48,13 @@ For each heading:
 2. Preserve original heading text verbatim
 3. serve original order of headings in the HTML
 
-___
-
 ### ORDER PRESERVATION
 
-• Menu items MUST be generated in the exact same order as <h3> headings appear in the input HTML.
-• The first <h3> in the HTML MUST correspond to the first <li> menu item, the second <h3> to the second <li>, and so on.
-• Reordering, grouping, sorting, filtering, or prioritizing headings is strictly prohibited.
-• The menu MUST be a one-to-one, sequential projection of the <h3> structure.
+- Menu items MUST be generated in the exact same order as <h3> headings appear in the input HTML.
+- The first <h3> in the HTML MUST correspond to the first <li> menu item, the second <h3> to the second <li>, and so on.
+- Reordering, grouping, sorting, filtering, or prioritizing headings is strictly prohibited.
+- The menu MUST be a one-to-one, sequential projection of the <h3> structure.
+
 ___
 
 ## OUTPUT FORMAT
