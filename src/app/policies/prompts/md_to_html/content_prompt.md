@@ -8,12 +8,10 @@ ___
 
 1. Hyphen Normalization
    1.1 Replace any sequence of two or more hyphens (--, ---, etc.) with a single hyphen.
-   1.2. —, –, &mdash;, &ndash;, &#8212; are prohibited anywhere in the output.
-
+   1.2 —, –, &mdash;, &ndash;, &#8212; are prohibited anywhere in the output.
 2. Markdown Conformance
    2.1 Never violate Markdown structure: **text**, *text*, _text_, [text](url)
    2.2 The characters *, _, [, ], (, ) must be preserved before converting to HTML.
-
 3. Whitespace
    3.1 Collapse repeating whitespace and remove leading/trailing whitespace.
    3.2 Never modify whitespace in Markdown formatting.
@@ -84,11 +82,27 @@ No variations, shortening, or relabeling allowed.
 - Do not treat bolded rows as section headings <li>. The first bolded row (e.g., **Heading** **Heading**) MUST be
   treated as a table row, NOT a section heading.
 - Table placement is governed solely by the SECTION CONTEXT rule.
+- A table MUST NOT be moved to the next or previous section under any circumstances.
+- Even if a table semantically relates to another heading, it MUST remain under the section where it physically appears.
 
-### SECTION DEFINITION
+___
 
-- A section is defined as a Markdown heading (a line beginning with one or more '#' characters followed by a space); do
-  not use in tables.
+## LINEAR FLOW & SECTION BOUNDARIES (CRITICAL)
+
+- The Markdown document MUST be processed as a single linear stream, top to bottom.
+- Each block (paragraph, list, table, etc.) MUST be emitted into the HTML output
+  immediately when it is encountered.
+- A block MUST belong to the most recent preceding Markdown heading (# ...).
+
+___
+
+## STRICTLY PROHIBITED:
+
+- Moving any block to a later or earlier section
+- Re-attaching content to the next <h3> section
+- Holding content "in memory" to emit it under another heading
+- Logical, semantic, or contextual reassignment of blocks
+  A block MAY ONLY belong to another section if a new Markdown heading (# ...) appears.
 
 ___
 
@@ -100,10 +114,8 @@ The resulting HTML MUST meet all requirements:
 2. Blocks must match the order of the incoming MARKDOWN
 3. Tables must be within sections in the order of the incoming MARKDOWN
 4. Bold font rules:
-
-- **text** → <strong>text</strong>
-- Never split or wrap bold span tags
-
+    - **text** → <strong>text</strong>
+    - Never split or wrap bold span tags
 5. There must be no <br>, <style>, or <script> tags
 6. A table or bold row must not create or start a new <li> section. Only lines starting with '#' may do so.
 

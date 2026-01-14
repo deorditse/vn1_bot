@@ -161,7 +161,6 @@ def build_graph() -> StateGraph:
     )
 
     graph.add_edge("generate_menu_html", "summarize")
-
     graph.add_edge("summarize", END)
 
     return graph

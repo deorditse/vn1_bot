@@ -14,7 +14,9 @@ ___
 • The number of menu items MUST EXACTLY MATCH the number of headings <h3>.
 
 ### ANCHOR ID
+
 For each heading:
+
 1. anchorId = heading text with ALL spaces removed
 2. Maintain original case
 3. Do NOT
@@ -28,19 +30,25 @@ For each heading:
 
 ### MENU ITEM FORMAT
 
-Each Markdown heading must be a single menu item according to the following rules:
+1. Each Markdown heading must be a single menu item according to the following rules:
+   ``` html
+   <li>
+      <a href="#anchorId" class="product-details-instructions-main__menu-item">
+       HeadingText
+      </a>
+   </li>
+   ```
+2. Preserve original heading text verbatim
+3. serve original order of headings in the HTML
 
-``` html
-<li>
-  <a href="#anchorId" class="product-details-instructions-main__menu-item">
-   HeadingText
- </a>
-</li>
-```
+___
 
-4. Preserve original heading text verbatim
-5. serve original order of headings in the HTML
+### ORDER PRESERVATION (STRICT)
 
+• Menu items MUST be generated in the exact same order as <h3> headings appear in the input HTML.
+• The first <h3> in the HTML MUST correspond to the first <li> menu item, the second <h3> to the second <li>, and so on.
+• Reordering, grouping, sorting, filtering, or prioritizing headings is strictly prohibited.
+• The menu MUST be a one-to-one, sequential projection of the <h3> structure.
 ___
 
 ## OUTPUT FORMAT
