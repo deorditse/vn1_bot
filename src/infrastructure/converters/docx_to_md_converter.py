@@ -21,39 +21,64 @@ class DocxToMdConverter(Converter):
 
             # 2. Pandoc → Markdown через stdout
             result = subprocess.run(
-                ["pandoc", docx_path, "-t", "markdown"],
+                [
+                    "pandoc",
+                    docx_path,
+                    "-t",
+                    "markdown_strict",
+                    "--wrap=none",
+                ],
                 check=True,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True,
             )
 
-            raw_md = result.stdout
-
-        return normalize_markdown(raw_md)
+        res = normalize_markdown(result.stdout)
+        with open("result_normalize_markdown.md", "w") as f:
+            f.write(res)
+        return res
 
 
 import re
 
-NORMALIZATION_RULES: Iterable[Tuple[str, str]] = [
-    # Collapse 2+ hyphens into one
+HYPHEN_RULES: Iterable[Tuple[str, str]] = [
+    (r"[—–]", "-"),  # длинные тире
+    (r"&mdash;|&ndash;", "-"),
     (r"-{2,}", "-"),
 
-    # Collapse 2+ spaces into one space
-    (r" {2,}", " "),
+]
+SPACE_RULES: Iterable[Tuple[str, str]] = [
+    (r"[ \t]{2,}", " "),
 ]
 
 
 def normalize_markdown(md: str) -> str:
     """
-    Apply deterministic markdown normalization rules.
-    Order of rules is significant.
+    Deterministic markdown normalization.
+    Tables are preserved verbatim.
     """
-    normalized = md
+    lines = md.splitlines()
+    normalized_lines = []
 
-    for pattern, replacement in NORMALIZATION_RULES:
-        normalized = re.sub(pattern, replacement, normalized)
+    in_table = False
 
-    with open("result.md", "w") as f:
-        f.write(normalized)
-    return normalized
+    for line in lines:
+        stripped = line.strip()
+
+        # crude but deterministic table detection
+        if stripped.startswith("|") and stripped.endswith("|"):
+            in_table = True
+        elif in_table and stripped == "":
+            in_table = False
+
+        if not in_table:
+            for pattern, repl in HYPHEN_RULES:
+                line = re.sub(pattern, repl, line)
+
+            for pattern, repl in SPACE_RULES:
+                line = re.sub(pattern, repl, line)
+
+        normalized_lines.append(line)
+
+    return "\n".join(normalized_lines)
