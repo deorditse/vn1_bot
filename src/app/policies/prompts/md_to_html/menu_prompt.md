@@ -9,10 +9,16 @@ ___
 
 ### HEADING SELECTION
 
-• Use only the section headings <h3> found in the input HTML code.
-• Do not skip any headings.
-• The number of menu items MUST EXACTLY MATCH the number of headings <h3>.
+- Do not skip any headings.
+- The number of menu items MUST EXACTLY MATCH the number of headings <h3>.
+- ONLY <h3> elements may be used to generate menu items.
+  All other HTML elements MUST be ignored completely.
+- The number of generated <li> elements MUST EXACTLY equal the number of <h3> elements in the input HTML.
 
+### ORDER PRESERVATION (STRICT)
+- Menu items MUST be generated in the exact same order as <h3> elements appear in the input HTML.
+- first <h3> → first <li>, second <h3> → second <li>, and so on.
+- Reordering, grouping, sorting, filtering, or prioritization is strictly prohibited.**
 ### ANCHOR ID
 
 For each heading:
@@ -43,7 +49,7 @@ For each heading:
 
 ___
 
-### ORDER PRESERVATION (STRICT)
+### ORDER PRESERVATION
 
 • Menu items MUST be generated in the exact same order as <h3> headings appear in the input HTML.
 • The first <h3> in the HTML MUST correspond to the first <li> menu item, the second <h3> to the second <li>, and so on.

@@ -6,38 +6,24 @@ You must work deterministically, without interpretation or semantic inference.
 
 ___
 
-## NORMALIZING INPUT MARKDOWN
-
-1. Hyphen Normalization
-   1.1 Replace any sequence of two or more hyphens (--, ---, etc.) with a single hyphen.
-   1.2 —, –, &mdash;, &ndash;, &#8212; are prohibited anywhere in the output.
-2. Markdown Conformance
-   2.1 Never violate Markdown structure: **text**, *text*, _text_, [text](url)
-   2.2 The characters *, _, [, ], (, ) must be preserved before converting to HTML.
-3. Whitespace
-   3.1 Collapse repeating whitespace and remove leading/trailing whitespace.
-   3.2 Never modify whitespace in Markdown formatting.
-   3.3 NEVER collapse or modify whitespace within ASCII table blocks
-
-___
-
 ## ABSOLUTE PROHIBITIONS
 
-1. Creating, inserting, or deleting any content
-2. Paraphrasing or reinterpreting input data
-3. Changing the order of Markdown elements. All blocks—headings, paragraphs, lists, tables—must appear in the HTML in
-   exactly the same order as in the input Markdown code—this is very important.
-4. Changing formatting (e.g., bold, italics, links)
-5. Inserting Markdown, comments, or inline HTML
-6. Modifying existing HTML fragments
-7. Merging or splitting content blocks
-8. Using only bolded lines (**text**) as headings is STRICTLY PROHIBITED
-9. Creating a new <li> without a Markdown heading
+1. Creation, insertion, or deletion of any content is prohibited.
+2. Paraphrasing or reinterpreting the input data is prohibited.
+3. Changing the order of Markdown elements is prohibited. All blocks—headings, paragraphs, lists, tables—must appear in
+   the HTML in the exact same order as in the input Markdown code.
+4. Changing the formatting (e.g., bolding, italics, links) is prohibited.
+5. Inserting Markdown, comments, or inline HTML is prohibited.
+6. Modifying existing HTML fragments is prohibited.
+7. Combining or splitting content blocks is prohibited.
+8. Creating a new <li> element without a Markdown heading is prohibited.
+9. A table MUST NEVER generate a new <li>
 
 ___
 
 ## CONVERT MARKDOWN TO CONTENT HTML
 
+The Markdown document MUST be processed as a single linear stream, top to bottom.
 Conversion by example:
 
 ```html
@@ -77,33 +63,12 @@ No variations, shortening, or relabeling allowed.
 
 ### TABLES
 
-- A table CANNOT start or close a section
-- A table MUST belong to the current active section
-- A table MUST be emitted immediately when encountered
-- Even if the first row is bold — it is still a table row, NOT a heading
-- Structure:
-- exactly one <table>
-- exactly one <tbody>
-- <tr> → <td><p>...</p></td>
-- No <thead>
-- Preserve row order exactly
+- A table MUST always be emitted inside the current.product-details-instructions-main__item-answer block.
 
-❌ A table MUST NEVER generate a new <li>
+### HEADING
 
-### SECTION OWNERSHIP
-
-- The document is processed as a single linear stream
-- Every block belongs to the most recent preceding Markdown heading
-- If no new heading appears, content MUST stay in the current <li>
-
-___
-
-## LINEAR FLOW & SECTION BOUNDARIES (CRITICAL)
-
-- The Markdown document MUST be processed as a single linear stream, top to bottom.
-- Each block (paragraph, list, table, etc.) MUST be emitted into the HTML output
-  immediately when it is encountered.
-- A block MUST belong to the most recent preceding Markdown heading (# ...).
+- ONLY Markdown headings starting with '#' may create a new <li> section. No other block type may start or close a
+  section.
 
 ___
 
@@ -121,26 +86,13 @@ ___
 
 The resulting HTML MUST meet all requirements:
 
-1. All ---, --, —, – are replaced with a single -
-2. Blocks must match the order of the incoming MARKDOWN
-3. Tables must be within sections in the order of the incoming MARKDOWN
-4. Bold font rules:
+1. Blocks must match the order of the incoming MARKDOWN
+2. Tables must be within sections in the order of the incoming MARKDOWN
+3. Bold font rules:
     - **text** → <strong>text</strong>
     - Never split or wrap bold span tags
-5. There must be no <br>, <style>, or <script> tags
-6. A table or bold row must not create or start a new <li> section. Only lines starting with '#' may do so.
-
-___
-
-## OUTPUT FORMAT
-
-- Return HTML only
-- No Markdown
-- No comments
-- ALL section headings MUST be rendered as <h3>. Do NOT generate h1, h2, h4, h5, or h6
-- Each <li> section MUST be closed before starting the next section
-- Content MUST NOT appear outside of a section wrapper
-- Do NOT output stray punctuation
+4. There must be no <br>, <style>, or <script> tags
+5. A table or bold row must not create or start a new <li> section. Only lines starting with '#' may do so.
 
 ___
 
