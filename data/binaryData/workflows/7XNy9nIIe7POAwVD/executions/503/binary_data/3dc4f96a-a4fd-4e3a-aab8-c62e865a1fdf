@@ -1,0 +1,363 @@
+// __________________________________
+// MENU _____________________________
+//___________________________________
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Энтерофурила" class="product-details-instructions-main__menu-item">
+    Аналоги Энтерофурила
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Энтерофурил при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Энтерофурил при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Энтерофурил и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Энтерофурил и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Энтерофурил" class="product-details-instructions-main__menu-item">
+    Как хранить Энтерофурил
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие" class="product-details-instructions-main__menu-item">
+    Взаимодействие
+  </a>
+</li>
+// __________________________________
+// Content __________________________
+//___________________________________
+
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Описание препарата">Описание препарата</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил - это противомикробный препарат, который используется для лечения острой бактериальной диареи. Его действующее вещество, нифуроксазид, относится к группе нитрофуранов и обладает высокой активностью в отношении различных патогенных микроорганизмов, поражающих кишечник. Препарат эффективно восстанавливает нормальную микрофлору кишечника и препятствует развитию бактериальной суперинфекции при вирусных инфекциях.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил выпускается в двух формах:</p>
+    <ul>
+      <li><strong>Капсулы 100 мг и 200 мг</strong></li>
+      <li><strong>Суспензия для приема внутрь 200 мг/5 мл</strong></li>
+    </ul>
+    <p>Каждая капсула содержит активное вещество <strong>нифуроксазид</strong> в дозах 100 мг или 200 мг. Вспомогательные вещества включают сахарозу, крахмал, целлюлозу, магния стеарат и красители.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил оказывает антибактериальное действие в просвете кишечника, не всасываясь в кровоток. Это позволяет препарату эффективно бороться с патогенными микроорганизмами, вызывающими диарею, при этом не нарушая равновесие кишечной микрофлоры.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Нифуроксазид блокирует активность дегидрогеназ и угнетает важные биохимические процессы в микробной клетке, включая цикл трикарбоновых кислот. Это приводит к разрушению мембран микробных клеток и снижению продукции токсинов. Он активно действует на <em>Campylobacter jejuni</em>, <em>Escherichia coli</em>, <em>Salmonella spp.</em>, <em>Shigella spp.</em> и другие микроорганизмы, вызывающие кишечные инфекции.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>После перорального применения нифуроксазид практически не всасывается из кишечника, а его антибактериальное действие проявляется исключительно в просвете кишечника. Препарат выводится из организма кишечником: 20% в неизменном виде и остаток - химически измененным.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил используется для лечения острой бактериальной диареи, которая протекает без ухудшения общего состояния пациента. Он эффективен при инфекциях, вызванных патогенными микроорганизмами, и используется для предотвращения бактериальной суперинфекции при вирусных кишечных заболеваниях. Препарат помогает при диарее, не сопровождающейся повышением температуры и интоксикацией.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат не следует применять в следующих случаях:</p>
+    <ul>
+      <li>Повышенная чувствительность к нифуроксазиду или производным нитрофурана.</li>
+      <li>Беременность (особенно в первом триместре) и период новорожденности до 1 месяца.</li>
+      <li>Недоношенность, непереносимость фруктозы, синдром глюкозо-галактозной мальабсорбции.</li>
+      <li>Наличие хронических заболеваний печени и алкоголизма.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные эффекты">Побочные эффекты</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Побочные действия Энтерофурила могут включать:</p>
+    <ul>
+      <li>Аллергические реакции, такие как сыпь, крапивница, отек Квинке.</li>
+      <li>В редких случаях могут возникать симптомы анафилактического шока.</li>
+      <li>Могут наблюдаться реакции со стороны желудочно-кишечного тракта, такие как тошнота или боли в животе.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил принимают внутрь. Суспензию перед приемом нужно тщательно встряхивать. Дозировка зависит от возраста пациента:</p>
+    <ul>
+      <li>Детям от 1 до 6 месяцев: по 2,5 мл суспензии (100 мг) 2-3 раза в сутки.</li>
+      <li>Детям от 6 месяцев до 3 лет: по 2,5 мл суспензии 3 раза в сутки.</li>
+      <li>Детям от 3 до 6 лет: по 5 мл суспензии 3 раза в сутки.</li>
+      <li>Взрослым и детям старше 6 лет: по 5 мл суспензии 4 раза в сутки.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Симптомы передозировки неизвестны. В случае передозировки рекомендуется симптоматическое лечение.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Не следует применять Энтерофурил одновременно с препаратами, вызывающими дисульфирамоподобные реакции, а также с лекарственными средствами, угнетающими центральную нервную систему.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Энтерофурила">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Энтерофурила">Аналоги Энтерофурила</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>К препаратам с аналогичным действием (с тем же МНН - нифуроксазид) относятся:</p>
+    <ul>
+      <li><strong>Нифуроксазид разных производителей</strong> - препарат с тем же действующим веществом, применяемый для лечения бактериальной диареи.</li>
+      <li><strong>Стопдиар</strong> - противомикробное средство, также использующее нифуроксазид для устранения симптомов диареи.</li>
+      <li><strong>Экофурил</strong> - аналог Энтерофурила с тем же активным компонентом.</li>
+      <li><strong>Элюфор</strong> - еще один препарат на основе нифуроксазида, обладающий аналогичным действием.</li>
+    </ul>
+    <p><a href="https://dev.vn1-dev.ru/selection/prestans/" target="_blank">Смотреть все аналоги &gt;&gt;</a></p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил разрешен к применению у детей от 1 месяца в соответствующих дозах, согласно инструкции.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Энтерофурил при беременности и кормлении грудью">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать Энтерофурил при беременности и кормлении грудью">Можно ли принимать Энтерофурил при беременности и кормлении грудью</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Применение препарата в период беременности не рекомендуется. Во время лактации использование возможно при коротком курсе лечения и только по назначению врача.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Энтерофурил и алкоголь">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместим ли Энтерофурил и алкоголь">Совместим ли Энтерофурил и алкоголь</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Употребление алкоголя в период лечения Энтерофурилом не рекомендуется, так как это может ухудшить эффективность лечения и повысить риск побочных эффектов.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Энтерофурил отпускается без рецепта.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Энтерофурил">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как хранить Энтерофурил">Как хранить Энтерофурил</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат следует хранить при температуре не выше 25°C в недоступном для детей месте. Не замораживать.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности Энтерофурила составляет 3 года. Не применять по истечении срока годности.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Производителем Энтерофурила является компания <strong>BOSNALIJEK D D</strong> из Боснии и Герцеговины. Производственная площадка (завод-производитель) может быть изменена держателем регистрационного удостоверения.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие">Взаимодействие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <table>
+      <tbody>
+        <tr>
+          <td><p><strong>Взаимодействие</strong></p></td>
+          <td><p><strong>Другие лекарственные препараты</strong></p></td>
+        </tr>
+        <tr>
+          <td><p>Потеря эффективности Ибупрофена.</p></td>
+          <td><p>Антациды.</p></td>
+        </tr>
+        <tr>
+          <td><p>Повышение риска возникновения желудочно-кишечных кровотечений.</p></td>
+          <td><p>Минералокортикостероиды, глюкокортикостероиды, этанол.</p></td>
+        </tr>
+        <tr>
+          <td><p>Усиление гипогликемического эффекта.</p></td>
+          <td><p>Производные сульфонилмочевины.</p></td>
+        </tr>
+        <tr>
+          <td><p>Риск возникновения и выраженность побочных эффектов.</p></td>
+          <td><p>Два и более НПВП.</p></td>
+        </tr>
+        <tr>
+          <td><p>Усиление обезболивающего действия.</p></td>
+          <td><p>Кофеин.</p></td>
+        </tr>
+        <tr>
+          <td><p>Снижение противовоспалительного и антиагрегантного действия лекарственного препарата.</p></td>
+          <td><p>Салицилаты.</p></td>
+        </tr>
+        <tr>
+          <td><p>Повышается вероятность развития гипотромбинемии.</p></td>
+          <td><p>Цефамандол, цефоперазон, цефотетан, вальпроевая кислота, пликамицин.</p></td>
+        </tr>
+        <tr>
+          <td><p>Повышение гематотоксичности Ибупрофена.</p></td>
+          <td><p>Миелотоксические лекарственные средства.</p></td>
+        </tr>
+        <tr>
+          <td><p>Стимулирование эффекта ибупрофена.</p></td>
+          <td><p>Циклоспорин и препараты с содержанием золота.</p></td>
+        </tr>
+        <tr>
+          <td><p>Снижение скорости выведения ибупрофена и повышение его концентрации в крови.</p></td>
+          <td><p>Блокаторы кальциевых канальцев.</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
