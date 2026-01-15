@@ -17,7 +17,9 @@ ___
 6. Modifying existing HTML fragments is prohibited.
 7. Combining or splitting content blocks is prohibited.
 8. Creating a new <li> element without a Markdown heading is prohibited.
-9. A table MUST NEVER generate a new <li>
+9. A table MUST NOT start a new logical block or be treated as a standalone section.
+   A table MUST be emitted immediately after the preceding Markdown block
+   if no Markdown heading (# ...) appears between them.
 
 ___
 
@@ -63,7 +65,15 @@ No variations, shortening, or relabeling allowed.
 
 ### TABLES
 
-- A table MUST always be emitted inside the current.product-details-instructions-main__item-answer block.
+1. A table MUST always be emitted inside the currently open .product-details-instructions-main__item-answer block.
+2. A table MUST be rendered strictly in-place in the linear Markdown stream.
+3. If a paragraph precedes a table in Markdown, the <table> MUST be emitted
+   immediately after the closing </p> of that paragraph, with no wrappers,
+   separators, or structural breaks.
+4. A table MUST NEVER:
+    - open a new <li>
+    - close or reopen .product-details-instructions-main__item-answer
+    - be wrapped in additional <div>, <section>, or semantic containers
 
 ### HEADING
 

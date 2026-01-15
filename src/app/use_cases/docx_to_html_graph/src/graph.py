@@ -9,21 +9,20 @@ from infrastructure.llm.llm import LLMService
 
 mode: ApiMode = env.api_mode()
 
-_llm_validation = None
+_llm_menu = None
 _llm_content = None
 
 
-def get_llm_validation():
-    global _llm_validation
-    if _llm_validation is None:
-        _llm_validation = LLMService().openai()
-    return _llm_validation
+def get_llm_menu():
+    global _llm_menu
+    if _llm_menu is None:
+        _llm_menu = LLMService().openai()
+    return _llm_menu
 
 
 def get_llm_content():
     global _llm_content
     if _llm_content is None:
-        # todo: create easy model model=''
         _llm_content = LLMService().openai()
     return _llm_content
 
@@ -101,7 +100,7 @@ DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(html_m
 async def generate_menu_html(state: GraphState) -> GraphState:
     _log()
 
-    llm = get_llm_validation()
+    llm = get_llm_menu()
     # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
     response = await llm.ainvoke(
         [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT.strip()),
