@@ -63,17 +63,30 @@ Convert [text](url) as:
 <a href="url" target="_blank">text</a>
 No variations, shortening, or relabeling allowed.
 
-### TABLES
+### TABLE HTML STRUCTURE
 
-1. A table MUST always be emitted inside the currently open .product-details-instructions-main__item-answer block.
-2. A table MUST be rendered strictly in-place in the linear Markdown stream.
-3. If a paragraph precedes a table in Markdown, the <table> MUST be emitted
-   immediately after the closing </p> of that paragraph, with no wrappers,
-   separators, or structural breaks.
-4. A table MUST NEVER:
-    - open a new <li>
-    - close or reopen .product-details-instructions-main__item-answer
-    - be wrapped in additional <div>, <section>, or semantic containers
+Markdown tables MUST be converted to HTML using the following rules:
+
+1. The <table> element MUST contain ONLY:
+    - <tbody>
+    - <tr>
+    - <td>
+    - <p>
+    - <strong>
+2. Header rows in Markdown tables MUST be rendered as:
+   <tr>
+        <td><p><strong>HeaderText</strong></p></td>
+   </tr>
+3. Every <td> MUST contain exactly ONE <p> element.
+   Raw text directly inside <td> is prohibited.
+4. Bold text inside table cells MUST be rendered ONLY via:
+   <p><strong>...</strong></p>
+5. No attributes are allowed on <table>, <tr>, <td>, or <p> elements.
+6. Table structure MUST preserve:
+    - original row order
+    - original column order
+    - original cell content
+7. A table MUST be emitted at the exact position where it appears in the input Markdown.
 
 ### HEADING
 

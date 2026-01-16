@@ -42,6 +42,74 @@ class DocxToMdConverter(Converter):
 
 import re
 
+
+def normalize_markdown(md: str) -> str:
+    """
+    Deterministic markdown normalization.
+    - Normalizes hyphens and spaces
+    - Preserves tables verbatim
+    - Converts bold-only lines into Markdown headings
+    - Removes empty headings followed immediately by another heading
+    """
+    lines = md.splitlines()
+    normalized_lines: list[str] = []
+
+    in_table = False
+
+    # ---------- PASS 1: normalisation ----------
+    for line in lines:
+        stripped = line.strip()
+
+        # table detection
+        if stripped.startswith("<table"):
+            in_table = True
+        if in_table:
+            normalized_lines.append(line)
+            if stripped.startswith("</table"):
+                in_table = False
+            continue
+
+        # hyphen normalization
+        for pattern, repl in HYPHEN_RULES:
+            line = re.sub(pattern, repl, line)
+
+        # space normalization
+        for pattern, repl in SPACE_RULES:
+            line = re.sub(pattern, repl, line)
+
+        # bold-only → heading
+        m = re.match(r"^\s*\*\*(.+?)\*\*\s*$", line)
+        if m:
+            heading_text = m.group(1).strip()
+            line = f"# {heading_text}"
+
+        normalized_lines.append(line)
+
+    # ---------- PASS 2: empty heading suppression ----------
+    result: list[str] = []
+    i = 0
+
+    while i < len(normalized_lines):
+        line = normalized_lines[i]
+
+        if is_heading(line):
+            j = i + 1
+
+            # ищем следующий НЕпустой блок
+            while j < len(normalized_lines) and is_empty(normalized_lines[j]):
+                j += 1
+
+            # если следующий блок — заголовок → пропускаем текущий
+            if j < len(normalized_lines) and is_heading(normalized_lines[j]):
+                i += 1
+                continue
+
+        result.append(line)
+        i += 1
+
+    return "\n".join(result)
+
+
 HYPHEN_RULES: Iterable[Tuple[str, str]] = [
     (r"[—–]", "-"),  # длинные тире
     (r"&mdash;|&ndash;", "-"),
@@ -53,44 +121,9 @@ SPACE_RULES: Iterable[Tuple[str, str]] = [
 ]
 
 
-def normalize_markdown(md: str) -> str:
-    """
-    Deterministic markdown normalization.
-    - Normalizes hyphens and spaces
-    - Preserves tables verbatim
-    - Converts bold-only lines into Markdown headings
-    """
-    lines = md.splitlines()
-    normalized_lines = []
+def is_heading(line: str) -> bool:
+    return bool(re.match(r"^\s*#+\s+\S+", line))
 
-    in_table = False
 
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-
-        # --- table detection (HTML or pipe tables) ---
-        if stripped.startswith("<table"):
-            in_table = True
-        if in_table and stripped.startswith("</table"):
-            in_table = False
-            normalized_lines.append(line)
-            continue
-
-        if not in_table:
-            # hyphen normalization
-            for pattern, repl in HYPHEN_RULES:
-                line = re.sub(pattern, repl, line)
-
-            # space normalization
-            for pattern, repl in SPACE_RULES:
-                line = re.sub(pattern, repl, line)
-
-            # --- HEADING NORMALIZATION ---
-            m = re.match(r"^\s*\*\*(.+?)\*\*\s*$", line)
-            if m:
-                heading_text = m.group(1).strip()
-                line = f"# {heading_text}"
-
-        normalized_lines.append(line)
-
-    return "\n".join(normalized_lines)
+def is_empty(line: str) -> bool:
+    return line.strip() == ""
