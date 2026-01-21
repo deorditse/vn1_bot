@@ -1,0 +1,373 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Визанны" class="product-details-instructions-main__menu-item">
+    Аналоги Визанны
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Визанна при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Визанна при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Визанна и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Визанна и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Визанна" class="product-details-instructions-main__menu-item">
+    Как хранить Визанна
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Визанна - это оригинальный гормональный препарат на основе диеногеста, предназначенный для лечения эндометриоза у женщин. Визанна это синтетический прогестаген с высокой селективностью к прогестероновым рецепторам, который подавляет рост эндометриоидных очагов, снижает воспаление и устраняет болевой синдром. Согласно официальной инструкции, Визанна применяется у взрослых женщин и у девочек старше 12 лет после наступления менархе. Препарат не обладает эстрогенной, андрогенной или глюкокортикоидной активностью, что делает его профиль безопасности более предсказуемым по сравнению с другими гормональными средствами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Визанна выпускается в виде таблеток для приема внутрь.</p>
+        <ul>
+            <li>Таблетки - круглые, белые или почти белые, с плоской поверхностью, скошенными краями и гравировкой «В» на одной стороне.</li>
+            <li>Действующим веществом является диеногест.</li>
+            <li>Дозировка: 2 мг диеногеста микронизированного в одной таблетке.</li>
+        </ul>
+        <p>Вспомогательные компоненты:</p>
+        <ul>
+            <li>Лактозы моногидрат</li>
+            <li>Кукурузный крахмал</li>
+            <li>Микрокристаллическая целлюлоза</li>
+            <li>Повидон-К25</li>
+            <li>Тальк</li>
+            <li>Кросповидон</li>
+            <li>Магния стеарат</li>
+        </ul>
+        <p>Препарат содержит лактозу, что важно учитывать при непереносимости молочного сахара.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Визанна относится к фармакотерапевтической группе: половые гормоны и модуляторы половой системы, гестагены; производные прегнадиена (АТХ-код G03DB08).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Диеногест - синтетический прогестаген, который избирательно связывается с прогестероновыми рецепторами в тканях эндометрия и эндометриоидных очагах. Его действие направлено на:</p>
+        <ul>
+            <li>Подавление пролиферации эндометриоидных клеток</li>
+            <li>Ингибирование ангиогенеза в гетеротопиях</li>
+            <li>Снижение локального синтеза простагландинов и провоспалительных цитокинов</li>
+            <li>Уменьшение гиперчувствительности нервных окончаний в очагах поражения</li>
+        </ul>
+        <p>В результате системного применения Визанна уменьшает или полностью устраняет тазовую боль, дисменорею и диспареунию, характерные для эндометриоза.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Диеногест быстро всасывается в желудочно-кишечном тракте. Максимальная концентрация в плазме достигается через 1-2 часа после приема. Связывание с белками плазмы - более 90%. Метаболизм происходит преимущественно в печени путём гидроксилирования и конъюгации. Выводится почками и через кишечник в виде неактивных метаболитов.</p>
+        <p>Прием пищи не влияет на биодоступность, но для поддержания стабильного терапевтического уровня рекомендуется принимать таблетку в одно и то же время суток.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Визанна, следует обратиться к её единственному зарегистрироврованному показанию:</p>
+        <ul>
+            <li>Лечение эндометриоза у взрослых женщин и у девочек от 12 до 18 лет после наступления первой менструации.</li>
+        </ul>
+        <p>Препарат эффективен при различных формах эндометриоза: перитонеальной, яичниковой, глубокой инфильтративной, а также при аденомиозе.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Визанна противопоказана при:</p>
+        <ul>
+            <li>Гиперчувствительности к диеногесту или любому компоненту состава</li>
+            <li>Непереносимости галактозы, дефиците лактазы, нарушении всасывания глюкозы-галактозы</li>
+            <li>Тромбозах (венозных или артериальных) в анамнезе или в настоящее время</li>
+            <li>Сахарном диабете с ангиопатией</li>
+            <li>Заболеваниях печени (острая/хроническая недостаточность, опухоли)</li>
+            <li>Гормонозависимых злокачественных новообразованиях (рак молочной железы, яичников, эндометрия)</li>
+            <li>Неразъясненных вагинальных кровотечениях</li>
+            <li>Возрасте до 12 лет или до наступления менархе</li>
+            <li>Холестатической желтухе в анамнезе беременности</li>
+        </ul>
+        <p>Также препарат не назначают при тяжелой сердечной недостаточности и системных атеросклеротических заболеваниях сосудов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия Визанны чаще возникают в первые 1-3 месяца терапии и обычно уменьшаются при продолжении лечения.</p>
+        <p>Часто (≥1 из 10):</p>
+        <ul>
+            <li>Головная боль, мигрень</li>
+            <li>Тошнота, боль в животе</li>
+            <li>Акне, выпадение волос</li>
+            <li>Увеличение массы тела</li>
+            <li>Сниженное настроение, тревога, бессонница</li>
+            <li>Дискомфорт в молочных железах</li>
+            <li>Вагинальные кровотечения (мажущие выделения, аменорея, нерегулярные менструации)</li>
+            <li>Утомляемость, раздражительность</li>
+        </ul>
+        <p>Нечасто (≥1 из 100):</p>
+        <ul>
+            <li>Анемия</li>
+            <li>Сухость кожи, зуд, гирсутизм</li>
+            <li>Мышечные спазмы, боль в спине</li>
+            <li>Инфекции мочевыводящих путей</li>
+            <li>Сухость влагалища, выделения</li>
+            <li>Отеки (задержка жидкости)</li>
+        </ul>
+        <p>Редко и очень редко:</p>
+        <ul>
+            <li>Тромбоэмболические осложнения</li>
+            <li>Доброкачественные опухоли печени</li>
+            <li>Нарушения минеральной плотности костной ткани (у подростков)</li>
+            <li>Депрессия, колебания настроения</li>
+        </ul>
+        <p>При появлении признаков тромбоза или аномальных кровотечений терапию немедленно прекращают.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как принимать Визанну и какова необходимая доза:</p>
+        <ul>
+            <li>1 таблетка (2 мг) 1 раз в сутки, независимо от приема пищи.</li>
+            <li>Таблетку запивают водой.</li>
+            <li>Препарат принимают непрерывно, без перерывов между упаковками.</li>
+            <li>Начинать можно в любой день менструального цикла.</li>
+        </ul>
+        <p>При пропуске дозы - принять как можно скорее, затем продолжить в обычном режиме. Не удваивать следующую дозу.</p>
+        <p>Продолжительность лечения определяет врач. Стандартный курс - 6-12 месяцев, но может быть продлён при необходимости и при отсутствии тяжелых побочных действий.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаи тяжелой передозировки Визанны не зарегистрированы. При случайном приеме избыточной дозы возможны:</p>
+        <ul>
+            <li>Тошнота, рвота</li>
+            <li>Мажущие кровянистые выделения</li>
+        </ul>
+        <p>Лечение - симптоматическое. Специфического антидота нет. При подозрении на передозировку (особенно у детей) - обратиться к врачу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Индукторы микросомальных ферментов (рифампицин, фенитоин, карбамазепин, зверобой продырявленный) - снижают эффективность Визанны.</li>
+            <li>Ингибиторы CYP3A4 (итраконазол, эритромицин, верапамил) и грейпфрутовый сок - повышают концентрацию диеногеста, увеличивая риск побочных действий.</li>
+        </ul>
+        <p>Перед началом любого нового лечения необходимо сообщить врачу о приеме <strong>Визанны</strong>.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Визанны">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Визанны">Аналоги Визанны</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Визанны, содержащим то же действующее вещество - диеногест, - относятся:</p>
+        <ul>
+            <li>Алвовизан (таблетки, покрытые пленочной оболочкой) - препарат на основе диеногеста, применяется для лечения эндометриоза у взрослых женщин и подростков старше 12 лет.</li>
+            <li>Зафрилла (таблетки) - лекарственное средство с диеногестом в качестве активного компонента, предназначенное для терапии эндометриоза и связанных с ним симптомов.</li>
+            <li>ДляЖенс Метри (таблетки) - содержит диеногест и используется при гинекологических состояниях, требующих прогестагенной терапии, включая эндометриоз.</li>
+        </ul>
+        <p>Все перечисленные препараты имеют идентичное действующее вещество и схожие показания к применению. Выбор конкретного средства осуществляется лечащим врачом с учётом клинической ситуации и предпочтений пациента.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Визанна разрешена к применению у девочек старше 12 лет и после наступления первой менструации.</p>
+        <p>Препарат противопоказан детям до 12 лет из-за отсутствия данных по безопасности и эффективности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Визанна при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Визанна при беременности и кормлении грудью">Можно ли принимать Визанна при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Беременность: <br>Визанна не применяется при беременности, так как необходимость в лечении эндометриоза в этот период отсутствует. Перед началом терапии необходимо исключить беременность.</p>
+        <p><strong>Лактация</strong>: <br>Диеногест проникает в грудное молоко. Поэтому Визанна противопоказана в период лактации. При необходимости терапии грудное вскармливание следует прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Визанна и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Визанна и алкоголь">Совместим ли Визанна и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямого взаимодействия не описано, однако алкоголь может усилить влияние гормонов на печень и повысить нагрузку на метаболические процессы.</p>
+        <p>В период терапии рекомендуется избегать употребления этанола.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Визанна является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Визанна">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Визанна">Как хранить Визанна</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Хранить в недоступном для детей месте</li>
+            <li>При температуре не выше 30 °C</li>
+            <li>В оригинальной упаковке</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности Визанны составляет 5 лет.</p>
+        <p>Не использовать после даты «Годен до:» на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Визанны является компания Bayer Weimar GmbH & Co. KG (Германия).</p>
+        <p>Обратите внимание: производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставки. Упаковка и контроль качества могут осуществляться на других фармацевтических предприятиях, включая страны ЕАЭС.</p>
+    </div>
+</li>
