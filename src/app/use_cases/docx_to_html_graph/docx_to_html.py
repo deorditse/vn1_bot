@@ -10,6 +10,8 @@ class ToHtmlConverterUseCase:
 
     async def convert(self, file_bytes: bytes) -> JSONResponse:
         md: str = await self._converter.convert(file_bytes=file_bytes)
+
+        print(md)
         result = await compile_md_to_html_graph.ainvoke(
             {"mdFile": md}
         )
