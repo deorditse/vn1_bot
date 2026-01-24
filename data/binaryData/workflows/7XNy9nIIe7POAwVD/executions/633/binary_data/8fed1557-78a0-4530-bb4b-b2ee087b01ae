@@ -1,0 +1,284 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Сорбифер Дурулес" class="product-details-instructions-main__menu-item">
+    Аналоги Сорбифер Дурулес
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Сорбифер Дурулес при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Сорбифер Дурулес при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Сорбифер Дурулес и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Сорбифер Дурулес и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Сорбифер Дурулес" class="product-details-instructions-main__menu-item">
+    Как хранить Сорбифер Дурулес
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Сорбифер Дурулес - это современный антианемический препарат, содержащий комбинацию двухвалентного железа и аскорбиновой кислоты. Он широко применяется для коррекции железодефицитных состояний и лечения анемии. Благодаря уникальной технологии Дурулес обеспечивается пролонгированное высвобождение ионов железа, что улучшает его переносимость и эффективность.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в лекарственной форме таблетки, покрытые пленочной оболочкой светло-серо-желтого цвета, с гравировкой "Z" на одной стороне. Каждая таблетка содержит 100 мг сульфата железа (эквивалентно 60 мг Fe²⁺) и 60 мг аскорбиновой кислоты. Вспомогательные компоненты в составе ядра и оболочки могут незначительно варьироваться в зависимости от производственной площадки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Сорбифер Дурулес относится к фармакотерапевтической группе антианемических средств. Действующие вещества - железо и аскорбиновая кислота - работают синергично.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Железо является жизненно важным элементом, необходимым для синтеза гемоглобина, миоглобина и ключевых ферментов. Оно обеспечивает транспорт кислорода и участвует в окислительно-восстановительных процессах. Аскорбиновая кислота значительно усиливает всасывание железа в желудочно-кишечном тракте, восстанавливая его до двухвалентной формы и стабилизируя. Технология Дурулес обеспечивает постепенное высвобождение ионов железа из пористого матрикса в течение 6 часов, что предотвращает раздражение слизистой ЖКТ и позволяет достичь высокого уровня абсорбции.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Железо медленно и равномерно высвобождается из таблетки, его всасывание происходит преимущественно в двенадцатиперстной кишке и проксимальном отделе тонкого кишечника. Биодоступность железа в данной форме высока. В плазме крови железо связывается с трансферрином и транспортируется в органы-мишени, депонируясь в виде ферритина и гемосидерина. Период полувыведения составляет около 6 часов. Аскорбиновая кислота полностью всасывается в ЖКТ.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Сорбифер Дурулес, следует обратиться к официальным показаниям. Препарат назначают для лечения и профилактики железодефицитной анемии, а также для коррекции латентного дефицита железа у различных групп пациентов, включая беременных, доноров и лиц с повышенной потребностью в этом микроэлементе.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются:</p>
+        <ul>
+            <li>Гиперчувствительность к компонентам препарата.</li>
+            <li>Заболевания, сопровождающиеся повышенным накоплением железа (гемохроматоз, гемосидероз).</li>
+            <li>Нарушения утилизации железа (сидероахрестическая анемия, анемия, вызванная отравлением свинцом).</li>
+            <li>Нежелезодефицитные анемии (апластическая, гемолитическая, мегалобластная).</li>
+            <li>Стеноз пищевода, обструктивные изменения ЖКТ, острые кровотечения из ЖКТ.</li>
+            <li>Гипероксалурия, оксалатные камни в почках.</li>
+            <li>Детский возраст до 12 лет.</li>
+            <li>Одновременный прием парентеральных форм железа.</li>
+        </ul>
+        <p>С осторожностью применяют при язвенной болезни, воспалительных заболеваниях кишечника, печеночной или почечной недостаточности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На фоне приема Сорбифер Дурулес побочные действия чаще всего связаны с желудочно-кишечным трактом. Могут наблюдаться тошнота, боль в животе, диарея, запор. Реже возникают головная боль, головокружение, кожные аллергические реакции (сыпь, зуд). При разжевывании или рассасывании таблеток возможно изъязвление слизистой оболочки рта. В единичных случаях описаны серьезные системные реакции, включая анафилаксию.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Сорбифер Дурулес, и оптимальная доза определяются врачом. Таблетки глотают целиком, не разжевывая, запивая достаточным количеством воды. Принимают до или во время еды. Взрослым и подросткам с 12 лет для лечения анемии обычно назначают по 1 таблетке 2 раза в сутки. Для профилактики - по 1 таблетке 1 раз в сутки. Максимальная суточная доза - 4 таблетки. Продолжительность курса определяется нормализацией показателей гемоглобина и ферритина.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Передозировка особенно опасна для детей и может проявляться тошнотой, рвотой, диареей, метаболическим ацидозом, в тяжелых случаях - шоком, комой и некрозом печени. В качестве первой помощи показано вызывание рвоты, прием молока. Специфическим антидотом является дефероксамин. При подозрении на передозировку необходима немедленная медицинская помощь.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Антациды, препараты кальция, магния, алюминия, а также чай, кофе, молоко и продукты, богатые клетчаткой, снижают всасывание железа. Интервал между приемами должен составлять не менее 2 часов. Железо, в свою очередь, уменьшает всасывание тетрациклинов, фторхинолонов, леводопы, тироксина и некоторых других препаратов. Аскорбиновая кислота может усиливать абсорбцию железа из пищи и влиять на эффективность антикоагулянтов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Сорбифер Дурулес">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Сорбифер Дурулес">Аналоги Сорбифер Дурулес</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На данный лекарственный препарат структурные аналоги, содержащие идентичную комбинацию сульфата железа и аскорбиновой кислоты в той же лекарственной форме, не выпускаются. Действующим веществом является <em>сульфат железа + аскорбиновая кислота</em>.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан детям в возрасте до 12 лет в связи с отсутствием достаточного количества клинических данных по безопасности и эффективности для этой возрастной группы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Сорбифер Дурулес при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Сорбифер Дурулес при беременности и кормлении грудью">Можно ли принимать Сорбифер Дурулес при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат разрешен к применению во время беременности и лактации по показаниям и под наблюдением врача. Стандартная профилактическая доза при беременности - 1 таблетка в сутки, в III триместре и при кормлении грудью - до 2 таблеток в сутки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Сорбифер Дурулес и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Сорбифер Дурулес и алкоголь">Совместим ли Сорбифер Дурулес и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Употребление алкоголя во время терапии не рекомендуется. Этанол может потенцировать негативное влияние железа на слизистую ЖКТ, повышать риск токсических реакций и снижать эффективность лечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Сорбифер Дурулес является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Сорбифер Дурулес">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Сорбифер Дурулес">Как хранить Сорбифер Дурулес</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в недоступном для детей месте при температуре не выше 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток составляет 3 года. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата является компания ЭГИС ФАРМАЦЕВТИЧЕСКИЙ ЗАВОД ЗАО (Венгрия). Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

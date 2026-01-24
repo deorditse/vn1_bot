@@ -1,0 +1,293 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Трекрезан" class="product-details-instructions-main__menu-item">
+    Аналоги Трекрезан
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Трекрезан при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Трекрезан при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Трекрезан и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Трекрезан и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Трекрезан" class="product-details-instructions-main__menu-item">
+    Как хранить Трекрезан
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан - это адаптогенное средство, которое стимулирует иммунный ответ организма, повышая его устойчивость к различным стрессовым и неблагоприятным факторам внешней среды. Препарат выпускается в виде таблеток, и используется для профилактики и лечения острых респираторных вирусных инфекций, а также для повышения выносливости при физических и умственных нагрузках.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан выпускается в форме таблеток белого или белого с желтоватым или коричневатым оттенком цвета. Таблетки плоскоцилиндрические с риской и фасками с двух сторон.</p>
+        <p>Состав одной таблетки:</p>
+        <ul>
+            <li>Действующее вещество: оксиэтиламмония метилфеноксиацетат (трекрезан) - 200 мг.</li>
+            <li>Вспомогательные вещества: лактозы моногидрат - 200 мг, микрокристаллическая целлюлоза - 92,5 мг, натрия стеарилфумарат - 5 мг, кремния диоксид коллоидный (аэросил) - 2,5 мг.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан относится к адаптогенным средствам, которые оказывают благоприятное влияние на иммунный статус организма. Он способствует выработке альфа- и гамма-интерферонов, активируя клеточный и гуморальный иммунитет. Препарат стимулирует фагоцитарную активность макрофагов, улучшая защитные силы организма. Трекрезан помогает организму адаптироваться к различным неблагоприятным условиям окружающей среды, таких как резкие изменения температуры или атмосферного давления, а также повышает выносливость при физической и умственной активности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат оказывает влияние на иммунную систему, усиливая как клеточный, так и гуморальный иммунный ответ. Механизм его действия не до конца изучен, однако его эффекты, такие как улучшение адаптации организма к различным стрессам, уже давно нашли широкое применение в клинической практике. Трекрезан также уменьшает воздействие токсинов на организм, а также повышает сопротивляемость организма к гипоксии и экстремальным температурам.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>После приема внутрь, оксиэтиламмония метилфеноксиацетат быстро всасывается, благодаря высокой биодоступности. Препарат быстро метаболизируется в печени и выводится почками преимущественно в виде глюкуронидов. Его биодоступность не изменяется при длительном применении, и он не накапливается в организме. Оксиэтиламмония метилфеноксиацетат не вызывает кумуляции при длительном использовании. При применении препарата в возрасте старше 12 лет или у пожилых пациентов, а также у людей с нарушениями функций печени или почек, фармакокинетика препарата не изменяется.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан применяется в составе комплексной терапии для:</p>
+        <ul>
+            <li>Профилактики и лечения острых респираторных вирусных инфекций.</li>
+            <li>Повышения устойчивости организма к различным стрессам, таким как гипоксия, перегревание, переохлаждение и адаптация к изменениям климатических условий.</li>
+            <li>Повышения выносливости при физических и умственных нагрузках.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не рекомендуется к применению в следующих случаях:</p>
+        <ul>
+            <li>Повышенная чувствительность к компонентам препарата.</li>
+            <li>Детский возраст до 12 лет (отсутствуют данные о безопасности и эффективности).</li>
+            <li>Наследственная непереносимость лактозы, недостаточность лактазы или нарушение всасывания глюкозы и галактозы.</li>
+            <li>Период беременности и грудного вскармливания.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Наиболее частыми побочными действиями Трекрезана могут быть аллергические реакции, включая анафилаксию, отек Квинке, кожные высыпания, зуд и другие. В редких случаях могут возникать тошнота и головная боль.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан принимается внутрь. Рекомендуемая дозировка:</p>
+        <ul>
+            <li>Для профилактики острых респираторных вирусных инфекций: взрослым и детям старше 12 лет - по 1 таблетке (200 мг) в сутки после еды, курс - 14 дней.</li>
+            <li>Для лечения острых респираторных инфекций: в первый день - по 1 таблетке 3 раза в сутки (600 мг), в последующие дни - по 1 таблетке (200 мг) в сутки, курс - 8 дней.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке Трекрезаном симптомы интоксикации не проявляются. Рекомендуется симптоматическое лечение.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не имеет известных взаимодействий с другими лекарственными средствами, однако рекомендуется соблюдать осторожность при применении с другими средствами, которые могут повлиять на иммунный статус организма.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Трекрезан">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Трекрезан">Аналоги Трекрезан</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Аналоги с точно таким же действующим веществом (оксиэтиламмония метилфеноксиацетат) не выпускаются.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан не рекомендуется детям младше 12 лет, так как нет достаточных данных о безопасности и эффективности применения у детей младшего возраста.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Трекрезан при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Трекрезан при беременности и кормлении грудью">Можно ли принимать Трекрезан при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Трекрезана в период беременности и лактации противопоказано, поскольку отсутствуют данные о его безопасности для матери и ребенка.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Трекрезан и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Трекрезан и алкоголь">Совместим ли Трекрезан и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алкоголь не влияет на эффективность Трекрезана, однако его употребление во время лечения не рекомендуется, так как это может усугубить побочные эффекты.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан отпускается из аптек без рецепта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Трекрезан">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Трекрезан">Как хранить Трекрезан</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трекрезан следует хранить в сухом, недоступном для детей месте, при температуре не выше 25°C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности препарата составляет 3 года. Не следует использовать Трекрезан по истечении срока годности, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата является ГРОТЕКС ООО, Россия. Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

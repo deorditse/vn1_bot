@@ -1,0 +1,331 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описаниепрепарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Формавыпускаисостав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическоедействие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показаниякприменению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочныеэффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Какприниматьидозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействиесдругимипрепаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#АналогиРебагита" class="product-details-instructions-main__menu-item">
+    Аналоги Ребагита
+  </a>
+</li>
+<li>
+  <a href="#Можнолиприниматьдетям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#МожнолиприниматьРебагитприбеременностиикормлениигрудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Ребагит при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#СовместимлиРебагитиалкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Ребагит и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускаетсяпорецептуилинет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#КакхранитьРебагит" class="product-details-instructions-main__menu-item">
+    Как хранить Ребагит
+  </a>
+</li>
+<li>
+  <a href="#Срокгодности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребагит - гастропротекторное средство, применяемое при заболеваниях желудочно-кишечного тракта. Действующим веществом является ребамипид, который обладает способностью восстанавливать слизистую оболочку желудка, стимулировать выработку простагландинов и повышать устойчивость клеток к повреждающим факторам.</p>
+        <p>Часто пациенты спрашивают: Ребагит это что и от чего помогает? Препарат используют при гастритах, язвенной болезни желудка и двенадцатиперстной кишки, а также для профилактики эрозивных поражений слизистой на фоне приема нестероидных противовоспалительных средств.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребагит выпускается в форме таблеток, покрытых оболочкой.</p>
+        <p>Состав одной таблетки:</p>
+        <ul>
+            <li>действующее вещество - ребамипид;</li>
+            <li>вспомогательные компоненты - лактоза, крахмал, гипромеллоза, стеарат магния и другие вещества, обеспечивающие стабильность и усвоение.</li>
+        </ul>
+        <p>Таблетки имеют белый или почти белый цвет, круглую форму.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребагит относится к группе гастропротекторов. Он оказывает:</p>
+        <ul>
+            <li>защитное действие на слизистую желудка;</li>
+            <li>стимулирует выработку слизи и простагландинов;</li>
+            <li>улучшает микроциркуляцию;</li>
+            <li>уменьшает воспаление и окислительный стресс;</li>
+            <li>способствует заживлению язв и эрозий.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребамипид усиливает синтез простагландинов в слизистой оболочке ЖКТ, что повышает её устойчивость к кислоте, пепсину и желчным кислотам. Также препарат стимулирует продукцию муцинов и антиоксидантных ферментов, защищая эпителий от свободных радикалов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>После приема внутрь Ребагит быстро всасывается.</p>
+        <ul>
+            <li>Cmax достигается через 2-6 часов.</li>
+            <li>Биодоступность около 10-15%.</li>
+            <li>Метаболизируется в печени, выводится с калом и мочой преимущественно в неизмененном виде.</li>
+            <li>Период полувыведения - около 1,5-2 часов.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Ребагит, обратимся к его показаниям:</p>
+        <ul>
+            <li>хронический гастрит с нарушением слизистого барьера;</li>
+            <li>эрозивные поражения желудка и двенадцатиперстной кишки;</li>
+            <li>язвенная болезнь желудка (в составе комплексной терапии);</li>
+            <li>профилактика повреждений слизистой при длительном приеме НПВС;</li>
+            <li>поддерживающая терапия после заживления язвы.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан при:</p>
+        <ul>
+            <li>индивидуальной непереносимости компонентов;</li>
+            <li>тяжелой почечной или печеночной недостаточности;</li>
+            <li>детском возрасте (до 18 лет - из-за недостатка клинических данных);</li>
+            <li>беременности и лактации.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребагит может вызывать следующие побочные действия:</p>
+        <ul>
+            <li>со стороны ЖКТ: тошнота, диарея, боли в животе, запор;</li>
+            <li>со стороны нервной системы: головная боль, головокружение;</li>
+            <li>аллергические реакции: кожная сыпь, зуд, крапивница;</li>
+            <li>лабораторные изменения: транзиторное повышение уровня печёночных ферментов.</li>
+        </ul>
+        <p>Как правило, побочные эффекты носят обратимый характер и исчезают после отмены препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Пациенты часто интересуются, как пить Ребагит и какая доза считается правильной.</p>
+        <ul>
+            <li>Рекомендуемая доза для взрослых - по 100 мг 3 раза в день.</li>
+            <li>Таблетки принимают после еды, запивая водой.</li>
+            <li>Продолжительность терапии зависит от характера заболевания и составляет от нескольких недель до нескольких месяцев.</li>
+        </ul>
+        <p>Назначение и длительность курса определяет врач.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаи передозировки встречаются крайне редко. Симптомы - усиление побочных эффектов (тошнота, диарея, боль в животе). Лечение симптоматическое.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребагит совместим с большинством лекарственных средств, применяемых в гастроэнтерологии.</p>
+        <ul>
+            <li>Может усиливать действие других гастропротекторов.</li>
+            <li>Допустимо сочетание с антибиотиками при эрадикации Helicobacter pylori.</li>
+            <li>Клинически значимых взаимодействий не выявлено.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Ребагита">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Ребагита">Аналоги Ребагита</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам относятся препараты, которые содержат то же действующее вещество - ребамипид. Они обладают сходным механизмом действия, применяются при хроническом гастрите, язвенной болезни желудка и двенадцатиперстной кишки, а также для профилактики поражений слизистой ЖКТ на фоне длительного приёма НПВС.</p>
+        <ul>
+            <li><strong>Ребамипид</strong> - дженерик, выпускаемый различными производителями. Эффективен при воспалительных заболеваниях желудка, способствует восстановлению слизистой оболочки и защищает её от действия кислоты и пепсина.</li>
+            <li><strong>Гастростат</strong> - гастропротектор на основе ребамипида, применяется при эрозиях и язвах. Отличается удобной формой выпуска и подтверждённым клиническим действием при длительном курсе терапии.</li>
+        </ul>
+        <p>Эти препараты полностью соответствуют по механизму действия Ребагиту, но могут различаться по цене, производителю и доступности в аптечной сети. Выбор между ними зависит от рекомендаций врача и индивидуальной переносимости.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Клинические данные о применении Ребагита у детей отсутствуют. Препарат противопоказан в возрасте до 18 лет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Ребагит при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Ребагит при беременности и кормлении грудью">Можно ли принимать Ребагит при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Ребагита во время беременности не рекомендуется, так как отсутствуют достаточные данные о его безопасности.
+В период лактации также противопоказано, так как нет информации о проникновении ребамипида в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Ребагит и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Ребагит и алкоголь">Совместим ли Ребагит и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алкоголь снижает эффективность терапии и повышает риск повреждения слизистой желудка, поэтому сочетание с Ребагитом не рекомендуется.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат относится к рецептурным средствам.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Ребагит">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Ребагит">Как хранить Ребагит</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить в сухом, защищенном от света месте при температуре не выше 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток составляет 3 года.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ребагит выпускается фармацевтическими компаниями, специализирующимися на гастропротекторах.
+Производственная площадка (завод-производитель) может меняться в зависимости от страны и партии выпуска.</p>
+    </div>
+</li>

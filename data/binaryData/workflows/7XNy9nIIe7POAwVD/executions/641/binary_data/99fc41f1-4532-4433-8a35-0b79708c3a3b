@@ -1,0 +1,286 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Аквадетрим" class="product-details-instructions-main__menu-item">
+    Аналоги Аквадетрим
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Аквадетрим при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Аквадетрим при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Аквадетрим и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Аквадетрим и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Аквадетрим" class="product-details-instructions-main__menu-item">
+    Как хранить Аквадетрим
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Описание препарата">Описание препарата</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Аквадетрим - это лекарственный препарат, представляющий собой водный раствор витамина D3. Действующим веществом является колекальциферол. Препарат регулирует обмен кальция и фосфора, восполняет дефицит витамина D3, способствует правильной минерализации костей и функционированию иммунной системы. Аквадетрим широко применяется для профилактики и лечения заболеваний, связанных с недостаточностью витамина D.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат выпускается в двух лекарственных формах:</p>
+    <ul>
+      <li>Капли для приема внутрь во флаконах 10 мл, 15 мл или 30 мл</li>
+      <li>Таблетки растворимые в контурных упаковках по 4, 8 или 10 штук</li>
+    </ul>
+    <p>Основное действующее вещество в обеих формах - колекальциферол. В 1 мл капель содержится 15 000 МЕ витамина D3, что соответствует 500 МЕ в одной капле. Одна таблетка содержит 500 МЕ витамина D3. Вспомогательные компоненты различаются в зависимости от формы выпуска.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Аквадетрим относится к регуляторам кальциево-фосфорного обмена. Препарат восполняет дефицит витамина D3 и способствует нормализации метаболизма минеральных веществ.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Витамин D3 является естественной формой витамина D, которая образуется в коже под действием ультрафиолетовых лучей. Он связывается со специфическими рецепторами, регулируя экспрессию множества генов, отвечающих за транспорт кальция, минерализацию костной ткани, иммунные функции и метаболические процессы. Витамин D3 усиливает всасывание кальция и фосфатов в кишечнике, способствует минерализации костей, регулирует мышечный тонус и нервную проводимость.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Водный раствор витамина D3 всасывается лучше, чем масляный. После приема внутрь колекальциферол абсорбируется в тонком кишечнике, метаболизируется в печени и почках. Период полувыведения составляет несколько дней. Препарат проникает через плацентарный барьер и выделяется с грудным молоком. Выводится преимущественно с желчью.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Показаниями к применению являются: профилактика и лечение дефицита витамина D, профилактика и лечение рахита, комплексная терапия остеопороза, включая постменопаузальный.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Противопоказаниями к применению являются: гиперчувствительность к компонентам препарата, гипервитаминоз D, гиперкальциемия, гиперкальциурия, мочекаменная болезнь, саркоидоз, острые и хронические заболевания печени и почек, почечная недостаточность, активная форма туберкулеза легких.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные эффекты">Побочные эффекты</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Среди возможных побочных действий могут наблюдаться симптомы гипервитаминоза D: потеря аппетита, тошнота, рвота, головные и мышечные боли, запоры, полиурия, нарушение психики. При появлении любых нежелательных явлений следует обратиться к врачу.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Схема, как пить Аквадетрим, и необходимая доза определяются врачом индивидуально. Капли принимают в ложечке жидкости, таблетки предварительно растворяют в воде. Профилактическая доза для доношенных новорожденных составляет 500 МЕ (1 капля или 1 таблетка) в сутки, для недоношенных детей - 1000-1500 МЕ в сутки. Для взрослых профилактическая доза составляет 500-1000 МЕ в сутки.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Симптомы передозировки включают тошноту, рвоту, запоры, беспокойство, жажду, полиурию. В тяжелых случаях может развиться нарушение функции почек, кальциноз тканей. При передозировке необходимо прекратить прием препарата и обратиться к врачу.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Противоэпилептические средства, рифампицин и колестирамин снижают абсорбцию витамина D3. При одновременном применении с тиазидными диуретиками повышается риск гиперкальциемии. Совместный прием с сердечными гликозидами может усиливать их токсическое действие.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Аквадетрим">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Аквадетрим">Аналоги Аквадетрим</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>К структурным аналогам, содержащим то же действующее вещество (колекальциферол), относятся:</p>
+    <ul>
+      <li>Вигантол - масляный раствор витамина D3 для профилактики и лечения рахита</li>
+      <li>Девилам - препарат для коррекции дефицита витамина D</li>
+      <li>Дэтриферол - водный раствор колекальциферола для детей и взрослых</li>
+      <li>Солигамма - витаминный препарат с D3 для нормализации кальциево-фосфорного обмена</li>
+      <li>ФортеДетрим - средство для профилактики и лечения дефицита витамина D</li>
+      <li>Юнивит Аква Д3 - комплексный препарат для восполнения недостаточности витамина D</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Аквадетрим разрешен к применению у детей с 4-недельного возраста. Дозировка устанавливается врачом индивидуально в зависимости от возраста, состояния здоровья и условий жизни ребенка.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Аквадетрим при беременности и кормлении грудью">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать Аквадетрим при беременности и кормлении грудью">Можно ли принимать Аквадетрим при беременности и кормлении грудью</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Применение во время беременности возможно в рекомендованных дозах. Следует избегать передозировки, так как гиперкальциемия может привести к нарушению развития плода. В период лактации препарат применяют с осторожностью, поскольку колекальциферол проникает в грудное молоко.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Аквадетрим и алкоголь">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместим ли Аквадетрим и алкоголь">Совместим ли Аквадетрим и алкоголь</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Данных о взаимодействии с алкоголем нет. Однако следует учитывать, что чрезмерное употребление алкоголя может нарушать метаболизм витамина D и кальция.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Аквадетрим относится к безрецептурным лекарственным препаратам.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Аквадетрим">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как хранить Аквадетрим">Как хранить Аквадетрим</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат следует хранить в оригинальной упаковке при температуре не выше 25°C. Вскрытый флакон с каплями необходимо использовать в течение 6 месяцев. Хранить в недоступном для детей месте.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности капель составляет 3 года, таблеток - 2 года. Не использовать по истечении срока годности, указанного на упаковке.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Производителем препарата является компания АКРИХИН АО (Россия) или Фармацевтический завод Польфарма АО (Польша). Производственная площадка может меняться.</p>
+  </div>
+</li>

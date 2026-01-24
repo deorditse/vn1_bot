@@ -1,0 +1,312 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Мирамистина" class="product-details-instructions-main__menu-item">
+    Аналоги Мирамистина
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Мирамистин при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Мирамистин при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Мирамистин и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Мирамистин и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Мирамистин" class="product-details-instructions-main__menu-item">
+    Как хранить Мирамистин
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Мирамистин (Miramistin) - это современное антисептическое средство широкого спектра действия, применяемое для профилактики и лечения бактериальных, вирусных и грибковых инфекций. Препарат эффективно используется в хирургии, травматологии, акушерстве, гинекологии, венерологии, дерматологии, урологии, стоматологии и оториноларингологии. Его действующее вещество - бензилдиметил-миристоиламино-пропиламмоний - разрушает клеточные мембраны патогенных микроорганизмов, способствуя быстрому устранению воспаления и ускоряя регенерацию тканей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Мирамистин выпускается в нескольких формах:</p>
+        <ul>
+            <li><strong>Раствор для местного применения</strong> - прозрачная бесцветная жидкость, разливается во флаконы с дозатором. В 1 литре содержится 0,1 г действующего вещества.</li>
+            <li><strong>Мазь</strong> - однородная субстанция белого или почти белого цвета, в 100 г мази содержится 0,5 г активного компонента.</li>
+            <li><strong>Вагинальные суппозитории</strong> - полупрозрачные свечи, каждая содержит 10 мг действующего вещества.</li>
+        </ul>
+        <p>Во всех формах основное действующее вещество - <strong>бензилдиметил-миристоиламино-пропиламмоний</strong>. Вспомогательные вещества могут отличаться в зависимости от производителя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Мирамистин относится к катионным антисептикам. Он обладает выраженным антимикробным действием на грамположительные и грамотрицательные бактерии, включая устойчивые к антибиотикам штаммы. Эффективен против грибков и вирусов. Препарат снижает устойчивость микроорганизмов к антибиотикам, ускоряет заживление ран и ожогов, не повреждая здоровые клетки кожи и слизистых оболочек.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Активное вещество разрушает липидные мембраны патогенных микроорганизмов, вызывая их гибель. Особенно чувствительны к действию препарата стафилококки и стрептококки. Мирамистин также усиливает процессы регенерации и уменьшает воспаление в очаге поражения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При местном применении системная абсорбция минимальна. Активное вещество может частично проникать в кровоток при обработке обширных раневых поверхностей, однако клинически значимого воздействия на организм не оказывает.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, <strong>от чего помогает Мирамистин</strong>, необходимо обратиться к его официальным показаниям:</p>
+        <ul>
+            <li>обработка инфицированных ран и ожогов 2-3 степени;</li>
+            <li>лечение обморожений, дерматомикозов, кандидозов кожи и слизистых;</li>
+            <li>профилактика нагноений при травмах и хирургических вмешательствах;</li>
+            <li>отиты, гаймориты, фарингиты, тонзиллиты, ларингиты (в составе комплексной терапии);</li>
+            <li>стоматиты, гингивиты, пародонтиты;</li>
+            <li>послеродовые травмы и инфекции;</li>
+            <li>уретриты и уретропростатиты;</li>
+            <li>профилактика заболеваний, передающихся половым путем.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>индивидуальная гиперчувствительность к компонентам препарата;</li>
+            <li>не рекомендуется для применения у детей младше 18 лет (ограничение зависит от формы выпуска).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Возможные <strong>побочные действия</strong>:</p>
+        <ul>
+            <li>кратковременное жжение или зуд на месте применения;</li>
+            <li>локальное раздражение кожи или слизистых.</li>
+        </ul>
+        <p>Обычно эти реакции проходят самостоятельно и не требуют отмены препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема применения зависит от формы выпуска и заболевания.</p>
+        <ul>
+            <li><strong>Раствор</strong>: используется для полоскания горла, промываний и орошений. При фарингите и тонзиллите детям от 3 лет назначают 3-5 распылений 3-4 раза в день, взрослым - 10-15 мл для полосканий или распыление 3-4 раза в сутки.</li>
+            <li><strong>Мазь</strong>: наносится тонким слоем на поражённый участок, сверху накладывается стерильная повязка. При дерматитах - до 2 раз в день. При гнойных ранах используется совместно с системными антибиотиками.</li>
+            <li><strong>Суппозитории</strong>: вводятся вагинально по 1 свече 2 раза в день, курс - 7 дней.</li>
+        </ul>
+        <p>Назначение дозировки: доза определяется врачом в зависимости от формы выпуска и характера заболевания.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаев клинически значимой передозировки не зафиксировано. При обработке больших поверхностей возможно попадание активного вещества в кровоток, что может удлинять время кровотечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>при совместном применении с антибиотиками усиливает их действие;</li>
+            <li>поверхностно-активные вещества снижают эффективность препарата.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Мирамистина">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Мирамистина">Аналоги Мирамистина</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам по действующему веществу относятся:</p>
+        <ul>
+            <li><strong>Миристоил раствор</strong> - антисептическое средство для наружного применения;</li>
+            <li><strong>Зилекса Септ</strong> - применяется для лечения инфекций кожи и слизистых;</li>
+            <li><strong>Мирамед Эвалар</strong> - препарат на основе того же действующего вещества, выпускается в форме раствора;</li>
+            <li><strong>Митрасептин Про</strong> - средство с выраженным антимикробным эффектом для профилактики и лечения инфекций.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Мирамистин в форме раствора может применяться у детей с 3 лет (для полосканий и орошений). Мазь и свечи назначаются преимущественно взрослым пациентам.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Мирамистин при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Мирамистин при беременности и кормлении грудью">Можно ли принимать Мирамистин при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение в период беременности и в период <strong>лактации</strong> допускается, если предполагаемая польза превышает возможные риски. Решение о назначении принимает врач.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Мирамистин и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Мирамистин и алкоголь">Совместим ли Мирамистин и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Данных о негативном взаимодействии препарата с алкоголем нет. Однако употребление алкоголя во время лечения инфекций может замедлить выздоровление.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Мирамистин во всех формах отпускается <strong>без рецепта</strong>.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Мирамистин">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Мирамистин">Как хранить Мирамистин</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат хранить в сухом, защищенном от света месте при температуре не выше 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности во всех формах выпуска - <strong>3 года</strong>.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Мирамистин выпускается различными российскими фармацевтическими предприятиями. Производственная площадка (завод-производитель) может меняться в зависимости от серии выпуска.</p>
+    </div>
+</li>

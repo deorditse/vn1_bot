@@ -1,0 +1,293 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Анжелик" class="product-details-instructions-main__menu-item">
+    Аналоги Анжелик
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Анжелик при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Анжелик при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Анжелик и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Анжелик и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Анжелик" class="product-details-instructions-main__menu-item">
+    Как хранить Анжелик
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик - это комбинированное противоклимактерическое средство, предназначенное для заместительной гормональной терапии (ЗГТ) у женщин в постменопаузе. Препарат содержит два активных компонента - эстрадиол и дроспиренон, которые помогают регулировать гормональный баланс в организме, устраняя симптомы менопаузы, такие как приливы, потливость и снижение минеральной плотности костей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик выпускается в двух формах:</p>
+        <ul>
+            <li>Анжелик - таблетки, покрытые пленочной оболочкой - круглые, двояковыпуклые серовато-розовые таблетки с тиснением "DL" на одной стороне упаковки.</li>
+            <li>Анжелик Микро - таблетки, покрытые пленочной оболочкой, круглые, двояковыпуклые, желтые с тиснением “EL” в правильном шестиугольнике на одной стороне упаковки.</li>
+        </ul>
+        <p>Состав каждого препарата:</p>
+        <ul>
+            <li>Анжелик: 1 мг эстрадиола (в пересчете на эстрадиол гемигидрат) и 2 мг дроспиренона.</li>
+            <li>Анжелик Микро: 0,5 мг эстрадиола и 0,25 мг дроспиренона.</li>
+        </ul>
+        <p>Вспомогательные вещества включают лактозу, магния стеарат и другие компоненты, обеспечивающие стабильность и удобство приема препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик обладает комбинированным эффектом за счет сочетания эстрадиола и дроспиренона. Эстрадиол, природный эстроген, заменяет недостающие в организме эстрогены во время и после менопаузы, в то время как дроспиренон, прогестаген, предотвращает развитие гиперплазии эндометрия, которая может возникнуть при применении только эстрогенов. Эти два компонента в комплексе обеспечивают эффективную терапию симптомов менопаузы и профилактику остеопороза.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Эстрадиол обладает высокой аффинностью к эстрогеновым рецепторам, что делает его основным активным компонентом, влияющим на множество органов, включая молочные железы, гипоталамус, гипофиз и кости. Препарат помогает поддерживать нормальный уровень холестерина и снижает концентрацию глюкозы в крови. 
+Дроспиренон, аналог прогестерона, также оказывает антиандрогенные эффекты, влияя на снижение уровня тестостерона в организме, что способствует улучшению состояния кожи и предотвращению появления акне.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Эстрадиол: После перорального применения быстро абсорбируется, но частично метаболизируется в печени, снижая свою биодоступность до 5%. Максимальная концентрация в плазме достигается через 2-8 часов после приема.</li>
+            <li>Дроспиренон: Быстро абсорбируется с биодоступностью 76-85%, не зависит от приема пищи. Его максимальная концентрация в плазме наблюдается через 1 час после приема.</li>
+        </ul>
+        <p>Оба компонента активно метаболизируются в печени и выводятся через почки и кишечник.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик применяется для:</p>
+        <ul>
+            <li>Заместительной гормональной терапии у женщин в постменопаузе с сохраненной маткой, не ранее чем через 12 месяцев после последней менструации.</li>
+            <li>Профилактики остеопороза у женщин в постменопаузе с высоким риском переломов, если другие препараты для профилактики остеопороза непереносимы.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат Анжелик не рекомендуется при следующих состояниях:</p>
+        <ul>
+            <li>Беременность и период лактации.</li>
+            <li>Тромбоэмболия, инсульт, инфаркт миокарда, тромбоз глубоких вен.</li>
+            <li>Заболевания печени, рак молочной железы и эндометрия.</li>
+            <li>Гиперплазия эндометрия, тромбофилии, заболевания почек.</li>
+            <li>Детский возраст до 18 лет.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Основные побочные действия включают:</p>
+        <ul>
+            <li>Болезненные ощущения в молочных железах, кровотечения из половых путей, боли в животе, тошноту.</li>
+            <li>В редких случаях могут наблюдаться тромбоэмболические осложнения, рак молочной железы и опухоли печени.</li>
+        </ul>
+        <p>Среди менее частых реакций отмечаются: головная боль, мигрень, головокружение, депрессия, нарушение сна, периферические отеки, повышение массы тела.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат принимается по одной таблетке в сутки, независимо от времени приема пищи. Если доза пропущена, следует принять таблетку как можно скорее, но не более чем через 24 часа. В случае пропуска нескольких таблеток может возникнуть кровотечение. Важно строго следовать предписаниям врача, не пропускать и не удваивать дозы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке Анжелик возможны симптомы, такие как тошнота, рвота и кровотечение из влагалища. Лечение симптоматическое, специфического антидота нет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик может взаимодействовать с лекарствами, которые увеличивают или уменьшают метаболизм половых гормонов, например, с фенитоином, рифампицином, карбамазепином, а также с препаратами, ингибирующими CYP3A4, такими как кетоконазол и флуконазол.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Анжелик">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Анжелик">Аналоги Анжелик</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Среди структурных аналогов Анжелик:</p>
+        <ul>
+            <li>Джес Плюс - комбинированный препарат для заместительной гормональной терапии с теми же активными веществами.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат Анжелик не применяется у детей и подростков до 18 лет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Анжелик при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Анжелик при беременности и кормлении грудью">Можно ли принимать Анжелик при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Анжелик во время беременности и лактации противопоказано. Половые гормоны могут проникать через плаценту и в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Анжелик и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Анжелик и алкоголь">Совместим ли Анжелик и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Употребление алкоголя на фоне терапии Анжелик не рекомендуется, так как это может усилить побочные эффекты препарата, особенно влияние на печень.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик - рецептурный препарат.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Анжелик">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Анжелик">Как хранить Анжелик</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить Анжелик следует при температуре не выше 25 °C, в недоступном для детей месте. Срок годности препарата - 3 года.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Анжелик производится компанией Bayer AG, Германия. Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

@@ -1,0 +1,296 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Милдроната" class="product-details-instructions-main__menu-item">
+    Аналоги Милдроната
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Милдронат при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Милдронат при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Милдронат и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Милдронат и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Милдронат" class="product-details-instructions-main__menu-item">
+    Как хранить Милдронат
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Милдронат - это широко известный метаболический препарат, применяемый в кардиологии, неврологии и спортивной медицине. Действующим веществом является мельдоний, синтетический аналог гамма-бутиробетаина, который присутствует в каждой клетке человеческого организма. Милдронат это средство, нормализующее энергетический метаболизм клеток, испытывающих недостаток кислорода или повышенную нагрузку.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Милдронат выпускается в двух основных лекарственных формах:</p>
+        <ul>
+            <li>Капсулы для приема внутрь дозировкой 500 мг.</li>
+            <li>Раствор для инъекций (внутривенного, внутримышечного и парабульбарного введения) дозировкой 100 мг/мл.</li>
+        </ul>
+        <p>Основное действующее вещество во всех формах - мельдоний (в форме дигидрата). Вспомогательные вещества могут варьироваться в зависимости от формы выпуска и завода-производителя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Милдронат относится к фармакотерапевтической группе метаболических средств, кардиопротекторов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика мельдония заключается в его способности ингибировать синтез карнитина, что препятствует накоплению в клетках токсических промежуточных продуктов окисления жирных кислот. В условиях ишемии или повышенной нагрузки препарат восстанавливает баланс между доставкой и потреблением кислорода, активирует производство энергии через более эффективный гликолиз. Это приводит к кардиопротекторному эффекту, повышению сократимости миокарда, улучшению кровоснабжения ишемизированных участков сердца и мозга, а также к повышению физической и умственной работоспособности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>После приема капсул мельдоний быстро всасывается, его биодоступность составляет около 78%. Максимальная концентрация в плазме достигается через 1-2 часа. При внутривенном введении биодоступность равна 100%, а максимальная концентрация достигается сразу. Препарат метаболизируется в печени с образованием двух основных метаболитов, которые выводятся почками. Период полувыведения составляет 3-6 часов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Милдронат, необходимо обратиться к его официальным показаниям. Препарат используется в комплексной терапии:</p>
+        <ul>
+            <li>Ишемической болезни сердца (стенокардия, инфаркт миокарда), хронической сердечной недостаточности.</li>
+            <li>Острых и хронических нарушений мозгового кровообращения (инсульт, цереброваскулярная недостаточность).</li>
+            <li>Сниженной работоспособности, умственных и физических перегрузок, в том числе у спортсменов.</li>
+            <li>Синдрома абстиненции при хроническом алкоголизме (в комбинации со специфической терапией).</li>
+            <li>Патологии сосудов глазного дна (ретинопатии, тромбозы вен сетчатки, кровоизлияния).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются:</p>
+        <ul>
+            <li>Гиперчувствительность к мельдонию или вспомогательным компонентам.</li>
+            <li>Повышенное внутричерепное давление (при нарушении венозного оттока, внутричерепных опухолях).</li>
+            <li>Беременность и период кормления грудью.</li>
+            <li>Возраст до 18 лет (эффективность и безопасность не установлены).</li>
+        </ul>
+        <p>С осторожностью препарат применяют при заболеваниях печени и/или почек.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при применении Милдроната развиваются редко. К возможным нежелательным реакциям относятся аллергические проявления (сыпь, зуд, покраснение кожи, отек), диспептические явления, изменения артериального давления, тахикардия, возбуждение, общая слабость.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Милдронат в капсулах, и доза инъекций определяются врачом в зависимости от показаний. Капсулы обычно принимают по 500-1000 мг в сутки, курс лечения 4-6 недель. Раствор вводят внутривенно, внутримышечно или парабульбарно (в глаз). Из-за возможного возбуждающего эффекта рекомендуется применять препарат в первой половине дня.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке возможно развитие симптомов артериальной гипотензии: головная боль, головокружение, тахикардия, общая слабость. Специфического антидота нет, лечение симптоматическое.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Милдронат можно сочетать со многими кардиологическими средствами (антиангинальными, антиаритмическими, диуретиками). Он усиливает действие сердечных гликозидов, нитроглицерина и гипотензивных средств, что требует осторожности из-за риска тахикардии и чрезмерного снижения давления.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Милдроната">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Милдроната">Аналоги Милдроната</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Милдроната, содержащим то же действующее вещество (мельдоний), относятся:</p>
+        <ul>
+            <li><strong>Мельдоний</strong> - кардиопротекторное и метаболическое средство, применяемое при тех же показаниях, что и оригинальный препарат.</li>
+            <li><strong>Кардионат</strong> - препарат на основе мельдония, используемый в комплексной терапии ишемической болезни сердца и нарушений мозгового кровообращения.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Милдроната у детей и подростков в возрасте до 18 лет противопоказано, так как эффективность и безопасность в этой возрастной группе не установлены.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Милдронат при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Милдронат при беременности и кормлении грудью">Можно ли принимать Милдронат при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение препарата во время беременности противопоказано из-за отсутствия данных о безопасности. На время лечения необходимо прекратить грудное вскармливание (лактацию), так как неизвестно, проникает ли мельдоний в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Милдронат и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Милдронат и алкоголь">Совместим ли Милдронат и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямого запрета на совместный прием в инструкции нет, однако препарат используется в терапии синдрома абстиненции при алкоголизме. Употребление алкоголя на фоне лечения сердечно-сосудистых или неврологических заболеваний, для которых показан Милдронат, не рекомендуется и может нейтрализовать терапевтический эффект.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Милдронат (капсулы и раствор) является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Милдронат">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Милдронат">Как хранить Милдронат</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в недоступном для детей месте при температуре не выше 25 °C. Раствор для инъекций нельзя замораживать.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности капсул составляет 4 года, раствора для инъекций - 5 лет. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Милдронат являются компании Grindex AS (Латвия, капсулы) и Santonica UAB (Литва, раствор). Упаковка и выпускающий контроль для рынка могут осуществляться различными дистрибьюторами, при этом производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставок.</p>
+    </div>
+</li>

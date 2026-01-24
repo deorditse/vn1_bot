@@ -1,0 +1,299 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Салофалька" class="product-details-instructions-main__menu-item">
+    Аналоги Салофалька
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Салофальк при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Салофальк при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Салофальк и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Салофальк и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Салофальк" class="product-details-instructions-main__menu-item">
+    Как хранить Салофальк
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Салофальк - это современное противовоспалительное кишечное средство, широко применяемое в гастроэнтерологической практике для лечения воспалительных заболеваний кишечника. Действующим веществом препарата является месалазин, который обеспечивает местное противовоспалительное действие в слизистой оболочке кишечника.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в нескольких лекарственных формах:</p>
+        <ul>
+            <li>Салофальк гранулы кишечнорастворимые с пролонгированным высвобождением дозировкой 500 мг и 1000 мг</li>
+            <li>Салофальк таблетки, покрытые кишечнорастворимой оболочкой дозировкой 250 мг и 500 мг</li>
+            <li>Салофальк суппозитории ректальные</li>
+            <li>Салофальк суспензия ректальная</li>
+            <li>Салофальк пена ректальная дозированная</li>
+        </ul>
+        <p>Основное действующее вещество во всех формах - месалазин. Вспомогательные компоненты различаются в зависимости от формы выпуска и дозировки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат относится к фармакотерапевтической группе противовоспалительных кишечных средств.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Месалазин обладает местным противовоспалительным действием, обусловленным ингибированием нейтрофильной липооксигеназы и синтеза простагландинов и лейкотриенов. Препарат замедляет миграцию, дегрануляцию и фагоцитоз нейтрофилов, а также секрецию иммуноглобулинов лимфоцитами. Оказывает антиоксидантное действие за счет способности связываться со свободными кислородными радикалами и разрушать их. Благодаря специальной лекарственной форме месалазин высвобождается непосредственно в области воспаления в кишечнике.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Высвобождение месалазина из гранул начинается через 2–3 часа после приема, максимальная концентрация в плазме достигается через 4–5 часов. Системная биодоступность после перорального приема составляет 15–25%. Месалазин метаболизируется в слизистой оболочке кишечника и печени до фармакологически неактивной N-ацетил-5-аминосалициловой кислоты. Выведение осуществляется преимущественно почками. Период полувыведения составляет около 4,4 часа.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Салофальк, необходимо обратиться к его официальным показаниям:</p>
+        <ul>
+            <li>Обострение язвенного колита легкой и средней степени тяжести</li>
+            <li>Поддержание ремиссии язвенного колита</li>
+            <li>Лечение болезни Крона (для таблетированных форм)</li>
+            <li>Лечение дистальных форм язвенного колита (для ректальных форм)</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются:</p>
+        <ul>
+            <li>Гиперчувствительность к месалазину, салициловой кислоте и ее производным</li>
+            <li>Тяжелая почечная и печеночная недостаточность</li>
+            <li>Детский возраст до 6 лет (для гранул и таблеток) и до 12 лет (для ректальной пены)</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при приеме Салофалька могут включать головную боль, головокружение, боль в животе, диарею, тошноту, вздутие живота. Реже наблюдаются аллергические реакции, изменения картины крови, нарушения функции печени и почек. В очень редких случаях возможны серьезные реакции: панкреатит, миокардит, перикардит, интерстициальный нефрит, синдром Стивенса-Джонсона.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Салофальк, зависит от формы препарата и показания. Гранулы и таблетки принимают внутрь, не разжевывая, запивая водой. Для лечения обострения язвенного колита обычно назначают по 1,5–3,0 г месалазина в сутки, разделенные на 2–3 приема. Для поддержания ремиссии доза составляет 1,5 г в сутки. Ректальные формы применяют 1–2 раза в сутки. Доза для детей рассчитывается исходя из массы тела.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке могут наблюдаться симптомы интоксикации салицилатами: шум в ушах, головокружение, головная боль, спутанность сознания, рвота, диарея. Специфического антидота не существует. Лечение симптоматическое и поддерживающее.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При одновременном применении с азатиоприном, 6-меркаптопурином или тиогуанином возможно усиление миелосупрессивного эффекта. Месалазин может снижать антикоагулянтный эффект варфарина. Лактулоза может уменьшать высвобождение месалазина из гранул due to снижению pH в кишечнике.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Салофалька">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Салофалька">Аналоги Салофалька</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Салофалька, содержащим то же действующее вещество (месалазин), относятся:</p>
+        <ul>
+            <li><strong>Кансалазин</strong> - противовоспалительный препарат для лечения язвенного колита с рН-зависимым высвобождением.</li>
+            <li><strong>Мезавант</strong> - современная форма месалазина с уникальной системой доставки действующего вещества.</li>
+            <li><strong>Месакол</strong> - кишечнорастворимые таблетки месалазина для терапии воспалительных заболеваний кишечника.</li>
+            <li><strong>Месалазин</strong> - дженерик, воспроизводящий терапевтическое действие оригинального препарата.</li>
+            <li><strong>Пентаса</strong> - препарат месалазина с гранулами, покрытыми этилцеллюлозной мембраной.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Салофальк в форме гранул и таблеток разрешен к применению у детей старше 6 лет. Дозировка рассчитывается индивидуально исходя из массы тела ребенка. Ректальная пена не применяется у детей до 12 лет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Салофальк при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Салофальк при беременности и кормлении грудью">Можно ли принимать Салофальк при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение во время беременности возможно только в случае, когда потенциальная польза для матери превышает возможный риск для плода. Месалазин проникает через плацентарный барьер, но в низких концентрациях. В период лактации применение возможно с осторожностью, так как месалазин выделяется в грудное молоко. При развитии диареи у ребенка грудное вскармливание следует прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Салофальк и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Салофальк и алкоголь">Совместим ли Салофальк и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямых данных о взаимодействии с алкоголем нет. Однако учитывая, что алкоголь может раздражающе действовать на слизистую ЖКТ и ухудшать течение воспалительных заболеваний кишечника, во время терапии рекомендуется исключить употребление алкогольных напитков.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Салофальк является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Салофальк">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Салофальк">Как хранить Салофальк</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в защищенном от света месте при температуре не выше 25 °C. Ректальную пену после вскрытия баллона следует использовать в течение 12 недель.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности для гранул составляет 4 года, для таблеток и суппозиториев - 3 года, для суспензии - 2 года, для ректальной пены - 1 год. Не применять по истечении срока годности, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Салофальк является компания DR. FALK PHARMA GMBH (Германия). Упаковка и выпускающий контроль могут осуществляться на разных производственных площадках, включая ЛОЗАН ФАРМА ГМБХ (Швейцария). Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

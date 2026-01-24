@@ -1,0 +1,301 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Алфлутоп" class="product-details-instructions-main__menu-item">
+    Алфлутоп
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Алфлутопа" class="product-details-instructions-main__menu-item">
+    Аналоги Алфлутопа
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Алфлутоп при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Алфлутоп при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Алфлутоп и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Алфлутоп и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Алфлутоп" class="product-details-instructions-main__menu-item">
+    Как хранить Алфлутоп
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Алфлутоп">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Алфлутоп">Алфлутоп</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Алфлутоп</strong> - это хондропротекторный препарат природного происхождения, широко применяемый в терапии дегенеративно-дистрофических заболеваний суставов и позвоночника. Его действующим веществом является биоактивный концентрат из мелкой морской рыбы. Алфлутоп способствует восстановлению хрящевой ткани и оказывает обезболивающее действие.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в форме <strong>раствора для инъекций</strong> (внутримышечного и внутрисуставного введения). Раствор представляет собой прозрачную жидкость, бесцветную или с желтовато-коричневым оттенком. 
+Доступные дозировки: ампулы по 1 мл и 2 мл.</p>
+        <ul>
+            <li><strong>Действующее вещество:</strong> биоактивный концентрат мелких морских рыб - 0.1 мл в 1 мл раствора.</li>
+            <li><strong>Вспомогательные вещества:</strong> фенол (не более 0.005 г/мл), вода для инъекций.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алфлутоп относится к фармакотерапевтической группе стимуляторов репарации тканей природного происхождения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика препарата обусловлена комплексным составом биоактивного концентрата, который включает хондроитин сульфат, аминокислоты, пептиды и микроэлементы. Алфлутоп предотвращает деструкцию здоровых тканей, стимулируя восстановительные процессы в хрящевой и интерстициальной ткани. Обезболивающий и противовоспалительный эффекты связаны с угнетением активности гиалуронидазы и нормализацией синтеза гиалуроновой кислоты. Это приводит к уменьшению боли и улучшению подвижности суставов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Данные о фармакокинетике препарата Алфлутоп не предоставлены.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Алфлутоп, необходимо обратиться к его официальным показаниям. Препарат применяется у взрослых для лечения:</p>
+        <ul>
+            <li>Первичного и вторичного остеоартроза различной локализации (коксартроз, гонартроз, артроз мелких суставов).</li>
+            <li>Остеохондроза.</li>
+            <li>Спондилеза.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Гиперчувствительность к компонентам препарата.</li>
+            <li>Беременность и период грудного вскармливания.</li>
+            <li>Детский возраст до 18 лет (в связи с отсутствием клинических данных).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при применении Алфлутопа развиваются редко. К ним относятся:</p>
+        <ul>
+            <li><strong>Редко:</strong> зудящий дерматит, покраснение кожи, ощущение жжения в месте инъекции, кратковременные мышечные боли (миалгии).</li>
+            <li><strong>Очень редко:</strong> анафилактические реакции.</li>
+            <li><strong>Частота неизвестна:</strong> при внутрисуставном введении возможно временное усиление болевого синдрома.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как применять Алфлутоп, и необходимая доза зависят от заболевания.</p>
+        <ul>
+            <li><strong>При полиостеоартрозе и остеохондрозе:</strong> препарат вводят глубоко внутримышечно по 1 мл ежедневно в течение 20 дней или по 2 мл через день (всего 10 инъекций за 20 дней).</li>
+            <li><strong>При поражении крупных суставов:</strong> препарат вводят внутрисуставно по 1-2 мл в каждый сустав с интервалом 3-4 дня. Курс лечения - 5-6 инъекций в каждый сустав.<br>
+            Возможно комбинирование внутрисуставного и внутримышечного введения. Курс терапии рекомендуется повторять через 6 месяцев по назначению врача.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке возможно усиление дозозависимых нежелательных реакций. Специфического антидота нет, лечение симптоматическое.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Клинически значимого взаимодействия Алфлутопа с другими лекарственными средствами не выявлено.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Алфлутопа">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Алфлутопа">Аналоги Алфлутопа</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Алфлутопа, содержащим то же действующее вещество (биоактивный концентрат мелких морских рыб), относятся:</p>
+        <ul>
+            <li><strong>Амбене Био</strong> - хондропротектор, применяемый для внутримышечного и внутрисуставного введения при остеоартрозах и остеохондрозе.</li>
+            <li><strong>Элтуфлоп Био</strong> - препарат на основе биоактивного концентрата морских рыб для лечения дегенеративных заболеваний суставов.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Алфлутопа у детей и подростков в возрасте до 18 лет противопоказано.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Алфлутоп при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Алфлутоп при беременности и кормлении грудью">Можно ли принимать Алфлутоп при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение препарата при беременности и в период лактации (грудного вскармливания) противопоказано.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Алфлутоп и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Алфлутоп и алкоголь">Совместим ли Алфлутоп и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Совместный прием препарата с алкоголем не изучался. Во избежание непредсказуемых реакций и потенциального снижения эффективности терапии рекомендуется отказаться от употребления алкоголя на период лечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алфлутоп является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Алфлутоп">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Алфлутоп">Как хранить Алфлутоп</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в защищенном от света месте при температуре от 15 °C до 25 °C. Беречь от детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности составляет 3 года. Не применять по его истечении.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Алфлутоп является компания <strong>ЗЕНТИВА А.С.</strong> (Словакия). Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

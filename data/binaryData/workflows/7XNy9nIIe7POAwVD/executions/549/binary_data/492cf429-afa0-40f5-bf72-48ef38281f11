@@ -1,0 +1,325 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Тантум Верде" class="product-details-instructions-main__menu-item">
+    Аналоги Тантум Верде
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Тантум Верде при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Тантум Верде при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Тантум Верде и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Тантум Верде и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Тантум Верде" class="product-details-instructions-main__menu-item">
+    Как хранить Тантум Верде
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тантум Верде - это нестероидный противовоспалительный препарат местного действия, применяемый для симптоматической терапии воспалительных и инфекционно-воспалительных заболеваний полости рта и глотки. Активным компонентом средства является бензидамин, который обладает противовоспалительным, обезболивающим и антисептическим эффектом. Препарат эффективно применяется при таких состояниях, как фарингит, тонзиллит, стоматит, гингивит, а также после стоматологических и ЛОР-операций.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тантум Верде доступен в нескольких лекарственных формах:</p>
+        <ul>
+            <li>Таблетки для рассасывания (со вкусом мяты, эвкалипта, лимона, апельсина и меда) - содержат по 3 мг бензидамина гидрохлорида;</li>
+            <li>Спрей для местного применения - одна доза содержит 0,255 мг бензидамина гидрохлорида;</li>
+            <li>Раствор для местного применения 0,15% - 0,15 г бензидамина гидрохлорида на 100 мл раствора;</li>
+            <li>Спрей Тантум Верде Форте - одна доза содержит 0,51 мг бензидамина гидрохлорида.</li>
+        </ul>
+        <p>Все формы содержат вспомогательные компоненты, включая ароматизаторы, подсластители (аспартам, ацесульфам калия), красители и стабилизаторы. Спрей и раствор содержат этанол.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тантум Верде относится к фармакотерапевтической группе нестероидных противовоспалительных средств. Препарат оказывает локальное противовоспалительное и анальгезирующее действие, а также обладает выраженным антисептическим эффектом в отношении широкого спектра патогенных микроорганизмов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Бензидамин, действующее вещество Тантум Верде, стабилизирует клеточные мембраны и подавляет синтез простагландинов, что обеспечивает противовоспалительный эффект. Благодаря способности быстро проникать через мембраны микроорганизмов, он вызывает повреждение клеточных структур, нарушает метаболизм и приводит к лизису патогенов. Препарат также демонстрирует противогрибковую активность в отношении Candida albicans, что расширяет его применение при инфекционных воспалениях слизистой полости рта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При местном применении бензидамин хорошо абсорбируется через слизистые оболочки, достигая терапевтических концентраций в воспаленных тканях. В системный кровоток препарат поступает в минимальных количествах, недостаточных для развития системных эффектов. Основной путь выведения - почки, в виде неактивных метаболитов или конъюгатов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тантум Верде применяется для симптоматического лечения болевого синдрома при воспалительных заболеваниях полости рта и ЛОР-органов различной этиологии. Чтобы понять, от чего помогает Тантум Верде, следует обратиться к официальным показаниям:</p>
+        <ul>
+            <li>стоматит, гингивит, глоссит (в том числе вызванные лучевой или химиотерапией);</li>
+            <li>фарингит, тонзиллит, ларингит;</li>
+            <li>кандидоз слизистой рта (в составе комбинированной терапии);</li>
+            <li>воспаление слюнных желез при наличии камней;</li>
+            <li>послеоперационный и посттравматический период (тонзиллэктомия, переломы челюсти, удаление зубов);</li>
+            <li>пародонтоз.</li>
+        </ul>
+        <p>При инфекциях, требующих системной терапии, Тантум Верде используется в комбинации с другими препаратами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказания к применению Тантум Верде включают:</p>
+        <ul>
+            <li>гиперчувствительность к бензидамину или другим компонентам состава;</li>
+            <li>детский возраст до 3 лет - для спрея, до 6 лет - для таблеток, до 12 лет - для раствора, до 18 лет - для формы Форте;</li>
+            <li>фенилкетонурия - для таблеток со вкусом мяты и лимона (содержат аспартам);</li>
+            <li>наследственная непереносимость фруктозы (из-за содержания изомальтозы).</li>
+        </ul>
+        <p>С осторожностью средство назначают при бронхиальной астме и аллергии на НПВП, включая ацетилсалициловую кислоту.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Согласно инструкции, побочные действия Тантум Верде встречаются редко. К ним относятся:</p>
+        <ul>
+            <li>местные реакции: жжение, сухость, онемение во рту;</li>
+            <li>аллергические проявления: кожный зуд, сыпь, фотосенсибилизация;</li>
+            <li>в крайне редких случаях - ларингоспазм, ангионевротический отек, анафилаксия.</li>
+        </ul>
+        <p>При усилении или появлении новых нежелательных реакций следует прекратить применение и обратиться к врачу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема применения зависит от лекарственной формы:</p>
+        <ul>
+            <li><strong>Таблетки</strong>: взрослым и детям старше 6 лет - по одной таблетке 3 раза в сутки, держать во рту до полного растворения;</li>
+            <li><strong>Спрей</strong>: взрослым и детям старше 12 лет - 4-8 впрыскиваний 2-6 раз в день; детям 6-12 лет - 4 впрыскивания; детям 3-6 лет - 1 впрыскивание на 4 кг массы тела (не более 4);</li>
+            <li><strong>Раствор</strong>: взрослым и детям старше 12 лет - 15 мл для полоскания 2-3 раза в сутки; при жжении - разводить водой 1:1;</li>
+            <li><strong>Тантум Верде Форте</strong>: взрослым - 2-4 дозы 2-6 раз в день.</li>
+        </ul>
+        <p>Продолжительность лечения не должна превышать 7 дней без консультации врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаев передозировки при соблюдении рекомендаций не зарегистрировано. При случайном проглатывании возможны: рвота, спазмы в животе, галлюцинации, судороги, тахикардия, угнетение дыхания. Лечение симптоматическое, включая промывание желудка и поддерживающую терапию. Антидот неизвестен.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Клинически значимых взаимодействий с другими лекарственными средствами не выявлено. Исследования фармакокинетического взаимодействия не проводились.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Тантум Верде">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Тантум Верде">Аналоги Тантум Верде</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Аналогами Тантум Верде по действующему веществу (бензидамину) являются следующие препараты. Все они относятся к группе нестероидных противовоспалительных средств местного действия и применяются при воспалительных и инфекционно-воспалительных заболеваниях полости рта и глотки:</p>
+        <ul>
+            <li>Ангидак Септ раствор: лекарственная форма для полоскания, содержит бензидамин в концентрации 0,15%. Применяется взрослыми и детьми старше 12 лет для симптоматического лечения боли и воспаления при стоматитах, гингивитах, фарингитах и после стоматологических вмешательств.</li>
+            <li>Ангидак спрей: дозированный спрей с содержанием 0,255 мг бензидамина на одну дозу. Назначается взрослым и детям от 3 лет. Обладает противовоспалительным, анальгезирующим и антисептическим действием, удобен в применении благодаря распылителю, позволяющему точно наносить препарат на очаг воспаления.</li>
+            <li>Ангидак Форте спрей: усиленная форма спрея с удвоенной концентрацией бензидамина (0,51 мг на дозу). Предназначен исключительно для взрослых при выраженных болевых симптомах. Используется по 2-4 впрыскивания до 6 раз в сутки.</li>
+            <li>Вертум Лор спрей: содержит бензидамин в дозе 0,255 мг. Применяется при остром тонзиллите, фарингите и других ЛОР-заболеваниях. Имеет аналогичный профиль безопасности и эффективности, как и оригинальный препарат.</li>
+            <li>Оралсепт спрей: препарат с 0,255 мг бензидамина на дозу. Используется для местной терапии боли и воспаления в ротовой полости и глотке. Выпускается в баллончиках с дозирующим устройством, обеспечивает равномерное распределение средства на слизистой.</li>
+            <li>Оралсепт таблетки: таблетки для рассасывания с содержанием 3 мг бензидамина. Предназначены для взрослых и детей старше 6 лет. Удобны при лечении глоссита, стоматита и острого фарингита, особенно когда нет возможности использовать спрей.</li>
+            <li>Фарбентум спрей: содержит 0,255 мг бензидамина на дозу. Обладает тем же механизмом действия: стабилизация мембран, подавление синтеза простагландинов, антимикробное и противогрибковое действие. Применяется при острых и хронических воспалительных состояниях слизистой рта и глотки.</li>
+            <li>Фарингоспрей спрей: дозированный спрей с бензидамином (0,255 мг/доза). Используется при инфекционно-воспалительных заболеваниях глотки и ротовой полости. Отличается доступной ценой и сопоставимой эффективностью с оригинальным препаратом.</li>
+        </ul>
+        <p>Все перечисленные аналоги имеют схожий состав, показания, противопоказания и профиль безопасности. Выбор конкретной формы зависит от возраста пациента, характера симптомов, личных предпочтений и рекомендаций врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тантум Верде в виде таблеток разрешен детям с 6 лет, спрей - с 3 лет (с учетом массы тела), раствор - с 12 лет, форма Форте - только с 18 лет. Применение у детей должно проходить под контролем взрослых.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Тантум Верде при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Тантум Верде при беременности и кормлении грудью">Можно ли принимать Тантум Верде при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не рекомендуется применять во время беременности и в период лактации из-за отсутствия достаточных клинических данных о безопасности. Решение о назначении возможно только при условии, что ожидаемая польза для матери превышает потенциальный риск для плода или ребенка.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Тантум Верде и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Тантум Верде и алкоголь">Совместим ли Тантум Верде и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямого взаимодействия с алкоголем не описано, однако стоит учитывать, что спрей и раствор содержат этанол. Употребление алкоголя на фоне терапии может усиливать раздражающее действие на слизистую и повышать риск системного всасывания, особенно при поврежденной слизистой оболочке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Таблетки, спрей и раствор Тантум Верде отпускаются без рецепта. Форма Тантум Верде Форте - по рецепту.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Тантум Верде">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Тантум Верде">Как хранить Тантум Верде</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Таблетки следует хранить при температуре не выше 25 °C, в оригинальной упаковке, в недоступном для детей месте. Спрей и раствор не требуют специальных условий хранения, но также должны быть защищены от доступа детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности всех форм Тантум Верде составляет 4 года. Применение по истечении срока запрещено.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителями Тантум Верде являются:</p>
+        <ul>
+            <li>AZIENDE CHIMICHE RIUNITE ANGELINI FRANCESCO A.C.R.A.F. S.p.A. (Италия) - для спреев и раствора;</li>
+            <li>ДИШ АГ (Швейцария) - для таблеток для рассасывания.</li>
+        </ul>
+        <p>Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

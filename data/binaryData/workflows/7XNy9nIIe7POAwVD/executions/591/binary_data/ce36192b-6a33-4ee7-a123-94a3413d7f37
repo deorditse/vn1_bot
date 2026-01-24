@@ -1,0 +1,393 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Иммуноглобулин" class="product-details-instructions-main__menu-item">
+    Иммуноглобулин
+  </a>
+</li>
+<li>
+  <a href="#Иммуноглобулин человека нормальный" class="product-details-instructions-main__menu-item">
+    Иммуноглобулин человека нормальный
+  </a>
+</li>
+<li>
+  <a href="#Иммуноглобулин человека противоаллергический" class="product-details-instructions-main__menu-item">
+    Иммуноглобулин человека противоаллергический
+  </a>
+</li>
+<li>
+  <a href="#Иммуноглобулиновый комплексный препарат (КИП)" class="product-details-instructions-main__menu-item">
+    Иммуноглобулиновый комплексный препарат (КИП)
+  </a>
+</li>
+<li>
+  <a href="#Специфические иммуноглобулины" class="product-details-instructions-main__menu-item">
+    Специфические иммуноглобулины
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Иммуноглобулина" class="product-details-instructions-main__menu-item">
+    Аналоги Иммуноглобулина
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать иммуноглобулин при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать иммуноглобулин при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли иммуноглобулин и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли иммуноглобулин и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Иммуноглобулин" class="product-details-instructions-main__menu-item">
+    Как хранить Иммуноглобулин
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Иммуноглобулин">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Иммуноглобулин">Иммуноглобулин</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Иммуноглобулин - это иммунобиологический препарат, содержащий очищенные антитела, полученные из плазмы крови здоровых доноров. Он относится к фармакологической группе иммуноглобулинов и применяется для заместительной терапии при иммунодефицитах, а также для лечения и профилактики различных инфекционных, аутоиммунных и аллергических состояний. В зависимости от формы выпуска и состава иммуноглобулин может выполнять как системные, так и локальные защитные функции.</p>
+    <p>Препараты иммуноглобулина классифицируются по способу введения и составу активных фракций.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Иммуноглобулин человека нормальный">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Иммуноглобулин человека нормальный">Иммуноглобулин человека нормальный</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Это стерильный раствор, предназначенный для внутримышечного или внутривенного капельного введения, содержащий преимущественно антитела класса IgG, очищенные и стандартизованные. Он применяется в клинической практике при первичных и вторичных иммунодефицитах, сепсисе, синдроме Кавасаки, тяжелых вирусных и бактериальных инфекциях. Обеспечивает немедленную пассивную защиту организма и компенсирует недостаток гуморального иммунитета.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Иммуноглобулин человека противоаллергический">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Иммуноглобулин человека противоаллергический">Иммуноглобулин человека противоаллергический</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Данная форма содержит преимущественно IgG-фракции, обладающие выраженным антиаллергическим действием. Препарат предназначен для внутримышечного введения и применяется в составе комплексной терапии аллергических заболеваний немедленного типа: бронхиальная астма, поллиноз, крапивница, отек Квинке, атопический дерматит.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Иммуноглобулиновый комплексный препарат (КИП)">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Иммуноглобулиновый комплексный препарат (КИП)">Иммуноглобулиновый комплексный препарат (КИП)</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Это лиофилизат для приготовления раствора для перорального приёма, содержащий комбинацию антител классов IgG, IgA и IgM, обеспечивающую защиту в просвете ЖКТ. Он применяется в составе комплексной терапии кишечных инфекций у детей с 1 месяца жизни и взрослых. КИП действует локально, предотвращая адгезию патогенов к слизистой и уменьшая тяжесть инфекционного процесса.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Специфические иммуноглобулины">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Специфические иммуноглобулины">Специфические иммуноглобулины</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Это препараты на основе иммуноглобулина G (IgG), которые характеризуются высоким титром антител, направленных против конкретного антигена (возбудителя или его токсина). Они производятся из плазмы, полученной от прецизионно отобранных доноров-добровольцев, которые были гипериммунизированы соответствующими вакцинами (например, против столбняка, гепатита B, бешенства) или имеют документально подтверждённый высокий естественный титр специфических антител вследствие перенесённой инфекции (например, против вируса ветряной оспы).</p>
+    <p>Таким образом, иммуноглобулин - это не один препарат, а целая группа лекарственных средств, различающихся по способу введения, составу и терапевтическим задачам. Это позволяет врачу подобрать наиболее подходящую форму в зависимости от диагноза, состояния пациента и целей терапии - будь то системная заместительная терапия при иммунодефиците, лечение аллергии или кишечной инфекции.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Существует несколько форм выпуска иммуноглобулинов, включая:</p>
+    <ul>
+      <li><strong>Раствор для внутримышечного введения</strong></li>
+      <li><strong>Раствор для внутривенного введения</strong></li>
+      <li><strong>Раствор для инфузий</strong></li>
+      <li><strong>Лиофилизат для приготовления раствора для приёма внутрь</strong> (иммуноглобулиновый комплексный препарат - КИП)</li>
+    </ul>
+    <p>Действующим веществом большинства иммуноглобулинов является <strong>иммуноглобулин человека нормальный [IgG]</strong>, могут быть <strong>комбинации IgG, IgA и IgM</strong>. Вспомогательные вещества зависят от формы выпуска (чаще всего это глицин и вода для инъекций).</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Иммуноглобулин человека нормальный оказывает иммуномодулирующее действие. Он повышает уровень антител в организме, обеспечивает пассивную защиту против широкого спектра вирусных и бактериальных патогенов, восполняет дефицит IgG, снижая риск развития инфекционных заболеваний у пациентов с иммунодефицитом.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат содержит опсонизирующие и нейтрализующие антитела, способные связывать и обезвреживать бактерии, вирусы и токсины. В организме иммуноглобулин распределяется между плазмой и внесосудистым пространством, достигая равновесия примерно через 7 дней. Благодаря своему механизму действия, иммуноглобулин помогает уменьшить выраженность аутоиммунных реакций, подавить воспалительный ответ и стабилизировать работу иммунной системы.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>После внутривенного введения биодоступность составляет 100%. У пациентов с нормальным уровнем IgG период полувыведения - около 21 дня, при гипогаммаглобулинемии - до 32 дней. При пероральном приёме (КИП) активные фрагменты обнаруживаются в кишечнике и сохраняют серологическую активность на протяжении нескольких суток.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Чтобы понять, от чего помогает иммуноглобулин, следует обратиться к официальным показаниям:</p>
+    <ul>
+      <li>Первичные и вторичные иммунодефициты (агаммаглобулинемия, ВИЧ у детей, после трансплантации костного мозга)</li>
+      <li>Идиопатическая тромбоцитопеническая пурпура</li>
+      <li>Синдром Кавасаки (в комплексе с АСК)</li>
+      <li>Тяжёлые бактериальные и вирусные инфекции (в том числе сепсис)</li>
+      <li>Синдром Гийена - Барре, миастения, нейропатии</li>
+      <li>Аллергические заболевания (атопический дерматит, бронхиальная астма)</li>
+      <li>Профилактика инфекций у недоношенных детей</li>
+      <li>Профилактика резус-конфликта при беременности</li>
+      <li>Поддерживающая терапия при цитостатической или иммунодепрессивной терапии</li>
+      <li>Комплексная терапия кишечных инфекций у детей и взрослых (КИП)</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Противопоказаниями к применению иммуноглобулина являются:</p>
+    <ul>
+      <li>Гиперчувствительность к человеческим иммуноглобулинам</li>
+      <li>Дефицит IgA с антителами к нему</li>
+      <li>Аллергические реакции в анамнезе на препараты крови</li>
+      <li>Острые респираторные инфекции (для внутримышечного введения)</li>
+      <li>Детский возраст до 1 года (для некоторых форм)</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные эффекты">Побочные эффекты</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Как и любой биологически активный препарат, иммуноглобулин может вызывать побочные действия:</p>
+    <ul>
+      <li>Общие: головная боль, тошнота, рвота, лихорадка, утомляемость, миалгия</li>
+      <li>Аллергические: кожная сыпь, зуд, анафилаксия (в редких случаях)</li>
+      <li>Сердечно-сосудистые: тахикардия, гипотензия, приливы</li>
+      <li>Местные: боль и гиперемия в месте инъекции</li>
+      <li>При приеме КИП возможны местные аллергические реакции и обострение основного заболевания</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Как пить иммуноглобулин и какую дозу выбрать - зависит от формы препарата и диагноза. Дозировки подбираются индивидуально лечащим врачом:</p>
+    <ul>
+      <li>В/в: 0,2-0,8 г/кг массы тела, курсами с интервалом 2-4 недели</li>
+      <li>В/м: по 1-2 мл, курс из 5 инъекций каждые 4 дня</li>
+      <li>Перорально (КИП): 1-2 дозы 2-3 раза в день за 30 минут до еды, курс - 5 дней.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Случаи передозировки иммуноглобулина не описаны. Однако при введении больших объёмов возможна гиперреакция иммунной системы или перегрузка объёмом.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Иммуноглобулин может снижать эффективность живых ослабленных вакцин, особенно при введении парентерально. После введения иммуноглобулина вакцинацию проводят не ранее чем через 3 месяца. Также препарат может применяться совместно с антибиотиками, иммунодепрессантами и другими ЛС, но не смешивается в одном шприце или растворе.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Иммуноглобулина">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Иммуноглобулина">Аналоги Иммуноглобулина</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>К аналогам с тем же действующим веществом (иммуноглобулин человека нормальный) относятся:</p>
+    <ul>
+      <li><strong>Габриглобин IgG</strong> - нормальный человеческий иммуноглобулин для внутривенного введения</li>
+      <li><strong>Имбиоглобулин</strong> - применяется при иммунодефицитах и вирусных инфекциях</li>
+      <li><strong>Иммуновенин</strong> - иммуноглобулин внутривенный широкого спектра действия</li>
+      <li><strong>Октагам</strong> - высокоочищенный иммуноглобулин человека нормальный</li>
+      <li><strong>Привиджен</strong> - концентрат антител IgG для системной терапии</li>
+      <li><strong>Сигардис МТ</strong> - форма иммуноглобулина для профилактики и лечения вирусных инфекций</li>
+      <li><strong>Пентаглобин</strong> - комплекс IgG, IgA, IgM для тяжёлых инфекций и иммуномодуляции</li>
+      <li><strong>Иммуноглобулиновый Комплексный Препарат (КИП)</strong> - пероральная форма с IgG+IgA+IgM</li>
+    </ul>
+    <p>К специфическим иммуноглобулинам, содержащим ту же основу, но направленным на определённые цели, относятся:</p>
+    <ul>
+      <li><strong>Иммуноглобулин против клещевого энцефалита</strong></li>
+      <li><strong>Иммуноглобулин человека противостафилококковый</strong></li>
+      <li><strong>Иммуноглобулин человека противоаллергический</strong></li>
+      <li><strong>Иммуноро Кедрион</strong> - антирезус иммуноглобулин</li>
+      <li><strong>Резогам Н</strong> - профилактика резус-конфликта</li>
+      <li><strong>Неогепатект / Неоцитотект</strong> - против цитомегаловирусной инфекции</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Да, иммуноглобулин применяется у детей с рождения, особенно у недоношенных или страдающих иммунодефицитом. Детские дозировки корректируются по массе тела. Пероральные формы (КИП) разрешены с 1 месяца жизни.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать иммуноглобулин при беременности и кормлении грудью">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать иммуноглобулин при беременности и кормлении грудью">Можно ли принимать иммуноглобулин при беременности и кормлении грудью</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Иммуноглобулин может применяться при беременности и лактации, если польза для матери превышает потенциальный риск. Препарат используется, в том числе, для профилактики резус-конфликта. Антитела проникают в грудное молоко, что может дополнительно защищать ребёнка.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли иммуноглобулин и алкоголь">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместим ли иммуноглобулин и алкоголь">Совместим ли иммуноглобулин и алкоголь</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Употребление алкоголя на фоне лечения иммуноглобулином не рекомендуется, поскольку этанол может снижать иммунный ответ и усиливать побочные действия. Также повышается нагрузка на печень и риск аллергических реакций.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Иммуноглобулины всех типов являются рецептурными препаратами, их назначение требует врачебного контроля и соблюдения строгих показаний.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Иммуноглобулин">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как хранить Иммуноглобулин">Как хранить Иммуноглобулин</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат хранят в защищённом от света месте при температуре от 2 до 8 °C, не замораживать. Ампулы, флаконы и лиофилизаты нельзя использовать при нарушении целостности упаковки или изменении физико-химических свойств.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности составляет:</p>
+    <ul>
+      <li>Для инъекционных форм - 2 года</li>
+      <li>Для лиофилизатов (КИП) - 3 года</li>
+    </ul>
+    <p>Использовать строго до даты, указанной на упаковке.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Производителями иммуноглобулинов могут быть разные компании. Уточняйте производителя в аптеке, производственная площадка (завод-производитель) может меняться в зависимости от серии и завода-упаковщика.</p>
+  </div>
+</li>

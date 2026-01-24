@@ -1,0 +1,300 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Спазмалгона" class="product-details-instructions-main__menu-item">
+    Аналоги Спазмалгона
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Спазмалгон при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Спазмалгон при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Спазмалгон и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Спазмалгон и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Спазмалгон" class="product-details-instructions-main__menu-item">
+    Как хранить Спазмалгон
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Спазмалгон - это комбинированный анальгезирующий препарат, широко применяемый для купирования болевого синдрома слабой и умеренной интенсивности различного происхождения. Его комплексное действие направлено на обезболивание, снятие спазмов и снижение повышенной температуры тела.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в одной лекарственной форме - таблетки для приема внутрь. Каждая таблетка Спазмалгона содержит три активных компонента: </p>
+        <ul>
+            <li>Метамизол натрия - 500 мг (ненаркотический анальгетик).</li>
+            <li>Питофенона гидрохлорид - 5,0 мг (миотропный спазмолитик).</li>
+            <li>Фенпивериния бромид - 0,1 мг (м-холиноблокатор).</li>
+        </ul>
+        <p>К вспомогательным веществам относятся: лактозы моногидрат, пшеничный крахмал, тальк, магния стеарат, желатин и натрия гидрокарбонат.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Спазмалгон относится к фармакотерапевтической группе комбинированных анальгезирующих средств (ненаркотический анальгетик + спазмолитик).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика препарата обусловлена синергическим действием его компонентов. Метамизол натрия оказывает анальгезирующее, жаропонижающее и противовоспалительное действие, неселективно ингибируя циклооксигеназу. Питофенон подобно папаверину вызывает прямое расслабление гладкой мускулатуры внутренних органов. Фенпивериния бромид дополняет этот эффект за счет м-холиноблокирующего действия. В совокупности это приводит к быстрому облегчению боли и снятию спазма.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Метамизол натрия хорошо абсорбируется из ЖКТ, гидролизуется в кишечной стенке с образованием активного метаболита. Связывание с белками плазмы составляет 50-60%. Метаболизируется в печени, выводится почками. Данные о фармакокинетике питофенона и фенпивериния бромида ограничены. Известно, что они характеризуются неполной резорбцией, метаболизируются в печени и выводятся преимущественно почками, не проникая через гематоэнцефалический барьер.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Спазмалгон, необходимо обратиться к его показаниям. Препарат применяется для симптоматического облегчения болевого синдрома слабой и умеренной выраженности: при головной и зубной боли, мигрени, невралгии, миалгии, артралгии, альгодисменорее, а также боли при травмах и ожогах.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются: гиперчувствительность к компонентам или производным пиразолона; угнетение костномозгового кроветворения; заболевания кроветворной системы (агранулоцитоз, анемия); тяжелая печеночная и/или почечная недостаточность; дефицит глюкозо-6-фосфатдегидрогеназы; тахиаритмии, тяжелая стенокардия, декомпенсированная ХСН; закрытоугольная глаукома; гиперплазия предстательной железы; кишечная непроходимость; коллапс; беременность и период грудного вскармливания (лактация); детский возраст до 8 лет; атония желчного или мочевого пузыря; непереносимость лактозы; аллергия на пшеницу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Возможные побочные действия Спазмалгона, в основном связанные с метамизолом натрия, включают: </p>
+        <ul>
+            <li>Со стороны крови: лейкопения, агранулоцитоз, тромбоцитопения, анемия.</li>
+            <li>Аллергические реакции: анафилактический шок, кожная сыпь, ангионевротический отек, бронхоспазм.</li>
+            <li>Со стороны сердечно-сосудистой системы: тахикардия, аритмия, артериальная гипотензия.</li>
+            <li>Со стороны ЖКТ: тошнота, сухость во рту, боль в животе, в редких случаях - желудочно-кишечные кровотечения.</li>
+            <li>Со стороны печени и почек: повышение активности ферментов, гепатит, нарушение функции почек, окрашивание мочи в красный цвет.</li>
+            <li>Со стороны нервной системы: головокружение, головная боль, нарушение аккомодации.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Спазмалгон, и доза зависят от возраста пациента. Таблетки принимают внутрь после еды, не разжевывая, запивая водой. </p>
+        <ul>
+            <li>Взрослые и подростки с 15 лет: по 1-2 таблетки 2-3 раза в сутки. Максимальная суточная доза - 6 таблеток.</li>
+            <li>Дети 12-15 лет: по 1 таблетке 2-3 раза в сутки.</li>
+            <li>Дети 8-11 лет: по ½ таблетки 2-3 раза в сутки.</li>
+        </ul>
+        <p>Курс приема без контроля врача не должен превышать 5 дней.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Симптомы передозировки включают рвоту, сухость во рту, гипотонию, сонливость, спутанность сознания, нарушение функции печени и почек, судороги. Лечение: промывание желудка, прием активированного угля, симптоматическая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Седативные средства и транквилизаторы усиливают анальгезирующий эффект. Совместный прием с другими ненаркотическими анальгетиками повышает токсичность. Метамизол натрия может усиливать действие пероральных гипогликемических средств, антикоагулянтов, ГКС и НПВП, вытесняя их из связи с белками плазмы. Индукторы печеночных ферментов (барбитураты) ослабляют эффект метамизола. Одновременный прием с миелотоксическими средствами увеличивает риск гематотоксичности. Следует избегать комбинации с метотрексатом, тиамазолом, хлорпромазином. Усиливает эффекты этанола.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Спазмалгона">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Спазмалгона">Аналоги Спазмалгона</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Спазмалгона, содержащим комбинацию метамизола натрия, питофенона и фенпивериния, относятся: </p>
+        <ul>
+            <li><strong>Максиган</strong> - комбинированный анальгетик-спазмолитик, применяемый при болях, сопровождаемых спазмами.</li>
+            <li><strong>Спазган</strong> - препарат для купирования болевого синдрома и снятия спазмов гладкой мускулатуры.</li>
+            <li><strong>Брал</strong> - комбинированное средство, обладающее анальгезирующим и спазмолитическим действием.</li>
+            <li><strong>Ревалгин</strong> - используется для симптоматического лечения боли при спастических состояниях.</li>
+            <li><strong>Спазмалин</strong> - анальгетик-спазмолитик, показанный при различных видах боли.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Спазмалгон может применяться у детей, но только строго по назначению врача. Разрешен с 8 лет в соответствующих возрасту дозировках.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Спазмалгон при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Спазмалгон при беременности и кормлении грудью">Можно ли принимать Спазмалгон при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение препарата противопоказано при беременности и в период лактации (грудного вскармливания).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Спазмалгон и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Спазмалгон и алкоголь">Совместим ли Спазмалгон и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Употребление алкоголя на фоне приема Спазмалгона не рекомендуется. Этанол усиливает анальгезирующий эффект препарата и повышает риск побочных действий, особенно со стороны печени и центральной нервной системы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Спазмалгон отпускается без рецепта врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Спазмалгон">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Спазмалгон">Как хранить Спазмалгон</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Таблетки следует хранить в оригинальной упаковке в недоступном для детей месте при температуре не выше 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности препарата составляет 3 года. Не применять по истечении даты, указанной на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Спазмалгон является компания Balkanpharma-Dupnitsa AD (Болгария). Упаковка и выпускающий контроль могут осуществляться на разных площадках. Следует учитывать, что производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

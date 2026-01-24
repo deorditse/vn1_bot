@@ -1,0 +1,329 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Ингавирин" class="product-details-instructions-main__menu-item">
+    Ингавирин
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Ингавирина" class="product-details-instructions-main__menu-item">
+    Аналоги Ингавирина
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Ингавирин при беременности и лактации" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Ингавирин при беременности и лактации
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Ингавирин и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Ингавирин и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Ингавирин" class="product-details-instructions-main__menu-item">
+    Как хранить Ингавирин
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Ингавирин">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Ингавирин">Ингавирин</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p><strong>Ингавирин</strong> - современный противовирусный препарат, применяемый для лечения и профилактики гриппа типов А и В, а также других острых респираторных вирусных инфекций (ОРВИ), включая аденовирусную, парагрипп, респираторно-синцитиальную и риновирусную инфекции. Действующим веществом является <strong>имидазолилэтанамид пентандиовой кислоты</strong>, который препятствует репликации вируса в клетках и усиливает защитные механизмы организма.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p><strong>Капсулы Ингавирин</strong>:</p>
+    <ul>
+      <li>30 мг (капсулы синего цвета),</li>
+      <li>90 мг (капсулы красного цвета). <br>Содержимое - порошок и гранулы белого или почти белого цвета.</li>
+    </ul>
+    <p><strong>Сироп Ингавирин</strong>:</p>
+    <ul>
+      <li>Прозрачная бесцветная жидкость с характерным запахом,</li>
+      <li>Выпускается во флаконах по 50 мл (для детей 6 месяцев-3 лет) и по 90 мл (для детей старше 3 лет и взрослых).</li>
+    </ul>
+    <p><strong>Состав</strong>:</p>
+    <ul>
+      <li>В 1 капсуле содержится 30 мг или 90 мг имидазолилэтанамида пентандиовой кислоты.</li>
+      <li>В 5 мл сиропа содержится 30 мг действующего вещества.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат оказывает противовирусное и иммуномодулирующее действие. Он блокирует размножение вируса в клетках, способствует его элиминации, активирует продукцию интерферонов и снижает уровень воспалительных медиаторов, что уменьшает выраженность интоксикационного синдрома и риск осложнений.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Усиление противовирусного ответа клеток за счет активации рецепторов интерферона.</li>
+      <li>Блокирование синтеза вирусных белков и подавление репликации.</li>
+      <li>Снижение продукции провоспалительных цитокинов, уменьшение воспаления.</li>
+      <li>Нормализация структуры и функций тканей, пораженных вирусом.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Быстро всасывается из желудочно-кишечного тракта, максимальная концентрация в плазме достигается через 30-60 минут.</li>
+      <li>При регулярном приеме накапливается преимущественно в печени, почках и легких.</li>
+      <li>Период полувыведения - около 1,8 часа.</li>
+      <li>Выведение осуществляется через кишечник (77%) и почки (23%).</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Чтобы определить, <strong>от чего помогает Ингавирин</strong>, следует учитывать официальные показания:</p>
+    <ul>
+      <li>лечение гриппа типов А и В;</li>
+      <li>терапия ОРВИ (аденовирусная, парагрипп, респираторно-синцитиальная, риновирусная инфекции);</li>
+      <li>профилактика гриппа и других ОРВИ после контакта с инфицированными лицами.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Гиперчувствительность к действующему веществу или вспомогательным компонентам.</li>
+      <li>Наследственные нарушения обмена углеводов (непереносимость фруктозы, дефицит сахаразы/изомальтазы).</li>
+      <li>Беременность и период лактации.</li>
+      <li>Возрастные ограничения: до 6 месяцев - лечение противопоказано; до 3 лет - профилактическое применение противопоказано.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные эффекты">Побочные эффекты</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Наиболее частыми <strong>побочными действиями Ингавирина</strong> являются аллергические реакции (сыпь, зуд, кожные высыпания). В редких случаях возможны диспепсические расстройства.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p><strong>Капсулы</strong>:</p>
+    <ul>
+      <li>взрослым назначается 90 мг 1 раз в сутки;</li>
+      <li>детям 7-17 лет - 60 мг 1 раз в сутки;</li>
+      <li>детям 3-6 лет - 30 мг 1 раз в сутки;</li>
+      <li>продолжительность терапии - 5-7 дней;</li>
+      <li>лечение рекомендуется начинать не позднее 48 часов от появления первых симптомов заболевания;</li>
+      <li>при тяжелых формах в течение первых 3 суток может применяться двойная доза, затем переход на стандартный режим.</li>
+    </ul>
+    <p><strong>Сироп</strong>:</p>
+    <ul>
+      <li>взрослым - 15 мл (90 мг) 1 раз в сутки;</li>
+      <li>детям 7-17 лет - 10 мл (60 мг) 1 раз в сутки;</li>
+      <li>детям 3-6 лет - 5 мл (30 мг) 1 раз в сутки;</li>
+      <li>детям 6 месяцев-3 лет - дозировка определяется массой тела (от 2,5 мл до 5 мл в сутки). <br>Продолжительность терапии - 5-7 дней.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Случаи передозировки в клинической практике не описаны.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Специальные исследования взаимодействия не проводились. Совместное применение с другими противовирусными средствами не рекомендуется без назначения врача.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Ингавирина">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Ингавирина">Аналоги Ингавирина</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Аналоги по международному непатентованному наименованию (имидазолилэтанамид пентандиовой кислоты) отсутствуют. Ингавирин является оригинальным препаратом.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Ингавирин разрешен для применения у детей с 6 месяцев (в форме сиропа). С профилактической целью препарат может использоваться только с 3 лет. Дозировка определяется возрастом и формой выпуска.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Ингавирин при беременности и лактации">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать Ингавирин при беременности и лактации">Можно ли принимать Ингавирин при беременности и лактации</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат противопоказан во время беременности и в период грудного вскармливания, поскольку безопасность и эффективность для данной категории пациентов не установлены.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Ингавирин и алкоголь">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместим ли Ингавирин и алкоголь">Совместим ли Ингавирин и алкоголь</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Совместное применение не рекомендуется, так как этанол снижает эффективность противовирусной терапии и повышает нагрузку на печень.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li><strong>Капсулы 30 мг и 90 мг</strong>, а также сироп для детей старше 3 лет отпускаются <strong>без рецепта</strong>.</li>
+      <li><strong>Ингавирин сироп 30 мг/5 мл, флакон 50 мл для детей 6 месяцев-3 лет</strong> отпускается <strong>по рецепту врача</strong>, так как терапия в этой возрастной группе требует индивидуального подбора дозы и медицинского контроля.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Ингавирин">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как хранить Ингавирин">Как хранить Ингавирин</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат следует хранить в сухом месте, защищенном от света, при температуре не выше 25 °C. Хранить в недоступном для детей месте.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности составляет 3 года. Применение по истечении срока, указанного на упаковке, недопустимо.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li><strong>Капсулы</strong>: АО «Валента Фарм» (Россия).</li>
+      <li><strong>Сироп</strong>: ABC Farmaceutici S.p.A. (Италия).</li>
+    </ul>
+    <p>Производственные площадки могут меняться.</p>
+  </div>
+</li>

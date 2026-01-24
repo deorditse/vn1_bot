@@ -1,0 +1,344 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание" class="product-details-instructions-main__menu-item">
+    Описание
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Терафлю" class="product-details-instructions-main__menu-item">
+    Аналоги Терафлю
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Терафлю при беременности и лактации" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Терафлю при беременности и лактации
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Терафлю и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Терафлю и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Терафлю" class="product-details-instructions-main__menu-item">
+    Как хранить Терафлю
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Описание">Описание</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Терафлю - это комбинированное лекарственное средство, применяемое при простудных заболеваниях и гриппе. Оно помогает облегчить основные проявления инфекции: жар, головную и мышечную боль, заложенность носа, чихание и общее недомогание. Препарат сочетает в себе несколько активных веществ - парацетамол, фенилэфрин и фенирамин, благодаря чему оказывает сразу жаропонижающее, обезболивающее, сосудосуживающее и антигистаминное действие.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Терафлю выпускается в виде порошка для приготовления раствора для приема внутрь. В линейке представлены разные вкусы - лесные ягоды, лимон, корица с яблоком.</p>
+    <p><strong>Состав одного пакетика Терафлю</strong>:</p>
+    <ul>
+      <li>парацетамол - 325 мг,</li>
+      <li>фенилэфрин гидрохлорид - 10 мг,</li>
+      <li>фенирамин малеат - 20 мг.</li>
+    </ul>
+    <p><strong>Состав одного пакетика Терафлю Экстра</strong>:</p>
+    <ul>
+      <li>парацетамол - 650 мг,</li>
+      <li>фенилэфрин гидрохлорид - 10 мг,</li>
+      <li>фенирамин малеат - 20 мг.</li>
+    </ul>
+    <p>Таблеток Терафлю не существует.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>По фармакотерапевтической классификации Терафлю относится к анальгетикам-антипиретикам с дополнительным противоотечным и антигистаминным эффектом.</p>
+    <p>Препарат обеспечивает комплексный эффект, целенаправленно воздействуя на ключевые проявления болезни:</p>
+    <ul>
+      <li>снижает жар,</li>
+      <li>уменьшает болевой синдром,</li>
+      <li>облегчает заложенность носа,</li>
+      <li>устраняет чихание и слезотечение,</li>
+      <li>облегчает общее самочувствие при гриппе и ОРВИ.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Парацетамол оказывает жаропонижающее и обезболивающее действие за счет угнетения синтеза простагландинов в центральной нервной системе.</li>
+      <li>Фенилэфрин сужает сосуды и уменьшает отек слизистой оболочки носа.</li>
+      <li>Фенирамин проявляет антигистаминные свойства, снижает аллергические проявления и облегчает дыхание.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Парацетамол быстро всасывается в ЖКТ, достигая максимальной концентрации в крови в течение 10-60 минут. Метаболизируется в печени, выводится почками, период полувыведения - 1-3 часа.</li>
+      <li>Фенилэфрин подвергается активному метаболизму в печени и кишечнике, в плазме крови максимальные показатели фиксируются через 45-120 минут. Выводится почками, период полувыведения - 2-3 часа.</li>
+      <li>Фенирамин медленнее покидает организм: его концентрация достигает максимума через 1-2,5 часа, а период полувыведения может составлять до 19 часов.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Чтобы понять, от чего помогает Терафлю, необходимо учитывать его состав. Препарат применяется для симптоматического лечения:</p>
+    <ul>
+      <li>гриппа,</li>
+      <li>ОРВИ,</li>
+      <li>простудных заболеваний, сопровождающихся жаром, ознобом, головной и мышечной болью, заложенностью носа, чиханием, насморком.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>индивидуальная гиперчувствительность к компонентам препарата,</li>
+      <li>совместный прием с ингибиторами МАО и в течение 2 недель после их отмены,</li>
+      <li>артериальная гипертензия, тяжелые заболевания сердца и сосудов,</li>
+      <li>сахарный диабет,</li>
+      <li>алкоголизм,</li>
+      <li>закрытоугольная глаукома,</li>
+      <li>гипертиреоз,</li>
+      <li>беременность и лактация,</li>
+      <li>детский возраст до 12 лет.</li>
+    </ul>
+    <p>С осторожностью применяют у пациентов с нарушениями функций печени, почек, сердца, при бронхиальной астме, анемии, гиперплазии предстательной железы.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные эффекты">Побочные эффекты</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Возможные побочные действия Терафлю включают:</p>
+    <ul>
+      <li>со стороны ЖКТ: тошнота, рвота, сухость во рту, боли в эпигастрии, диарея, запор;</li>
+      <li>со стороны нервной системы: сонливость, головокружение, возбуждение, головная боль, галлюцинации;</li>
+      <li>со стороны сердечно-сосудистой системы: тахикардия, повышение давления;</li>
+      <li>аллергические реакции: кожная сыпь, зуд, ангионевротический отек;</li>
+      <li>со стороны крови: тромбоцитопения, лейкопения.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Многих пациентов интересует, как пить Терафлю и какая доза считается оптимальной.</p>
+    <ul>
+      <li>Взрослым и детям старше 12 лет назначают по 1 пакетику каждые 4-6 часов, но не более 4 пакетиков в сутки.</li>
+      <li>Раствор готовят, растворив порошок в стакане горячей воды, хорошо размешивают и выпивают теплым.</li>
+      <li>Препарат рекомендуется принимать на ночь.</li>
+      <li>Максимальная длительность курса - 5 дней.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Передозировка чаще связана с парацетамолом и может привести к поражению печени. Симптомы: тошнота, рвота, бледность кожи, анорексия, боли в животе. Возможны судороги, аритмия.</p>
+    <p>В случае превышения дозы необходима срочная медицинская помощь, промывание желудка, введение ацетилцистеина как антидота.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Нельзя сочетать с другими средствами, содержащими парацетамол, чтобы не вызвать токсическое поражение печени.</li>
+      <li>Ингибиторы МАО, трициклические антидепрессанты, алкоголь усиливают действие препарата.</li>
+      <li>Бета-адреноблокаторы и сердечные гликозиды повышают риск аритмии.</li>
+      <li>Варфарин и кумарины при длительном совместном приеме увеличивают риск кровотечений.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Терафлю">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Терафлю">Аналоги Терафлю</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>К препаратам с аналогичным составом и действием относятся:</p>
+    <ul>
+      <li><strong>Колдакт Хот Дринк</strong> - комбинированное средство в форме порошка для приготовления горячего напитка. Обладает жаропонижающим, обезболивающим и противоотечным действием, применяется при гриппе и простуде.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Терафлю разрешен к применению только с 12 лет. Для детей младшего возраста препарат противопоказан.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Терафлю при беременности и лактации">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать Терафлю при беременности и лактации">Можно ли принимать Терафлю при беременности и лактации</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>В период беременности и при грудном вскармливании (лактация) препарат противопоказан, так как компоненты могут негативно повлиять на плод и новорожденного.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Терафлю и алкоголь">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместим ли Терафлю и алкоголь">Совместим ли Терафлю и алкоголь</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Совместный прием с алкоголем противопоказан. Этанол усиливает токсическое действие парацетамола и повышает риск поражения печени, а также усиливает седативный эффект фенирамина.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Терафлю можно купить без рецепта.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Терафлю">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как хранить Терафлю">Как хранить Терафлю</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Хранить при температуре не выше 25 °C, в сухом месте, недоступном для детей, в оригинальной упаковке.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности - 3 года. Не использовать после даты, указанной на упаковке.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>Терафлю (TheraFlu) - GSK Consumer Health Inc, США.</li>
+      <li>Терафлю Экстра - Дельфарм Орлеан, Франция.</li>
+    </ul>
+    <p>Производственная площадка (завод-производитель) может меняться в зависимости от партии.</p>
+  </div>
+</li>

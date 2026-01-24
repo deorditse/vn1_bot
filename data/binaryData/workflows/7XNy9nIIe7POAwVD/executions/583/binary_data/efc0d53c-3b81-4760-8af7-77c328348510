@@ -1,0 +1,328 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Нимесил" class="product-details-instructions-main__menu-item">
+    Нимесил
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Нимесила" class="product-details-instructions-main__menu-item">
+    Аналоги Нимесила
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Нимесил при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Нимесил при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Нимесил и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Нимесил и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Нимесил" class="product-details-instructions-main__menu-item">
+    Как хранить Нимесил
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Нимесил">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Нимесил">Нимесил</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нимесил - это нестероидный противовоспалительный препарат (НПВП) из группы сульфонанилидов. Обладает анальгезирующим, жаропонижающим и противовоспалительным действием. Активным веществом является нимесулид, который применяется в клинической практике для купирования острой боли, лечения воспалительных и дегенеративных заболеваний опорно-двигательного аппарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в двух лекарственных формах:</p>
+        <ul>
+            <li>гранулы для приготовления суспензии для приема внутрь (пакетики по 2 г, содержащие 100 мг нимесулида);</li>
+            <li>таблетки шипучие (100 мг нимесулида в каждой).</li>
+        </ul>
+        <p>Вспомогательные вещества могут различаться в зависимости от формы выпуска, однако основное действующее вещество во всех формах - нимесулид.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нимесил относится к группе НПВП. Препарат снижает болевой синдром, уменьшает воспаление и температуру тела. Действие связано с подавлением синтеза простагландинов в очаге воспаления.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нимесулид преимущественно ингибирует фермент циклооксигеназу-2 (ЦОГ-2), что приводит к снижению выработки простагландинов - медиаторов боли, воспаления и гипертермии. Это обеспечивает выраженный обезболивающий эффект и уменьшает воспалительные проявления.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>После приема внутрь нимесулид быстро всасывается, достигая максимальной концентрации в плазме через 2-3 часа. Связывание с белками плазмы достигает 97,5%. Метаболизм происходит в печени с образованием активных метаболитов, которые выводятся почками и кишечником. Период полувыведения - около 4-5 часов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Нимесил, необходимо обратиться к официальным показаниям:</p>
+        <ul>
+            <li>посттравматическая и послеоперационная боль с воспалительными проявлениями;</li>
+            <li>боли при дорсопатии, включая острый болевой синдром в спине и пояснице;</li>
+            <li>дегенеративные заболевания костно-мышечной системы (например, остеоартроз);</li>
+            <li>тендинит, бурсит;</li>
+            <li>растяжения связок, ушибы, вывихи суставов;</li>
+            <li>зубная боль;</li>
+            <li>альгодисменорея (болезненные менструации).</li>
+        </ul>
+        <p>Нимесил применяется в качестве препарата второй линии при симптоматической терапии остеоартроза.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан при:</p>
+        <ul>
+            <li>гиперчувствительности к нимесулиду или вспомогательным веществам;</li>
+            <li>язвенной болезни желудка и двенадцатиперстной кишки, эрозивных поражениях ЖКТ;</li>
+            <li>желудочно-кишечных кровотечениях;</li>
+            <li>тяжелой печеночной, сердечной или почечной недостаточности;</li>
+            <li>заболеваниях печени с риском гепатотоксичности;</li>
+            <li>беременности и в период лактации;</li>
+            <li>детском возрасте до 12 лет;</li>
+            <li>алкогольной и наркотической зависимости;</li>
+            <li>активных воспалительных заболеваниях кишечника;</li>
+            <li>сочетании с другими гепатотоксичными препаратами.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При приеме возможны различные нежелательные реакции. Наиболее частые побочные действия Нимесила:</p>
+        <ul>
+            <li>со стороны ЖКТ: тошнота, рвота, диарея, боли в животе, диспепсия;</li>
+            <li>со стороны печени: повышение уровня печеночных ферментов, редкие случаи гепатита;</li>
+            <li>со стороны ЦНС: головная боль, головокружение, сонливость;</li>
+            <li>аллергические реакции: зуд, сыпь, крапивница, ангионевротический отек;</li>
+            <li>со стороны сердечно-сосудистой системы: повышение артериального давления, тахикардия, отеки.</li>
+        </ul>
+        <p>Риск побочных эффектов увеличивается при длительном применении и превышении дозы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как пить Нимесил зависит от формы выпуска.</p>
+        <ul>
+            <li>Гранулы: содержимое одного пакетика (100 мг) растворяют в стакане воды и принимают сразу после приготовления.</li>
+            <li>Таблетки шипучие: растворяют в воде до образования суспензии и употребляют сразу.</li>
+        </ul>
+        <p>Рекомендуемая доза для взрослых и подростков старше 12 лет - 100 мг два раза в день после еды. Максимальная длительность курса - не более 15 дней.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Симптомы: сонливость, апатия, тошнота, рвота, боли в животе, повышение давления, в тяжелых случаях - желудочно-кишечные кровотечения, угнетение дыхания. Лечение симптоматическое. Специфического антидота нет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Совместное применение с антикоагулянтами, антиагрегантами, другими НПВП, глюкокортикостероидами, ингибиторами обратного захвата серотонина повышает риск кровотечений. Нимесил усиливает токсичность метотрексата и циклоспорина, увеличивает концентрацию лития в крови. При одновременном приеме с диуретиками и гипотензивными средствами возможно снижение их эффективности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Нимесила">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Нимесила">Аналоги Нимесила</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Все перечисленные аналоги содержат то же действующее вещество - нимесулид, и относятся к группе нестероидных противовоспалительных средств (НПВС). Их действие направлено на снятие боли, снижение температуры и уменьшение воспалительных проявлений.</p>
+        <ul>
+            <li><strong>Найз (гранулы, таблетки)</strong>. Один из наиболее распространённых аналогов Нимесила. Выпускается в форме гранул для приготовления суспензии и таблеток. Используется при острых болях (включая зубную и головную), болях в спине, воспалительных заболеваниях суставов. Отличается быстрым наступлением эффекта и удобной формой для приема.</li>
+            <li><strong>Найсулид</strong>. Представлен в форме таблеток. Применяется при ревматических заболеваниях, остеоартрозе, болевом синдроме различного происхождения. Назначается как симптоматическое средство для кратковременной терапии.</li>
+            <li><strong>Немулекс</strong>. Выпускается в виде гранул для приготовления суспензии для приема внутрь. Благодаря форме быстро усваивается и обеспечивает выраженный обезболивающий эффект. Рекомендуется при посттравматической и послеоперационной боли, а также при заболеваниях суставов.</li>
+            <li><strong>Нимесан Нео</strong>. Таблетки с действующим веществом нимесулидом. Назначаются при болевом синдроме воспалительного генеза, в том числе при дорсопатиях, артритах, зубной боли и альгодисменорее. Подходит для кратковременного применения.</li>
+            <li><strong>Нимесулид</strong>. Базовый аналог в форме таблеток. По сути, это международное непатентованное наименование действующего вещества, выпускаемое разными производителями. Используется при острых болях и воспалительных процессах.</li>
+            <li><strong>Нимесулид-МБФ</strong>. Отечественный препарат в форме таблеток. Применяется для симптоматической терапии боли и воспаления при заболеваниях опорно-двигательного аппарата, головной и зубной боли.</li>
+            <li><strong>Нимика</strong>. Таблетки, содержащие нимесулид. Используются при острой боли в спине, суставах, мышцах, а также при зубной боли и головной боли. Подходит для кратковременного приема при выраженном болевом синдроме.</li>
+            <li><strong>Нимулид (суспензия, таблетки)</strong>. Представлен в двух формах - суспензия для приема внутрь и таблетки. Суспензия удобна для подростков и пациентов, которым сложно проглатывать таблетки. Применяется при воспалительных заболеваниях суставов, болях различного происхождения, альгодисменорее.</li>
+            <li><strong>Пролид</strong>. Таблетированная форма нимесулида. Используется для снятия боли и воспаления при остеоартрозе, дорсопатии, травмах и зубной боли. Назначается как средство кратковременной терапии.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат разрешен только детям старше 12 лет. До этого возраста применение противопоказано.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Нимесил при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Нимесил при беременности и кормлении грудью">Можно ли принимать Нимесил при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан во время беременности и периода лактации. Нимесулид может негативно влиять на плод, увеличивать риск кровотечений и осложнять роды.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Нимесил и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Нимесил и алкоголь">Совместим ли Нимесил и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Одновременный прием Нимесила и алкоголя противопоказан. Этанол усиливает гепатотоксическое действие и повышает риск кровотечений.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нимесил является рецептурным препаратом и отпускается только по назначению врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Нимесил">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Нимесил">Как хранить Нимесил</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить в сухом, защищенном от света месте при температуре не выше 25 °C. Беречь от детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности - 3 года. Не использовать после даты, указанной на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>LABORATORIOS MENARINI S.A. (Испания) - гранулы для приготовления суспензии.</li>
+            <li>E-PHARMA TRENTO S.P.A. (Италия) - таблетки шипучие.</li>
+        </ul>
+        <p>Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

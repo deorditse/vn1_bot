@@ -1,0 +1,303 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Ярина" class="product-details-instructions-main__menu-item">
+    Ярина
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Ярины" class="product-details-instructions-main__menu-item">
+    Аналоги Ярины
+  </a>
+</li>
+<li>
+  <a href="#**Можно ли принимать детям**" class="product-details-instructions-main__menu-item">
+    **Можно ли принимать детям**
+  </a>
+</li>
+<li>
+  <a href="#**Можно ли принимать Ярину при беременности и кормлении грудью**" class="product-details-instructions-main__menu-item">
+    **Можно ли принимать Ярину при беременности и кормлении грудью**
+  </a>
+</li>
+<li>
+  <a href="#**Совместим ли Ярина и алкоголь**" class="product-details-instructions-main__menu-item">
+    **Совместим ли Ярина и алкоголь**
+  </a>
+</li>
+<li>
+  <a href="#**Отпускается по рецепту или нет**" class="product-details-instructions-main__menu-item">
+    **Отпускается по рецепту или нет**
+  </a>
+</li>
+<li>
+  <a href="#**Как хранить Ярину**" class="product-details-instructions-main__menu-item">
+    **Как хранить Ярину**
+  </a>
+</li>
+<li>
+  <a href="#**Срок годности**" class="product-details-instructions-main__menu-item">
+    **Срок годности**
+  </a>
+</li>
+<li>
+  <a href="#**Производитель**" class="product-details-instructions-main__menu-item">
+    **Производитель**
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Ярина">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Ярина">Ярина</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина - это низкодозированный монофазный пероральный комбинированный контрацептив, предназначенный для предотвращения нежелательной беременности. Он состоит из двух активных веществ: дроспиренона и этинилэстрадиола. Эти компоненты обладают не только контрацептивным действием, но и благоприятно воздействуют на различные аспекты здоровья женщин, такие как акне и себорея.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина выпускается в виде таблеток, покрытых пленочной оболочкой. Каждая таблетка содержит:</p>
+        <ul>
+            <li>Дроспиренон - 3 мг</li>
+            <li>Этинилэстрадиол - 0,03 мг</li>
+        </ul>
+        <p>Препарат выпускается в упаковках по 21 таблетке, где каждая таблетка помечена днем недели, что упрощает регулярный прием.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина является комбинированным контрацептивом, который действует путем подавления овуляции, повышения вязкости цервикальной слизи и изменения структуры эндометрия, что затрудняет имплантацию оплодотворенной яйцеклетки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Этинилэстрадиол и дроспиренон в препарате Ярина действуют синергично. Этинилэстрадиол подавляет продукцию фолликулостимулирующего гормона (ФСГ), предотвращая овуляцию. Дроспиренон, кроме контрацептивного эффекта, обладает антиминералокортикоидным действием, помогая снижать задержку жидкости и уменьшать симптомы предменструального синдрома.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>После приема внутрь дроспиренон быстро всасывается, достигая максимальной концентрации в плазме через 1-2 часа. Он метаболизируется в печени, а его метаболиты выводятся через почки и кишечник. Период полувыведения дроспиренона составляет около 31 часа, что позволяет принимать препарат один раз в сутки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина помогает в следующем:</p>
+        <ul>
+            <li>Основное показание - контрацепция.</li>
+            <li>Препарат также применяется для лечения и профилактики таких состояний, как акне и себорея у женщин, использующих контрацептивы.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина противопоказана при следующих состояниях:</p>
+        <ul>
+            <li>Тромбозы, тромбоэмболии и их предшествующие формы.</li>
+            <li>Заболевания печени, тяжелая почечная недостаточность, опухоли, связанные с гормональной зависимостью.</li>
+            <li>Беременность и лактация.</li>
+            <li>Гиперчувствительность к компонентам препарата.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные эффекты, которые могут проявляться при применении Ярины:</p>
+        <ul>
+            <li>Нарушения менструального цикла.</li>
+            <li>Повышение артериального давления.</li>
+            <li>Увеличение массы тела.</li>
+            <li>Головная боль, головокружение, мигрень.</li>
+            <li>Риск тромбообразования и тромбоэмболии, особенно в первые месяцы использования.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина принимается по 1 таблетке в день в течение 21 дня, после чего следует 7-дневный перерыв. Во время перерыва обычно начинается менструальноподобное кровотечение. Таблетки следует принимать каждый день примерно в одно и то же время.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке Ярины могут возникнуть симптомы, такие как тошнота и рвота. В таком случае проводится симптоматическое лечение. Специфического антидота нет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина может взаимодействовать с некоторыми лекарствами, например, с антидепрессантами, антибиотиками и противогрибковыми средствами, что может снизить ее эффективность. В таких случаях рекомендуется использовать дополнительные методы контрацепции.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Ярины">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Ярины">Аналоги Ярины</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На российском рынке существуют несколько аналогов Ярины, которые также являются комбинированными контрацептивами, содержащими дроспиренон и этинилэстрадиол. Эти препараты обладают схожим механизмом действия и могут быть использованы для профилактики нежелательной беременности, а также для лечения акне и регулирования гормонального фона у женщин. Вот некоторые из них:</p>
+        <ul>
+            <li><strong>Джес</strong> - это комбинированный контрацептив, который содержит в своём составе дроспиренон (3 мг) и этинилэстрадиол (0,02 мг), что делает его низкодозированным препаратом. Джес имеет аналогичное действие с Яриной, но отличается меньшей дозировкой эстрогена, что снижает риск побочных эффектов, таких как повышение артериального давления или проблемы с кожей. Джес также широко используется для лечения акне, себореи и синдрома предменструального напряжения.</li>
+            <li><strong>Димиа</strong> - это ещё один аналог Ярины, содержащий дроспиренон (3 мг) и этинилэстрадиол (0,03 мг). Этот препарат также обладает контрацептивным эффектом и используется для лечения гормональных расстройств, таких как акне и синдром раздражённого кишечника. Как и Ярина, Димиа регулирует менструальный цикл и уменьшает симптомы предменструального синдрома (ПМС).</li>
+            <li><strong>Мидиана</strong> - комбинированный оральный контрацептив, содержащий тот же состав, что и Ярина: дроспиренон (3 мг) и этинилэстрадиол (0,03 мг). Он также используется для предотвращения беременности и в качестве терапии при гормональных нарушениях, таких как акне, поликистоз яичников и дисфункция менструального цикла. Мидиана может быть рекомендована женщинам, имеющим повышенную чувствительность к препаратам с эстрогенами.</li>
+            <li><strong>Делсия</strong> - это еще один комбинированный контрацептив, в составе которого присутствуют дроспиренон (3 мг) и этинилэстрадиол (0,03 мг). Препарат помогает не только предотвратить нежелательную беременность, но и оказывает терапевтическое действие при лечении акне и других кожных заболеваний, связанных с гормональными нарушениями.</li>
+            <li><strong>Видора</strong> - комбинированный контрацептив с тем же действующим составом (дроспиренон и этинилэстрадиол). Препарат также используется для предотвращения беременности и лечения акне, а также различных гинекологических заболеваний, таких как поликистоз яичников. Видора отличается <strong>Джейна</strong> - это комбинированный контрацептив, содержащий дроспиренон (3 мг) и этинилэстрадиол (0,03 мг). Джейна используется как средство контрацепции и для лечения заболеваний, таких как акне и различные гормональные расстройства. Этот препарат не вызывает значительных побочных эффектов, таких как головная боль или увеличение массы тела.</li>
+            <li><strong>Планиженс Дроспи</strong> - это препарат с аналогичным составом, который имеет тот же механизм действия, что и Ярина. Этот контрацептив эффективно предотвращает нежелательную беременность, а также регулирует менструальный цикл и уменьшает симптомы ПМС. Используется для борьбы с акне, воспалениями и другими проблемами, связанными с гормональными нарушениями.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Можно ли принимать детям**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Можно ли принимать детям**">**Можно ли принимать детям**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина не рекомендуется для применения девочками до наступления менархе. Использование препарата у подростков может быть возможно, но только после консультации с врачом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Можно ли принимать Ярину при беременности и кормлении грудью**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Можно ли принимать Ярину при беременности и кормлении грудью**">**Можно ли принимать Ярину при беременности и кормлении грудью**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Ярины противопоказано во время беременности и в период лактации. В случае выявления беременности при приеме препарата, его следует немедленно отменить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Совместим ли Ярина и алкоголь**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Совместим ли Ярина и алкоголь**">**Совместим ли Ярина и алкоголь**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Ярины совместно с алкоголем не оказывает значимого воздействия на эффективность препарата, однако чрезмерное употребление алкоголя может повлиять на общее состояние здоровья.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Отпускается по рецепту или нет**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Отпускается по рецепту или нет**">**Отпускается по рецепту или нет**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярина является рецептурным препаратом, и для ее приобретения требуется консультация врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Как хранить Ярину**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Как хранить Ярину**">**Как хранить Ярину**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ярину следует хранить в сухом, защищенном от света месте при температуре не выше 25 °C. Хранить в недоступном для детей месте.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Срок годности**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Срок годности**">**Срок годности**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности препарата Ярина составляет 3 года.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-**Производитель**">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="**Производитель**">**Производитель**</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат производится компанией <strong>Bayer AG</strong> (Германия).</p>
+    </div>
+</li>

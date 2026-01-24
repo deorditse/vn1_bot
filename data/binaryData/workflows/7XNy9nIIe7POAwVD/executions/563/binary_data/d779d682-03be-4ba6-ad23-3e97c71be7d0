@@ -1,0 +1,305 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Лизобакта" class="product-details-instructions-main__menu-item">
+    Аналоги Лизобакта
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Лизобакт при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Лизобакт при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Лизобакт и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Лизобакт и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Лизобакт" class="product-details-instructions-main__menu-item">
+    Как хранить Лизобакт
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лизобакт - антисептическое средство местного действия, предназначенное для симптоматического лечения инфекционно-воспалительных заболеваний слизистой оболочки полости рта и гортани. Препарат сочетает в себе антимикробную активность лизоцима и защитное действие пиридоксина, что способствует ускорению регенерации поврежденных тканей. Лизобакт выпускается в форме таблеток для рассасывания и применяется как в составе комплексной терапии, так и самостоятельно при катаральных и эрозивных состояниях ротовой полости.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лизобакт представлен в виде таблеток для рассасывания. Круглые таблетки белого или желтовато-белого цвета с разделительной риской на одной стороне и фаской на обеих сторонах могут содержать включения в виде темных точек.</p>
+        <p>Каждая таблетка содержит:</p>
+        <ul>
+            <li>лизоцима гидрохлорид - 20 мг;</li>
+            <li>пиридоксина гидрохлорид - 10 мг.</li>
+        </ul>
+        <p>Вспомогательные вещества: лактозы моногидрат, камедь трагакантовая, магния стеарат, натрия сахаринат, ванилин.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат относится к фармакотерапевтической группе антисептиков, применяемых при заболеваниях горла. Его действие обусловлено двумя активными компонентами: лизоцимом и пиридоксином.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лизоцим - фермент белковой природы, входящий в состав слюны, слез и других биологических жидкостей. Он обладает выраженной противомикробной активностью в отношении грамположительных и некоторых грамотрицательных бактерий, а также вирусов и грибов, разрушая их клеточные стенки. Кроме того, лизоцим участвует в регуляции местного неспецифического иммунитета. 
+Пиридоксин (витамин B6) оказывает трофическое и защитное действие на слизистую оболочку полости рта, способствуя заживлению афтозных и герпетических поражений, а также предотвращая их рецидивы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакокинетические данные для препарата Лизобакт отсутствуют. При местном применении действующие вещества практически не всасываются в системный кровоток, что минимизирует риск системных побочных эффектов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Лизобакт, следует обратиться к официальным показаниям. Препарат применяется у взрослых и детей от 3 лет при:</p>
+        <ul>
+            <li>гингивите, стоматите;</li>
+            <li>катаральных явлениях при острых респираторных инфекциях;</li>
+            <li>афтозных и герпетических изъязвлениях полости рта;</li>
+            <li>эрозиях слизистой оболочки любой этиологии.</li>
+        </ul>
+        <p>Лизобакт используется как в монотерапии, так и в составе комплексного лечения инфекционно-воспалительных состояний ротовой полости и гортани.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению Лизобакта являются:</p>
+        <ul>
+            <li>повышенная чувствительность к лизоциму, пиридоксину или другим компонентам препарата;</li>
+            <li>аллергия на куриный белок (поскольку лизоцим получают из куриного яйца).</li>
+        </ul>
+        <p>С осторожностью препарат назначают при наличии в анамнезе аллергических реакций.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия Лизобакта наблюдаются редко. Наиболее вероятными являются аллергические реакции: кожная сыпь, зуд, крапивница, а в тяжелых случаях - ангионевротический отек (отек Квинке) или бронхоспазм. Очень редко могут развиваться признаки мультиформной экссудативной эритемы. При появлении любых признаков гиперчувствительности применение препарата следует немедленно прекратить и обратиться за медицинской помощью.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Лизобакт, и необходимая доза зависят от возраста пациента:</p>
+        <ul>
+            <li><strong>взрослые</strong>: по 2 таблетки 3-4 раза в сутки;</li>
+            <li><strong>дети 3-7 лет</strong>: по 1 таблетке 3 раза в сутки;</li>
+            <li><strong>дети 7-12 лет</strong>: по 1 таблетке 4 раза в сутки;</li>
+            <li><strong>дети старше 12 лет</strong>: по 2 таблетки 3-4 раза в сутки.</li>
+        </ul>
+        <p>Таблетки следует медленно рассасывать, не разжевывая, удерживая во рту до полного растворения. Препарат применяется вне приема пищи. Максимальная длительность терапии - 8 дней. При отсутствии улучшения или ухудшении состояния необходимо обратиться к врачу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаи передозировки маловероятны. В случае приема доз, значительно превышающих рекомендованные, возможны парестезии (онемение, покалывание) в конечностях. Специфического антидота не существует. Лечение симптоматическое: обильное питье, наблюдение.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лизобакт усиливает действие антибиотиков (пенициллин, хлорамфеникол, нитрофурантоин), а также мочегонных средств. Одновременно он ослабляет активность леводопы. 
+Изониазид, пеницилламин, пиразинамид, эстрогены и пероральные контрацептивы могут повышать потребность организма в пиридоксине, снижая его эффективность. Перед началом терапии следует сообщить врачу обо всех принимаемых лекарствах.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Лизобакта">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Лизобакта">Аналоги Лизобакта</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Лизобакта относятся следующие препараты:</p>
+        <ul>
+            <li>Ларинготаб - содержит бензокаин и хлоргексидин; обладает анестезирующим и антисептическим действием, применяется при боли в горле.</li>
+            <li>Зотт - комбинированный препарат на основе цетилпиридиния хлорида и лидокаина; оказывает антисептическое и местноанестезирующее действие при фарингите и тонзиллите.</li>
+        </ul>
+        <p>Действующим веществом Лизобакта являются лизоцим и пиридоксин.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лизобакт разрешен к применению у детей с 3 лет. Эффективность и безопасность у детей младше 3 лет не установлены, поэтому препарат в этой возрастной группе не назначается.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Лизобакт при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Лизобакт при беременности и кормлении грудью">Можно ли принимать Лизобакт при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат может применяться во время беременности и в период лактации, так как действующие вещества практически не всасываются в системный кровоток. Тем не менее, перед началом терапии рекомендуется проконсультироваться с лечащим врачом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Лизобакт и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Лизобакт и алкоголь">Совместим ли Лизобакт и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Специальных исследований по взаимодействию Лизобакта с алкоголем не проводилось. Однако употребление алкоголя может раздражать слизистую оболочку полости рта и ослаблять местный иммунитет, что снижает эффективность терапии. По этой причине на фоне лечения рекомендуется воздержаться от алкоголя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лизобакт отпускается без рецепта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Лизобакт">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Лизобакт">Как хранить Лизобакт</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в недоступном для детей месте при температуре не выше 25 °C, в оригинальной упаковке. Не допускать попадания прямых солнечных лучей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности Лизобакта составляет 5 лет. Не следует использовать препарат после даты, указанной на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Лизобакт является БОСНАЛЕК АО (Босния и Герцеговина). Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

@@ -1,0 +1,334 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Снуп" class="product-details-instructions-main__menu-item">
+    Снуп
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Снуп" class="product-details-instructions-main__menu-item">
+    Аналоги Снуп
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Снуп при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Снуп при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Снуп и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Снуп и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Снуп" class="product-details-instructions-main__menu-item">
+    Как хранить Снуп
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Снуп">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Снуп">Снуп</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп - это сосудосуживающий препарат для местного применения, широко применяемый при лечении острых и хронических заболеваний носа. Действующим веществом выступает ксилометазолин - альфа-адреномиметик, обеспечивающий быстрое и продолжительное облегчение носового дыхания за счёт устранения отёка слизистой оболочки. Также выпускается форма Снуп Экстра, содержащая дополнительный компонент - ипратропия бромид, усиливающий противоотёчное действие за счёт подавления секреции.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат Снуп представлен в виде назального дозированного спрея в следующих вариантах:</p>
+        <ul>
+            <li>Снуп 45 мкг/доза - спрей назальный дозированный, содержит 45 мкг ксилометазолина гидрохлорида на одну дозу.</li>
+            <li>Снуп 90 мкг/доза - спрей назальный дозированный, содержит 90 мкг ксилометазолина на дозу.</li>
+            <li>Снуп Экстра - комбинированный препарат, содержащий 70 мкг ксилометазолина и 84 мкг ипратропия бромида в одной дозе.</li>
+        </ul>
+        <p>Дополнительные ингредиенты: морская вода, калия дигидрофосфат, вода для инъекций, глицерин, динатрия эдетат и др.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп относится к группе симпатомиметиков, применяемых для лечения заболеваний носа. Действие направлено на сужение сосудов слизистой оболочки, устранение отёка и гиперемии, нормализацию носового дыхания.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ксилометазолин активирует альфа-адренорецепторы сосудов слизистой оболочки, вызывая быстрое и выраженное сосудосуживающее действие. Облегчение наступает в течение 2 минут после применения и длится до 12 часов. В составе Снуп Экстра ипратропия бромид дополнительно снижает секрецию желез, устраняя ринорею («течение из носа»).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При интраназальном введении абсорбция действующих веществ минимальна. Ксилометазолин и ипратропия бромид обнаруживаются в плазме крови в незначительных количествах. Биодоступность ограничена, системное действие минимально при соблюдении рекомендуемых доз.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Снуп, необходимо учитывать его показания:</p>
+        <ul>
+            <li>Острые респираторные инфекции с ринитом;</li>
+            <li>Аллергический ринит, поллиноз;</li>
+            <li>Синусит;</li>
+            <li>Средний отит (в составе комплексной терапии);</li>
+            <li>Евстахиит;</li>
+            <li>Подготовка к диагностике в носовых ходах.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп противопоказан при:</p>
+        <ul>
+            <li>Гиперчувствительности к компонентам;</li>
+            <li>Артериальной гипертензии;</li>
+            <li>Тахикардии, выраженном атеросклерозе;</li>
+            <li>Глаукоме, гипертиреозе;</li>
+            <li>Атрофическом рините;</li>
+            <li>Состоянии после хирургических вмешательств на мозговых оболочках;</li>
+            <li>Одновременном применении ингибиторов МАО, три- и тетрациклических антидепрессантов;</li>
+            <li>Беременности и лактации (для Снуп Экстра);</li>
+            <li>Детском возрасте до 2 лет (Снуп) и до 18 лет (Снуп Экстра).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия Снупа могут включать:</p>
+        <ul>
+            <li>Головная боль, бессонница;</li>
+            <li>Сухость и жжение в носу, чихание;</li>
+            <li>Повышенное артериальное давление, тахикардия;</li>
+            <li>Раздражение слизистой, носовые кровотечения;</li>
+            <li>При длительном применении - эффект «рикошета» и атрофия слизистой;</li>
+            <li>В случае Снуп Экстра возможны зрительные нарушения, затруднённое мочеиспускание, галлюцинации и тахикардия.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп выпускается в интраназальной форме. Как применять спрей:</p>
+        <ul>
+            <li>Снуп 45 мкг/доза: взрослым и детям от 6 лет - по 1-2 впрыскивания в каждую ноздрю 2-3 раза в день.</li>
+            <li>Детям 2-6 лет - по 1 впрыскиванию 1-3 раза в сутки.</li>
+            <li>Снуп 90 мкг/доза - с 6 лет и взрослым по 1 впрыскиванию 2-3 раза в день.</li>
+            <li>Снуп Экстра: только взрослым - по 1 впрыскиванию в каждую ноздрю до 3 раз в день.</li>
+        </ul>
+        <p>Продолжительность курса - не более 5-7 дней.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Передозировка Снуп может проявляться: головокружением, брадикардией, судорогами, угнетением дыхания, падением температуры. В тяжёлых случаях - кома. Требуется симптоматическое лечение. Снуп Экстра при передозировке может вызвать холинолитические симптомы - сухость во рту, тахикардию.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказано сочетание с:</p>
+        <ul>
+            <li>Ингибиторами МАО (в т.ч. после отмены - 14 дней);</li>
+            <li>Три- и тетрациклическими антидепрессантами;</li>
+            <li>Симпатомиметиками (риск тахикардии и гипертензии).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Снуп">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Снуп">Аналоги Снуп</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К препаратам с тем же действующим веществом (ксилометазолином) относятся:</p>
+        <ul>
+            <li><strong>Галазолин.</strong> Торговое наименование препаратов на основе ксилометазолина (чаще 0,05% для детей и 0,1% для взрослых). Применяется при заложенности носа на фоне ОРВИ, аллергического и вазомоторного ринита, синусита; эффект развивается быстро и держится несколько часов. Курс обычно не более 5-7 дней, чтобы избежать «рикошета».</li>
+            <li><strong>Звездочка-Ноз.</strong> Препараты ксилометазолина для интраназального применения, уменьшают отёк и восстанавливают носовое дыхание. Используются 2-3 раза в сутки короткими курсами; противопоказаны при глаукоме, выраженной гипертензии и гипертиреозе. Детские и взрослые формы подбирают по концентрации.</li>
+            <li><strong>Ксилен Актив.</strong> Линейка на основе ксилометазолина для симптоматического облегчения ринита различной этиологии. Обладает сосудосуживающим действием, снижает гиперсекрецию и облегчает дыхание через 5-10 минут после впрыскивания. Рекомендуется кратковременное применение согласно инструкции.</li>
+            <li><strong>Ксилен.</strong> Классические формы ксилометазолина (спрей/капли) для уменьшения заложенности носа при инфекционном и аллергическом рините, синуситах и евстахиите. Режим дозирования - обычно 2-3 раза в день, не превышая 5-7 дней подряд. Возможны местные побочные действия (сухость, жжение).</li>
+            <li><strong>Ксило Нордум.</strong> Торговая марка препаратов ксилометазолина для взрослых и детей (в соответствии с концентрацией). Применяется как симптоматическое средство «от чего помогает» при отёке слизистой и затруднённом носовом дыхании. Требует перерыва после короткого курса.</li>
+            <li><strong>Ксилокт-Солофарм.</strong> Спреи/капли ксилометазолина для кратковременного снятия заложенности носа. Используются при ОРВИ-рините, поллинозе, синусите; дозы и кратность - согласно возрасту и форме выпуска. Не применять одновременно с ингибиторами МАО.</li>
+            <li><strong>Ксилометазолин (МНН).</strong> Международное непатентованное наименование группы препаратов; выпускается разными производителями в детских и взрослых концентрациях. Обеспечивает быстрое сосудосуживающее действие, уменьшая отёк слизистой. Важно избегать длительного непрерывного применения.</li>
+            <li><strong>Ксимелин Эко.</strong> Торговая линейка ксилометазолина, предназначенная для симптоматической терапии ринита и синусита. Облегчает носовое дыхание, применяют 2-3 раза в сутки коротким курсом. Противопоказан при атрофическом рините и после операций на мозговых оболочках.</li>
+            <li><strong>Отривин.</strong> Бренд ксилометазолина с формами для разных возрастов; используется при заложенности носа разной природы. Обеспечивает быстрое уменьшение отёка и облегчение дыхания. Соблюдайте дозу и длительность курса, чтобы снизить риск «рикошета».</li>
+            <li><strong>Риномарис.</strong> Препараты на основе ксилометазолина для местного применения при рините, синусите и евстахиите. Сужают сосуды слизистой, уменьшая отёк и ринорею; применяют кратковременно. Возможны местные «побочные действия» - сухость, раздражение.</li>
+            <li><strong>Ринонорм.</strong> Лекарственные формы ксилометазолина (детские/взрослые) для снятия заложенности носа. Действуют в течение нескольких часов, используются не более 5-7 дней подряд. Противопоказаны при артериальной гипертензии и гипертиреозе.</li>
+            <li><strong>Ринорус.</strong> Сосудосуживающие препараты ксилометазолина для облегчения дыхания при простуде и аллергическом рините. Режим применения - 2-3 раза в сутки, строго по инструкции. При повышенной чувствительности возможны чихание, жжение, носовое кровотечение.</li>
+            <li><strong>Риностоп.</strong> Линейка ксилометазолина для симптоматической терапии ринита и синусита, в том числе при ОРВИ. Даёт быстрый деконгестантный эффект; детские формы - с меньшей концентрацией. Не сочетать с три- и тетрациклическими антидепрессантами.</li>
+            <li><strong>Тизин Классик.</strong> Торговый бренд препаратов ксилометазолина для краткосрочного применения при заложенности носа. Эффект наступает быстро и длится несколько часов; применять курсами до 5-7 дней. Стандартные противопоказания для альфа-адреномиметиков сохраняются.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп 45 мкг/доза разрешён детям с 2 лет, а Снуп 90 мкг/доза - с 6 лет. Снуп Экстра противопоказан до 18 лет. Применение у детей должно происходить под наблюдением взрослых.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Снуп при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Снуп при беременности и кормлении грудью">Можно ли принимать Снуп при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Во время беременности Снуп и особенно Снуп Экстра применять не рекомендуется. В период лактации допускается применение Снуп (без ипратропия бромида) с осторожностью и после консультации с врачом. Снуп Экстра - противопоказан.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Снуп и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Снуп и алкоголь">Совместим ли Снуп и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Данных о взаимодействии с алкоголем нет, но системное влияние возможных побочных эффектов (головокружение, аритмия) усиливается при одновременном употреблении этанола. Рекомендуется воздерживаться от алкоголя на период лечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп и Снуп Экстра отпускаются без рецепта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Снуп">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Снуп">Как хранить Снуп</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить при температуре не выше 25 °C, в недоступном для детей месте. После вскрытия флакон использовать в течение 12 месяцев.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности - 5 лет, после вскрытия - 1 год. Не применять по истечении указанного срока.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Снуп выпускается компанией URSAPHARM Arzneimittel GmbH (Германия), а также упаковывается на территории России. Снуп Экстра производится компанией KURIDA AS (Норвегия). Заводы-производители могут меняться.</p>
+    </div>
+</li>

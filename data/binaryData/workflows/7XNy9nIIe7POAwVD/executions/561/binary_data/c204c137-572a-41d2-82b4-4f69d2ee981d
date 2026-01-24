@@ -1,0 +1,384 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Глюкофажа" class="product-details-instructions-main__menu-item">
+    Аналоги Глюкофажа
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Глюкофаж при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Глюкофаж при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Глюкофаж и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Глюкофаж и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Глюкофаж" class="product-details-instructions-main__menu-item">
+    Как хранить Глюкофаж
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж - это оригинальный пероральный гипогликемический препарат на основе метформина, относящийся к фармакотерапевтической группе бигуанидов. Глюкофаж это препарат первого выбора при лечении сахарного диабета 2 типа, особенно у пациентов с избыточной массой тела или ожирением. Он снижает уровень глюкозы в крови за счет повышения чувствительности тканей к инсулину, подавления глюконеогенеза в печени и замедления всасывания глюкозы в кишечнике. В отличие от производных сульфонилмочевины, Глюкофаж не стимулирует секрецию инсулина и при монотерапии не вызывает гипогликемии. Препарат также применяется для профилактики сахарного диабета 2 типа у пациентов с предиабетом и факторами риска.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж выпускается в виде таблеток, покрытых пленочной оболочкой, в трех дозировках:</p>
+        <ul>
+            <li>500 мг - белые, круглые, двояковыпуклые таблетки</li>
+            <li>850 мг - белые, круглые, двояковыпуклые таблетки</li>
+            <li>1000 мг - белые, овальные, двояковыпуклые таблетки с риской и гравировкой «1000»</li>
+        </ul>
+        <p>Действующим веществом является метформин (в виде гидрохлорида).</p>
+        <p>Вспомогательные компоненты: повидон К30, магния стеарат. Оболочка содержит гипромеллозу (для 500 мг и 850 мг) или Opadry прозрачный YS-1-7472 (гипромеллоза, макрогол 400 и 8000 - для 1000 мг).</p>
+        <p>Глюкофаж Лонг - это таблетки с пролонгированным высвобождением, доступные в дозировках 500 мг, 750 мг и 1000 мг. Они обеспечивают постепенное высвобождение метформина в течение суток, что позволяет принимать препарат один раз в день (обычно во время ужина) и снижает частоту желудочно-кишечных побочных действий.</p>
+        <p>Состав Глюкофаж Лонг включает: кармеллозу натрия, гипромеллозу 2208, магния стеарат.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж относится к группе гипогликемических средств, кроме инсулинов; бигуаниды (АТХ-код A10BA02).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Метформин снижает как базальную, так и постпрандиальную концентрацию глюкозы в плазме крови. Механизм действия включает:</p>
+        <ul>
+            <li>Повышение чувствительности периферических тканей (мышц, жира) к инсулину</li>
+            <li>Ингибирование глюконеогенеза и гликогенолиза в печени</li>
+            <li>Замедление всасывания глюкозы в тонком кишечнике</li>
+            <li>Стимуляцию синтеза гликогена и утилизации глюкозы клетками</li>
+            <li>Улучшение липидного профиля (снижение общего холестерина, ЛПНП и тригlicerидов)</li>
+        </ul>
+        <p>При длительной терапии отмечается умеренное снижение массы тела или ее стабилизация.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Метформин не метаболизируется в организме и выводится в неизмененном виде почками. Связывание с белками плазмы незначительно, объем распределения - 63-276 л.</p>
+        <p>Для Глюкофаж Лонг:</p>
+        <ul>
+            <li>Максимальная концентрация в плазме достигается через 4-12 часов</li>
+            <li>Период полувыведения - около 6,5 часов</li>
+            <li>При нарушении функции почек выведение замедляется, повышая риск лактоацидоза</li>
+        </ul>
+        <p>Прием с пищей не влияет на всасывание, но рекомендуется принимать таблетки во время или после еды для уменьшения ЖКТ-непереносимости.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Глюкофаж, следует обратиться к официальным показаниям:</p>
+        <ul>
+            <li>Сахарный диабет 2 типа у взрослых и детей старше 10 лет (в монотерапии или в комбинации с инсулином/другими пероральными гипогликемическими средствами), особенно при избыточном весе</li>
+            <li>Профилактика сахарного диабета 2 типа у взрослых с предиабетом и дополнительными факторами риска (ожирение, гестационный диабет в анамнезе, семейная отягощенность и др.)</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж и Глюкофаж Лонг противопоказаны при:</p>
+        <ul>
+            <li>Гиперчувствительности к метформину или компонентам состава</li>
+            <li>Диабетическом кетоацидозе, прекоме, коме</li>
+            <li>Тяжелой почечной недостаточности (КК &lt; 30 мл/мин)</li>
+            <li>Острых состояниях с риском гипоксии (инфаркт миокарда, острая сердечная недостаточность, шок, тяжелые инфекции)</li>
+            <li>Острой или хронической печеночной недостаточности</li>
+            <li>Хроническом алкоголизме, острой алкогольной интоксикации</li>
+            <li>Лактоацидозе в анамнезе</li>
+            <li>Назначении йодсодержащих контрастных средств (за 48 ч до и после процедуры)</li>
+            <li>Гипокалорийной диете (&lt;1000 ккал/сут)</li>
+            <li>Глюкофаж Лонг: детский возраст до 18 лет</li>
+            <li>Глюкофаж: детский возраст до 10 лет</li>
+        </ul>
+        <p>С осторожностью применяют у пожилых, при КК 30-59 мл/мин, беременности и лактации.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Наиболее частые побочные действия Глюкофажа связаны с ЖКТ и возникают в начале терапии:</p>
+        <p>Очень часто (&gt;1 из 10):</p>
+        <ul>
+            <li>Тошнота</li>
+            <li>Рвота</li>
+            <li>Диарея</li>
+            <li>Боли в животе</li>
+            <li>Снижение аппетита</li>
+        </ul>
+        <p>Часто (≤1 из 10):</p>
+        <ul>
+            <li>Нарушение вкуса (металлический привкус)</li>
+            <li>Дефицит витамина B12 при длительном применении</li>
+        </ul>
+        <p>Очень редко (&lt;1 из 10 000):</p>
+        <ul>
+            <li>Лактоацидоз - тяжелое, потенциально смертельное состояние, проявляющееся рвотой, болью в животе, мышечными судорогами, сильной усталостью, затрудненным дыханием, гипотермией</li>
+            <li>Гепатит, нарушение печеночных проб</li>
+            <li>Кожные реакции (крапивница, зуд, эритема)</li>
+        </ul>
+        <p>При появлении признаков лактоацидоза - немедленно прекратить прием и обратиться за неотложной помощью.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как принимать Глюкофаж и подбирать дозу - определяет врач индивидуально.</p>
+        <p>Глюкофаж (обычные таблетки):</p>
+        <ul>
+            <li>Начальная доза - 500 или 850 мг 2-3 раза в сутки во время/после еды</li>
+            <li>Поддерживающая - 1500-2000 мг/сут</li>
+            <li>Максимальная - 3000 мг/сут (разделить на 3 приема)</li>
+        </ul>
+        <p>Глюкофаж Лонг (пролонгированные таблетки):</p>
+        <ul>
+            <li>Начальная доза - 500 мг 1 раз в сутки (во время ужина)</li>
+            <li>Максимальная суточная доза:</li>
+            <ul>
+                <li>2000 мг для 500 мг и 1000 мг форм</li>
+                <li>2250 мг (3×750 мг) для 750 мг формы</li>
+            </ul>
+            <li>При неэффективности - возможен переход на обычные таблетки с дозой до 3000 мг</li>
+        </ul>
+        <p>У детей 10-16 лет: максимум 2000 мг/сут. <br>Глюкофаж Лонг у детей до 18 лет не применяется.</p>
+        <p>Таблетки запивают водой, не разжевывают. При пропуске дозы не удваивают следующую.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Передозировка может вызвать лактоацидоз. Симптомы: рвота, боль в животе, мышечные судороги, одышка, гипотермия, кома.</p>
+        <p>Лечение: немедленная госпитализация, гемодиализ (наиболее эффективен для удаления метформина и лактата), симптоматическая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж взаимодействует с множеством средств:</p>
+        <ul>
+            <li>Йодсодержащие контрастные препараты - риск почечной недостаточности и лактоацидоза → отмена за 48 ч до и после исследования</li>
+            <li>Алкоголь - усиливает риск лактоацидоза</li>
+            <li>Производные сульфонилмочевины, инсулин - повышают риск гипогликемии</li>
+            <li>Циметидин, долутегравир, ранолазин - снижают почечный клиренс метформина → повышение его концентрации</li>
+            <li>Рифампицин - может усиливать эффект</li>
+            <li>ГКС, диуретики, бета-адреномиметики - ослабляют гипогликемическое действие</li>
+        </ul>
+        <p>Перед началом любого нового лечения необходимо сообщить врачу о приеме Глюкофажа.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Глюкофажа">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Глюкофажа">Аналоги Глюкофажа</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Глюкофажа, содержащим то же действующее вещество (метформин), относятся:</p>
+        <ul>
+            <li>Сиофор (таблетки, покрытые пленочной оболочкой) и Сиофор Лонг (таблетки с пролонгированным высвобождением) - один из наиболее известных российских аналогов, применяется при диабете 2 типа и предиабете.</li>
+            <li>Мерифатин (таблетки, покрытые пленочной оболочкой) и Мерифатин МВ (таблетки с пролонгированным высвобождением) - отечественные препараты с аналогичным профилем эффективности и безопасности.</li>
+            <li>Метформин и Метформин-Лонг - непатентованные формы в виде таблеток, покрытых пленочной оболочкой и таблеток с пролонгированным высвобождением, различных производителей, доступные по более низкой цене.</li>
+            <li>Форметин (таблетки, покрытые пленочной оболочкой) - еще один генерик метформина для лечения диабета 2 типа.</li>
+        </ul>
+        <p>Выбор между оригиналом и аналогом зависит от рекомендаций врача, стоимости и переносимости.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж в обычной форме разрешен детям с 10 лет при сахарном диабете 2 типа. 
+Глюкофаж Лонг не применяется у лиц младше 18 лет из-за отсутствия данных по безопасности и эффективности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Глюкофаж при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Глюкофаж при беременности и кормлении грудью">Можно ли принимать Глюкофаж при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Беременность: 
+При сахарном диабете 2 типа Глюкофаж может применяться по жизненным показаниям как альтернатива инсулину, но решение принимается индивидуально.</p>
+        <p>Лактация: 
+Метформин проникает в грудное молоко. Хотя нежелательные реакции у новорожденных не зарегистрированы, Глюкофаж и Глюкофаж Лонг не рекомендуются в период лактации. При необходимости терапии грудное вскармливание следует прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Глюкофаж и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Глюкофаж и алкоголь">Совместим ли Глюкофаж и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алкоголь и Глюкофаж несовместимы.</p>
+        <p>Острое или хроническое употребление этанола повышает риск лактоацидоза, особенно при голодании, печеночной недостаточности или низкокалорийной диете. В период терапии алкоголь следует полностью исключить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкофаж и Глюкофаж Лонг являются рецептурными препаратами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Глюкофаж">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Глюкофаж">Как хранить Глюкофаж</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Хранить при температуре не выше 25 °C</li>
+            <li>В недоступном для детей месте</li>
+            <li>В оригинальной упаковке</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Глюкофаж 500 мг и 850 мг - 5 лет</li>
+            <li>Глюкофаж 1000 мг и все формы Глюкофаж Лонг - 3 года</li>
+        </ul>
+        <p>Не использовать после даты «Годен до:» на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Глюкофажа и Глюкофаж Лонг является компания Merck Santé S.A.S. (Франция) и Merck S.L. (Испания).</p>
+        <p>Обратите внимание: производственная площадка (завод-производитель) может меняться в зависимости от партии. В России упаковка может осуществляться на предприятиях, включая ООО «Нанолек».</p>
+    </div>
+</li>

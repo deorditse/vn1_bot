@@ -1,0 +1,303 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание" class="product-details-instructions-main__menu-item">
+    Описание
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Терафлекса" class="product-details-instructions-main__menu-item">
+    Аналоги Терафлекса
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Терафлекс при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Терафлекс при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Терафлекс и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Терафлекс и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Терафлекс" class="product-details-instructions-main__menu-item">
+    Как хранить Терафлекс
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание">Описание</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Терафлекс - это препарат, применяемый для лечения дегенеративно-дистрофических заболеваний суставов и позвоночника, таких как остеоартроз и остеохондроз. В его состав входят два активных вещества: глюкозамина гидрохлорид и хондроитина сульфат, которые способствуют восстановлению хрящевой ткани и улучшению её функций.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в форме капсул. Каждая капсула содержит:</p>
+        <ul>
+            <li>Глюкозамина гидрохлорид <strong>-</strong> 500 мг<strong>,</strong></li>
+            <li>Хондроитина сульфат натрия - 400 мг.</li>
+        </ul>
+        <p>Капсулы имеют желатиновую оболочку и содержат порошок белого или желтоватого цвета с кристаллическими частицами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Терафлекс относится к группе препаратов, которые способствуют восстановлению и поддержанию здоровья хрящей. Он стимулирует синтез соединительной ткани, особенно хрящевой, и улучшает её защиту от разрушения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Глюкозамин и хондроитина сульфат принимают участие в образовании хрящевого матрикса и поддержании синовиальной жидкости. Эти вещества способствуют предотвращению разрушения хряща, стимулируют его регенерацию и обладают умеренным противовоспалительным действием.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Глюкозамин: биодоступность при пероральном приеме составляет 25%, с эффектом "первого прохождения" через печень. Максимальные концентрации глюкозамина наблюдаются в печени, почках и суставном хряще. Выводится преимущественно почками.</li>
+            <li>Хондроитина сульфат: абсолютная биодоступность составляет 12%. Метаболизируется в печени, выводится почками.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Терафлекс применяется для лечения следующих заболеваний:</p>
+        <ul>
+            <li>Остеоартроз I-III стадии,</li>
+            <li>Остеохондроз,</li>
+            <li>Дегенеративно-дистрофические заболевания суставов и позвоночника.</li>
+        </ul>
+        <p>Препарат помогает восстанавливать хрящи и уменьшать симптомы этих заболеваний, такие как боль и воспаление.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению Терафлекса являются:</p>
+        <ul>
+            <li>Гиперчувствительность к компонентам препарата,</li>
+            <li>Тяжелая хроническая почечная недостаточность,</li>
+            <li>Беременность и период лактации (отсутствуют данные о безопасности),</li>
+            <li>Возраст до 15 лет.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К возможным побочным действиям Терафлекса относятся:</p>
+        <ul>
+            <li>Нарушения со стороны желудочно-кишечного тракта (боли в животе, метеоризм, запор, диарея),</li>
+            <li>Головокружение,</li>
+            <li>Сонливость, бессонница,</li>
+            <li>Аллергические реакции.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат принимают внутрь. Взрослым и детям старше 15 лет первые три недели назначают по 1 капсуле 3 раза в сутки, затем дозу уменьшают до 1 капсулы 2 раза в сутки. Курс лечения длится от 3 до 6 месяцев.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При передозировке возможны симптомы, такие как геморрагическая сыпь, тошнота, рвота. Лечение: промывание желудка и симптоматическая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Терафлекс может улучшать абсорбцию тетрациклинов и уменьшать эффективность полусинтетических пенициллинов. Препарат совместим с НПВП и глюкокортикостероидами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Терафлекса">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Терафлекса">Аналоги Терафлекса</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На сегодняшний день существует несколько препаратов, аналогичных Терафлексу, которые содержат те же активные вещества - глюкозамина гидрохлорид и хондроитина сульфат. Эти препараты имеют схожее фармакологическое действие и используются для лечения заболеваний суставов и позвоночника. Рассмотрим основные аналоги Терафлекса более подробно.</p>
+        <p><strong>Артра -</strong> один из наиболее популярных аналогов Терафлекса. Он содержит в своем составе глюкозамина гидрохлорид и хондроитина сульфат, что делает его эффективным средством для лечения остеоартроза и остеохондроза. Артра способствует восстановлению хрящевой ткани, уменьшению воспаления в суставах и облегчению боли. Препарат имеет несколько форм выпуска, включая таблетки и капсулы. При длительном применении помогает улучшить подвижность суставов и снизить потребность в нестероидных противовоспалительных препаратах (НПВП).</p>
+        <blockquote>
+            <p><strong>Кондронова</strong> - еще один препарат, содержащий глюкозамин и хондроитин. Он применим при остеоартрозах, остеохондрозах и других дегенеративно-дистрофических заболеваниях суставов. Этот препарат помогает восстанавливать хрящевую ткань, повышает синтез гиалуроновой кислоты и защищает суставы от дальнейшего разрушения. Как и Терафлекс, Кондронова улучшает подвижность суставов и снижает болевые ощущения. Она выпускается в форме таблеток, и ее можно использовать в комплексной терапии заболеваний суставов.</p>
+        </blockquote>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат можно назначать детям старше 15 лет. Дозировка зависит от возраста и состояния пациента.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Терафлекс при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Терафлекс при беременности и кормлении грудью">Можно ли принимать Терафлекс при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Терафлекса при беременности и лактации не рекомендуется, так как данные о безопасности в эти периоды отсутствуют.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Терафлекс и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Терафлекс и алкоголь">Совместим ли Терафлекс и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Употребление алкоголя при лечении Терафлексом не рекомендуется, так как это может повысить риск побочных эффектов со стороны желудочно-кишечного тракта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Терафлекс отпускается без рецепта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Терафлекс">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Терафлекс">Как хранить Терафлекс</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить препарат следует в недоступном для детей месте, при температуре не выше 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности Терафлекса составляет 3 года. Не применять по истечении срока годности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата является компания "Фармстандарт".</p>
+    </div>
+</li>

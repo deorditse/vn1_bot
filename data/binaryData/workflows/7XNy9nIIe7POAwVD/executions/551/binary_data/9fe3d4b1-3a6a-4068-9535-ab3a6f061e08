@@ -1,0 +1,301 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Нексиума" class="product-details-instructions-main__menu-item">
+    Аналоги Нексиума
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Нексиум при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Нексиум при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Нексиум и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Нексиум и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Нексиум" class="product-details-instructions-main__menu-item">
+    Как хранить Нексиум
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нексиум - это современный препарат из группы ингибиторов протонного насоса, широко применяемый в гастроэнтерологии для лечения кислотозависимых заболеваний. Нексиум это лекарственное средство, действующим веществом которого является эзомепразол. Благодаря высокой селективности и эффективности он обеспечивает выраженное и продолжительное снижение секреции соляной кислоты в желудке, создавая условия для заживления эрозий и язв, а также устранения симптомов, связанных с повышенной кислотностью.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нексиум выпускается в двух лекарственных формах, адаптированных для разных групп пациентов:</p>
+        <ul>
+            <li><strong>Таблетки кишечнорастворимые, покрытые пленочной оболочкой</strong> дозировкой 20 мг и 40 мг.</li>
+            <li><strong>Пеллеты и гранулы для приготовления суспензии для приема внутрь</strong> в саше (пакетах) по 10 мг эзомепразола.</li>
+        </ul>
+        <p>Основное действующее вещество во всех формах - эзомепразол (в виде магния тригидрата). Вспомогательные вещества могут варьироваться в зависимости от формы выпуска и завода-производителя. Препарат содержит сахарозу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нексиум относится к фармакотерапевической группе средств для лечения кислотозависимых заболеваний, ингибиторов протонного насоса.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика эзомепразола основана на его способности необратимо блокировать работу протонного насоса (H+/K+-АТФ-азы) в париетальных клетках слизистой оболочки желудка. Это ключевой фермент, ответственный за конечный этап секреции соляной кислоты. Препарат является S-изомером омепразола и проявляет более предсказуемый и стабильный эффект. Ингибирование насоса приводит к подавлению как базальной, так и стимулированной секреции кислоты, независимо от природы раздражителя. Клинически это проявляется быстрым устранением изжоги, созданием оптимального внутрижелудочного pH для заживления повреждений слизистой оболочки пищевода, желудка и двенадцатиперстной кишки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Эзомепразол быстро всасывается после перорального приема, достигая максимальной концентрации в плазме через 1-2 часа. Абсолютная биодоступность при однократном приеме 40 мг составляет 64% и увеличивается при регулярном применении. Связывание с белками плазмы достигает 97%. Метаболизм происходит в печени с участием изоферментов цитохрома P450, в первую очередь CYP2C19, и, в меньшей степени, CYP3A4. Период полувыведения составляет около 1,3 часа при ежедневном приеме. Выводится преимущественно в виде метаболитов с мочой (около 80%). У пациентов с нарушениями функции печени скорость метаболизма может снижаться.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Нексиум, необходимо обратиться к его широкому спектру показаний:</p>
+        <ul>
+            <li><strong>Гастроэзофагеальная рефлюксная болезнь (ГЭРБ):</strong> лечение эрозивного эзофагита, длительная поддерживающая терапия для предотвращения рецидивов, симптоматическое лечение.</li>
+            <li><strong>Язвенная болезнь:</strong> лечение и профилактика рецидивов язв, ассоциированных с <em>Helicobacter pylori</em>, в составе комбинированной терапии (с антибиотиками).</li>
+            <li><strong>Кислотоподавляющая терапия</strong> у пациентов после кровотечения из пептической язвы.</li>
+            <li><strong>Лечение и профилактика</strong> язв желудка и двенадцатиперстной кишки, связанных с приемом нестероидных противовоспалительных препаратов (НПВП).</li>
+            <li><strong>Синдром Золлингера-Эллисона</strong> и другие состояния с патологической гиперсекрецией желудочного сока.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются:</p>
+        <ul>
+            <li>Гиперчувствительность к эзомепразолу, другим производным бензимидазола или вспомогательным веществам.</li>
+            <li>Одновременный прием с атазанавиром или нелфинавиром (препараты для лечения ВИЧ).</li>
+            <li>Наследственная непереносимость фруктозы, синдром глюкозо-галактозной мальабсорбции (для форм, содержащих сахарозу).</li>
+            <li>Детский возраст: для таблеток - до 12 лет; для гранул - до 1 года или масса тела менее 10 кг. Применение у детей ограничено конкретными показаниями.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при приеме Нексиума обычно слабо выражены и носят преходящий характер. Наиболее часто (≥1/100) могут наблюдаться головная боль, боль в животе, диарея, тошнота, метеоризм, запор. Реже возникают реакции со стороны кожи (зуд, сыпь), головокружение, сухость во рту, бессонница, повышение активности печеночных ферментов. В редких случаях возможны более серьезные реакции: гипомагниемия (при длительном лечении), нарушения со стороны крови (лейкопения, тромбоцитопения), реакции гиперчувствительности (ангионевротический отек), интерстициальный нефрит, поражения печени.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Нексиум, зависит от показания. Стандартная доза для взрослых при лечении эрозивного эзофагита составляет 40 мг 1 раз в сутки в течение 4 недель. Для поддерживающей терапии ГЭРБ - 20 мг 1 раз в сутки. Для эрадикации <em>H. pylori</em> применяется комплексная схема: Нексиум 20 мг + кларитромицин 500 мг + амоксициллин 1000 мг, все дважды в сутки в течение 1 недели. Таблетки принимают целиком, не разжевывая, запивая водой, желательно утром, независимо от приема пищи. Гранулы из саше растворяют в воде для получения суспензии, которую выпивают сразу или в течение 30 минут.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Опыт передозировки ограничен. Описаны случаи приема до 280 мг эзомепразола, сопровождавшиеся общей слабостью и желудочно-кишечными симптомами. Специфического антидота не существует. Лечение симптоматическое. Гемодиализ неэффективен ввиду высокого связывания препарата с белками плазмы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Эзомепразол метаболизируется системой CYP450, поэтому может взаимодействовать с препаратами, влияющими на активность этих изоферментов.</p>
+        <ul>
+            <li><strong>Снижает всасывание:</strong> кетоконазол, итраконазол, эрлотиниб (из-за повышения pH желудка).</li>
+            <li><strong>Повышает концентрацию в плазме:</strong> препараты, метаболизируемые CYP2C19 (диазепам, циталопрам, имипрамин, фенитоин, клопидогрел (активный метаболит), варфарин (требует контроля МНО).</li>
+            <li><strong>Совместный прием не рекомендуется:</strong> атазанавир, нелфинавир (снижается их концентрация).</li>
+            <li><strong>Снижают концентрацию эзомепразола:</strong> рифампицин, препараты зверобоя продырявленного (индукторы CYP450).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Нексиума">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Нексиума">Аналоги Нексиума</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Нексиума, содержащим то же действующее вещество (эзомепразол), относятся:</p>
+        <ul>
+            <li><strong>Эзомепразол</strong> - ингибитор протонного насоса, применяемый для лечения ГЭРБ, язвенной болезни и состояний с гиперсекрецией кислоты.</li>
+            <li><strong>Эманера</strong> - препарат на основе эзомепразола, используемый для заживления эрозивного эзофагита, устранения симптомов изжоги и в составе эрадикационной терапии <em>H. pylori</em>.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нексиум может применяться у детей по строгим показаниям и под наблюдением врача. Гранулы для суспензии показаны детям с 1 года (массой ≥10 кг) для лечения ГЭРБ. Таблетки применяются у детей с 12 лет для лечения ГЭРБ и эрадикации <em>H. pylori</em>. Дозировка зависит от массы тела и показания.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Нексиум при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Нексиум при беременности и кормлении грудью">Можно ли принимать Нексиум при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение во время беременности возможно только в том случае, если ожидаемая польза для матери превышает потенциальный риск для плода, так как данные исследований ограничены. Во время лактации применение Нексиума противопоказано, поскольку неизвестно, проникает ли эзомепразол в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Нексиум и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Нексиум и алкоголь">Совместим ли Нексиум и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямого запрета на совместный прием в инструкции нет, однако алкоголь сам по себе может раздражать слизистую оболочку желудка и провоцировать симптомы, для лечения которых назначен препарат. Для достижения наилучшего терапевтического эффекта рекомендуется воздержаться от употребления алкоголя на время курса лечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Нексиум (все лекарственные формы) является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Нексиум">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Нексиум">Как хранить Нексиум</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке при температуре не выше 25 °C, в недоступном для детей месте. Приготовленную суспензию из гранул необходимо использовать в течение 30 минут.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток и гранул в саше составляет 3 года. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Нексиум является компания AstraZeneca AB (Швеция). Упаковка и выпускающий контроль для рынка могут осуществляться на разных площадках, включая Россию (ООО «АстраЗенека Индастриз»), при этом производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставок.</p>
+    </div>
+</li>

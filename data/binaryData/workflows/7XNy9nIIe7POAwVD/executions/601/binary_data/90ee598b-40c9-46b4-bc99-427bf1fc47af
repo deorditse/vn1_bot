@@ -1,0 +1,328 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Флуимуцил" class="product-details-instructions-main__menu-item">
+    Флуимуцил
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Флуимуцила" class="product-details-instructions-main__menu-item">
+    Аналоги Флуимуцила
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Флуимуцил при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Флуимуцил при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Флуимуцил и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Флуимуцил и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Флуимуцил" class="product-details-instructions-main__menu-item">
+    Как хранить Флуимуцил
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Флуимуцил">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Флуимуцил">Флуимуцил</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Флуимуцил - это современное муколитическое средство, используемое для разжижения и выведения мокроты при острых и хронических заболеваниях органов дыхания. Его действующее вещество, ацетилцистеин, способствует разрушению дисульфидных связей в слизистом секрете, улучшает отхождение мокроты и оказывает антиоксидантное действие. В форме Флуимуцил-антибиотик ИТ препарат также содержит тиамфеникол, обладающий широким спектром антибактериальной активности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li><strong>Флуимуцил</strong>, шипучие таблетки - 600 мг ацетилцистеина. Белые, с лимонным запахом. Производитель: ЗАМБОН СВИТЦЕРЛАНД ЛТД (Швейцария).</li>
+            <li><strong>Флуимуцил</strong>, гранулы для раствора - бело-желтые с апельсиновым запахом, для приема внутрь. Производитель: ЗАМБОН СВИТЦЕРЛАНД ЛТД (Швейцария).</li>
+            <li><strong>Флуимуцил</strong>, раствор - бесцветная жидкость для в/в введения и ингаляций. Производитель: ЗАМБОН С П А (Италия).</li>
+            <li><strong>Флуимуцил-антибиотик ИТ</strong> - лиофилизат для инъекций и ингаляций. Действующее вещество: тиамфеникола глицинат ацетилцистеинат. Производитель: ЗАМБОН С П А (Италия).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Флуимуцил оказывает муколитическое, отхаркивающее и антиоксидантное действие. Ацетилцистеин снижает вязкость мокроты, облегчает её отхождение, защищает клетки от свободных радикалов. В форме антибиотика ИТ препарат дополнительно оказывает антибактериальный эффект.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ацетилцистеин разрушает дисульфидные связи кислых мукополисахаридов, снижая вязкость мокроты. Усиливает синтез сиаломуцинов, подавляет адгезию бактерий, стимулирует секрецию бронхиальных желез и активирует синтез глутатиона. Тиамфеникол нарушает синтез белка бактерий.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ацетилцистеин всасывается через ЖКТ, Cmax - через 1-3 ч. Биодоступность - 10%. Метаболизируется в печени, выводится почками. Тиамфеникол быстро распределяется, Cmax достигается через 1 ч после в/м введения, T1/2 - около 3 ч. Выводится почками, проникает через плаценту.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Флуимуцил помогает при:</p>
+        <ul>
+            <li>острых и хронических бронхитах, трахеитах, пневмонии;</li>
+            <li>синуситах, отитах, гайморитах;</li>
+            <li>бронхоэктатической болезни, муковисцидозе;</li>
+            <li>подготовке к бронхоскопии;</li>
+            <li>послеоперационном выведении секрета;</li>
+            <li>ларинготрахеите, бронхиолите, коклюше.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Язвенная болезнь ЖКТ;</li>
+            <li>Беременность и лактация (за исключением жизненных показаний);</li>
+            <li>Возраст до 18 лет (для отдельных форм);</li>
+            <li>Гиперчувствительность к компонентам;</li>
+            <li>Лейкопения, тромбоцитопения (для антибиотика ИТ).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Возможные побочные действия:</p>
+        <ul>
+            <li>ЖКТ: изжога, тошнота, рвота, диарея;</li>
+            <li>Дыхательная система: кашель, бронхоспазм;</li>
+            <li>Аллергия: зуд, сыпь, крапивница;</li>
+            <li>Гематологические нарушения (при применении антибиотика ИТ);</li>
+            <li>При в/м введении: жжение, болезненность.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как пить Флуимуцил зависит от формы выпуска:</p>
+        <ul>
+            <li>Взрослым - по 600 мг ацетилцистеина 1 раз в сутки;</li>
+            <li>Детям 6-14 лет - по 200-400 мг в день;</li>
+            <li>Детям 2-6 лет - 200 мг в 2 приема;</li>
+            <li>Детям до 2 лет - только по назначению врача.</li>
+        </ul>
+        <p>Флуимуцил-антибиотик ИТ:</p>
+        <ul>
+            <li>В/м: взрослым - 500 мг 2-3 р/день;</li>
+            <li>Детям - доза зависит от возраста (125-500 мг);</li>
+            <li>Ингаляции: взрослым - 250 мг, детям - 125 мг 1-2 р/день;</li>
+            <li>Местно - по показаниям.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Передозировка ацетилцистеином проявляется тошнотой, рвотой, диареей. Передозировка антибиотиком может вызвать суперинфекцию, нарушения кроветворения. Назначается симптоматическая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Несовместим с противокашлевыми средствами - возможен застой мокроты;</li>
+            <li>Уменьшает эффективность антибиотиков при одновременном приеме - интервал не менее 2 ч;</li>
+            <li>Усиливает сосудорасширяющий эффект нитроглицерина;</li>
+            <li>Ослабляет действие парацетамола.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Флуимуцила">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Флуимуцила">Аналоги Флуимуцила</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Аналоги с ацетилцистеином:</p>
+        <ul>
+            <li><strong>АЦЦ Лонг</strong> - шипучие таблетки 600 мг для взрослых.</li>
+            <li><strong>АЦЦ 200</strong> - гранулы с дозировкой 200 мг, применяются при ОРЗ с мокротой.</li>
+            <li><strong>Мукоцил Солюшн</strong> - раствор для ингаляций на основе ацетилцистеина.</li>
+            <li><strong>Эспа-Нац</strong> - немецкий аналог в таблетках и растворе.</li>
+            <li><strong>Ацетилцистеин Канон</strong> - доступный российский аналог в порошке и растворе.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Флуимуцил разрешен детям с 2 лет (в отдельных формах - с рождения). Назначение проводится врачом с учетом массы тела и возраста.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Флуимуцил при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Флуимуцил при беременности и кормлении грудью">Можно ли принимать Флуимуцил при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Во время беременности и в период лактации препарат назначается только по строгим показаниям, если польза превышает потенциальный риск. Грудное вскармливание на время лечения желательно прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Флуимуцил и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Флуимуцил и алкоголь">Совместим ли Флуимуцил и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На фоне терапии употребление алкоголя не рекомендовано. Этанол усиливает раздражающее действие на ЖКТ и снижает эффективность лечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Флуимуцил в таблетках и гранулах отпускается без рецепта. Флуимуцил-Антибиотик ИТ отпускается из аптек строго по рецепту.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Флуимуцил">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Флуимуцил">Как хранить Флуимуцил</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат хранится при температуре 15-25 °С в защищенном от света и влаги месте, недоступном для детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Таблетки, гранулы, раствор - 3 года;</li>
+            <li>Флуимуцил-антибиотик ИТ - 3 года (вода для инъекций - 5 лет);</li>
+            <li>Использовать до даты, указанной на упаковке.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Флуимуцил является <strong>Zambon Switzerland Ltd</strong> (Швейцария) и <strong>Zambon S.p.A.</strong> (Италия). Производственная площадка может меняться в зависимости от серии выпуска.</p>
+    </div>
+</li>

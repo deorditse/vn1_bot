@@ -1,0 +1,389 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Крестора" class="product-details-instructions-main__menu-item">
+    Аналоги Крестора
+  </a>
+</li>
+<li>
+  <a href="#Роксера" class="product-details-instructions-main__menu-item">
+    Роксера
+  </a>
+</li>
+<li>
+  <a href="#Розувастатин" class="product-details-instructions-main__menu-item">
+    Розувастатин
+  </a>
+</li>
+<li>
+  <a href="#Розукард" class="product-details-instructions-main__menu-item">
+    Розукард
+  </a>
+</li>
+<li>
+  <a href="#Мертенил" class="product-details-instructions-main__menu-item">
+    Мертенил
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Крестор при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Крестор при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Крестор и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Крестор и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Крестор" class="product-details-instructions-main__menu-item">
+    Как хранить Крестор
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Крестор</strong> - это гиполипидемическое средство из группы статинов, применяемое для снижения уровня липидов в крови и профилактики сердечно-сосудистых осложнений. Действующее вещество препарата - <strong>розувастатин</strong>, ингибитор ГМГ-КоА-редуктазы. Лекарство уменьшает синтез холестерина в печени, способствует снижению уровня липопротеинов низкой плотности и замедляет формирование атеросклеротических бляшек. Крестор помогает снизить риск инфаркта, инсульта и других осложнений, связанных с атеросклерозом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Крестор выпускается в форме таблеток, покрытых плёночной оболочкой, с различной дозировкой действующего вещества:</p>
+        <ul>
+            <li>Крестор 5 мг</li>
+            <li>Крестор 10 мг</li>
+            <li>Крестор 20 мг</li>
+            <li>Крестор 40 мг</li>
+        </ul>
+        <p>В каждой таблетке содержится розувастатин в виде кальциевой соли. Дополнительные компоненты зависят от дозировки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат относится к гиполипидемическим средствам, ингибиторам ГМГ-КоА-редуктазы. Крестор снижает концентрацию общего холестерина, холестерина липопротеинов низкой плотности и триглицеридов в крови, одновременно повышая уровень липопротеинов высокой плотности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Розувастатин избирательно блокирует фермент ГМГ-КоА-редуктазу, участвующий в синтезе холестерина. Это приводит к снижению количества «плохого» холестерина и уменьшению риска прогрессирования атеросклероза.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Максимальная концентрация в крови достигается через 3-5 часов.</li>
+            <li>Биодоступность около 20%.</li>
+            <li>До 90% связывается с белками плазмы.</li>
+            <li>Метаболизм минимальный (около 10%), преимущественно с участием CYP2C9.</li>
+            <li>Выводится в основном с калом (около 90%), частично почками.</li>
+            <li>Период полувыведения - около 19 часов.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, <strong>от чего помогает Крестор</strong>, нужно учитывать его официальные показания:</p>
+        <ul>
+            <li>Первичная гиперхолестеринемия (в том числе семейная гетерозиготная).</li>
+            <li>Смешанная гиперхолестеринемия.</li>
+            <li>Семейная гомозиготная гиперхолестеринемия (как дополнение к диете или аферезу ЛПНП).</li>
+            <li>Гипертриглицеридемия.</li>
+            <li>Замедление прогрессирования атеросклероза.</li>
+            <li>Первичная профилактика инфаркта, инсульта и других сердечно-сосудистых осложнений у пациентов из группы риска.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Гиперчувствительность к розувастатину или вспомогательным компонентам.</li>
+            <li>Активные заболевания печени.</li>
+            <li>Тяжёлые нарушения функции почек.</li>
+            <li>Миопатии и предрасположенность к рабдомиолизу.</li>
+            <li>Одновременный приём циклоспорина.</li>
+            <li>Беременность и лактация.</li>
+            <li>Возраст до 18 лет (для всех дозировок).</li>
+            <li>Для дозы 40 мг - дополнительные ограничения (нарушение функции почек средней степени, гипотиреоз, злоупотребление алкоголем, азиатская раса, приём фибратов).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как и другие статины, препарат может вызывать <strong>побочные действия</strong>:</p>
+        <ul>
+            <li>Часто: головная боль, головокружение, тошнота, запор, боль в животе, миалгия, астения.</li>
+            <li>Нечасто: кожный зуд, сыпь, крапивница.</li>
+            <li>Редко: тромбоцитопения, миопатия, рабдомиолиз, гепатит, панкреатит.</li>
+            <li>Очень редко: желтуха, потеря памяти, депрессия, периферическая нейропатия.</li>
+            <li>Неизвестно: нарушения сна, кашель, одышка, тендинопатии.</li>
+        </ul>
+        <p>При появлении выраженных реакций лечение следует прекратить и обратиться к врачу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Вопрос <strong>как пить Крестор</strong> определяется лечащим врачом.</p>
+        <ul>
+            <li>Начальная доза - 5 мг или 10 мг 1 раз в сутки.</li>
+            <li>При необходимости врач может увеличить дозу до 20 мг.</li>
+            <li>Максимальная суточная доза - 40 мг (только для пациентов с тяжёлой гиперхолестеринемией и высоким риском осложнений).</li>
+            <li>Таблетки принимают внутрь, не разжёвывая, запивая водой.</li>
+            <li>Время приёма не зависит от еды.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Приём повышенной дозы может привести к усилению побочных эффектов, особенно со стороны мышц и печени. Специфического антидота нет. Проводится симптоматическая терапия и контроль функций жизненно важных органов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Крестор может взаимодействовать с:</p>
+        <ul>
+            <li>циклоспорином (резкое повышение концентрации розувастатина в крови);</li>
+            <li>варфарином и другими антикоагулянтами;</li>
+            <li>фибратами (риск рабдомиолиза);</li>
+            <li>никотиновой кислотой;</li>
+            <li>антибиотиками (эритромицин, фузидиевая кислота);</li>
+            <li>гормональными контрацептивами;</li>
+            <li>противовирусными средствами (ингибиторы протеаз ВИЧ, препараты для терапии гепатита С).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Крестора">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Крестора">Аналоги Крестора</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Крестор - это оригинальный препарат розувастатина. На рынке также представлены дженерики и аналоги с тем же действующим веществом, которые отличаются производителем, составом вспомогательных компонентов и ценой.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Роксера">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Роксера">Роксера</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Роксера</strong> - гиполипидемическое средство на основе розувастатина. Применяется для лечения первичной и смешанной гиперхолестеринемии, а также для профилактики сердечно-сосудистых заболеваний. Выпускается в таблетках с дозировками 5, 10, 15, 20 и 40 мг. Эффективность и профиль безопасности сопоставимы с оригинальным Крестором, однако цена обычно ниже.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Розувастатин">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Розувастатин">Розувастатин</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Розувастатин</strong> - международное непатентованное название (МНН) и одновременно дженерик. Представлен множеством производителей. Выпускается в таблетках дозировкой от 5 до 40 мг. Применяется для снижения уровня холестерина и триглицеридов, коррекции липидного обмена и профилактики осложнений атеросклероза.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Розукард">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Розукард">Розукард</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Розукард</strong> - статин на основе розувастатина. Используется для снижения уровня холестерина липопротеинов низкой плотности, повышения липопротеинов высокой плотности и снижения риска сердечно-сосудистых осложнений. Выпускается в таблетках 10, 20 и 40 мг. Отличается хорошей переносимостью и широким спектром показаний.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Мертенил">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Мертенил">Мертенил</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Мертенил</strong> - гиполипидемическое средство из группы статинов. Основное действующее вещество - розувастатин. Выпускается в дозировках 5, 10, 20 и 40 мг. Применяется при гиперхолестеринемии, гипертриглицеридемии, а также в профилактических целях у пациентов из группы риска.</p>
+        <p>Все перечисленные аналоги содержат то же действующее вещество - розувастатин, поэтому их терапевтический эффект сопоставим с оригинальным Крестором. Однако выбор конкретного препарата должен делать врач, учитывая переносимость, сопутствующие заболевания и возможные лекарственные взаимодействия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Крестор не применяется у детей младше 18 лет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Крестор при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Крестор при беременности и кормлении грудью">Можно ли принимать Крестор при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан во время беременности и периода <strong>лактации</strong>, так как холестерин необходим для правильного развития плода, а розувастатин может проникать в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Крестор и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Крестор и алкоголь">Совместим ли Крестор и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алкоголь усиливает нагрузку на печень и повышает риск побочных эффектов со стороны мышц и печени. Одновременный приём нежелателен.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Крестор отпускается только по рецепту врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Крестор">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Крестор">Как хранить Крестор</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>В оригинальной упаковке.</li>
+            <li>При температуре до 30 °C.</li>
+            <li>В недоступном для детей месте.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток - <strong>3 года</strong>.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Крестора является компания <strong>AstraZeneca UK Limited</strong> и другие фармацевтические предприятия по лицензии. Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

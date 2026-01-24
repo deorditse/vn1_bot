@@ -1,0 +1,323 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Мидокалм-краткоеописаниепрепарата" class="product-details-instructions-main__menu-item">
+    Мидокалм - краткое описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Формавыпускаисостав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическоедействие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показаниякприменению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочныеэффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Какприниматьидозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействиеседругимипрепаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#АналогиМидокалма" class="product-details-instructions-main__menu-item">
+    Аналоги Мидокалма
+  </a>
+</li>
+<li>
+  <a href="#Можнолиприниматьдетям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#МожнолиприниматьМидокалмприбеременностиикормлениигрудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Мидокалм при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#СовместимлиМидокалмиалкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Мидокалм и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускаетсяпорецептуилинет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#КакхранитьМидокалм" class="product-details-instructions-main__menu-item">
+    Как хранить Мидокалм
+  </a>
+</li>
+<li>
+  <a href="#Срокгодности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Мидокалм - краткое описание препарата">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Мидокалм - краткое описание препарата">Мидокалм - краткое описание препарата</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p><strong>Мидокалм</strong> - это миорелаксант центрального действия, применяемый для снижения патологически повышенного мышечного тонуса и спастичности различного происхождения. Его использование помогает облегчить движение, уменьшить болевые ощущения и повысить качество жизни пациентов с неврологическими и ортопедическими заболеваниями.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p><strong>Мидокалм</strong> выпускается в нескольких формах:</p>
+    <ul>
+      <li>таблетки, покрытые пленочной оболочкой по 50 мг и 150 мг;</li>
+      <li>таблетки пролонгированного действия <strong>Мидокалм Лонг</strong> по 450 мг (упаковки по 10 и 30 штук);</li>
+      <li>раствор для внутримышечного и внутривенного введения 10% (ампулы по 1 мл №5).</li>
+    </ul>
+    <p><strong>Состав</strong>:</p>
+    <ul>
+      <li>действующее вещество - толперизон гидрохлорид;</li>
+      <li>вспомогательные вещества различаются в зависимости от формы (лактоза, крахмал, стеарат магния, целлюлоза и др.).</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Мидокалм относится к группе миорелаксантов центрального действия. Он блокирует проведение патологических импульсов в спинном мозге, уменьшая чрезмерное мышечное напряжение. Дополнительно оказывает умеренное сосудорасширяющее действие и способствует улучшению кровотока в тканях.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Толперизон стабилизирует мембраны нервных клеток и препятствует избыточному поступлению кальция в нервные окончания. Это приводит к уменьшению возбудимости рефлекторных дуг в спинном мозге и снижению тонуса поперечно-полосатой мускулатуры. При этом сознание и сила мышц сохраняются, что выгодно отличает препарат от некоторых других миорелаксантов.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>После приема внутрь толперизон быстро всасывается в ЖКТ, максимальная концентрация достигается через 30-60 минут. Биодоступность - около 20%. Метаболизируется преимущественно в печени и почках, выводится с мочой в виде метаболитов. Период полувыведения - 2,5-3 часа. При парентеральном введении эффект наступает быстрее.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Пациенты часто интересуются, <strong>от чего помогает Мидокалм и для чего он назначается</strong>.</p>
+    <p>Препарат применяют при:</p>
+    <ul>
+      <li>спастичности мышц после инсульта;</li>
+      <li>рассеянном склерозе и других неврологических заболеваниях с гипертонусом;</li>
+      <li>остеохондрозе позвоночника, спондилезе, спондилоартрозе;</li>
+      <li>миелопатиях, энцефаломиелитах;</li>
+      <li>детском церебральном параличе и других энцефалопатиях, сопровождающихся мышечной дистонией;</li>
+      <li>восстановительном лечении после ортопедических и травматологических операций.</li>
+    </ul>
+    <p>Таким образом, Мидокалм помогает облегчить движение, снизить боль и улучшить общее состояние пациентов.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Применение противопоказано при:</p>
+    <ul>
+      <li>гиперчувствительности к толперизону или другим компонентам;</li>
+      <li>миастении;</li>
+      <li>возрасте до 3 месяцев (для таблеток - до 1 года);</li>
+      <li>периоде лактации (при необходимости лечения грудное вскармливание прекращают).</li>
+    </ul>
+    <p>С осторожностью назначается при почечной и печеночной недостаточности.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные эффекты">Побочные эффекты</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Хотя препарат обычно хорошо переносится, у некоторых пациентов могут возникать <strong>побочные действия</strong>:</p>
+    <ul>
+      <li>со стороны ЖКТ: тошнота, рвота, боли в животе;</li>
+      <li>аллергические реакции: кожная сыпь, зуд, отек;</li>
+      <li>со стороны нервной системы: головная боль, слабость, сонливость;</li>
+      <li>со стороны сердечно-сосудистой системы: понижение давления, тахикардия.</li>
+    </ul>
+    <p>Чаще всего побочные эффекты проявляются при превышении дозы или индивидуальной чувствительности.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Пациенты нередко задаются вопросом, <strong>как пить Мидокалм и какая доза считается оптимальной</strong>.</p>
+    <ul>
+      <li>Взрослым обычно назначают по 50 мг 2-3 раза в сутки, при необходимости дозу увеличивают до 150 мг 2-3 раза в день.</li>
+      <li>Для детей дозировка подбирается индивидуально в зависимости от массы тела.</li>
+      <li>Раствор для инъекций применяют внутримышечно по 100 мг 2 раза в сутки или внутривенно медленно по 100 мг 1 раз в сутки.</li>
+    </ul>
+    <p>Таблетки рекомендуется принимать после еды, запивая водой.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Симптомы: выраженная мышечная слабость, затруднение дыхания, судороги. 
+Лечение: промывание желудка, симптоматическая терапия, при необходимости - поддержка дыхания.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <ul>
+      <li>усиливает действие общих анестетиков, седативных средств и миорелаксантов;</li>
+      <li>допускается совместное применение с НПВС для усиления анальгезирующего эффекта;</li>
+      <li>не влияет на действие алкоголя, но их сочетание нежелательно из-за увеличения нагрузки на ЦНС.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Мидокалма">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Мидокалма">Аналоги Мидокалма</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>К структурным и фармакологическим аналогам препарата относятся:</p>
+    <ul>
+      <li><strong>Лидамитол</strong> - миорелаксант, применяемый при мышечных спазмах различного происхождения;</li>
+      <li><strong>Толперизон</strong> - дженерик Мидокалма с тем же действующим веществом, используется при спастичности и гипертонусе;</li>
+      <li><strong>Калмирекс</strong> - миорелаксант на основе толперизона, выпускается в форме раствора для инъекций и таблеток.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат разрешен с 1 года в форме таблеток и с 3 месяцев - в форме раствора для инъекций. Доза подбирается индивидуально врачом в зависимости от массы тела ребенка.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Мидокалм при беременности и кормлении грудью">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Можно ли принимать Мидокалм при беременности и кормлении грудью">Можно ли принимать Мидокалм при беременности и кормлении грудью</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Клинических данных о безопасности применения во время беременности недостаточно. Использование возможно только в исключительных случаях, когда польза для матери превышает потенциальный риск. При <strong>лактации</strong> лечение препаратом не рекомендуется, так как неизвестно, выделяется ли толперизон с грудным молоком.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Мидокалм и алкоголь">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместим ли Мидокалм и алкоголь">Совместим ли Мидокалм и алкоголь</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Хотя исследователи отмечают отсутствие прямого взаимодействия с этанолом, врачи не рекомендуют совмещать препарат с алкоголем. Такое сочетание усиливает нагрузку на печень и центральную нервную систему.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p><strong>Мидокалм</strong> является рецептурным препаратом и отпускается только по назначению врача.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Мидокалм">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Как хранить Мидокалм">Как хранить Мидокалм</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Хранить препарат необходимо в сухом, защищенном от света месте при температуре до 25 °C, в недоступном для детей месте.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности таблеток и раствора - 3 года с даты производства.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат выпускается фармацевтической компанией <strong>Gedeon Richter (Гедеон Рихтер, Венгрия)</strong>. При этом производственная площадка (завод-производитель) может меняться в зависимости от страны поставки.</p>
+  </div>
+</li>

@@ -1,0 +1,293 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Актовегина" class="product-details-instructions-main__menu-item">
+    Аналоги Актовегина
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Актовегин при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Актовегин при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Актовегин и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Актовегин и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Актовегин" class="product-details-instructions-main__menu-item">
+    Как хранить Актовегин
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Актовегин - это лекарственный препарат, стимулирующий регенерацию тканей и улучшающий метаболизм. Его действующее вещество, депротеинизированный гемодериват крови телят, представляет собой очищенный от белков экстракт, содержащий физиологические компоненты, которые способствуют усилению энергетического метаболизма клеток.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в двух основных лекарственных формах:</p>
+        <ul>
+            <li>Таблетки, покрытые оболочкой, дозировкой 200 мг.</li>
+            <li>Раствор для инъекций, дозировкой 40 мг/мл в ампулах по 2 мл, 5 мл и 10 мл.</li>
+        </ul>
+        <p>Основное действующее вещество во всех формах - депротеинизированный гемодериват крови телят. Вспомогательные компоненты зависят от формы выпуска и завода-производителя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Актовегин относится к фармакотерапевтической группе стимуляторов регенерации тканей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика Актовегина заключается в его комплексном антигипоксантном действии, которое включает метаболический, нейропротективный и микроциркуляторный эффекты. Препарат повышает поглощение и утилизацию кислорода и глюкозы клетками, что приводит к улучшению энергетического метаболизма в условиях ишемии и снижению образования лактата. Он модулирует активность ключевых факторов, препятствуя апоптозу (гибели клеток) и уменьшая повреждение при оксидативном стрессе. Кроме того, Актовегин улучшает микроциркуляцию за счет увеличения скорости капиллярного кровотока и стимуляции функции эндотелия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>С помощью стандартных фармакокинетических методов невозможно изучить параметры препарата, так как он состоит из физиологических компонентов, которые обычно присутствуют в организме. Эффект после парентерального введения наступает в течение 30 минут, максимальное действие наблюдается через 2-6 часов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Актовегин, необходимо обратиться к его официальным показаниям для применения у взрослых в составе комплексной терапии:</p>
+        <ul>
+            <li>Симптоматическое лечение когнитивных нарушений, включая постинсультные когнитивные нарушения и деменцию.</li>
+            <li>Симптоматическое лечение нарушений периферического кровообращения и их последствий.</li>
+            <li>Симптоматическое лечение диабетической полинейропатии.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются:</p>
+        <ul>
+            <li>Гиперчувствительность к депротеинизированному гемодеривату крови телят или вспомогательным веществам.</li>
+            <li>Декомпенсированная сердечная недостаточность, отек легких, олигурия, анурия, задержка жидкости в организме (для раствора).</li>
+            <li>Непереносимость фруктозы, глюкозо-галактозная мальабсорбция или сахаразо-изомальтазная недостаточность (для таблеток).</li>
+            <li>Детский возраст до 18 лет.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при применении Актовегина развиваются редко. Со стороны иммунной системы возможны аллергические реакции, включая лекарственную лихорадку и симптомы шока. Со стороны кожи и подкожной клетчатки могут наблюдаться крапивница и внезапное покраснение. Частота возникновения боли в мышцах не установлена.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как принимать Актовегин, и необходимая доза определяются врачом в зависимости от показания.</p>
+        <ul>
+            <li><strong>Таблетки</strong>: принимают внутрь, не разжевывая, перед едой. Доза составляет от 1 до 2 таблеток 3 раза в день (600-1200 мг/сутки) при нарушениях периферического кровообращения, до 2 таблеток 3 раза в день (1200 мг/сутки) при когнитивных нарушениях. Продолжительность лечения - от 4 недель до 6 месяцев.</li>
+            <li><strong>Раствор для инъекций</strong>: вводится внутривенно, внутриартериально или внутримышечно. Начальная доза обычно составляет 10-20 мл в сутки внутривенно или внутриартериально, для дальнейшего лечения - 5 мл внутривенно или внутримышечно. Для инфузий раствор добавляют к 200-300 мл изотонического раствора натрия хлорида или 5% глюкозы.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаев передозировки препаратом Актовегин не зарегистрировано. Доклинические данные свидетельствуют об отсутствии токсических эффектов даже при значительном превышении доз.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>В настоящее время клинически значимые взаимодействия Актовегина с другими лекарственными препаратами неизвестны.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Актовегина">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Актовегина">Аналоги Актовегина</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На данный лекарственный препарат структурные аналоги, содержащие то же действующее вещество (депротеинизированный гемодериват крови телят), не выпускаются. Действующим веществом является депротеинизированный гемодериват крови телят.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Актовегина у детей и подростков в возрасте до 18 лет противопоказано ввиду отсутствия данных по эффективности и безопасности для этой возрастной группы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Актовегин при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Актовегин при беременности и кормлении грудью">Можно ли принимать Актовегин при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение во время беременности и в период лактации возможно только в случаях, когда потенциальная польза для матери превышает потенциальный риск для плода или ребенка. Применение при плацентарной недостаточности не рекомендуется.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Актовегин и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Актовегин и алкоголь">Совместим ли Актовегин и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Данные о взаимодействии Актовегина с алкоголем отсутствуют. Однако учитывая, что препарат часто применяется при серьезных заболеваниях, сопровождающихся нарушениями метаболизма и кровообращения, употребление алкоголя на фоне терапии не рекомендуется.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Актовегин является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Актовегин">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Актовегин">Как хранить Актовегин</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в недоступном для детей месте при температуре не выше 25 °C, защищенном от света. Раствор для инъекций после вскрытия ампулы хранению не подлежит.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности для таблеток и раствора для инъекций составляет 3 года. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Актовегин является компания Takeda GmbH (Германия/Австрия). Производственная площадка (завод-производитель) может меняться, упаковка и выпускающий контроль могут осуществляться на разных площадках, включая Россию (ООО «Такеда Фармасьютикалс»).</p>
+    </div>
+</li>

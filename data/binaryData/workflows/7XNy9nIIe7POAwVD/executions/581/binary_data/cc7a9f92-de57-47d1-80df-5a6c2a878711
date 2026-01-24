@@ -1,0 +1,329 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Гептрал" class="product-details-instructions-main__menu-item">
+    Гептрал
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Гептрала" class="product-details-instructions-main__menu-item">
+    Аналоги Гептрала
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Гептрал при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Гептрал при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Гептрал и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Гептрал и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Гептрал" class="product-details-instructions-main__menu-item">
+    Как хранить Гептрал
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Гептрал">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Гептрал">Гептрал</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Гептрал - это лекарственный препарат с действующим веществом адеметионин, природной аминокислотой, которая участвует в биохимических процессах организма и играет важную роль в детоксикации и защите печени. Препарат применяется при хронических заболеваниях печени, способствует очищению организма от токсинов, улучшает отток желчи, восстанавливает поврежденные ткани и оказывает положительное влияние на нервную систему.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Гептрал выпускается в двух лекарственных формах:</p>
+        <ul>
+            <li><strong>Таблетки кишечнорастворимые, покрытые пленочной оболочкой</strong> (500 мг адеметионина в виде 1,4-бутандисульфоната 949 мг).</li>
+            <li><strong>Лиофилизат для приготовления раствора</strong> для внутривенного или внутримышечного введения (760 мг адеметионина 1,4-бутандисульфоната, что соответствует 400 мг иона адеметионина).</li>
+        </ul>
+        <p>Вспомогательные компоненты зависят от формы выпуска и могут отличаться в зависимости от производителя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Гептрал относится к гепатопротекторам и антидепрессантам. Он улучшает функциональное состояние печени, обладает детоксикационным, холеретическим, антиоксидантным и нейропротективным эффектом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Адеметионин, входящий в состав препарата, участвует в реакциях трансметилирования, транссульфирования и трансаминопропилирования. В печени он повышает синтез глутатиона, цистеина и таурина, что усиливает процессы детоксикации. 
+Препарат улучшает текучесть мембран гепатоцитов, препятствует их повреждению, стимулирует образование желчи и уменьшает проявления внутрипеченочного холестаза. Также адеметионин оказывает антидепрессивное действие.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>При приеме внутрь биодоступность составляет около 5%.</li>
+            <li>Максимальная концентрация в плазме достигается через 3-5 часов.</li>
+            <li>Связывание с белками плазмы низкое.</li>
+            <li>Метаболизм происходит преимущественно в печени.</li>
+            <li>Период полувыведения - около 1,5 часа.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Гептрал, необходимо обратиться к его показаниям:</p>
+        <ul>
+            <li>внутрипеченочный холестаз при хронических заболеваниях печени;</li>
+            <li>жировая дистрофия печени;</li>
+            <li>токсические поражения печени (алкогольные, лекарственные, вирусные);</li>
+            <li>хронические формы гепатита;</li>
+            <li>цирроз печени;</li>
+            <li>холангит, хронический бескаменный холецистит;</li>
+            <li>энцефалопатия, связанная с печеночной недостаточностью;</li>
+            <li>депрессивные состояния;</li>
+            <li>синдром хронической усталости у пациентов с заболеваниями печени;</li>
+            <li>внутрипеченочный холестаз беременных.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение препарата противопоказано при:</p>
+        <ul>
+            <li>индивидуальной гиперчувствительности к адеметионину и вспомогательным веществам;</li>
+            <li>наследственных нарушениях метаболизма метионина (гомоцистинурия, гипергомоцистеинемия);</li>
+            <li>дефиците витамина B12 или фолиевой кислоты;</li>
+            <li>биполярных аффективных расстройствах;</li>
+            <li>возрасте до 18 лет.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как и у любого лекарственного средства, возможны побочные действия:</p>
+        <ul>
+            <li>со стороны ЖКТ: тошнота, диарея, боли в животе, изжога;</li>
+            <li>со стороны нервной системы: головная боль, головокружение, бессонница, тревожность;</li>
+            <li>аллергические реакции: зуд, сыпь, ангионевротический отек;</li>
+            <li>местные проявления при инъекциях: отек и боль в месте введения.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как пить Гептрал зависит от формы выпуска и показаний:</p>
+        <ul>
+            <li><strong>Таблетки</strong> принимают внутрь, не разжевывая, предпочтительно утром, между приемами пищи.</li>
+            <li><strong>Доза</strong> при поддерживающей терапии составляет 800-1600 мг в сутки (курс 2-4 недели).</li>
+            <li><strong>Лиофилизат</strong> вводят внутривенно или внутримышечно в дозировке 400-800 мг (1-2 флакона) в сутки. При тяжелых состояниях возможна начальная парентеральная терапия с переходом на таблетки.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Данных о тяжелых случаях передозировки мало. Возможны усиление побочных эффектов со стороны ЖКТ и нервной системы. При подозрении на передозировку необходимо обратиться за медицинской помощью.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Усиление эффекта возможно при одновременном приеме с антидепрессантами (СИОЗС, ТЦА, средствами с триптофаном).</li>
+            <li>Следует соблюдать осторожность при комбинации с другими гепатотропными препаратами.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Гептрала">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Гептрала">Аналоги Гептрала</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К препаратам с тем же действующим веществом (адеметионин) относятся:</p>
+        <ul>
+            <li><strong>Гептор</strong>. Российский аналог Гептрала, содержит адеметионин в таблетках и лиофилизате для приготовления раствора. Используется при заболеваниях печени с внутрипеченочным холестазом, циррозе, хроническом гепатите, а также при депрессивных состояниях. Отличается более доступной ценой, что делает его популярной альтернативой оригинальному препарату.</li>
+            <li><strong>Гепцифол</strong>. Препарат на основе адеметионина, применяемый для улучшения функции печени и снижения проявлений холестаза. Оказывает антидепрессивное действие, нормализует обменные процессы, используется при токсических и алкогольных поражениях печени.</li>
+            <li><strong>Гепцифол Экспресс</strong>. Модифицированная форма адеметионина, созданная для повышения биодоступности действующего вещества. Применяется в терапии хронических заболеваний печени, в том числе при холестатических нарушениях.</li>
+            <li><strong>Адеметионин Велфарм</strong>. Российский препарат, содержащий адеметионин в форме таблеток и лиофилизата. Используется при жировой дистрофии печени, циррозе, хроническом гепатите, а также в психиатрической практике при депрессивных расстройствах.</li>
+            <li><strong>Самеликс</strong>. Лекарственное средство с адеметионином, применяемое при хронических болезнях печени и внутрипеченочном холестазе. Обладает гепатопротективным и антидепрессивным действием, назначается также в комплексной терапии депрессивных состояний.</li>
+        </ul>
+        <p>Все эти препараты содержат одно и то же действующее вещество - адеметионин, поэтому являются полными аналогами по МНН. Разница между ними заключается в производителе, форме выпуска, вспомогательных компонентах и цене.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Гептрала у пациентов младше 18 лет противопоказано из-за отсутствия достаточного опыта клинического применения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Гептрал при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Гептрал при беременности и кормлении грудью">Можно ли принимать Гептрал при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Во время беременности и в период лактации назначение препарата возможно только по строгим показаниям. В I триместре не применяется. Решение о назначении принимает врач, оценивая соотношение пользы и риска.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Гептрал и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Гептрал и алкоголь">Совместим ли Гептрал и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Одновременный прием алкоголя и Гептрала противопоказан, так как этанол оказывает токсическое воздействие на печень и снижает эффективность терапии.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li><strong>Таблетки</strong> можно приобрести без рецепта.</li>
+            <li><strong>Лиофилизат для инъекций</strong> отпускается строго по рецепту.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Гептрал">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Гептрал">Как хранить Гептрал</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат необходимо хранить при температуре не выше 25 °C, в оригинальной упаковке, в недоступном для детей месте.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток и лиофилизата - 3 года. По истечении указанного срока применять препарат нельзя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Гептрал выпускается различными фармацевтическими компаниями, среди которых Abbott S.p.A (Италия). Производственная площадка (завод-производитель) может меняться в зависимости от серии и страны поставки.</p>
+    </div>
+</li>

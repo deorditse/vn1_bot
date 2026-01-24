@@ -1,0 +1,302 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Цераксона" class="product-details-instructions-main__menu-item">
+    Аналоги Цераксона
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Цераксон при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Цераксон при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Цераксон и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Цераксон и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Цераксон" class="product-details-instructions-main__menu-item">
+    Как хранить Цераксон
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Цераксон - это современное ноотропное средство, действующим веществом которого является цитиколин. Препарат широко применяется в неврологической практике для лечения и восстановления после острых и хронических поражений головного мозга. Цераксон способствует стабилизации клеточных мембран и улучшению когнитивных функций.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в двух лекарственных формах:</p>
+        <ul>
+            <li>Раствор для внутривенного и внутримышечного введения в ампулах по 4 мл с дозировкой цитиколина 500 мг или 1000 мг.</li>
+            <li>Раствор для приема внутрь (пероральный) во флаконах 30 мл с дозировочным шприцем или в пакетиках по 10 мл. Концентрация цитиколина в 1 мл раствора составляет 100 мг.</li>
+        </ul>
+        <p>Вспомогательные компоненты различаются в зависимости от формы выпуска.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Цераксон относится к фармакотерапевтической группе ноотропных средств.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Цитиколин, являясь предшественником структурных компонентов клеточных мембран, обладает нейропротективным и репаративным действием. Он способствует восстановлению поврежденных мембран нейронов, ингибирует действие фосфолипаз, препятствует образованию свободных радикалов и уменьшает апоптоз (гибель) клеток. В остром периоде инсульта препарат уменьшает объем повреждения мозговой ткани. Цераксон также улучшает когнитивные функции: память, внимание, способность к концентрации.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Цитиколин хорошо абсорбируется при внутривенном, внутримышечном и пероральном введении. Биодоступность при приеме внутрь практически равна таковой при парентеральном введении. Вещество хорошо проникает через гематоэнцефалический барьер и активно встраивается в структуры головного мозга. Метаболизируется в печени и кишечнике. Выводится из организма в основном в виде углекислого газа и в незначительном количестве - почками и через кишечник.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Цераксон, следует обратиться к официальным показаниям:</p>
+        <ul>
+            <li>Острый период ишемического инсульта (в комплексной терапии).</li>
+            <li>Восстановительный период после ишемического и геморрагического инсультов.</li>
+            <li>Черепно-мозговая травма (ЧМТ), острый и восстановительный периоды.</li>
+            <li>Когнитивные и поведенческие нарушения при дегенеративных и сосудистых заболеваниях головного мозга.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Гиперчувствительность к цитиколину или любому вспомогательному веществу.</li>
+            <li>Выраженная ваготония (преобладание тонуса парасимпатической нервной системы).</li>
+            <li>Непереносимость фруктозы (для пероральной формы).</li>
+            <li>Возраст до 18 лет (в связи с недостаточностью данных).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при приеме Цераксона встречаются очень редко. К ним могут относиться: аллергические реакции (сыпь, зуд), головная боль, головокружение, тошнота, диарея, возбуждение, бессонница, изменение артериального давления, тремор. При появлении любых нежелательных реакций следует сообщить врачу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как принимать Цераксон, и необходимая доза определяются врачом.</p>
+        <ul>
+            <li><strong>Парентеральное введение (в/в, в/м):</strong> в остром периоде - 1000 мг каждые 12 часов. Длительность лечения - не менее 6 недель.</li>
+            <li><strong>Раствор для приема внутрь:</strong> как пить препарат, зависит от показаний. Обычная доза составляет 500-2000 мг в сутки (5-20 мл или 1-2 пакетика), разделенная на 1-2 приема. Раствор можно принимать в неразбавленном виде или смешивать с половиной стакана воды.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаи передозировки не описаны в связи с низкой токсичностью цитиколина.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Цераксон усиливает эффект леводопы. Не рекомендуется одновременное применение с лекарственными средствами, содержащими меклофеноксат.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Цераксона">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Цераксона">Аналоги Цераксона</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Цераксона, содержащим то же действующее вещество (цитиколин), относятся:</p>
+        <ul>
+            <li><strong>Роноцит</strong> - ноотропное средство для парентерального введения и приема внутрь.</li>
+            <li><strong>Рекогнан</strong> - препарат цитиколина, применяемый при острых и хронических неврологических нарушениях.</li>
+            <li><strong>Энцетрон</strong> - нейропротектор, способствующий восстановлению функций головного мозга.</li>
+            <li><strong>Цитиколин</strong> - аналог, выпускаемый различными производителями.</li>
+            <li><strong>Нейпилепт</strong> - средство для лечения последствий инсультов и черепно-мозговых травм.</li>
+            <li><strong>Нооактив</strong> - ноотропный препарат на основе цитиколина.</li>
+            <li><strong>Нооцил</strong> - применяется при когнитивных расстройствах сосудистого и дегенеративного генеза.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Цераксона у детей и подростков в возрасте до 18 лет противопоказано в связи с отсутствием достаточных клинических данных.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Цераксон при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Цераксон при беременности и кормлении грудью">Можно ли принимать Цераксон при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение при беременности возможно только в случае, если потенциальная польза для матери превышает риск для плода. Данных о применении в период лактации (грудного вскармливания) недостаточно; на время лечения рекомендуется прекратить грудное вскармливание.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Цераксон и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Цераксон и алкоголь">Совместим ли Цераксон и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Совместный прием препарата с алкоголем не рекомендуется. Этанол может оказывать дополнительное угнетающее действие на центральную нервную систему и снижать эффективность терапии.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Цераксон является рецептурным лекарственным препаратом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Цераксон">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Цераксон">Как хранить Цераксон</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Раствор для инъекций следует хранить при температуре не выше 30°C. Раствор для приема внутрь - при температуре не выше 25°C. Препарат должен находиться в оригинальной упаковке в недоступном для детей месте.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности для всех форм выпуска составляет 3 года. Не применять по его истечении.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Цераксон является компания <strong>FERRER INTERNACIONAL S.A.</strong> (Испания). Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

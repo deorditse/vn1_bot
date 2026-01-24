@@ -1,0 +1,385 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Дуодарта" class="product-details-instructions-main__menu-item">
+    Аналоги Дуодарта
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Дуодарт при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Дуодарт при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Дуодарт и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Дуодарт и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Дуодарт" class="product-details-instructions-main__menu-item">
+    Как хранить Дуодарт
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт - это комбинированный препарат для лечения доброкачественной гиперплазии предстательной железы (ДГПЖ) у мужчин. Дуодарт это фиксированная комбинация двух активных компонентов: дутастерида - ингибитора 5-альфа-редуктазы, и тамсулозина - селективного α1A-адреноблокатора. Благодаря двойному механизму действия, Дуодарт одновременно уменьшает размер предстательной железы и быстро улучшает симптомы нарушения мочеиспускания. Препарат снижает риск острой задержки мочи и необходимости хирургического вмешательства. Согласно официальной инструкции, Дуодарт применяется только у взрослых мужчин и не предназначен для женщин и детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт выпускается в виде капсул с модифицированным высвобождением. Каждая капсула содержит:</p>
+        <ul>
+            <li>0,50 мг дутастерида</li>
+            <li>0,40 мг тамсулозина гидрохлорида</li>
+        </ul>
+        <p>Внешне капсула - продолговатая, с коричневым корпусом и оранжевой крышечкой, на которой черными чернилами нанесена маркировка «GS 7CZ». Внутри находятся:</p>
+        <ul>
+            <li>Мягкая желатиновая капсула с дутастеридом</li>
+            <li>Пеллеты белого или почти белого цвета с тамсулозином</li>
+        </ul>
+        <p>Вспомогательные вещества включают:</p>
+        <ul>
+            <li>В оболочке твердой капсулы: гипромеллоза, титана диоксид, каррагинан, красители (железа оксиды, солнечный закат желтый Е110), кукурузный крахмал, карнаубский воск.</li>
+            <li>В мягкой капсуле: желатин, глицерол, лецитин (из сои), триглицериды среднецепочечные, бутилгидрокситолуол.</li>
+            <li>В пеллетах: микрокристаллическая целлюлоза, сополимер метакриловой кислоты и этилакрилата, тальк, триэтилцитрат.</li>
+        </ul>
+        <p>Состав препарата содержит соевые производные и краситель Е110, что важно учитывать при аллергии на сою, арахис или пищевые красители.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт относится к фармакотерапевтической группе: препараты для лечения доброкачественной гиперплазии предстательной железы, включающие альфа-адреноблокаторы в комбинации с ингибиторами 5-альфа-редуктазы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Комбинированное действие Дуодарта основано на синергии двух механизмов:</p>
+        <ul>
+            <li>Дутастерид ингибирует изоферменты 5-альфа-редуктазы I и II типа, блокируя превращение тестостерона в дигидротестостерон (ДГТ) - основной гормон, стимулирующий рост предстательной железы. Это приводит к постепенному уменьшению объема простаты, улучшению уродинамики и снижению риска осложнений.</li>
+            <li>Тамсулозин селективно блокирует α1A-адренорецепторы в гладкой мускулатуре простаты и шейки мочевого пузыря, вызывая их расслабление и быстрое улучшение мочеиспускания (усиление струи, уменьшение частоты и ночной поллакиурии).</li>
+        </ul>
+        <p>Таким образом, Дуодарт для чего назначен - обеспечивает как краткосрочное облегчение симптомов, так и долгосрочную защиту от прогрессирования ДГПЖ.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хотя в инструкции данные ограничены, известно, что оба компонента хорошо всасываются в ЖКТ.</p>
+        <ul>
+            <li>Дутастерид медленно достигает равновесной концентрации в плазме (около 1-2 месяцев), имеет высокое связывание с белками (&gt;99%) и длительный период полувыведения (5-6 недель). Выводится преимущественно через кишечник.</li>
+            <li>Тамсулозин всасывается быстрее, метаболизируется в печени, период полувыведения - около 15 часов. Выводится почками и кишечником.</li>
+        </ul>
+        <p>Препарат Дуодарт рекомендуется принимать через 30 минут после еды, что улучшает всасывание дутастерида и снижает вариабельность концентрации.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Дуодарт, следует обратиться к его основному показанию:</p>
+        <ul>
+            <li>Лечение симптоматической доброкачественной гиперплазии предстательной железы у мужчин, сопровождающейся нарушением мочеиспускания (слабая струя, учащение, ночные позывы, ощущение неполного опорожнения мочевого пузыря).</li>
+        </ul>
+        <p>Терапия также направлена на профилактику острой задержки мочи и снижение необходимости хирургического вмешательства.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт противопоказан в следующих случаях:</p>
+        <ul>
+            <li>Повышенная чувствительность к дутастериду, тамсулозину, другим ингибиторам 5-альфа-редуктазы, сое, арахису или любому компоненту состава (включая краситель солнечный закат желтый Е110).</li>
+            <li>Ортостатическая гипотензия (пониженное давление с головокружением или обмороками).</li>
+            <li>Тяжелые нарушения функции печени.</li>
+            <li>Женский пол (препарат предназначен только для мужчин).</li>
+            <li>Возраст до 18 лет.</li>
+        </ul>
+        <p>Женщинам, особенно беременным, запрещено прикасаться к поврежденным капсулам из-за риска всасывания дутастерида через кожу.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия Дуодарта могут быть связаны с каждым компонентом.</p>
+        <p>Часто (у ≤1 из 10):</p>
+        <ul>
+            <li>Головокружение</li>
+            <li>Импотенция</li>
+            <li>Снижение либидо</li>
+            <li>Нарушение эякуляции (снижение объема спермы)</li>
+            <li>Увеличение или болезненность грудных желез</li>
+        </ul>
+        <p>Нечасто (у ≤1 из 100):</p>
+        <ul>
+            <li>Головная боль</li>
+            <li>Ортостатическая гипотензия</li>
+            <li>Тахикардия, ощущение сердцебиения</li>
+            <li>Насморк, заложенность носа</li>
+            <li>Тошнота, рвота, запор, диарея</li>
+            <li>Кожная сыпь, крапивница, зуд</li>
+            <li>Выпадение волос на теле</li>
+        </ul>
+        <p>Редко и очень редко:</p>
+        <ul>
+            <li>Обморок</li>
+            <li>Ангионевротический отек</li>
+            <li>Синдром Стивенса-Джонсона</li>
+            <li>Приапизм (длительная болезненная эрекция)</li>
+        </ul>
+        <p>Неизвестная частота:</p>
+        <ul>
+            <li>Депрессия</li>
+            <li>Фибрилляция предсердий</li>
+            <li>Одышка</li>
+            <li>Нечеткость зрения</li>
+            <li>Сухость во рту</li>
+        </ul>
+        <p>Особое внимание: некоторые сексуальные побочные действия могут сохраняться даже после отмены препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как принимать Дуодарт и какова необходимая доза - строго определены:</p>
+        <ul>
+            <li>1 капсула 1 раз в сутки.</li>
+            <li>Принимать целиком, запивая водой, через 30 минут после еды, в одно и то же время.</li>
+            <li>Не разжевывать, не вскрывать - содержимое может раздражать слизистые.</li>
+        </ul>
+        <p>Лечение продолжается долгосрочно, по назначению врача. Самовольная отмена снижает эффективность и может привести к возврату симптомов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаи передозировки Дуодартом клинически не описаны. Теоретически возможны:</p>
+        <ul>
+            <li>Гипотензия</li>
+            <li>Головокружение</li>
+            <li>Нарушения эякуляции</li>
+        </ul>
+        <p>Лечение - симптоматическое. Гемодиализ неэффективен из-за высокого связывания компонентов с белками.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт не следует сочетать с:</p>
+        <ul>
+            <li>Другими альфа-адреноблокаторами (риск гипотензии).</li>
+            <li>Кетоконазолом (усиливает концентрацию тамсулозина).</li>
+        </ul>
+        <p>Осторожность требуется при одновременном приеме:</p>
+        <ul>
+            <li>Ингибиторов ФДЭ-5 (силденафил, тадалафил) - усиление гипотензии</li>
+            <li>Верапамила, дилтиазема, цитохром P450 ингибиторов (пароксетин, ритонавир, эритромицин) - повышение уровня тамсулозина</li>
+            <li>Варфарина - возможное влияние на МНО</li>
+        </ul>
+        <p>Перед началом любой новой терапии необходимо сообщить врачу о приеме Дуодарта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Дуодарта">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Дуодарта">Аналоги Дуодарта</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Дуодарта, содержащим те же действующие вещества (дутастерид + тамсулозин), относятся:</p>
+        <ul>
+            <li>Предстанормикс дуо (капсулы с модифицированным высвобождением) - комбинированный препарат для лечения ДГПЖ, обеспечивающий аналогичный фармакологический эффект.</li>
+            <li>Дутастерид + Тамсулозин Фармасинтез (капсулы с модифицированным высвобождением) - российский генерик с идентичным составом и показаниями.</li>
+        </ul>
+        <p>Выбор конкретного аналога зависит от рекомендаций врача, стоимости и доступности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт не применяется у лиц моложе 18 лет, так как безопасность и эффективность у детей и подростков не установлены. Препарат предназначен исключительно для взрослых мужчин.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Дуодарт при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Дуодарт при беременности и кормлении грудью">Можно ли принимать Дуодарт при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт противопоказан женщинам, включая беременных и кормящих.</p>
+        <p>Дутастерид может всасываться через кожу и влиять на развитие плода мужского пола, особенно в первые 16 недель беременности, вызывая аномалии наружных половых органов.</p>
+        <p>При случайном контакте поврежденной капсулы с кожей беременной женщины - немедленно промыть участок и обратиться к врачу.</p>
+        <p>Лактация не является клинически значимым аспектом, так как препарат не назначается женщинам.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Дуодарт и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Дуодарт и алкоголь">Совместим ли Дуодарт и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хотя прямого взаимодействия не описано, алкоголь может усиливать гипотензивный эффект тамсулозина, повышая риск головокружения, слабости и обморока.</p>
+        <p>Поэтому на фоне терапии рекомендуется ограничить или избегать употребления алкоголя, особенно в начале лечения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дуодарт является рецептурным лекарственным препаратом и отпускается из аптек только по назначению врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Дуодарт">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Дуодарт">Как хранить Дуодарт</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить:</p>
+        <ul>
+            <li>В недоступном для детей месте</li>
+            <li>При температуре не выше 25 °C</li>
+            <li>В оригинальном флаконе с защитой от влаги</li>
+        </ul>
+        <p>Избегать прямого солнечного света и контакта с влагой.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности Дуодарта составляет 2 года.</p>
+        <p>Не использовать препарат после даты, указанной на упаковке после слов «Годен до:». Датой окончания срока является последний день указанного месяца.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Дуодарта является Catalent Germany Schorndorf GmbH (Германия).</p>
+        <p>Обратите внимание: производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставки. Упаковка и контроль качества могут осуществляться на других фармацевтических предприятиях, включая страны ЕАЭС.</p>
+    </div>
+</li>

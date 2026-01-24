@@ -1,0 +1,318 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные действия" class="product-details-instructions-main__menu-item">
+    Побочные действия
+  </a>
+</li>
+<li>
+  <a href="#Дозировка и способ применения" class="product-details-instructions-main__menu-item">
+    Дозировка и способ применения
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Тримедата" class="product-details-instructions-main__menu-item">
+    Аналоги Тримедата
+  </a>
+</li>
+<li>
+  <a href="#Применение у детей" class="product-details-instructions-main__menu-item">
+    Применение у детей
+  </a>
+</li>
+<li>
+  <a href="#Применение при беременности и грудном вскармливании" class="product-details-instructions-main__menu-item">
+    Применение при беременности и грудном вскармливании
+  </a>
+</li>
+<li>
+  <a href="#Совместимость с алкоголем" class="product-details-instructions-main__menu-item">
+    Совместимость с алкоголем
+  </a>
+</li>
+<li>
+  <a href="#Условия отпуска" class="product-details-instructions-main__menu-item">
+    Условия отпуска
+  </a>
+</li>
+<li>
+  <a href="#Условия хранения" class="product-details-instructions-main__menu-item">
+    Условия хранения
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Описание препарата">Описание препарата</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Тримедат - лекарственный препарат, относящийся к средствам, регулирующим моторику желудочно-кишечного тракта. Он помогает восстанавливать физиологическую активность гладкой мускулатуры кишечника, устраняет как чрезмерные сокращения, так и снижение перистальтики. Благодаря такому действию препарат используется при функциональных нарушениях пищеварительной системы, проявляющихся спазмами, болевыми ощущениями, запорами или диареей.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат выпускается в таблетках для приёма внутрь.</p>
+    <p><strong>Состав</strong>:</p>
+    <ul>
+      <li>активное вещество - тримебутина малеат в дозировках 100 мг и 200 мг;</li>
+      <li>дополнительные вещества - лактоза, крахмал, тальк, стеарат магния и другие вспомогательные компоненты, обеспечивающие стабильность и усвоение.</li>
+    </ul>
+    <p>Таблетки имеют белый или почти белый цвет, круглую форму, двояковыпуклую поверхность.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Тримедат относится к периферическим спазмолитикам. Его особенность - способность действовать как регулятор моторики. Препарат восстанавливает координацию перистальтических волн, устраняет дискомфорт, связанный с задержкой или ускорением продвижения содержимого по кишечнику.</p>
+    <p>Таким образом, лекарство одновременно облегчает симптомы гипермоторики и гипомоторики ЖКТ, нормализуя процесс пищеварения.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакодинамика">Фармакодинамика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Механизм действия основан на взаимодействии тримебутина с энкефалинергической системой кишечника. Связываясь с периферическими опиоидными рецепторами различных типов, действующее вещество регулирует интенсивность сокращений гладкой мускулатуры.</p>
+    <p>Благодаря такому эффекту препарат обеспечивает баланс между расслаблением и стимуляцией моторики, возвращая её к физиологическим показателям.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Фармакокинетика">Фармакокинетика</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>После приёма внутрь Тримедат быстро абсорбируется.</p>
+    <ul>
+      <li>Максимальная концентрация в крови достигается в течение 1-2 часов.</li>
+      <li>Метаболизм происходит преимущественно в печени.</li>
+      <li>Выведение осуществляется с мочой.</li>
+      <li>Средний период полувыведения составляет около 4-6 часов.</li>
+    </ul>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Показания к применению">Показания к применению</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Тримедат назначают при функциональных расстройствах желудочно-кишечного тракта, включая:</p>
+    <ul>
+      <li>синдром раздражённого кишечника;</li>
+      <li>дискинезию желчевыводящих путей;</li>
+      <li>диспепсические явления (тошноту, вздутие, ощущение переполнения желудка);</li>
+      <li>запоры и диарею функционального характера;</li>
+      <li>восстановление моторики после хирургических вмешательств.</li>
+    </ul>
+    <p>Препарат используется для облегчения симптомов, связанных с нарушением координации работы ЖКТ, и способствует улучшению качества жизни пациентов.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Противопоказания">Противопоказания</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Применение Тримедата ограничено при:</p>
+    <ul>
+      <li>гиперчувствительности к тримебутину или другим компонентам таблеток;</li>
+      <li>наследственной непереносимости лактозы;</li>
+      <li>возрасте до 3 лет;</li>
+      <li>беременности в I триместре;</li>
+      <li>грудном вскармливании.</li>
+    </ul>
+    <p>С осторожностью препарат назначается при тяжёлых нарушениях функции печени и почек.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные действия">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Побочные действия">Побочные действия</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>При использовании Тримедата возможно развитие нежелательных реакций, которые обычно носят обратимый характер.</p>
+    <p>Со стороны пищеварительной системы могут наблюдаться тошнота, запор или диарея. Со стороны нервной системы - лёгкое головокружение или сонливость. В редких случаях появляются кожные высыпания, зуд или крапивница. Аллергические реакции проявляются крайне редко.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Дозировка и способ применения">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Дозировка и способ применения">Дозировка и способ применения</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Инструкция по применению указывает, что принимать Тримедат следует внутрь, запивая водой.</p>
+    <ul>
+      <li>Взрослым назначают по 100-200 мг трижды в день.</li>
+      <li>Дети от 3 до 5 лет принимают по 25 мг трижды в день.</li>
+      <li>Дети от 5 до 12 лет - по 50 мг трижды в день.</li>
+    </ul>
+    <p>Курс лечения определяется врачом и зависит от характера нарушений: от нескольких недель при острых состояниях до нескольких месяцев при хронических формах.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Передозировка">Передозировка</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Сведения о передозировке ограничены. При превышении дозы возможны усиление побочных явлений - тошнота, боли в животе, сонливость. Лечение симптоматическое: промывание желудка, приём энтеросорбентов, наблюдение за жизненными функциями.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Тримедат не оказывает значимого влияния на фармакокинетику большинства лекарственных средств. Его можно комбинировать с антибиотиками, ферментными средствами, спазмолитиками. 
+Не рекомендуется сочетать приём с алкоголем или препаратами, угнетающими центральную нервную систему, во избежание усиления побочных эффектов.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Тримедата">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Аналоги Тримедата">Аналоги Тримедата</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Среди аналогов выделяют препараты с тем же действующим веществом - тримебутином:</p>
+    <ul>
+      <li>Необутин - выпускается в форме таблеток и суспензии, используется при функциональных нарушениях ЖКТ и синдроме раздражённого кишечника.</li>
+      <li>Необутин Ретард - пролонгированная форма, обеспечивающая удобный приём один раз в сутки.</li>
+      <li>Тримебутин - дженерик, выпускаемый различными производителями, отличается доступной ценой при идентичном механизме действия.</li>
+    </ul>
+    <p>Все аналоги обладают сходным профилем эффективности и безопасности, но могут различаться по режиму дозирования и продолжительности действия.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Применение у детей">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Применение у детей">Применение у детей</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат разрешён к применению у детей старше трёх лет. Дозировка зависит от возраста: до 5 лет назначают по 25 мг трижды в сутки, от 5 до 12 лет - по 50 мг трижды в сутки. Лечение проводится под контролем педиатра.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Применение при беременности и грудном вскармливании">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Применение при беременности и грудном вскармливании">Применение при беременности и грудном вскармливании</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>В первом триместре беременности использование Тримедата противопоказано. Во втором и третьем триместрах он может назначаться по решению врача, если ожидаемая польза превышает потенциальные риски. В период грудного вскармливания препарат не применяется, при необходимости лечения лактацию следует прекратить.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместимость с алкоголем">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Совместимость с алкоголем">Совместимость с алкоголем</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Алкоголь снижает эффективность терапии и повышает риск развития побочных реакций со стороны желудочно-кишечного тракта и нервной системы. Совместный приём не рекомендуется.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Условия отпуска">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Условия отпуска">Условия отпуска</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Препарат отпускается без рецепта, однако при его использовании желательно предварительно проконсультироваться с врачом для уточнения дозировки и длительности курса.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Условия хранения">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Условия хранения">Условия хранения</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Тримедат необходимо хранить в сухом месте, защищённом от света, при температуре не выше 25 °C, недоступном для детей.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Срок годности">Срок годности</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Срок годности таблеток составляет 3 года с даты производства. Использовать препарат после окончания срока хранения нельзя.</p>
+  </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+  <div class="product-details-instructions-main__item-questions">
+    <h3 id="Производитель">Производитель</h3>
+    <div class="product-details-instructions-main__item--arrow"></div>
+  </div>
+  <div class="product-details-instructions-main__item-answer">
+    <p>Выпуск Тримедата осуществляется фармацевтическими компаниями, специализирующимися на гастроэнтерологических препаратах. Информация о конкретном заводе-изготовителе указывается на упаковке.</p>
+  </div>
+</li>

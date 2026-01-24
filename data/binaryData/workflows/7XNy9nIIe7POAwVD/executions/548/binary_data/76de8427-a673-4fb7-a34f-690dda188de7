@@ -1,0 +1,282 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Небилета" class="product-details-instructions-main__menu-item">
+    Аналоги Небилета
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Небилет при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Небилет при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Небилет и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Небилет и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Небилет" class="product-details-instructions-main__menu-item">
+    Как хранить Небилет
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Небилет представляет собой современный бета1-адреноблокатор, отличающийся наличием дополнительного вазодилатирующего эффекта. Действующее вещество, небиволол, не только блокирует сердечные бета1-рецепторы, но и способствует высвобождению оксида азота из сосудистого эндотелия. Благодаря такому двойному механизму, Небилет это эффективное средство для коррекции артериального давления и комплексной терапии хронической сердечной недостаточности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Лекарство производится в виде таблеток для перорального употребления. Одна таблетка включает небиволола гидрохлорид в количестве 5,45 мг, что соответствует 5,00 мг чистого небиволола. Таблетки имеют круглую двояковыпуклую форму, почти белый цвет и снабжены насечкой для деления. Вспомогательные компоненты состава: моногидрат лактозы, крахмал из кукурузы, натриевая соль кроскармеллозы, гипромеллоза 2910, полисорбат 80, микрокристаллическая целлюлоза, коллоидный диоксид кремния и стеарат магния.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Небилет относится к категории селективных ингибиторов бета1-адренорецепторов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Действие препарата складывается из двух взаимодополняющих эффектов. Его D-энантиомер селективно угнетает бета1-адренорецепторы миокарда, уменьшая частоту и силу сердечных сокращений, что ведет к снижению артериального давления. Параллельно L-энантиомер реализует сосудорасширяющий эффект через модуляцию системы L-аргинин/оксид азота. Такая комбинация способствует снижению общего периферического сосудистого сопротивления и улучшает функцию эндотелия, что является преимуществом при лечении гипертензии. Препарат лишен внутренней симпатомиметической активности и не обладает мембраностабилизирующим действием.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Активный компонент хорошо абсорбируется в пищеварительном тракте, прием пищи не оказывает влияния на этот процесс. Средняя биодоступность составляет около 12% по причине эффекта первого прохождения, однако у лиц с генетически детерминированным «медленным» типом метаболизма этот показатель значительно выше. Степень связывания с плазменными белками достигает 98%. Небиволол подвергается интенсивному метаболизму в печени, образуя активные гидроксипроизводные. Период полувыведения у «быстрых» метаболизаторов равен примерно 10 часам для исходного вещества и 24 часам для метаболитов; у «медленных» - удлиняется до 30-50 и 48 часов соответственно. Элиминация осуществляется через почки (38%) и кишечник (48%), преимущественно в виде метаболизированных соединений.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Для понимания, от чего помогает Небилет, следует рассмотреть его клинические показания. Средство назначается для терапии артериальной гипертензии, а также в качестве компонента комбинированного лечения стабильной сердечной недостаточности легкой и умеренной степени у пациентов, достигших 70-летнего возраста.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прием лекарства запрещен при: индивидуальной непереносимости небиволола или любого ингредиента состава; печеночной недостаточности (класс B и C по шкале Чайлд-Пью); острой сердечной недостаточности, кардиогенном шоке, декомпенсированной ХСН; выраженной артериальной гипотензии (систолическое АД ниже 90 мм рт. ст.); синдроме слабости синусового узла, атриовентрикулярной блокаде II-III степени; брадикардии с частотой менее 60 ударов в минуту перед началом терапии; нелеченой феохромоцитоме; метаболическом ацидозе; бронхиальной астме и эпизодах бронхоспазма в анамнезе; тяжелых нарушениях периферического кровообращения; непереносимости лактозы; возрасте младше 18 лет; периоде грудного вскармливания; одновременном применении с флоктафенином или сультопридом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия Небилета в большинстве случаев связаны с его основными фармакологическими эффектами. Достаточно часто могут возникать головные боли, головокружение, ощущение парестезии, диспепсические явления (тошнота, запор, диарея), одышка, повышенная усталость, отечность периферических тканей. Нечасто регистрируются замедление сердечного ритма, чрезмерное снижение АД, зрительные расстройства, депрессивные состояния, кожные высыпания и зуд, бронхоспазм, эректильная дисфункция. В редких случаях возможны синкопальные состояния или обострение псориаза. С неустановленной частотой отмечаются реакции гиперчувствительности, включая ангионевротический отек. При лечении ХСН наиболее частыми нежелательными явлениями выступают брадикардия и головокружение.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Инструкция, как пить Небилет, и оптимальная доза зависят от диагноза и индивидуальных характеристик пациента. Таблетки употребляют внутрь один раз в течение дня, независимо от приема пищи, с достаточным объемом воды.</p>
+        <ul>
+            <li>Для лечения артериальной гипертензии: стандартная начальная и поддерживающая доза составляет 5 мг (одна целая таблетка) раз в сутки. У пациентов пожилого возраста, при нарушенной функции почек или при необходимости стартовая доза может быть снижена до 2,5 мг (половина таблетки).</li>
+            <li>При хронической сердечной недостаточности: терапия требует медленного титрования дозы. Лечение начинают с 1,25 мг (четверть таблетки) один раз в день. С интервалом в 1-2 недели дозу постепенно повышают до 2,5 мг, затем до 5 мг, и при хорошей переносимости - до максимальной целевой дозы 10 мг (две таблетки) однократно в сутки. Резкая отмена препарата недопустима.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Клиническая картина передозировки включает выраженную брадикардию, критическое падение артериального давления, бронхоспазм, признаки острой сердечной недостаточности. В рамках неотложной помощи показано промывание желудка, прием энтеросорбентов, проведение симптоматического лечения. При брадикардии вводят атропин, в резистентных случаях - бета-адреностимуляторы или рассматривают установку электрокардиостимулятора. Для коррекции гипотензии и шока применяют инфузионные растворы, вазопрессорные средства, глюкагон.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Абсолютно противопоказано комбинирование с флоктафенином и сультопридом. С повышенной осторожностью и под врачебным контролем следует сочетать с блокаторами кальциевых каналов недигидропиридинового ряда (верапамил, дилтиазем), антиаритмическими средствами I и III классов, гипотензивными препаратами центрального действия (клонидин), инсулином и таблетированными сахароснижающими средствами (возможно смазывание симптомов гипогликемии). Ингибиторы изофермента CYP2D6 (пароксетин, флуоксетин, хинидин) замедляют метаболизм небиволола, повышая его концентрацию в крови. Аналогичный эффект возможен при совместном приеме с циметидином. Небиволол не вступает в значимое взаимодействие с варфарином.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Небилета">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Небилета">Аналоги Небилета</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К лекарственным средствам, являющимся структурными аналогами Небилета и содержащим идентичное действующее вещество (небиволол), можно отнести:</p>
+        <ul>
+            <li><strong>Небиволол</strong> - селективный бета1-адреноблокатор, обладающий способностью стимулировать высвобождение оксида азота, применяемый при гипертонии и сердечной недостаточности.</li>
+            <li><strong>Бинелол</strong> - препарат на основе небиволола, предназначенный для контроля артериального давления и улучшения клинических исходов у пациентов с ХСН.</li>
+            <li><strong>Небилонг</strong> - лекарственная форма небиволола пролонгированного действия, обеспечивающая стабильный антигипертензивный эффект при однократном суточном приеме.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Использование Небилета в педиатрической практике (у детей и подростков до 18 лет) противопоказано, поскольку исследования эффективности и безопасности в этой возрастной категории не проводились.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Небилет при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Небилет при беременности и кормлении грудью">Можно ли принимать Небилет при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение в период беременности не рекомендуется и допускается исключительно по жизненным показаниям, когда ожидаемая польза для матери превосходит потенциальный риск для плода. Небиволол способен проникать через плацентарный барьер, что может вызвать брадикардию и гипогликемию у плода и новорожденного. Терапия в период лактации (грудного вскармливания) запрещена, так как действующее вещество и его метаболиты попадают в грудное молоко. При необходимости лечения матери рекомендуется отказаться от грудного вскармливания.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Небилет и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Небилет и алкоголь">Совместим ли Небилет и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Сочетанный прием Небилета с алкогольными напитками не рекомендуется. Этанол может потенцировать гипотензивный эффект лекарства, усиливать седативное действие и повышать вероятность развития таких нежелательных реакций, как головокружение и ортостатическая гипотензия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Небилет относится к категории лекарственных средств, отпускаемых строго по рецепту врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Небилет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Небилет">Как хранить Небилет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Таблетки необходимо хранить в оригинальной заводской упаковке, в месте, недоступном для детей, при температурном режиме, не превышающем 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Период годности медикамента составляет 3 года с даты производства. Запрещено применение по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Конкретные данные о компании-производителе продукции под торговой маркой «Небилет» в предоставленном материале не указаны. Фармацевтические средства на основе небиволола выпускаются разными производителями. При приобретении следует внимательно изучать информацию на упаковке конкретной серии. Важно учитывать, что производственная площадка (завод-изготовитель) может изменяться.</p>
+    </div>
+</li>

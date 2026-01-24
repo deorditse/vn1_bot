@@ -1,0 +1,316 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Диклофенак" class="product-details-instructions-main__menu-item">
+    Диклофенак
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Диклофенака" class="product-details-instructions-main__menu-item">
+    Аналоги Диклофенака
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Диклофенак при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Диклофенак при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Диклофенак и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Диклофенак и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Диклофенак" class="product-details-instructions-main__menu-item">
+    Как хранить Диклофенак
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Диклофенак">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Диклофенак">Диклофенак</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Диклофенак</strong> - это нестероидный противовоспалительный препарат (НПВП), широко применяемый для купирования боли, воспаления и снижения температуры. Действующим веществом является диклофенак. Препарат эффективен при различных болевых синдромах и воспалительных заболеваниях опорно-двигательного аппарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Диклофенак выпускается в многообразных лекарственных формах для системного и местного применения:</p>
+        <ul>
+            <li><strong>Таблетки</strong> (покрытые оболочкой, кишечнорастворимые, с пролонгированным высвобождением) дозировкой 25 мг, 50 мг, 75 мг, 100 мг.</li>
+            <li><strong>Раствор для внутримышечного введения</strong> (25 мг/мл, 75 мг/3 мл).</li>
+            <li><strong>Суппозитории ректальные</strong> (50 мг, 100 мг).</li>
+            <li><strong>Гель для наружного применения</strong> (1%, 5%).</li>
+            <li><strong>Мазь для наружного применения</strong> (1%, 2%).</li>
+            <li><strong>Капли глазные</strong> (0.1%).</li>
+        </ul>
+        <p><strong>Действующее вещество</strong> во всех формах - диклофенак (в виде натриевой или калиевой соли). Вспомогательные компоненты варьируются в зависимости от производителя и формы выпуска.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Диклофенак относится к фармакотерапевтической группе нестероидных противовоспалительных средств. Он обладает выраженным противовоспалительным, анальгезирующим и жаропонижающим действием.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика диклофенака основана на неизбирательном ингибировании ферментов циклооксигеназы (ЦОГ-1 и ЦОГ-2), что приводит к подавлению синтеза простагландинов - медиаторов боли, воспаления и лихорадки. Препарат ослабляет болевой синдром в покое и при движении, уменьшает утреннюю скованность и припухлость суставов, улучшая их функцию. По противовоспалительной активности превосходит ибупрофен.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При приеме внутрь диклофенак полностью всасывается. Прием пищи замедляет скорость всасывания. Максимальная концентрация в плазме достигается через 1-2 часа (для обычных таблеток) и через 5 часов (для пролонгированных форм). Биодоступность составляет около 50%. Связывание с белками плазмы высокое (свыше 99%). Препарат хорошо проникает в синовиальную жидкость. Метаболизируется в печени. Период полувыведения из плазмы - около 2 часов. Выводится преимущественно почками в виде неактивных метаболитов. При местном применении системная абсорбция низкая.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Диклофенак, необходимо обратиться к его широкому спектру показаний:</p>
+        <ul>
+            <li>Воспалительные и дегенеративные заболевания суставов (ревматоидный артрит, остеоартроз, анкилозирующий спондилит).</li>
+            <li>Мышечные и суставные боли (миалгия, невралгия, люмбаго, ишиас).</li>
+            <li>Посттравматические и послеоперационные болевые синдромы.</li>
+            <li>Подагрический артрит, почечная и печеночная колика.</li>
+            <li>Первичная дисменорея.</li>
+            <li>Местно: лечение травм (ушибы, растяжения), воспалений мягких тканей.</li>
+            <li>В офтальмологии: профилактика и лечение воспаления после операций на глазу.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Гиперчувствительность к диклофенаку или другим НПВП (например, «аспириновая» триада).</li>
+            <li>Эрозивно-язвенные поражения ЖКТ в фазе обострения.</li>
+            <li>Тяжелая печеночная, почечная или сердечная недостаточность.</li>
+            <li>Нарушения кроветворения.</li>
+            <li>Последний триместр беременности, детский возраст до 6 лет (для системных форм).</li>
+            <li>Для ректальных форм: воспалительные заболевания прямой кишки.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия могут затрагивать различные системы органов. Наиболее частые связаны с ЖКТ: тошнота, боль в эпигастрии, диарея, развитие эрозий и язв. Возможны головокружение, кожные сыпи, повышение активности печеночных ферментов. При длительном применении в высоких дозах повышается риск серьезных осложнений: желудочно-кишечных кровотечений, нарушений функции почек и печени, угнетения кроветворения. При местном применении возможны зуд, покраснение в месте нанесения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как принимать Диклофенак, и необходимая доза зависят от формы выпуска и показания.</p>
+        <ul>
+            <li><strong>Внутрь:</strong> Взрослым - 75-150 мг/сут в 2-3 приема. Таблетки пролонгированного действия принимают 1 раз в сутки. Пить во время или после еды, не разжевывая, запивая водой.</li>
+            <li><strong>Внутримышечно:</strong> По 75 мг 1-2 раза в сутки коротким курсом (1-2 дня).</li>
+            <li><strong>Ректально:</strong> По 1 суппозиторию (50-100 мг) 1-2 раза в сутки.</li>
+            <li><strong>Местно:</strong> Гель или мазь наносят тонким слоем на кожу 2-4 раза в день.</li>
+            <li><strong>Глазные капли:</strong> По 1 капле до 5 раз в сутки по схеме.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Симптомы: головокружение, головная боль, тошнота, рвота, боль в животе, в тяжелых случаях - угнетение дыхания, судороги, нарушения функции почек. Лечение симптоматическое: промывание желудка, прием активированного угля.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Диклофенак усиливает действие антикоагулянтов (варфарин), пероральных гипогликемических средств, метотрексата, дигоксина. Одновременный прием с другими НПВП, глюкокортикоидами, алкоголем увеличивает риск ульцерогенного действия. Диуретики и ингибиторы АПФ на фоне диклофенака могут терять эффективность.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Диклофенака">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Диклофенака">Аналоги Диклофенака</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Диклофенака, содержащим то же действующее вещество, относятся:</p>
+        <ul>
+            <li><strong>Вольтарен</strong> - оригинальный препарат диклофенака, эталон эффективности и безопасности.</li>
+            <li><strong>Вольтарен Эмульгель</strong> - гель для местного применения с улучшенной текстурой.</li>
+            <li><strong>Диалрапид</strong> - быстрорастворимые таблетки диклофенака калия для купирования острой боли.</li>
+            <li><strong>Диклак</strong> - препарат в различных формах для лечения воспаления и боли.</li>
+            <li><strong>Дикловит</strong> - гель и суппозитории для комплексной терапии.</li>
+            <li><strong>Диклоген</strong> - средство для системного и местного применения при артритах и травмах.</li>
+            <li><strong>Дикло-Ф</strong> - глазные капли для использования в офтальмологической практике.</li>
+            <li><strong>Дифендум</strong> - таблетки и раствор для инъекций при болевом синдроме.</li>
+            <li><strong>Ортофен</strong> - мазь и таблетки, один из первых аналогов диклофенака.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Системные формы (таблетки, уколы) противопоказаны детям до 6 лет. У детей старше 6 лет применяют с осторожностью, доза рассчитывается как 1-2 мг/кг массы тела в сутки. Местные формы (гель, мазь) могут применяться у детей по показаниям.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Диклофенак при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Диклофенак при беременности и кормлении грудью">Можно ли принимать Диклофенак при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение в I и II триместрах беременности возможно только по строгим показаниям. Противопоказан в III триместре. На время лечения диклофенаком в период лактации следует прекратить грудное вскармливание, так как препарат проникает в молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Диклофенак и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Диклофенак и алкоголь">Совместим ли Диклофенак и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Совместный прием с алкоголем категорически не рекомендуется. Это многократно увеличивает риск развития эрозивно-язвенных поражений желудка и желудочных кровотечений, а также токсического воздействия на печень.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Большинство системных форм (таблетки, инъекции) отпускаются по рецепту. Некоторые местные формы (гель, мазь) могут быть безрецептурными.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Диклофенак">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Диклофенак">Как хранить Диклофенак</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в защищенном от света месте при температуре не выше 25°C (для большинства форм). Беречь от детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности варьируется от 2 до 5 лет в зависимости от формы выпуска и производителя. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Диклофенак выпускается различными фармацевтическими компаниями. Производственная площадка (завод-производитель) может отличаться в зависимости от серии и страны выпуска.</p>
+    </div>
+</li>

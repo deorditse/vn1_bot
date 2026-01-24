@@ -1,0 +1,318 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Юперио" class="product-details-instructions-main__menu-item">
+    Юперио
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Юперио" class="product-details-instructions-main__menu-item">
+    Аналоги Юперио
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Юперио при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Юперио при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Юперио и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Юперио и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Юперио" class="product-details-instructions-main__menu-item">
+    Как хранить Юперио
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Юперио">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Юперио">Юперио</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Юперио</strong> - это инновационный лекарственный препарат, применяемый в кардиологии для лечения хронической сердечной недостаточности у взрослых пациентов. Его действующее вещество - <strong>сакубитрил/валсартан</strong>, комбинация двух активных компонентов, которые обеспечивают комплексное воздействие на систему регуляции сердечно-сосудистой деятельности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат выпускается в виде таблеток, покрытых пленочной оболочкой, с разной дозировкой активных веществ:</p>
+        <ul>
+            <li>Юперио 24 мг/26 мг,</li>
+            <li>Юперио 49 мг/51 мг,</li>
+            <li>Юперио 97 мг/103 мг.</li>
+        </ul>
+        <p>Каждая таблетка содержит фиксированное сочетание двух активных компонентов: сакубитрила (в форме натриевой соли) и валсартана. Вспомогательные вещества включают микрокристаллическую целлюлозу, кроскармеллозу натрия, магния стеарат и другие компоненты, зависящие от дозировки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Юперио относится к группе антигипертензивных и кардиопротективных препаратов. Благодаря комбинации ингибитора неприлизина (сакубитрил) и антагониста рецепторов ангиотензина II (валсартан), препарат обеспечивает двойное воздействие: расширяет сосуды, снижает нагрузку на сердце и способствует улучшению сократительной функции миокарда.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Сакубитрил ингибирует фермент неприлизин, что повышает уровень натрийуретических пептидов, усиливает диурез и вазодилатацию, снижает гипертрофию миокарда.</li>
+            <li>Валсартан блокирует рецепторы ангиотензина II, уменьшая сосудистое сопротивление и предотвращая развитие неблагоприятных сердечно-сосудистых изменений.</li>
+        </ul>
+        <p>Их совместное действие направлено на снижение риска госпитализаций и летальных исходов у пациентов с хронической сердечной недостаточностью.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>После приема внутрь компоненты быстро всасываются в ЖКТ.</p>
+        <ul>
+            <li>Сакубитрил быстро превращается в активный метаболит LBQ657.</li>
+            <li>Максимальная концентрация достигается через 2 часа.</li>
+            <li>Валсартан достигает пика в плазме через 1,5-2 часа.</li>
+            <li>Выводится преимущественно через кишечник и почки.</li>
+            <li>Период полувыведения активных веществ составляет около 9-12 часов.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Юперио, необходимо обратиться к его показаниям:</p>
+        <ul>
+            <li>Лечение хронической сердечной недостаточности с низкой фракцией выброса у взрослых пациентов для снижения риска смерти и госпитализации по сердечно-сосудистым причинам.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение препарата противопоказано при:</p>
+        <ul>
+            <li>гиперчувствительности к сакубитрилу, валсартану или вспомогательным веществам;</li>
+            <li>беременности и лактации;</li>
+            <li>тяжелых нарушениях функции печени;</li>
+            <li>сопутствующем применении ингибиторов АПФ (с интервалом менее 36 часов);</li>
+            <li>наследственных ангионевротических отеках.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как и любое лекарство, препарат может вызывать побочные действия. Наиболее часто отмечаются:</p>
+        <ul>
+            <li>гипотензия, головокружение, обмороки;</li>
+            <li>гиперкалиемия;</li>
+            <li>снижение функции почек;</li>
+            <li>кашель;</li>
+            <li>ангионевротический отек (редко).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Инструкция по применению Юперио указывает, что доза подбирается индивидуально врачом.</p>
+        <ul>
+            <li>Начальная доза для большинства пациентов составляет 50 мг два раза в сутки (24/26 мг).</li>
+            <li>При хорошей переносимости доза постепенно увеличивается до 200 мг дважды в сутки (97/103 мг).</li>
+            <li>Таблетки принимаются внутрь, независимо от еды, запивая водой.</li>
+        </ul>
+        <p>Важно строго соблюдать предписания врача и не изменять дозу самостоятельно.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Основные проявления передозировки - выраженная артериальная гипотензия и нарушения функции почек. Лечение симптоматическое, при необходимости проводится поддерживающая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Совместный прием с ингибиторами АПФ противопоказан (риск ангиоотека).</li>
+            <li>Комбинация с препаратами калия или калийсберегающими диуретиками повышает риск гиперкалиемии.</li>
+            <li>Одновременный прием с НПВС может ухудшать функцию почек.</li>
+            <li>Алкоголь усиливает гипотензивный эффект.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Юперио">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Юперио">Аналоги Юперио</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На данный лекарственный препарат аналоги не выпускаются. Действующим веществом является сакубитрил/валсартан.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Безопасность и эффективность применения Юперио у детей не установлены. Препарат не применяется в педиатрической практике.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Юперио при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Юперио при беременности и кормлении грудью">Можно ли принимать Юперио при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан в период беременности, так как может вызвать повреждения плода. При необходимости лечения во время лактации грудное вскармливание следует прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Юперио и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Юперио и алкоголь">Совместим ли Юперио и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Совместное применение не рекомендуется. Алкоголь усиливает риск гипотензии и побочных реакций со стороны сердечно-сосудистой системы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Юперио является рецептурным препаратом и отпускается только по назначению врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Юперио">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Юперио">Как хранить Юперио</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат хранить в сухом месте, защищенном от влаги и света, при температуре не выше 30 °C, в оригинальной упаковке. Хранить в недоступном для детей месте.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности препарата составляет 3 года. Не использовать после даты, указанной на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем является компания Novartis Pharm<strong>a</strong>, однако производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

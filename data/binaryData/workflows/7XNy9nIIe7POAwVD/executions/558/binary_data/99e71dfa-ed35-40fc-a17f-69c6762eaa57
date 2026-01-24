@@ -1,0 +1,299 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Фестала" class="product-details-instructions-main__menu-item">
+    Аналоги Фестала
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Фестал при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Фестал при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Фестал и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Фестал и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Фестал" class="product-details-instructions-main__menu-item">
+    Как хранить Фестал
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фестал - это комбинированный ферментный препарат, широко применяемый для улучшения пищеварения и коррекции функциональных расстройств желудочно-кишечного тракта. Фестал это средство, содержащее комплекс активных компонентов: панкреатин, гемицеллюлазу и компоненты желчи. Такой состав позволяет не только компенсировать дефицит пищеварительных ферментов, но и нормализовать процессы желчеотделения, способствуя более эффективному расщеплению и усвоению питательных веществ.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фестал выпускается в единственной лекарственной форме: кишечнорастворимые таблетки, покрытые оболочкой.</p>
+        <p>Каждая таблетка содержит три активных компонента:</p>
+        <ul>
+            <li><strong>Панкреатин</strong> (192 мг) с минимальной ферментной активностью: липаза 6000 ЕД, амилаза 4500 ЕД, протеаза 300 ЕД.</li>
+            <li><strong>Гемицеллюлаза</strong> (50 мг).</li>
+            <li><strong>Компоненты желчи</strong> (25 мг). 
+ Вспомогательные вещества могут варьироваться в зависимости от завода-производителя.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фестал относится к фармакотерапевтической группе пищеварительных ферментных средств полиферментного состава.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика Фестала обусловлена комплексным действием его компонентов, направленным на восполнение недостаточности внешнесекреторной функции поджелудочной железы и желчевыделительной функции печени. Панкреатин, содержащий ферменты липазу, амилазу и протеазу, обеспечивает расщепление жиров, углеводов и белков в тонком кишечнике. Компоненты желчи усиливают эмульгирование пищевых жиров, активируют липазу поджелудочной железы и облегчают всасывание жирорастворимых витаминов (A, E, K), оказывая желчегонное действие. Гемицеллюлаза способствует ферментации растительной клетчатки, уменьшая метеоризм и вздутие живота. Совместное действие компонентов способствует уменьшению диспепсических явлений: тяжести в эпигастрии, метеоризма, ощущения переполнения после еды.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Данные о фармакокинетике панкреатина и других компонентов препарата Фестал в доступных источниках не представлены. Кишечнорастворимая оболочка таблетки защищает ферменты от инактивации в желудке и обеспечивает их высвобождение в двенадцатиперстной кишке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Фестал, необходимо обратиться к его официальным показаниям. Препарат используется:</p>
+        <ul>
+            <li>Для компенсации внешнесекреторной недостаточности поджелудочной железы, сочетающейся с билиарной недостаточностью, при хроническом панкреатите, муковисцидозе.</li>
+            <li>При нарушениях пищеварения на фоне диффузных заболеваний печени (цирроз, токсические поражения), после холецистэктомии, при дискинезии желчевыводящих путей, хроническом гастрите и дуодените.</li>
+            <li>Для улучшения переваривания пищи у лиц без выраженных гастроэнтерологических заболеваний при погрешностях в диете (употребление жирной, обильной пищи), нарушениях жевательной функции, малоподвижном образе жизни.</li>
+            <li>Для подготовки к рентгенологическому и ультразвуковому исследованию органов брюшной полости.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Противопоказаниями к применению являются:</p>
+        <ul>
+            <li>Гиперчувствительность к любому компоненту препарата.</li>
+            <li>Острый панкреатит или обострение хронического панкреатита.</li>
+            <li>Печеночная недостаточность, кома или прекома, гепатит, гипербилирубинемия.</li>
+            <li>Механическая желтуха, желчнокаменная болезнь, эмпиема желчного пузыря.</li>
+            <li>Кишечная непроходимость, склонность к диарее.</li>
+            <li>Детский возраст до 3 лет.</li>
+            <li>Беременность и период грудного вскармливания.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при приеме Фестала развиваются редко. Чаще всего возможны реакции со стороны желудочно-кишечного тракта: боль в животе, диарея, тошнота. В отдельных случаях могут наблюдаться аллергические реакции (кожная сыпь, зуд, ангионевротический отек). При длительном применении в высоких дозах существует риск развития гиперурикемии и гиперурикозурии (повышение уровня мочевой кислоты в крови и моче).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Фестал, достаточно проста. Стандартная доза для взрослых составляет 1-2 таблетки 3 раза в сутки во время или сразу после еды, не разжевывая, запивая небольшим количеством жидкости. Более высокие дозы устанавливаются только врачом. Продолжительность приема может варьировать от нескольких дней при диспепсии, вызванной погрешностями в диете, до нескольких лет при необходимости постоянной заместительной терапии.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Симптомы передозировки связаны с чрезмерно высоким поступлением ферментов и компонентов желчи и могут проявляться гиперурикемией и гиперурикозурией. Специфического антидота нет, лечение симптоматическое с отменой препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фестал может усиливать всасывание пара-аминосалициловой кислоты (ПАСК), сульфаниламидов и некоторых антибиотиков. Одновременный прием антацидных средств, содержащих кальция карбонат или магния гидроксид, может снижать эффективность панкреатина. Препарат может уменьшать всасывание препаратов железа и фолиевой кислоты при длительном применении. Не рекомендуется одновременный прием с акарбозой, так как панкреатин снижает ее эффект.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Фестала">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Фестала">Аналоги Фестала</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К комбинированным ферментным препаратам со схожим составом и механизмом действия относятся:</p>
+        <ul>
+            <li><strong>Энзистал</strong> - комбинированный ферментный препарат, содержащий панкреатин, гемицеллюлазу и компоненты желчи, применяется при нарушениях пищеварения и внешнесекреторной недостаточности поджелудочной железы.</li>
+            <li><strong>Нормоэнзим</strong> - пищеварительное ферментное средство на основе панкреатина, папаина и грибковой диастазы, используется для улучшения переваривания пищи при диспепсических расстройствах.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фестал противопоказан к применению у детей в возрасте до 3 лет. У детей старше 3 лет препарат может применяться по назначению и под наблюдением врача, который определяет необходимую дозировку и режим приема.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Фестал при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Фестал при беременности и кормлении грудью">Можно ли принимать Фестал при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Фестала во время беременности и в период лактации противопоказано, так как безопасность его использования у данной категории пациенток не установлена.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Фестал и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Фестал и алкоголь">Совместим ли Фестал и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямого запрета на совместный прием в инструкции нет, однако употребление алкоголя само по себе негативно влияет на функцию поджелудочной железы и печени, может усугублять симптомы диспепсии. Для достижения максимального терапевтического эффекта от приема ферментов во время курса лечения рекомендуется отказаться от употребления спиртных напитков.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фестал относится к безрецептурным лекарственным препаратам.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Фестал">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Фестал">Как хранить Фестал</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в недоступном для детей месте при температуре не выше 25 °C.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности Фестала составляет 3 года с даты производства. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Фестал является компания «Лактоза (Индия) Лимитед» (Lactose (India) Limited). Упаковка и выпускающий контроль для рынка могут осуществляться различными дистрибьюторами, при этом производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставок.</p>
+    </div>
+</li>

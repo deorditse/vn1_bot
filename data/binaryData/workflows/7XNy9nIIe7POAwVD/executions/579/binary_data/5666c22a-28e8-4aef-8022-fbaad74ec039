@@ -1,0 +1,330 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Галвус" class="product-details-instructions-main__menu-item">
+    Галвус
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению (от чего помогает Галвус)" class="product-details-instructions-main__menu-item">
+    Показания к применению (от чего помогает Галвус)
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты (побочные действия)" class="product-details-instructions-main__menu-item">
+    Побочные эффекты (побочные действия)
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка (как пить Галвус)" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка (как пить Галвус)
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Галвуса" class="product-details-instructions-main__menu-item">
+    Аналоги Галвуса
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Галвус при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Галвус при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Галвус и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Галвус и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Галвус" class="product-details-instructions-main__menu-item">
+    Как хранить Галвус
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Галвус">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Галвус">Галвус</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Галвус - это гипогликемический препарат из группы ингибиторов дипептидилпептидазы-4 (ДПП-4). Действующее вещество - вилдаглиптин. Препарат применяется для контроля уровня глюкозы у пациентов с сахарным диабетом 2 типа, способствует улучшению функции β-клеток поджелудочной железы и нормализации секреции инсулина. </p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Галвус выпускается в форме таблеток, покрытых пленочной оболочкой:</p>
+        <ul>
+            <li><strong>Галвус</strong> - таблетки по 50 мг вилдаглиптина;</li>
+            <li><strong>Галвус Мет</strong> - комбинированный препарат (вилдаглиптин + метформин), выпускается в дозировках 50 мг/500 мг, 50 мг/850 мг и 50 мг/1000 мг.</li>
+        </ul>
+        <p>Основное действующее вещество - вилдаглиптин. В состав вспомогательных компонентов входят: лактоза, кросповидон, магния стеарат и вещества, формирующие оболочку таблетки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Галвус относится к средствам для лечения сахарного диабета 2 типа. Он повышает чувствительность β-клеток поджелудочной железы к глюкозе, улучшает секрецию инсулина и снижает уровень глюкагона. Комбинированная форма Галвус Мет также подавляет глюконеогенез в печени и уменьшает всасывание углеводов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Вилдаглиптин ингибирует фермент ДПП-4, что приводит к увеличению концентрации инкретинов (GLP-1 и GIP).</li>
+            <li>Инкретины стимулируют секрецию инсулина при высоком уровне глюкозы и уменьшают секрецию глюкагона.</li>
+            <li>В результате улучшается гликемический контроль, снижается риск гипогликемии.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>После приема внутрь быстро всасывается, максимальная концентрация в плазме достигается через 1-2 часа.</li>
+            <li>Биодоступность - около 85%.</li>
+            <li>Метаболизируется в печени, выводится почками и через кишечник.</li>
+            <li>Период полувыведения составляет 2-3 часа.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению (от чего помогает Галвус)">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению (от чего помогает Галвус)">Показания к применению (от чего помогает Галвус)</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Галвус назначается при:</p>
+        <ul>
+            <li>сахарном диабете 2 типа - как в виде монотерапии, так и в комбинации с другими гипогликемическими средствами (метформином, производными сульфонилмочевины, инсулином).</li>
+        </ul>
+        <p>Таким образом, ответ на вопрос Галвус от чего помогает: от сахарного диабета 2 типа, улучшает контроль уровня сахара и снижает риск осложнений.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Гиперчувствительность к вилдаглиптину или другим компонентам;</li>
+            <li>сахарный диабет 1 типа и диабетический кетоацидоз;</li>
+            <li>тяжелая почечная недостаточность;</li>
+            <li>заболевания печени;</li>
+            <li>беременность и лактация;</li>
+            <li>возраст до 18 лет.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты (побочные действия)">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты (побочные действия)">Побочные эффекты (побочные действия)</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При применении возможны:</p>
+        <ul>
+            <li>со стороны ЖКТ: тошнота, боли в животе, диарея;</li>
+            <li>со стороны печени: повышение трансаминаз;</li>
+            <li>ЦНС: головная боль, головокружение;</li>
+            <li>кожа: сыпь, зуд, отек;</li>
+            <li>редкие: панкреатит, отек Квинке.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка (как пить Галвус)">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка (как пить Галвус)">Как принимать и дозировка (как пить Галвус)</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Рекомендуемая доза - 50 мг 1-2 раза в сутки (в зависимости от схемы терапии).</li>
+            <li>Максимальная суточная доза - 100 мг.</li>
+            <li>Таблетки принимают внутрь, запивая водой, независимо от приема пищи.</li>
+            <li>При приеме комбинированного препарата Галвус Мет доза подбирается индивидуально в зависимости от уровня глюкозы и переносимости.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Превышение дозы может вызвать боли в животе, отек конечностей, повышение уровня печеночных ферментов. В тяжелых случаях - развитие панкреатита. Лечение симптоматическое.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Совместное применение с инсулином или сульфонилмочевиной повышает риск гипогликемии.</li>
+            <li>При комбинации с метформином усиливается гипогликемический эффект.</li>
+            <li>Взаимодействие с НПВС, глюкокортикостероидами и диуретиками может влиять на контроль уровня глюкозы.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Галвуса">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Галвуса">Аналоги Галвуса</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Галвуса, содержащим то же действующее вещество - вилдаглиптин, относятся:</p>
+        <ul>
+            <li><strong>Агарта Мет таб ппо 50 мг + 1000 мг №60</strong> 
+ Комбинированный препарат, в составе которого вилдаглиптин и метформин. Применяется для улучшения контроля гликемии у пациентов с сахарным диабетом 2 типа. Метформин снижает продукцию глюкозы печенью и повышает чувствительность тканей к инсулину, а вилдаглиптин улучшает функцию β-клеток. Такая комбинация обеспечивает двойное действие и подходит для пациентов, у которых монотерапия недостаточно эффективна.</li>
+            <li><strong>Агарта Мет таб ппо 50 мг + 850 мг №60</strong> 
+ Вариант препарата с пониженной дозой метформина, назначается при непереносимости высоких доз или для постепенного увеличения дозировки. Используется как стартовая комбинация у пациентов, нуждающихся в мягком контроле уровня сахара.</li>
+            <li><strong>Глипвило Мет таб ппо 50 мг + 1000 мг №30 и №60</strong> 
+ Дженерик Галвус Мет. Сочетает действие вилдаглиптина и метформина. Выпускается в упаковках по 30 и 60 таблеток, что удобно для выбора длительности курса терапии. Назначается при неэффективности монотерапии.</li>
+            <li><strong>Вилдаглиптин таб 50 мг №28 и №56</strong> 
+ Чистый препарат, содержащий только вилдаглиптин. Применяется для монотерапии при диабете 2 типа или в комбинации с другими сахароснижающими средствами (метформином, инсулином). Подходит пациентам, которым противопоказан метформин.</li>
+            <li><strong>Агарта таб 50 мг №30</strong> 
+ Дженерик оригинального Галвуса в дозировке 50 мг. Используется как самостоятельное средство или в составе комбинированной терапии. Отличается доступной стоимостью и сопоставимой эффективностью.</li>
+            <li><strong>Глипвило таб 50 мг №28 и №56</strong> 
+ Аналог Галвуса в форме таблеток по 50 мг. Применяется для лечения диабета 2 типа, может назначаться длительными курсами. Упаковки по 28 и 56 таблеток позволяют выбрать оптимальный вариант для терапии.</li>
+        </ul>
+        <p>Таким образом, все перечисленные аналоги Галвуса содержат одно и то же действующее вещество - вилдаглиптин. Отличие между ними заключается в комбинации с метформином или в чистом виде, дозировках и удобстве формы выпуска. Выбор конкретного препарата зависит от индивидуальных особенностей пациента, уровня сахара в крови и переносимости метформина.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан детям и подросткам до 18 лет из-за отсутствия достаточных данных о безопасности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Галвус при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Галвус при беременности и кормлении грудью">Можно ли принимать Галвус при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Во время беременности назначение препарата не рекомендуется, так как данных о безопасности недостаточно. 
+В период лактации применение противопоказано: вилдаглиптин может проникать в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Галвус и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Галвус и алкоголь">Совместим ли Галвус и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алкоголь не рекомендуется во время лечения, так как повышается нагрузка на печень и увеличивается риск побочных эффектов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Галвус и Галвус Мет являются рецептурными препаратами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Галвус">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Галвус">Как хранить Галвус</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить в сухом месте при температуре не выше 30 °C, в оригинальной упаковке, недоступно для детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности препарата - 3 года.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Галвуса является компания Novartis Pharma (Швейцария). Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

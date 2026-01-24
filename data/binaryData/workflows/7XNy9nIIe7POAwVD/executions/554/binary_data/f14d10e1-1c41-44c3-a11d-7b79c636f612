@@ -1,0 +1,405 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Но-шпы" class="product-details-instructions-main__menu-item">
+    Аналоги Но-шпы
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Но-шпа при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Но-шпа при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Но-шпа и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Но-шпа и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Но-шпа" class="product-details-instructions-main__menu-item">
+    Как хранить Но-шпа
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Но-шпа - это оригинальный спазмолитический препарат на основе дротаверина, широко применяемый для купирования болевого синдрома, вызванного спазмом гладкой мускулатуры внутренних органов. Но-шпа - это эффективное средство при коликах, дисменорее, головных болях напряжения и других состояниях, сопровождающихся болезненным сокращением гладких мышц. Препарат быстро расслабляет мускулатуру желудочно-кишечного тракта, желчевыводящих и мочевыводящих путей, устраняя боль без влияния на центральную нервную систему.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Но-шпа представлена в нескольких лекарственных формах:</p>
+        <ul>
+            <li>Но-шпа - таблетки и таблетки, покрытые пленочной оболочкой, по 40 мг дротаверина гидрохлорида;</li>
+            <li>Но-шпа - раствор для внутривенного и внутримышечного введения по 40 мг дротаверина в 2 мл (только по рецепту);</li>
+            <li>Но-шпа форте - таблетки и таблетки, покрытые пленочной оболочкой, по 80 мг дротаверина гидрохлорида;</li>
+            <li>Но-шпа Дуо - комбинированные таблетки, содержащие 40 мг дротаверина и 500 мг парацетамола.</li>
+        </ul>
+        <p>Вспомогательные вещества для таблеток Но-шпы и Но-шпы форте: лактозы моногидрат, кукурузный крахмал, повидон, тальк, магния стеарат.</p>
+        <p>Состав Но-шпы Дуо: парацетамол, дротаверин, кукурузный и прежелатинизированный крахмал, микрокристаллическая целлюлоза, магния стеарат, тальк, краситель хинолиновый желтый.</p>
+        <p>Но-шпа, раствор для внутривенного и внутримышечного введения содержит этанол 96% и натрия дисульфит, что важно учитывать при аллергии и алкоголизме.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Но-шпа относится к фармакотерапевтической группе спазмолитических средств (АТХ-код A03AD02).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дротаверин - производное изохинолина - избирательно расслабляет гладкую мускулатуру независимо от типа вегетативной иннервации. Механизм действия связан с ингибированием фосфодиэстеразы IV, повышением уровня цАМФ и последующей инактивацией миозинкиназы, что приводит к релаксации мышечных клеток.</p>
+        <p>Парацетамол (в Но-шпа Дуо) оказывает анальгетическое и жаропонижающее действие за счет ингибирования синтеза простагландинов в ЦНС.</p>
+        <p>Комбинация в Но-шпа Дуо обеспечивает двойной эффект: устранение спазма и купирование боли.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Дротаверин быстро и почти полностью всасывается в ЖКТ, биодоступность - около 100%. Максимальная концентрация в плазме достигается через 2 часа. Связывание с белками - 95-98%. Выводится преимущественно почками.</p>
+        <p>Парацетамол (в Но-шпа Дуо) всасывается быстро, Tmax - 0,5-2 часа, связывание с белками - 15%, метаболизируется в печени, выводится почками.</p>
+        <p>Оба компонента не проникают через гематоэнцефалический барьер в значимых концентрациях.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Но-шпа, следует обратиться к официальным показаниям:</p>
+        <ul>
+            <li>Спазмы гладкой мускулатуры при заболеваниях желчевыводящих путей: холецистит, холангит, желчная колика</li>
+            <li>Спазмы мочевыводящих путей: почечная колика, цистит, пиелит</li>
+            <li>Спазмы ЖКТ: язва, гастрит, синдром раздраженного кишечника, спастический колит</li>
+            <li>Головные боли напряжения</li>
+            <li>Дисменорея (менструальные боли)</li>
+        </ul>
+        <p>Но-шпа Дуо дополнительно показана при болях слабой и умеренной интенсивности (зубная боль, миалгия, артралгия, невралгия).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Но-шпа (таблетки и таблетки, п.п.о.) и Но-шпа форте противопоказаны при:</p>
+        <ul>
+            <li>Гиперчувствительности к дротаверину или компонентам состава</li>
+            <li>Непереносимости лактозы, дефиците лактазы, глюкозо-галактозной мальабсорбции</li>
+            <li>Тяжелой печеночной или почечной недостаточности</li>
+            <li>Тяжелой сердечной недостаточности (синдром низкого сердечного выброса)</li>
+            <li>Лактации</li>
+        </ul>
+        <p>Но-шпа Дуо имеет дополнительные противопоказания:</p>
+        <ul>
+            <li>Беременность</li>
+            <li>Почечная/печеночная недостаточность любой степени</li>
+            <li>Тромбоцитопения, агранулоцитоз</li>
+            <li>Применение других препаратов с парацетамолом</li>
+            <li>Бронхиальная астма, дыхательная недостаточность</li>
+            <li>Возраст до 6 лет</li>
+        </ul>
+        <p>Но-шпа, раствор для внутривенного и внутримышечного введения, имеет дополнительные противопоказания:</p>
+        <ul>
+            <li>Возраст до 18 лет</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия Но-шпы встречаются редко.</p>
+        <p>Редко (≤1 из 1000):</p>
+        <ul>
+            <li>Головная боль, головокружение</li>
+            <li>Бессонница</li>
+            <li>Ощущение сердцебиения</li>
+            <li>Снижение артериального давления</li>
+            <li>Тошнота, запор</li>
+            <li>Аллергические реакции: крапивница, зуд, ангионевротический отек</li>
+        </ul>
+        <p>Но-шпа Дуо может вызывать дополнительные побочные действия, связанные с парацетамолом:</p>
+        <ul>
+            <li>Гепатотоксичность (при передозировке)</li>
+            <li>Нарушения со стороны крови (агранулоцитоз, тромбоцитопения - при длительном применении)</li>
+            <li>Бронхоспазм, ринит</li>
+        </ul>
+        <p>При появлении признаков аллергии или нарушений сердечного ритма прием препарата немедленно прекращают.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как принимать Но-шпу и подбирать дозу - зависит от формы выпуска и возраста пациента.</p>
+        <p>Но-шпа, таблетки и таблетки, п.п.о. (40 мг):</p>
+        <ul>
+            <li>Взрослые: 1-2 таблетки 2-3 раза в сутки (макс. 6 таблеток/сут)</li>
+            <li>Дети 6-12 лет: 1 таблетка 1-2 раза в сутки (макс. 2 таблетки/сут)</li>
+            <li>Дети 12-18 лет: 1 таблетка до 4 раз в сутки или 2 таблетки 1-2 раза (макс. 4 таблетки/сут)</li>
+        </ul>
+        <p>Но-шпа форте, таблетки и таблетки, п.п.о. (80 мг):</p>
+        <ul>
+            <li>Взрослые: 1 таблетка 1-3 раза в сутки (макс. 3 таблетки/сут)</li>
+            <li>Детям до 18 лет не назначают</li>
+        </ul>
+        <p>Но-шпа Дуо, таблетки:</p>
+        <ul>
+            <li>Взрослые и подростки &gt;12 лет: 1-2 таблетки за прием, повтор через 8 часов (макс. 6 таблеток/сут при курсе ≤3 дней)</li>
+            <li>Дети 6-12 лет: ½ таблетки, повтор через 10-12 часов (макс. 2 таблетки/сут)</li>
+        </ul>
+        <p>Но-шпа, раствор для внутривенного и внутримышечного введения:</p>
+        <ul>
+            <li>Взрослым назначают 40-240 мг дротаверина в сутки, разделённых на 1-3 введения.</li>
+            <li>При острых коликах (почечной или желчной) - 40-80 мг внутривенно медленно (введение продолжается около 30 секунд).</li>
+            <li>Внутримышечно - 40-80 мг 1-2 раза в сутки.</li>
+            <li>Не применяется у детей и подростков до 18 лет.</li>
+        </ul>
+        <p>Таблетки запивают водой, принимают внутрь, независимо от еды. При пропуске не удваивают дозу. Курс без консультации врача - не более 2-3 дней.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Передозировка Но-шпы и Но-шпа форте может вызвать нарушения сердечного ритма и проводимости, вплоть до остановки сердца.</p>
+        <p>Передозировка Но-шпа Дуо (из-за парацетамола) проявляется:</p>
+        <ul>
+            <li>Тошнотой, рвотой, болью в животе</li>
+            <li>Гепатотоксичностью (через 12-48 часов)</li>
+            <li>Печеночной и почечной недостаточностью</li>
+            <li>Панкреатитом, комой</li>
+        </ul>
+        <p>Лечение: промывание желудка, назначение N-ацетилцистеина (антидот парацетамола), симптоматическая терапия. При подозрении на передозировку - срочная госпитализация.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Леводопа: Но-шпа снижает ее эффективность, усиливая тремор и ригидность</li>
+            <li>Морфин: Но-шпа уменьшает его спазмогенное действие</li>
+            <li>Фенобарбитал: усиливает спазмолитический эффект</li>
+            <li>Другие спазмолитики: возможен аддитивный эффект</li>
+            <li>Парацетамол (в Но-шпа Дуо):
+                <ul>
+                    <li>Усиливает токсичность хлорамфеникола</li>
+                    <li>Повышает риск гепатотоксичности при сочетании с этанолом, рифампицином, барбитуратами</li>
+                    <li>Усиливает антикоагулянтный эффект варфарина</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Перед началом терапии сообщите врачу обо всех принимаемых препаратах.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Но-шпы">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Но-шпы">Аналоги Но-шпы</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Но-шпы, содержащим то же действующее вещество (дротаверин), относятся:</p>
+        <ul>
+            <li>Дротаверин (таблетки и раствор для внутривенного и внутримышечного введения) - непатентованные генерики различных производителей, имеющие аналогичные показания.</li>
+            <li>Доверин (таблетки) - оригинальный препарат с тем же составом и показаниями, применяется при спазмах внутренних органов.</li>
+        </ul>
+        <p>Выбор между оригиналом и аналогом зависит от рекомендации врача, стоимости и переносимости.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Но-шпа: разрешена детям от 6 лет</li>
+            <li>Но-шпа форте: запрещена до 18 лет</li>
+            <li>Но-шпа Дуо: разрешена детям от 6 лет</li>
+            <li>Раствор для внутривенного и внутримышечного введения: противопоказан до 18 лет</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Но-шпа при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Но-шпа при беременности и кормлении грудью">Можно ли принимать Но-шпа при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Беременность: <br> Применение возможно только по назначению врача, так как клинические данные ограничены.</p>
+        <p>Лактация: <br> Но-шпа, Но-шпа форте и Но-шпа Дуо противопоказаны в период лактации, так как дротаверин и парацетамол могут проникать в грудное молоко. При необходимости терапии грудное вскармливание следует прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Но-шпа и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Но-шпа и алкоголь">Совместим ли Но-шпа и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хотя прямого взаимодействия не описано, алкоголь может усилить гипотензивный эффект дротаверина и повысить нагрузку на печень (особенно при приеме Но-шпа Дуо).</p>
+        <p>В период терапии рекомендуется избегать употребления этанола.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Но-шпа (таблетки и таблетки, п.п.о.), Но-шпа форте, Но-шпа Дуо - без рецепта</li>
+            <li>Но-шпа, раствор для внутривенного и внутримышечного введения - только по рецепту</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Но-шпа">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Но-шпа">Как хранить Но-шпа</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Хранить в недоступном для детей месте</li>
+            <li>При температуре:</li>
+            <ul>
+                <li>Не выше 25 °C (таблетки в ПВХ/Al, Но-шпа Дуо)</li>
+                <li>Не выше 30 °C (таблетки в Al/Al)</li>
+            </ul>
+            <li>В оригинальной упаковке</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Но-шпа (все формы) и Но-шпа форте (ПВХ/Al): 3 года</li>
+            <li>Но-шпа форте (Al/Al): 5 лет</li>
+            <li>Но-шпа Дуо: 2 года</li>
+        </ul>
+        <p>Не использовать после даты «Годен до:» на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Но-шпы (таблетки и таблетки, п.п.о), Но-шпа форте и Но-шпа Дуо является Opella Healthcare Hungary Ltd. (Венгрия).</p>
+        <p>Производитель Но-шпа, раствора для внутривенного и внутримышечного введения - Chinoin Zavod (Венгрия).</p>
+        <p>Обратите внимание: производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставки. Упаковка может осуществляться на предприятиях в других странах, включая Россию.</p>
+    </div>
+</li>

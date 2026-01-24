@@ -1,0 +1,332 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Трипликсам-краткоеописаниепрепарата" class="product-details-instructions-main__menu-item">
+    Трипликсам - краткое описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Формавыпускаисостав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показаниякприменению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Какприниматьидозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействиесдругимипрепаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#АналогиТрипликсама" class="product-details-instructions-main__menu-item">
+    Аналоги Трипликсама
+  </a>
+</li>
+<li>
+  <a href="#Можнолиприниматьдетям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#МожнолиприниматьТрипликсамприбеременностиикормлениигрудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Трипликсам при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#СовместимлиТрипликсамиалкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Трипликсам и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускаетсяпорецептуилинет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#КакхранитьТрипликсам" class="product-details-instructions-main__menu-item">
+    Как хранить Трипликсам
+  </a>
+</li>
+<li>
+  <a href="#Срокгодности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Трипликсам - краткое описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Трипликсам - краткое описание препарата">Трипликсам - краткое описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p><strong>Трипликсам</strong> - комбинированное антигипертензивное средство, предназначенное для лечения артериальной гипертензии и связанных с ней сердечно-сосудистых заболеваний. Препарат объединяет три действующих компонента: периндоприл (ингибитор АПФ), амлодипин (антагонист кальция) и индапамид (тиазидоподобный диуретик). Такая комбинация позволяет комплексно воздействовать на основные механизмы повышения давления и эффективно контролировать его уровень при длительном приёме.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трипликсам выпускается в виде таблеток для приёма внутрь.</p>
+        <p><strong>Состав</strong> (в зависимости от дозировки):</p>
+        <ul>
+            <li>периндоприла аргинин - 5 мг или 10 мг;</li>
+            <li>амлодипина бесилат - 5 мг или 10 мг;</li>
+            <li>индапамид - 1,25 мг или 2,5 мг.</li>
+        </ul>
+        <p>Вспомогательные компоненты включают лактозу, повидон, магния стеарат и другие вещества, обеспечивающие стабильность и усвояемость препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трипликсам относится к группе комбинированных гипотензивных средств. Его фармакологический эффект обусловлен действием трёх активных компонентов:</p>
+        <ul>
+            <li><strong>Периндоприл</strong> снижает образование ангиотензина II, расширяет сосуды и уменьшает постнагрузку на сердце.</li>
+            <li><strong>Амлодипин</strong> расслабляет гладкую мускулатуру сосудов, предотвращая спазм и улучшая кровоток.</li>
+            <li><strong>Индапамид</strong> способствует выведению лишней жидкости и натрия, снижая объём циркулирующей крови и давление.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Сочетание трёх компонентов обеспечивает:</p>
+        <ul>
+            <li>стойкое снижение артериального давления на протяжении суток;</li>
+            <li>уменьшение гипертрофии миокарда левого желудочка;</li>
+            <li>снижение риска инсульта и инфаркта миокарда;</li>
+            <li>улучшение эластичности сосудов.</li>
+        </ul>
+        <p>Терапевтический эффект проявляется уже в первые недели лечения и сохраняется при длительном применении.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li><strong>Периндоприл</strong> быстро всасывается, превращаясь в активный метаболит периндоприлат; период полувыведения - около 17 часов.</li>
+            <li><strong>Амлодипин</strong> медленно абсорбируется, биодоступность достигает 60-65%, максимальная концентрация наблюдается через 6-12 часов, период полувыведения - до 40-50 часов.</li>
+            <li><strong>Индапамид</strong> обладает высокой биодоступностью (около 93%), выводится преимущественно почками, период полувыведения - 14-24 часа.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Пациенты часто спрашивают, <strong>от чего помогает Трипликсам</strong>. Согласно инструкции, препарат назначается при:</p>
+        <ul>
+            <li>артериальной гипертензии;</li>
+            <li>стабильной ишемической болезни сердца;</li>
+            <li>необходимости комбинированной терапии для снижения сердечно-сосудистого риска.</li>
+        </ul>
+        <p>Таким образом, Трипликсам применяется <strong>для чего</strong> - для эффективного контроля давления и профилактики осложнений, связанных с гипертонией.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трипликсам противопоказан при:</p>
+        <ul>
+            <li>гиперчувствительности к компонентам;</li>
+            <li>ангионевротическом отёке в анамнезе;</li>
+            <li>тяжёлой печёночной или почечной недостаточности;</li>
+            <li>гипокалиемии;</li>
+            <li>беременности и в период лактации;</li>
+            <li>возрасте до 18 лет (из-за недостатка данных по безопасности).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как и другие препараты, Трипликсам может вызывать нежелательные реакции. Наиболее частые <strong>побочные действия</strong>:</p>
+        <ul>
+            <li>со стороны ЖКТ: тошнота, боли в животе, диарея;</li>
+            <li>со стороны нервной системы: головная боль, головокружение, усталость;</li>
+            <li>со стороны сердечно-сосудистой системы: артериальная гипотензия, сердцебиение, отёки;</li>
+            <li>со стороны кожи: сыпь, зуд, аллергические реакции.</li>
+        </ul>
+        <p>Редко могут возникать судороги, нарушения зрения или слуха, кашель, изменения лабораторных показателей (повышение креатинина, калия).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Пациенты нередко интересуются, <strong>как пить Трипликсам и какая доза считается оптимальной</strong>.</p>
+        <ul>
+            <li>Таблетки принимают 1 раз в сутки, желательно утром перед едой.</li>
+            <li><strong>Доза</strong> подбирается индивидуально и зависит от исходного уровня давления и сопутствующих заболеваний.</li>
+            <li>При необходимости врач может корректировать дозировку с учётом переносимости.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Основные симптомы передозировки - выраженное снижение давления, тошнота, судороги, нарушение работы почек. 
+Лечение: промывание желудка, приём сорбентов, контроль жизненных функций, симптоматическая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Усиливает гипотензивный эффект при сочетании с другими антигипертензивными средствами.</li>
+            <li>Совместный приём с НПВС может ослаблять действие Трипликсама.</li>
+            <li>Повышает риск гиперкалиемии при использовании с калийсберегающими диуретиками и препаратами калия.</li>
+            <li>Не рекомендуется сочетать с литийсодержащими средствами из-за риска токсичности.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Трипликсама">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Трипликсама">Аналоги Трипликсама</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам относятся препараты с теми же действующими веществами. На российском рынке зарегистрирован аналог:</p>
+        <ul>
+            <li><strong>Ко-Дальнева</strong> - комбинированный препарат, содержащий периндоприл, амлодипин и индапамид. Применяется при артериальной гипертензии и ишемической болезни сердца, обладает аналогичным механизмом действия.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трипликсам не применяется у пациентов младше 18 лет из-за отсутствия достаточных данных по эффективности и безопасности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Трипликсам при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Трипликсам при беременности и кормлении грудью">Можно ли принимать Трипликсам при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат противопоказан при беременности. В период <strong>лактации</strong> его приём также запрещён, так как активные вещества могут проникать в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Трипликсам и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Трипликсам и алкоголь">Совместим ли Трипликсам и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Одновременный приём с алкоголем не рекомендуется. Этанол усиливает гипотензивный эффект и может вызвать резкое падение давления, головокружение и обмороки.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трипликсам является рецептурным препаратом и отпускается только по назначению врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Трипликсам">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Трипликсам">Как хранить Трипликсам</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в сухом, защищённом от света месте при температуре до 25 °C, недоступном для детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток Трипликсам составляет 2-3 года (в зависимости от производителя).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Трипликсам выпускается международными фармацевтическими компаниями. 
+Производственная площадка (завод-производитель) может отличаться в зависимости от серии и страны выпуска.</p>
+    </div>
+</li>

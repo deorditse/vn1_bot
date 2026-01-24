@@ -1,0 +1,369 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные действия" class="product-details-instructions-main__menu-item">
+    Побочные действия
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Особые указания" class="product-details-instructions-main__menu-item">
+    Особые указания
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли при беременности и лактации" class="product-details-instructions-main__menu-item">
+    Можно ли при беременности и лактации
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Тералиджен и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Тералиджен и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Тералиджен" class="product-details-instructions-main__menu-item">
+    Как хранить Тералиджен
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Тералиджен" class="product-details-instructions-main__menu-item">
+    Аналоги Тералиджен
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен - это препарат с мягким антипсихотическим, анксиолитическим и седативным действием. Его активное вещество - алимемазин, производное фенотиазина. Препарат широко применяется в психиатрии и неврологии при тревожных, фобических, астенических и вегетативных расстройствах, а также при нарушениях сна и аллергических проявлениях.</p>
+        <p>Тералиджен <strong>это</strong> средство, которое снижает тревогу, устраняет страхи и напряжение, способствует нормализации сна и улучшению общего психоэмоционального состояния.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен выпускается в виде:</p>
+        <ul>
+            <li>таблеток по <strong>5 мг</strong> в упаковках по 25 и 100 штук.</li>
+        </ul>
+        <p>Активное вещество: алимемазина тартрат.<br>
+        Дополнительно в состав входят: моногидрат лактозы, кукурузный крахмал, тальк, стеарат магния, повидон и другие вспомогательные компоненты, обеспечивающие стабильность препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алимемазин - это антипсихотик с выраженными седативными, анксиолитическими и антигистаминными свойствами.</p>
+        <p>Тералиджен оказывает следующие действия:</p>
+        <ul>
+            <li>устраняет тревожность и страхи;</li>
+            <li>улучшает качество сна;</li>
+            <li>снижает выраженность вегетативных симптомов;</li>
+            <li>оказывает лёгкое антипсихотическое действие без глубокой седации;</li>
+            <li>обладает антигистаминным действием - может применяться при кожных зуде и аллергии.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Алимемазин блокирует постсинаптические дофаминовые D1- и D2-рецепторы, а также обладает высокой аффинностью к H1-гистаминовым, α-адренорецепторам и серотониновым рецепторам.</p>
+        <p>Периферически снижает тонус гладкой мускулатуры, уменьшает проницаемость сосудов, потенцирует седативное действие других препаратов. Устраняет вегетативные проявления стресса: тахикардию, тремор, потливость, сухость во рту.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Абсорбция: высокая, быстро всасывается в ЖКТ.</li>
+            <li>Биодоступность: умеренная, из-за частичного метаболизма при первом прохождении через печень.</li>
+            <li>Метаболизм: в печени с образованием активных метаболитов.</li>
+            <li>Период полувыведения: около 3-5 часов.</li>
+            <li>Выведение: почками и с желчью.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен от чего помогает:</p>
+        <ul>
+            <li>неврозы и неврозоподобные состояния;</li>
+            <li>тревожные расстройства;</li>
+            <li>фобии;</li>
+            <li>расстройства сна, вызванные психоэмоциональным напряжением;</li>
+            <li>психосоматические состояния;</li>
+            <li>легкие формы депрессии с тревожным компонентом;</li>
+            <li>вегетативные дисфункции;</li>
+            <li>кожный зуд и аллергические проявления (как дополнительный эффект).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не назначают при:</p>
+        <ul>
+            <li>гиперчувствительности к алимемазину и другим производным фенотиазина;</li>
+            <li>угнетении ЦНС;</li>
+            <li>тяжелой печёночной недостаточности;</li>
+            <li>эпилепсии;</li>
+            <li>болезни Паркинсона;</li>
+            <li>закрытоугольной глаукоме;</li>
+            <li>доброкачественной гиперплазии предстательной железы с задержкой мочи;</li>
+            <li>детском возрасте до 7 лет.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные действия">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные действия">Побочные действия</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен побочные действия могут включать:</p>
+        <ul>
+            <li>сонливость, утомляемость, головокружение;</li>
+            <li>сухость во рту, запор, тошнота;</li>
+            <li>снижение артериального давления;</li>
+            <li>аллергические реакции (крапивница, зуд);</li>
+            <li>экстрапирамидные расстройства (при длительном применении);</li>
+            <li>в редких случаях - лейкопения, агранулоцитоз (необходим контроль крови).</li>
+        </ul>
+        <p>Большинство побочных эффектов дозозависимы и исчезают после снижения дозы или отмены препарата.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как пить Тералиджен:</p>
+        <ul>
+            <li>Взрослым - от 5 до 10 мг 3-4 раза в сутки.</li>
+            <li>Максимальная суточная доза - 60 мг (в условиях стационара).</li>
+            <li>Детям от 7 лет - от 2,5 мг 2 раза в сутки, под контролем врача.</li>
+        </ul>
+        <p>Таблетки принимают внутрь, независимо от еды. Длительность курса - от 2 до 6 недель, по назначению специалиста.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Симптомы:</p>
+        <ul>
+            <li>выраженная сонливость, угнетение сознания, дыхания;</li>
+            <li>резкое снижение давления;</li>
+            <li>экстрапирамидные расстройства;</li>
+            <li>судороги.</li>
+        </ul>
+        <p>Лечение: промывание желудка, контроль дыхания и давления, симптоматическая терапия. Специфического антидота нет.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>Усиливает седативное действие алкоголя, снотворных, транквилизаторов.</li>
+            <li>Усиливает эффект гипотензивных препаратов.</li>
+            <li>При одновременном приёме с антидепрессантами - возможен аддитивный седативный эффект.</li>
+            <li>Противопоказан с ингибиторами МАО (возможна токсическая реакция).</li>
+            <li>Снижает эффект леводопы.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Особые указания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Особые указания">Особые указания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li>В начале лечения возможна сонливость - рекомендуется приём вечером.</li>
+            <li>Не рекомендуется управлять автомобилем в первые дни терапии.</li>
+            <li>При длительном приёме необходимо контролировать клинический анализ крови.</li>
+            <li>У пожилых пациентов может усилиться ортостатическая гипотензия.</li>
+            <li>Не вызывает зависимости, может применяться курсами.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен разрешён детям с 7 лет. Применяется в сниженных дозах при неврозах, тревожности, нарушениях сна, тиках. Подбор дозы должен осуществляться строго педиатром или психиатром.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли при беременности и лактации">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли при беременности и лактации">Можно ли при беременности и лактации</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Во время беременности Тералиджен применяют с осторожностью, если ожидаемая польза превышает риск.</p>
+        <p>При лактации - не рекомендуется, так как препарат может проникать в грудное молоко. При необходимости лечения кормление следует прекратить.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Тералиджен и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Тералиджен и алкоголь">Совместим ли Тералиджен и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен и алкоголь несовместимы<strong>.</strong> Этанол усиливает седативное и угнетающее действие препарата на ЦНС. Это может привести к нарушению дыхания, гипотонии, потере сознания.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен отпускается по рецепту<strong>.</strong> Назначается только врачом после оценки психоэмоционального состояния пациента.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Тералиджен">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Тералиджен">Как хранить Тералиджен</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить в сухом, защищённом от света месте при температуре не выше 25 °C.<br>
+        Беречь от детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>3 года с даты производства.<br>
+        Не использовать по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Тералиджен">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Тералиджен">Аналоги Тералиджен</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Полных аналогов по действующему веществу (алимемазину) немного. Основной:</p>
+        <ul>
+            <li>Тералиджен Ретард - та же молекула в пролонгированной форме, удобна для приёма 1-2 раза в сутки. Обладает тем же терапевтическим действием, подходит при хронических расстройствах сна и тревоги.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Тералиджен выпускается фармацевтической компанией EGIS Pharmaceuticals (Венгрия).</p>
+        <p>В зависимости от серии и страны поставки конкретная производственная площадка может различаться. Информацию о производителе всегда следует уточнять на упаковке.</p>
+    </div>
+</li>

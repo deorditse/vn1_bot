@@ -1,0 +1,286 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Описание препарата" class="product-details-instructions-main__menu-item">
+    Описание препарата
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Троксевазина" class="product-details-instructions-main__menu-item">
+    Аналоги Троксевазина
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Троксевазин при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Троксевазин при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Троксевазин и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Троксевазин и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Троксевазин" class="product-details-instructions-main__menu-item">
+    Как хранить Троксевазин
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Описание препарата">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Описание препарата">Описание препарата</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Троксевазин - это известный венотонизирующий и венопротекторный препарат на основе биофлавоноида. Действующим веществом является троксерутин, обладающий Р-витаминной активностью. Препарат широко используется для улучшения состояния венозных сосудов и микроциркуляции, оказывая комплексное воздействие на сосудистую стенку.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Троксевазин выпускается в двух основных лекарственных формах для системного и местного применения:</p>
+        <ul>
+            <li>Капсулы дозировкой 300 мг.</li>
+            <li>Гель для наружного применения с содержанием троксерутина 2%.</li>
+        </ul>
+        <p>Основное действующее вещество во всех формах - троксерутин. Вспомогательные вещества могут варьироваться в зависимости от формы выпуска и завода-производителя.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Троксевазин относится к фармакотерапевтической группе венотонизирующих и венопротекторных средств.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Фармакодинамика троксерутина заключается в его способности избирательно накапливаться в эндотелии сосудов. Он уменьшает проницаемость и ломкость капилляров, повышает тонус вен, оказывая противоотечное и противовоспалительное действие. Препарат обладает антиоксидантными свойствами, защищая клеточные мембраны от повреждения, снижает агрегацию тромбоцитов и эритроцитов, что улучшает микроциркуляцию.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>При приеме капсул внутрь абсорбция троксерутина составляет около 10-15%. Максимальная концентрация в плазме достигается в течение 1-9 часов. Вещество связывается с белками плазмы на 27-29%, метаболизируется в печени и выводится преимущественно через кишечник, в меньшей степени почками. При местном применении гель проникает через эпидермис, достигая дермы через 30 минут и подкожной клетчатки через 2-5 часов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Троксевазин, необходимо обратиться к официальным показаниям для каждой формы. 
+Капсулы применяются при: хронической венозной недостаточности, посттромботическом синдроме, трофических нарушениях при варикозе, симптомах геморроя, а также в качестве вспомогательной терапии диабетической ретинопатии. 
+Гель показан при: варикозном расширении вен, хронической венозной недостаточности с отеком и болью, поверхностном тромбофлебите, перифлебите, посттромботическом синдроме, гематомах.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Общими противопоказаниями для обеих форм являются гиперчувствительность к троксерутину и детский возраст до 18 лет. 
+Для капсул дополнительно: I триместр беременности, лактация, язвенная болезнь желудка и ДПК в фазе обострения, непереносимость лактозы. 
+Для геля дополнительно: нарушение целостности кожных покровов в месте нанесения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Побочные действия при приеме капсул встречаются редко и могут включать диспепсические явления (тошнота, боль в желудке), головную боль, аллергические кожные реакции (сыпь, зуд). Очень редко возможны «приливы» крови, головокружение. При применении геля возможны местные аллергические реакции: крапивница, экзема, дерматит.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Схема, как пить Троксевазин в капсулах, зависит от показания. Стандартная доза при венозной недостаточности составляет 1 капсула (300 мг) 2-3 раза в сутки во время еды. Курс лечения - 3-4 недели. При диабетической ретинопатии доза может быть увеличена. Гель наносят тонким слоем на пораженные участки 2 раза в сутки, мягко втирая. Рекомендуется сочетать обе формы для усиления эффекта.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаи передозировки гелем не описаны. При приеме чрезмерного количества капсул возможны возбуждение, тошнота, головная боль, гиперемия лица. Лечение симптоматическое: промывание желудка, прием сорбентов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Клинически значимого лекарственного взаимодействия троксерутина с другими препаратами не установлено. При состояниях с повышенной проницаемостью сосудов гель может эффективно сочетаться с аскорбиновой кислотой.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Троксевазина">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Троксевазина">Аналоги Троксевазина</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К структурным аналогам Троксевазина, содержащим то же действующее вещество (троксерутин), относятся:</p>
+        <ul>
+            <li>Троксерутин - венотонизирующее средство, применяемое при симптомах хронической венозной недостаточности.</li>
+            <li>Гепарин ДС - комбинированный препарат, содержащий троксерутин и гепарин натрия, используется для лечения поверхностного флебита, перифлебита, отеков и гематом.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение Троксевазина (обеих форм) у детей в возрасте до 18 лет противопоказано в связи с недостаточностью данных клинического применения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Троксевазин при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Троксевазин при беременности и кормлении грудью">Можно ли принимать Троксевазин при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Применение капсул в I триместре беременности и в период лактации противопоказано. Во II и III триместрах возможно только по решению врача, если польза превышает риск. Гель в I триместре противопоказан, во II и III триместрах применяется с осторожностью по назначению врача. Данные о проникновении в грудное молоко ограничены, поэтому при лактации применение не рекомендовано.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Троксевазин и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Троксевазин и алкоголь">Совместим ли Троксевазин и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Прямого запрета на совместный прием нет, однако рекомендуется ограничить употребление алкоголя во время лечения, так как этанол может оказывать дополнительную нагрузку на печень и потенциально снижать эффективность терапии.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Троксевазин (капсулы и гель) относится к безрецептурным лекарственным препаратам.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Троксевазин">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Троксевазин">Как хранить Троксевазин</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат следует хранить в оригинальной упаковке в недоступном для детей месте при температуре не выше 25 °C. Гель не замораживать.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности капсул и геля составляет 5 лет с даты производства. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем препарата Троксевазин является компания «BALKANPHARMA» (Болгария). Капсулы выпускает «BALKANPHARMA-RAZGRAD AD», гель - «BALKANPHARMA-TROYAN AD». Упаковка и выпускающий контроль для рынка могут осуществляться различными дистрибьюторами, при этом производственная площадка (завод-производитель) может меняться в зависимости от партии и региона поставок.</p>
+    </div>
+</li>

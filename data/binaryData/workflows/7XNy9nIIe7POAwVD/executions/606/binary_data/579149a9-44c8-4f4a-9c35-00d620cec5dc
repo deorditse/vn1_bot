@@ -1,0 +1,306 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Ципралекс" class="product-details-instructions-main__menu-item">
+    Ципралекс
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению" class="product-details-instructions-main__menu-item">
+    Показания к применению
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Ципралекса" class="product-details-instructions-main__menu-item">
+    Аналоги Ципралекса
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Ципралекс при беременности и кормлении грудью" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Ципралекс при беременности и кормлении грудью
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Ципралекс и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Ципралекс и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Ципралекс" class="product-details-instructions-main__menu-item">
+    Как хранить Ципралекс
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Ципралекс">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Ципралекс">Ципралекс</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ципралекс - это современный антидепрессант из группы селективных ингибиторов обратного захвата серотонина (СИОЗС), который широко применяется для лечения депрессии и тревожных расстройств. Действующее вещество препарата - эсциталопрам, обладающий высокой селективностью и доказанной эффективностью при терапии психоэмоциональных нарушений.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ципралекс выпускается в форме таблеток, покрытых пленочной оболочкой:</p>
+        <ul>
+            <li>5 мг - круглые двояковыпуклые белые таблетки с маркировкой «ЕК»;</li>
+            <li>10 мг - овальные двояковыпуклые белые таблетки с риской и маркировкой «Е» и «L»;</li>
+            <li>20 мг - овальные двояковыпуклые белые таблетки с риской и маркировкой «Е» и «N».</li>
+        </ul>
+        <p>Состав: эсциталопрама оксалат (эквивалент 5, 10 или 20 мг эсциталопрама), а также вспомогательные вещества - микрокристаллическая целлюлоза, тальк, кроскармеллоза натрия, коллоидный диоксид кремния, магния стеарат и оболочка (гипромеллоза, макрогол, диоксид титана).</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат относится к антидепрессантам - СИОЗС (селективные ингибиторы обратного захвата серотонина). Его механизм действия направлен на повышение концентрации серотонина в синаптической щели, что способствует улучшению настроения и снижению тревожности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Эсциталопрам селективно ингибирует обратный захват серотонина, связываясь с первичным участком транспортера серотонина и одновременно воздействуя на аллостерический центр. Это обеспечивает более полное ингибирование обратного захвата серотонина по сравнению с другими представителями группы.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат хорошо и почти полностью всасывается в ЖКТ, биодоступность составляет около 80%. Максимальная концентрация в плазме достигается через 4 часа. Связывание с белками плазмы менее 80%. Метаболизируется в печени (CYP2C19, CYP3A4, CYP2D6) с образованием активных метаболитов. Период полувыведения - около 30 часов. Выводится почками и через печень.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению">Показания к применению</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Чтобы понять, от чего помогает Ципралекс, важно рассмотреть его официальные показания:</p>
+        <ul>
+            <li>депрессивные эпизоды любой степени тяжести;</li>
+            <li>паническое расстройство с или без агорафобии;</li>
+            <li>социальное тревожное расстройство (социальная фобия);</li>
+            <li>генерализованное тревожное расстройство;</li>
+            <li>обсессивно-компульсивное расстройство.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>К основным противопоказаниям относятся:</p>
+        <ul>
+            <li>повышенная чувствительность к эсциталопраму или другим компонентам препарата;</li>
+            <li>одновременный прием неселективных необратимых ингибиторов МАО;</li>
+            <li>совместное применение с пимозидом;</li>
+            <li>детский возраст до 18 лет (эффективность и безопасность не доказаны).</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ципралекс может вызывать побочные действия, особенно в первые недели лечения. Наиболее часто встречаются: тошнота, сухость во рту, бессонница, сонливость, головокружение, повышенная потливость. Также возможны изменения аппетита и массы тела, сексуальные дисфункции, тревожность, желудочно-кишечные расстройства. В редких случаях отмечаются судорожные приступы, серотониновый синдром, нарушения сердечного ритма.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Рекомендации по тому, как пить Ципралекс, зависят от диагноза и состояния пациента:</p>
+        <ul>
+            <li>при депрессии обычно назначают 10 мг 1 раз в сутки, доза может быть увеличена до 20 мг;</li>
+            <li>при паническом расстройстве начинают с 5 мг в сутки, затем переходят на 10-20 мг;</li>
+            <li>при генерализованном тревожном и обсессивно-компульсивном расстройствах стандартная доза составляет 10 мг с возможным увеличением до 20 мг;</li>
+            <li>у пожилых пациентов рекомендовано начинать с 5 мг.</li>
+        </ul>
+        <p>Таблетки принимают внутрь, запивая водой, независимо от приема пищи.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Симптомы включают головокружение, тошноту, сонливость, удлинение интервала QT, в тяжелых случаях - судороги или серотониновый синдром. Специфического антидота нет. Проводится промывание желудка, назначается активированный уголь, проводится симптоматическая терапия.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ципралекс не сочетают с необратимыми ингибиторами МАО. Осторожность требуется при сочетании с антикоагулянтами, серотонинергическими средствами (триптаны, трамадол), лития, зверобоя. Совместный прием с алкоголем не рекомендован.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Ципралекса">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Ципралекса">Аналоги Ципралекса</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <ul>
+            <li><strong>Эсциталопрам</strong> - препараты разных производителей, выпускаются в таблетках, действующее вещество идентично, применяются при депрессии и тревожных расстройствах.</li>
+            <li><strong>Элицея</strong> - антидепрессант на основе эсциталопрама, показан при депрессии, панических атаках и обсессивных расстройствах.</li>
+            <li><strong>Селектра</strong> - оригинальный СИОЗС с действием, аналогичным Ципралексу, используется для лечения депрессий различной степени.</li>
+            <li><strong>Элицея Ку-таб</strong> - диспергируемая форма эсциталопрама, удобна для пациентов с затрудненным глотанием.</li>
+            <li><strong>Ленуксин</strong> - отечественный препарат эсциталопрама, назначается при депрессиях и тревожных расстройствах.</li>
+            <li><strong>Цивельт</strong> - современный аналог на основе эсциталопрама, применяется в психиатрической и неврологической практике.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не рекомендуется к применению у лиц младше 18 лет из-за недостатка данных по эффективности и безопасности.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Ципралекс при беременности и кормлении грудью">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Ципралекс при беременности и кормлении грудью">Можно ли принимать Ципралекс при беременности и кормлении грудью</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>В период беременности применение возможно только по жизненным показаниям, так как существует риск для плода. При лактации прием не рекомендуется, поскольку эсциталопрам проникает в грудное молоко.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Ципралекс и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Ципралекс и алкоголь">Совместим ли Ципралекс и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Совместный прием с алкоголем нежелателен, так как этанол усиливает нагрузку на ЦНС и может повышать риск побочных эффектов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ципралекс является рецептурным препаратом и отпускается из аптек только по рецепту врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Ципралекс">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Ципралекс">Как хранить Ципралекс</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить в оригинальной упаковке при температуре не выше 25 °C, в недоступном для детей месте.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности таблеток - 3 года.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Ципралекс выпускается компанией H. Lundbeck A/S (Дания). Упаковка и контроль качества могут проводиться на разных производственных площадках, в том числе в других странах. Производственная площадка (завод-производитель) может меняться.</p>
+    </div>
+</li>

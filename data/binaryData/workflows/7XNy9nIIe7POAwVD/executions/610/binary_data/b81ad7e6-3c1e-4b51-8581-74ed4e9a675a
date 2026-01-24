@@ -1,0 +1,303 @@
+///
+/// MENU
+///
+<li>
+  <a href="#Энтеросгель" class="product-details-instructions-main__menu-item">
+    Энтеросгель
+  </a>
+</li>
+<li>
+  <a href="#Форма выпуска и состав" class="product-details-instructions-main__menu-item">
+    Форма выпуска и состав
+  </a>
+</li>
+<li>
+  <a href="#Фармакологическое действие" class="product-details-instructions-main__menu-item">
+    Фармакологическое действие
+  </a>
+</li>
+<li>
+  <a href="#Фармакодинамика" class="product-details-instructions-main__menu-item">
+    Фармакодинамика
+  </a>
+</li>
+<li>
+  <a href="#Фармакокинетика" class="product-details-instructions-main__menu-item">
+    Фармакокинетика
+  </a>
+</li>
+<li>
+  <a href="#Показания к применению (от чего помогает Энтеросгель)" class="product-details-instructions-main__menu-item">
+    Показания к применению (от чего помогает Энтеросгель)
+  </a>
+</li>
+<li>
+  <a href="#Противопоказания" class="product-details-instructions-main__menu-item">
+    Противопоказания
+  </a>
+</li>
+<li>
+  <a href="#Побочные эффекты" class="product-details-instructions-main__menu-item">
+    Побочные эффекты
+  </a>
+</li>
+<li>
+  <a href="#Как принимать и дозировка" class="product-details-instructions-main__menu-item">
+    Как принимать и дозировка
+  </a>
+</li>
+<li>
+  <a href="#Передозировка" class="product-details-instructions-main__menu-item">
+    Передозировка
+  </a>
+</li>
+<li>
+  <a href="#Взаимодействие с другими препаратами" class="product-details-instructions-main__menu-item">
+    Взаимодействие с другими препаратами
+  </a>
+</li>
+<li>
+  <a href="#Аналоги Энтеросгеля" class="product-details-instructions-main__menu-item">
+    Аналоги Энтеросгеля
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать детям" class="product-details-instructions-main__menu-item">
+    Можно ли принимать детям
+  </a>
+</li>
+<li>
+  <a href="#Можно ли принимать Энтеросгель при беременности и лактации" class="product-details-instructions-main__menu-item">
+    Можно ли принимать Энтеросгель при беременности и лактации
+  </a>
+</li>
+<li>
+  <a href="#Совместим ли Энтеросгель и алкоголь" class="product-details-instructions-main__menu-item">
+    Совместим ли Энтеросгель и алкоголь
+  </a>
+</li>
+<li>
+  <a href="#Отпускается по рецепту или нет" class="product-details-instructions-main__menu-item">
+    Отпускается по рецепту или нет
+  </a>
+</li>
+<li>
+  <a href="#Как хранить Энтеросгель" class="product-details-instructions-main__menu-item">
+    Как хранить Энтеросгель
+  </a>
+</li>
+<li>
+  <a href="#Срок годности" class="product-details-instructions-main__menu-item">
+    Срок годности
+  </a>
+</li>
+<li>
+  <a href="#Производитель" class="product-details-instructions-main__menu-item">
+    Производитель
+  </a>
+</li>
+
+///
+/// Content
+///
+<li class="product-details-instructions-main__item open" id="in-Энтеросгель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Энтеросгель">Энтеросгель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Энтеросгель - современный энтеросорбент, применяемый для выведения токсинов и продуктов обмена из организма. Препарат используется как при острых, так и при хронических интоксикациях, кишечных инфекциях и аллергических реакциях. Действующим веществом является полиметилсилоксана полигидрат, обладающий выраженной способностью связывать и выводить вредные соединения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Форма выпуска и состав">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Форма выпуска и состав">Форма выпуска и состав</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Энтеросгель выпускается в форме пасты для приема внутрь:</p>
+        <ul>
+            <li>паста однородной консистенции без запаха;</li>
+            <li>паста для приема внутрь со сладким вкусом.</li>
+        </ul>
+        <p>В 100 г пасты содержится 70 г активного вещества - полиметилсилоксана полигидрата. Вспомогательные компоненты зависят от варианта выпуска.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакологическое действие">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакологическое действие">Фармакологическое действие</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат относится к группе энтеросорбентов. Его структура представляет собой пористую кремнийорганическую матрицу, которая действует как молекулярная губка, избирательно связывая токсины и метаболиты средней молекулярной массы. Энтеросгель эффективно поглощает и выводит из организма токсины, патогенные бактерии, аллергены, соли тяжелых металлов, алкогольные и лекарственные соединения.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакодинамика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакодинамика">Фармакодинамика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Терапевтический эффект достигается за счет:</p>
+        <ul>
+            <li>связывания и выведения токсинов;</li>
+            <li>нейтрализации эндо- и экзогенных ядов;</li>
+            <li>снижения уровня билирубина и азотистых шлаков;</li>
+            <li>устранения патогенных бактерий и их токсинов, а также пищевых аллергенов.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Фармакокинетика">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Фармакокинетика">Фармакокинетика</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не всасывается в желудочно-кишечном тракте, не попадает в кровоток и полностью выводится через кишечник в течение 12 часов.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Показания к применению (от чего помогает Энтеросгель)">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Показания к применению (от чего помогает Энтеросгель)">Показания к применению (от чего помогает Энтеросгель)</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Энтеросгель показан при:</p>
+        <ul>
+            <li>острых и хронических отравлениях (в том числе алкоголем, лекарственными препаратами, солями тяжелых металлов);</li>
+            <li>кишечных инфекциях (дизентерия, сальмонеллез, токсикоинфекции);</li>
+            <li>аллергических реакциях (пищевой и лекарственной аллергии);</li>
+            <li>заболеваниях печени и почек, сопровождающихся повышением уровня билирубина или мочевины;</li>
+            <li>гнойно-воспалительных процессах с выраженной интоксикацией;</li>
+            <li>для профилактики у работников вредных производств.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Противопоказания">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Противопоказания">Противопоказания</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат не назначают при:</p>
+        <ul>
+            <li>индивидуальной непереносимости компонентов;</li>
+            <li>атонии кишечника.</li>
+        </ul>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Побочные эффекты">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Побочные эффекты">Побочные эффекты</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Возможные побочные действия включают тошноту, запор, при тяжелых нарушениях функции почек и печени - отвращение к препарату.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как принимать и дозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как принимать и дозировка">Как принимать и дозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Как пить Энтеросгель, зависит от возраста:</p>
+        <ul>
+            <li>взрослые - по 15-22,5 г 3 раза в день (суточная доза 45-67,5 г);</li>
+            <li>дети 5-14 лет - по 15 г 3 раза в день;</li>
+            <li>дети до 5 лет - по 7,5 г 3 раза в день;</li>
+            <li>грудные дети - по 2,5 г, разведенные в грудном молоке или воде, 6 раз в день перед кормлением.</li>
+        </ul>
+        <p>При тяжелых отравлениях доза может быть увеличена вдвое в первые трое суток. Длительность курса - от 3-5 дней при острых состояниях до 2-3 недель при хронических заболеваниях и аллергии.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Передозировка">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Передозировка">Передозировка</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Случаев передозировки не зарегистрировано.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Взаимодействие с другими препаратами">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Взаимодействие с другими препаратами">Взаимодействие с другими препаратами</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Энтеросгель снижает эффективность лекарственных средств при одновременном приеме. Чтобы избежать взаимодействия, необходимо соблюдать интервал 1-2 часа между препаратами.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Аналоги Энтеросгеля">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Аналоги Энтеросгеля">Аналоги Энтеросгеля</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>На данный момент лекарственных аналогов с тем же действующим веществом не выпускается.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать детям">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать детям">Можно ли принимать детям</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат разрешен для применения у детей с раннего возраста, включая грудных младенцев.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Можно ли принимать Энтеросгель при беременности и лактации">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Можно ли принимать Энтеросгель при беременности и лактации">Можно ли принимать Энтеросгель при беременности и лактации</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Во время беременности и в период грудного вскармливания Энтеросгель может использоваться после консультации с врачом.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Совместим ли Энтеросгель и алкоголь">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Совместим ли Энтеросгель и алкоголь">Совместим ли Энтеросгель и алкоголь</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Препарат применяется в том числе при алкогольных интоксикациях, однако одновременный прием с алкоголем снижает эффективность терапии.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Отпускается по рецепту или нет">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Отпускается по рецепту или нет">Отпускается по рецепту или нет</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Энтеросгель можно приобрести без рецепта врача.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Как хранить Энтеросгель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Как хранить Энтеросгель">Как хранить Энтеросгель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Хранить при температуре от +4 °C до +25 °C, в плотно закрытой упаковке, недоступной для детей.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Срок годности">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Срок годности">Срок годности</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Срок годности - 3 года. Не применять по истечении срока, указанного на упаковке.</p>
+    </div>
+</li>
+<li class="product-details-instructions-main__item open" id="in-Производитель">
+    <div class="product-details-instructions-main__item-questions">
+        <h3 id="Производитель">Производитель</h3>
+        <div class="product-details-instructions-main__item--arrow"></div>
+    </div>
+    <div class="product-details-instructions-main__item-answer">
+        <p>Производителем Энтеросгеля является ООО «ТНК СИЛМА» (Россия). Производственная площадка и место упаковки могут изменяться.</p>
+    </div>
+</li>
