@@ -50,13 +50,14 @@ DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(
 
 async def generate_content_html(state: GraphState) -> GraphState:
     _log()
-    is_valid = state.get("html_content_is_valid", True)
+    # is_valid = state.get("html_content_is_valid", True)
     llm = get_llm_content()
 
     messages = [
         SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
         HumanMessage(content=state["mdFile"])
     ]
+
     if state.get("validation_errors"):
         messages.append(
             HumanMessage(

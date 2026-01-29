@@ -14,4 +14,5 @@ class ToHtmlConverterUseCase:
         result = await compile_md_to_html_graph.ainvoke(
             {"mdFile": md}
         )
+
         return JSONResponse({"html_menu": result.get('html_menu'), "html_content": result.get('html_content')})
