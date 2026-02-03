@@ -95,9 +95,11 @@ services:
     image: ghcr.io/kylemanna/docker-sstp
     container_name: sstp
     privileged: true
-    network_mode: bridge
     restart: unless-stopped
-
+    networks:
+      - vn1
+    logging:
+      driver: "none"
     environment:
       - SSTP_SERVER=185.169.107.20
       - SSTP_USERNAME=Yandex-DEV
