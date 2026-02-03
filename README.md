@@ -62,3 +62,23 @@ docker-compose down
 sudo docker compose pull
 docker image prune -f
 docker compose up -d
+
+
+
+## Step 3: Setting up SSL with Certbot
+
+Certbot will obtain and install an SSL certificate from Let's Encrypt.
+
+sudo docker compose run --rm certbot certonly \
+ --webroot \
+ --webroot-path /var/www/certbot/ \
+ --email deor.dima@gmail.com \
+ --agree-tos \
+ --no-eff-email \
+ -d ai-bot.vn1.ru
+
+Follow the on-screen instructions to complete the SSL setup.
+Once completed, n8n will be accessible securely over HTTPS at your-domain.com.
+
+IMPORTANT: Make sure you follow the above steps in order. Step 5 will modify your /etc/nginx/sites-available/n8n.conf file to something like this:
+![image](https://github.com/user-attachments/assets/344187ec-5bcf-4d97-ad35-21b6562182e5)
