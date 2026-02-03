@@ -46,6 +46,12 @@ sudo docker compose up --build -d
 
 sudo docker compose up -d
 
+## разрешения
+
+sudo chown -R 1000:1000 ./bots/alliance_trucks/data
+sudo chown -R 1000:1000 ./bots/test/data
+sudo chmod -R u+rwX ./bots/alliance_trucks/data
+sudo chmod -R u+rwX ./bots/test/data
 
 
 ###### Запуск API
@@ -76,6 +82,12 @@ sudo docker compose run --rm certbot certonly \
  --agree-tos \
  --no-eff-email \
  -d ai-bot.vn1.ru
+
+
+автопроддление 
+
+sudo docker compose run --rm certbot renew --dry-run
+
 
 Follow the on-screen instructions to complete the SSL setup.
 Once completed, n8n will be accessible securely over HTTPS at your-domain.com.

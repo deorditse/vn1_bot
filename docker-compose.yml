@@ -10,8 +10,8 @@ services:
     container_name: n8n-vn1
     image: docker.n8n.io/n8nio/n8n:latest
     environment:
-      - N8N_HOST=deorbot.ru
-      - WEBHOOK_URL=https://deorbot.ru/vn1/
+      - N8N_HOST=ai-bot.vn1.ru
+      - WEBHOOK_URL=https://ai-bot.vn1.ru/vn1/
       - N8N_PATH=/vn1/
       - N8N_PORT=5678
       - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
