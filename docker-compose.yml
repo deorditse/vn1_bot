@@ -86,7 +86,8 @@ services:
       - API_PORT=8010
       - API_MODE=PROD
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-
+      - PROXY=${PROXY}
+      -
       - ALL_PROXY=socks5h://xray:10808
       - HTTP_PROXY=socks5h://xray:10808
       - HTTPS_PROXY=socks5h://xray:10808
