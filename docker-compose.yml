@@ -1,6 +1,5 @@
 networks:
   vn1:
-    driver: bridge
 
 services:
   n8n-vn1:
