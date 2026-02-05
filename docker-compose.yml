@@ -1,5 +1,6 @@
 networks:
   vn1:
+    driver: bridge
 
 services:
   n8n-vn1:
@@ -35,24 +36,6 @@ services:
       options:
         max-size: "5m"
         max-file: "1"
-
-  backend-vn1:
-    container_name: backend-vn1
-    build:
-      context: .
-      dockerfile: Dockerfile
-    expose:
-      - "8010"
-    #    ports:
-    #      - "8010:8010"
-    environment:
-      - PYTHONUNBUFFERED=1
-      - API_PORT=8010
-      - API_MODE=PROD
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-    restart: unless-stopped
-    networks:
-      - vn1
 
   nginx:
     container_name: nginx
@@ -91,3 +74,35 @@ services:
       - vn1
     logging:
       driver: "none"
+
+  xray:
+    image: teddysun/xray
+    container_name: xray
+    ports:
+      - "10808:10808"
+    volumes:
+      - ./xray-config:/etc/xray
+    command: xray run -config /etc/xray/config.json
+    networks:
+      - vn1
+
+  backend-vn1:
+    container_name: backend-vn1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "8010"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_PORT=8010
+      - API_MODE=PROD
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ALL_PROXY=socks5h://xray:10808
+      - HTTPS_PROXY=socks5h://xray:10808
+      - HTTP_PROXY=socks5h://xray:10808
+    restart: unless-stopped
+    networks:
+      - vn1
+    depends_on:
+      - xray
