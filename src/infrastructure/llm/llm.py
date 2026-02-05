@@ -1,5 +1,7 @@
 from langchain_openai import ChatOpenAI
 
+from infrastructure.network.network import client_httpx_vpn
+
 
 # from langchain_gigachat import GigaChat
 
@@ -28,6 +30,7 @@ class LLMService:
             api_key=api_key_openai(),
             model=model,
             max_tokens=32000,  # КРИТИЧНО
+            http_client=client_httpx_vpn
         )
 
     def deepseek(self) -> ChatOpenAI:
@@ -36,4 +39,5 @@ class LLMService:
         return ChatOpenAI(
             api_key=api_key_deepseek(),
             base_url="https://api.deepseek.com",
+            http_client=client_httpx_vpn
         )
