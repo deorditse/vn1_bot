@@ -87,5 +87,21 @@ services:
       - API_MODE=PROD
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     restart: unless-stopped
+    depends_on:
+      - xray
     networks:
       - vn1
+  xray:
+    image: teddysun/xray
+    container_name: xray
+    restart: unless-stopped
+    volumes:
+      - ./xray-config/config.json:/etc/xray/config.json:ro
+    command: xray run -config /etc/xray/config.json
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"
