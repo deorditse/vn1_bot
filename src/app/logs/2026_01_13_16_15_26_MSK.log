@@ -1,6 +1,0 @@
-13-01 16:15:26 uvicorn.error:INFO   | Started server process [11025]
-13-01 16:15:26 uvicorn.error:INFO   | Waiting for application startup.
-13-01 16:15:26 uvicorn.error:INFO   | Application startup complete.
-13-01 16:15:26 uvicorn.error:ERROR  | [Errno 48] error while attempting to bind on address ('0.0.0.0', 8010): [errno 48] address already in use
-13-01 16:15:26 uvicorn.error:INFO   | Waiting for application shutdown.
-13-01 16:15:26 uvicorn.error:INFO   | Application shutdown complete.
