@@ -1,2 +1,43 @@
+
+# Secrets
 .env
+.env.*
+
+# Logs
 *.log
+logs/
+*.pid
+
+# Runtime / state (CRITICAL)
+data/
+shared/
+certbot/
+xray-config/
+
+# n8n
+**/.n8n/
+**/database.sqlite
+**/*.sqlite
+**/*.sqlite-journal
+**/*.db
+
+
+# Docker
+**/docker-data/
+**/volumes/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env.venv/
+
+# Node / n8n internals
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
