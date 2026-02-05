@@ -11,7 +11,7 @@ logs/
 # Runtime / state (CRITICAL)
 data/
 shared/
-certbot/
+#certbot/
 xray-config/
 
 # n8n
