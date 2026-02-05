@@ -96,6 +96,7 @@ services:
       - xray
     networks:
       - vn1
+
   xray:
     image: teddysun/xray
     container_name: xray

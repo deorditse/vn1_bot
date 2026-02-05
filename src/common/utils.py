@@ -25,8 +25,6 @@ def current_time_msk_str(fmt: str = "%Y_%m_%d_%H_%M_%S_MSK") -> str:
     return datetime_msk().strftime(fmt)
 
 
-def get_env(name: str, default=None) -> str:
+def get_env(name: str, default=None) -> str | None:
     value = os.getenv(name)
-    if value is None and default is None:
-        raise RuntimeError(f"Undefined environment variable {name}")
     return value or default

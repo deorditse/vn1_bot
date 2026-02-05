@@ -26,8 +26,9 @@ class LLMService:
 
         return ChatOpenAI(
             api_key=api_key_openai(),
+            http_async_client=make_async_http_client(),  # ← ТОЛЬКО ТАК
             model=model,
-            max_tokens=32000,  # КРИТИЧНО
+            max_tokens=32000,
         )
 
     def deepseek(self) -> ChatOpenAI:
@@ -36,4 +37,25 @@ class LLMService:
         return ChatOpenAI(
             api_key=api_key_deepseek(),
             base_url="https://api.deepseek.com",
+            http_async_client=make_async_http_client(),  # ← ТОЛЬКО ТАК
         )
+
+
+import httpx
+from common.env import proxy_url
+
+
+def make_async_http_client() -> httpx.AsyncClient:
+    proxy = proxy_url()
+
+    if proxy:
+        return httpx.AsyncClient(
+            proxy=proxy,
+            timeout=httpx.Timeout(300.0),
+            verify=True,
+        )
+
+    return httpx.AsyncClient(
+        timeout=httpx.Timeout(300.0),
+        verify=True,
+    )
