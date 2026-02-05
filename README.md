@@ -27,6 +27,7 @@ sudo docker ps
 ### пересобрать только один, например n8n-alliance:
 
 sudo docker compose restart n8n-vn1
+sudo docker compose restart backend-vn1
 sudo docker compose up -d --build n8n-vn1
 
 ### обновление завсиимостей

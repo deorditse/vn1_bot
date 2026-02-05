@@ -74,17 +74,6 @@ services:
     logging:
       driver: "none"
 
-  xray:
-    image: teddysun/xray
-    container_name: xray
-    ports:
-      - "10808:10808"
-    volumes:
-      - ./xray-config:/etc/xray
-    command: xray run -config /etc/xray/config.json
-    networks:
-      - vn1
-
   backend-vn1:
     container_name: backend-vn1
     build:
@@ -97,11 +86,6 @@ services:
       - API_PORT=8010
       - API_MODE=PROD
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - ALL_PROXY=socks5h://xray:10808
-      - HTTPS_PROXY=socks5h://xray:10808
-      - HTTP_PROXY=socks5h://xray:10808
     restart: unless-stopped
     networks:
       - vn1
-    depends_on:
-      - xray
