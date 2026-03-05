@@ -1,13 +1,90 @@
-from typing import TypedDict, Annotated
+import inspect
+from typing import TypedDict, Annotated, Optional, Any, List
 from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
+from langgraph.types import RetryPolicy
+from pydantic import Field
+from pydantic.v1 import BaseModel
+
 from app.policies.policies_loader import load_prompt
 from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
 from common import ApiMode, env
 from infrastructure.llm.llm import LLMService
 
 mode: ApiMode = env.api_mode()
+
+
+# =======================================================
+# Graph state
+# =======================================================
+
+
+class GraphState(BaseModel):
+    mdFile: str = Field("", description="mdFile")
+    html_menu: str = Field("", description="HTML menu")
+    html_content: str = Field('', description="HTML content")
+    validation_attempts: int = Field(0, description="Validation attempts")
+    validation_errors: list[str] = Field(default_factory=list, description="Validation errors")
+    html_content_is_valid: bool = Field(False, description="HTML content is_valid")
+
+
+# =======================================================
+# Node base class
+# =======================================================
+
+class BaseNode:
+    """Node base class"""
+    step: str
+    title: str
+
+    def __init__(self, step: str, title: str):
+        self.step = step
+        self.title = title
+
+    def __call__(self, state: GraphState) -> dict:
+        raise NotImplementedError
+
+
+# =======================================================
+# Nodes
+# =======================================================
+
+class GenerateContentHtmlNode(BaseNode):
+    """Генерация HTML структуры из Markdown"""
+
+    def __init__(self, llm: Any):
+        super().__init__(
+            step="generateContentHtml", title="Генерация HTML структуры"
+        )
+        self.llm = llm
+
+    async def __call__(self, state: GraphState) -> dict:
+        _log()
+
+        messages = [
+            SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
+            HumanMessage(content=state.mdFile)
+        ]
+
+        errors = state.validation_errors
+
+        if not isinstance(errors, list):
+            errors = []
+
+        if errors:
+            messages.append(
+                HumanMessage(
+                    content="Fix the following validation errors:\n"
+                            + "\n".join(errors)
+                )
+            )
+
+        response = await self.llm.ainvoke(messages)
+        _print(response.content)
+
+        return {'html_content': response.content}
+
 
 _llm_menu = None
 _llm_content = None
@@ -20,63 +97,39 @@ def get_llm_menu():
     return _llm_menu
 
 
-def get_llm_content():
-    global _llm_content
-    if _llm_content is None:
-        _llm_content = LLMService().openai()
-    return _llm_content
-
-
-# =======================================================
-# Graph state
-# =======================================================
-
-
-class GraphState(TypedDict, total=False):
-    # mdFile: str
-    mdFile: Annotated[str, LastValue]
-    html_menu: str
-    html_content: str
-    validation_attempts: Annotated[int, LastValue]
-    validation_errors: list[str]
-
-    # validation
-    html_content_is_valid: bool
-
-
 DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
                                                                                 html_content_example=content_example)
 
 
-async def generate_content_html(state: GraphState) -> GraphState:
+# async def generate_content_html(state: GraphState) -> GraphState:
+#     _log()
+#     # is_valid = state.get("html_content_is_valid", True)
+#     llm = get_llm_content()
+#
+#     messages = [
+#         SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
+#         HumanMessage(content=state["mdFile"])
+#     ]
+#
+#     if state.get("validation_errors"):
+#         messages.append(
+#             HumanMessage(
+#                 content="Fix the following validation errors:\n"
+#                         + "\n".join(state["validation_errors"])
+#             )
+#         )
+#
+#     response = await llm.ainvoke(messages)
+#     _print(response.content)
+#
+#     return {'html_content': response.content}
+
+
+def validate_content_html(state: GraphState) -> dict:
     _log()
-    # is_valid = state.get("html_content_is_valid", True)
-    llm = get_llm_content()
+    errors = []
 
-    messages = [
-        SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
-        HumanMessage(content=state["mdFile"])
-    ]
-
-    if state.get("validation_errors"):
-        messages.append(
-            HumanMessage(
-                content="Fix the following validation errors:\n"
-                        + "\n".join(state["validation_errors"])
-            )
-        )
-
-    response = await llm.ainvoke(messages)
-    _print(response.content)
-
-    return {'html_content': response.content}
-
-
-def validate_content_html(state: GraphState) -> GraphState:
-    _log()
-    errors: list[str] = []
-
-    html = state["html_content"]
+    html = state.html_content
 
     # TODO: add validation
 
@@ -89,7 +142,7 @@ def validate_content_html(state: GraphState) -> GraphState:
     return {
         "html_content_is_valid": False,
         "validation_errors": errors,
-        "validation_attempts": state.get("validation_attempts", 0) + 1,
+        "validation_attempts": state.validation_attempts + 1,
     }
 
 
@@ -98,14 +151,14 @@ DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(html_m
                                                                           )
 
 
-async def generate_menu_html(state: GraphState) -> GraphState:
+async def generate_menu_html(state: GraphState) -> dict:
     _log()
 
     llm = get_llm_menu()
     # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
     response = await llm.ainvoke(
         [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT.strip()),
-         HumanMessage(content=state.get("html_content")),
+         HumanMessage(content=state.html_content),
          ]
     )
     _print(response.content)
@@ -115,49 +168,50 @@ async def generate_menu_html(state: GraphState) -> GraphState:
     }
 
 
-def summarize(state: GraphState) -> GraphState:
+def summarize(state: GraphState) -> dict:
     _log()
-    return state
-
-    # =======================================================
-    # Graph builder
-    # =======================================================
+    return state.dict()
 
 
-class ValidationRouter:
-    def __init__(self, max_attempts: int = 3):
-        self.max_attempts = max_attempts
-
-    def __call__(self, state: GraphState) -> str:
-        attempts = state.get("validation_attempts", 0)
-
-        if state.get("html_content_is_valid"):
-            return "generate_menu_html"
-
-        if attempts >= self.max_attempts:
-            return "generate_menu_html"  # или END / error-node
-
-        return "generate_content_html"
+# =======================================================
+# Graph builder
+# =======================================================
 
 
 def build_graph() -> StateGraph:
-    # convert file to MD
+    gen_llm = LLMService().openai()
+
+    gen_content = GenerateContentHtmlNode(llm=gen_llm)
+    retry_policy = RetryPolicy(
+        max_attempts=5,
+        initial_interval=3,
+    )
+
     graph = StateGraph(GraphState)
 
-    graph.add_node("generate_content_html", generate_content_html)
-    graph.add_node("validate_content_html", validate_content_html)
-    graph.add_node("generate_menu_html", generate_menu_html)
+    # nodes
+    graph.add_node("generate_content_html", gen_content, retry_policy=retry_policy)
+    graph.add_node("validate_content_html", validate_content_html, retry_policy=retry_policy)
+    graph.add_node("generate_menu_html", generate_menu_html, retry_policy=retry_policy)
     graph.add_node("summarize", summarize)
 
+    # edges
     graph.add_edge(START, "generate_content_html")
     graph.add_edge("generate_content_html", "validate_content_html")
 
+    def validation(state: GraphState):
+        return (
+            "valid"
+            if state.html_content_is_valid or state.validation_attempts >= 3
+            else "retry"
+        )
+
     graph.add_conditional_edges(
         "validate_content_html",
-        ValidationRouter(),
+        validation,
         {
-            "generate_content_html": "generate_content_html",
-            "generate_menu_html": "generate_menu_html",
+            "retry": "generate_content_html",
+            "valid": "generate_menu_html",
         },
     )
 
@@ -177,8 +231,8 @@ logger = logging.getLogger(__name__)
 
 
 def _log():
-    fn = sys._getframe(1).f_code.co_name
-    print("call: def", fn)
+    fn = inspect.stack()[1].function
+    print(f"call: {fn}")
 
 
 def _print(data):

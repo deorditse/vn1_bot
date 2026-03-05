@@ -95,3 +95,6 @@ Once completed, n8n will be accessible securely over HTTPS at your-domain.com.
 
 IMPORTANT: Make sure you follow the above steps in order. Step 5 will modify your /etc/nginx/sites-available/n8n.conf file to something like this:
 ![image](https://github.com/user-attachments/assets/344187ec-5bcf-4d97-ad35-21b6562182e5)
+
+
+
