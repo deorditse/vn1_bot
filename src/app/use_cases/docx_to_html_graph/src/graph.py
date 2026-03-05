@@ -1,11 +1,8 @@
 import inspect
-from typing import Any
+from typing import Any, TypedDict, List
 from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import StateGraph, START, END
 from langgraph.types import RetryPolicy
-from pydantic import Field
-from pydantic.v1 import BaseModel
-
 from app.policies.policies_loader import load_prompt
 from app.policies.prompts.md_to_html.examples import menu_example, md_example, content_example
 from common import ApiMode, env
@@ -19,13 +16,13 @@ mode: ApiMode = env.api_mode()
 # =======================================================
 
 
-class GraphState(BaseModel):
-    mdFile: str = Field("", description="mdFile")
-    html_menu: str = Field("", description="HTML menu")
-    html_content: str = Field('', description="HTML content")
-    validation_attempts: int = Field(0, description="Validation attempts")
-    validation_errors: list[str] = Field(default_factory=list, description="Validation errors")
-    html_content_is_valid: bool = Field(False, description="HTML content is_valid")
+class GraphState(TypedDict, total=False):
+    mdFile: str
+    html_menu: str
+    html_content: str
+    validation_attempts: int
+    validation_errors: List[str]
+    html_content_is_valid: bool
 
 
 # =======================================================
@@ -41,7 +38,7 @@ class BaseNode:
         self.step = step
         self.title = title
 
-    def __call__(self, state: GraphState) -> dict:
+    def __call__(self, state: GraphState) -> GraphState:
         raise NotImplementedError
 
 
@@ -52,21 +49,21 @@ class BaseNode:
 class GenerateContentHtmlNode(BaseNode):
     """Генерация HTML структуры из Markdown"""
 
-    def __init__(self, llm: Any):
+    def __init__(self, llm):
         super().__init__(
             step="generateContentHtml", title="Генерация HTML структуры"
         )
-        self.llm = llm
+        self._llm = llm
 
-    async def __call__(self, state: GraphState) -> dict:
+    async def __call__(self, state: GraphState) -> GraphState:
         _log()
 
         messages = [
             SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
-            HumanMessage(content=state.mdFile)
+            HumanMessage(content=state.get('mdFile', '')),
         ]
 
-        errors = state.validation_errors
+        errors = state.get("validation_errors", [])
 
         if not isinstance(errors, list):
             errors = []
@@ -79,10 +76,11 @@ class GenerateContentHtmlNode(BaseNode):
                 )
             )
 
-        response = await self.llm.ainvoke(messages)
+        response = await self._llm.ainvoke(messages)
+
         _print(response.content)
 
-        return {'html_content': response.content}
+        return {'html_content': response.content.strip()}
 
 
 _llm_menu = None
@@ -100,38 +98,11 @@ DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(
                                                                                 html_content_example=content_example)
 
 
-# async def generate_content_html(state: GraphState) -> GraphState:
-#     _log()
-#     # is_valid = state.get("html_content_is_valid", True)
-#     llm = get_llm_content()
-#
-#     messages = [
-#         SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
-#         HumanMessage(content=state["mdFile"])
-#     ]
-#
-#     if state.get("validation_errors"):
-#         messages.append(
-#             HumanMessage(
-#                 content="Fix the following validation errors:\n"
-#                         + "\n".join(state["validation_errors"])
-#             )
-#         )
-#
-#     response = await llm.ainvoke(messages)
-#     _print(response.content)
-#
-#     return {'html_content': response.content}
-
-
-def validate_content_html(state: GraphState) -> dict:
+def validate_content_html(state: GraphState) -> GraphState:
     _log()
     errors = []
 
-    html = state.html_content
-
     # TODO: add validation
-
     if not errors:
         return {
             "html_content_is_valid": True,
@@ -141,7 +112,7 @@ def validate_content_html(state: GraphState) -> dict:
     return {
         "html_content_is_valid": False,
         "validation_errors": errors,
-        "validation_attempts": state.validation_attempts + 1,
+        "validation_attempts": state.get("validation_attempts", 0) + 1,
     }
 
 
@@ -150,14 +121,14 @@ DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(html_m
                                                                           )
 
 
-async def generate_menu_html(state: GraphState) -> dict:
+async def generate_menu_html(state: GraphState) -> GraphState:
     _log()
 
     llm = get_llm_menu()
     # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
     response = await llm.ainvoke(
         [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT.strip()),
-         HumanMessage(content=state.html_content),
+         HumanMessage(content=state.get('html_content')),
          ]
     )
     _print(response.content)
@@ -167,9 +138,9 @@ async def generate_menu_html(state: GraphState) -> dict:
     }
 
 
-def summarize(state: GraphState) -> dict:
+def summarize(state: GraphState) -> GraphState:
     _log()
-    return state.dict(exclude_none=True)
+    return state
 
 
 # =======================================================
@@ -201,7 +172,7 @@ def build_graph() -> StateGraph:
     def validation(state: GraphState):
         return (
             "valid"
-            if state.html_content_is_valid or state.validation_attempts >= 3
+            if state.get('html_content_is_valid') or state.get('validation_attempts', 0) >= 3
             else "retry"
         )
 
