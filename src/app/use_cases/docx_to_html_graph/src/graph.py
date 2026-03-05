@@ -1,7 +1,6 @@
 import inspect
-from typing import TypedDict, Annotated, Optional, Any, List
+from typing import Any
 from langchain_core.messages import SystemMessage, HumanMessage
-from langgraph.channels import LastValue
 from langgraph.graph import StateGraph, START, END
 from langgraph.types import RetryPolicy
 from pydantic import Field
@@ -170,7 +169,7 @@ async def generate_menu_html(state: GraphState) -> dict:
 
 def summarize(state: GraphState) -> dict:
     _log()
-    return state.dict()
+    return state.dict(exclude_none=True)
 
 
 # =======================================================
