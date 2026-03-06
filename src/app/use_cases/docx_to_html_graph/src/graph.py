@@ -1,4 +1,5 @@
 import inspect
+from http.client import responses
 from typing import Any, TypedDict, List
 from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import StateGraph, START, END
@@ -15,14 +16,16 @@ mode: ApiMode = env.api_mode()
 # Graph state
 # =======================================================
 
-
 class GraphState(TypedDict, total=False):
     mdFile: str
-    html_menu: str
-    html_content: str
     validation_attempts: int
     validation_errors: List[str]
     html_content_is_valid: bool
+
+    # content
+    html_menu: str
+    html_content: str
+    ai_description: str
 
 
 # =======================================================
@@ -51,15 +54,17 @@ class GenerateContentHtmlNode(BaseNode):
 
     def __init__(self, llm):
         super().__init__(
-            step="generateContentHtml", title="Генерация HTML структуры"
+            step="generate_content_html", title="Генерация HTML структуры"
         )
         self._llm = llm
 
     async def __call__(self, state: GraphState) -> GraphState:
-        _log()
+        _log(self.step)
 
+        content_prompt = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
+                                                                            html_content_example=content_example)
         messages = [
-            SystemMessage(content=DOC_TO_CONTENT_HTML_PROMPT.strip()),
+            SystemMessage(content=content_prompt.strip()),
             HumanMessage(content=state.get('mdFile', '')),
         ]
 
@@ -78,28 +83,12 @@ class GenerateContentHtmlNode(BaseNode):
 
         response = await self._llm.ainvoke(messages)
 
-        _print(response.content)
-
         return {'html_content': response.content.strip()}
 
 
-_llm_menu = None
-_llm_content = None
-
-
-def get_llm_menu():
-    global _llm_menu
-    if _llm_menu is None:
-        _llm_menu = LLMService().openai()
-    return _llm_menu
-
-
-DOC_TO_CONTENT_HTML_PROMPT = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
-                                                                                html_content_example=content_example)
-
-
 def validate_content_html(state: GraphState) -> GraphState:
-    _log()
+    _log('validate_content_html')
+
     errors = []
 
     # TODO: add validation
@@ -116,57 +105,92 @@ def validate_content_html(state: GraphState) -> GraphState:
     }
 
 
-DOC_TO_MENU_HTML_PROMPT = load_prompt('md_to_html/menu_prompt.md').format(html_menu_example=menu_example,
-                                                                          html_input_example=content_example,
-                                                                          )
+class GenerateMenuHtmlNode(BaseNode):
+    """Генерация HTML меню из content"""
 
+    def __init__(self, llm):
+        super().__init__(
+            step="generate_menu_html", title="Генерация HTML menu"
+        )
+        self._llm = llm
 
-async def generate_menu_html(state: GraphState) -> GraphState:
-    _log()
+    menu_prompt = load_prompt('md_to_html/menu_prompt.md').format(html_menu_example=menu_example,
+                                                                  html_input_example=content_example,
+                                                                  )
 
-    llm = get_llm_menu()
-    # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
-    response = await llm.ainvoke(
-        [SystemMessage(content=DOC_TO_MENU_HTML_PROMPT.strip()),
-         HumanMessage(content=state.get('html_content')),
-         ]
-    )
-    _print(response.content)
+    async def __call__(self, state: GraphState) -> GraphState:
+        _log(self.step)
 
-    return {
-        "html_menu": response.content,
-    }
+        # чтобы anchor_id были одинковыми - берем сгенерированный html и работаем с ним
+        response = await self._llm.ainvoke(
+            [SystemMessage(content=self.menu_prompt.strip()),
+             HumanMessage(content=state.get('html_content')),
+             ]
+        )
+
+        return {
+            "html_menu": response.content,
+        }
 
 
 def summarize(state: GraphState) -> GraphState:
-    _log()
+    _log('summarize')
     return state
+
+
+class GenerateShortDescriptionNode(BaseNode):
+    """Генерация ShortDescription из входного markdown"""
+
+    def __init__(self, llm):
+        super().__init__(
+            step="ai_short_description", title="Генерация Ai описания препарата"
+        )
+        self._llm = llm
+
+    ai_information_prompt = load_prompt('generation/ai_information.md')
+
+    async def __call__(self, state: GraphState) -> GraphState:
+        _log(self.step)
+
+        response = await self._llm.ainvoke(
+            [SystemMessage(content=self.ai_information_prompt.strip()),
+             HumanMessage(content=state.get('mdFile', '')),
+             ]
+        )
+
+        return {'ai_description': response.content.strip()}
 
 
 # =======================================================
 # Graph builder
 # =======================================================
 
-
-def build_graph() -> StateGraph:
-    gen_llm = LLMService().openai()
-
-    gen_content = GenerateContentHtmlNode(llm=gen_llm)
+def build_graph(llm_content, llm_menu, llm_gen_description) -> StateGraph:
     retry_policy = RetryPolicy(
         max_attempts=5,
         initial_interval=3,
     )
 
     graph = StateGraph(GraphState)
+    # ___ Nodes ___
+    content = GenerateContentHtmlNode(llm=llm_content)
+    graph.add_node("generate_content_html", content, retry_policy=retry_policy)
 
-    # nodes
-    graph.add_node("generate_content_html", gen_content, retry_policy=retry_policy)
     graph.add_node("validate_content_html", validate_content_html, retry_policy=retry_policy)
-    graph.add_node("generate_menu_html", generate_menu_html, retry_policy=retry_policy)
+
+    menu = GenerateMenuHtmlNode(llm_menu)
+    graph.add_node("generate_menu_html", menu, retry_policy=retry_policy)
     graph.add_node("summarize", summarize)
 
-    # edges
+    ai_description = GenerateShortDescriptionNode(llm_gen_description)
+    graph.add_node("ai_short_description", ai_description, retry_policy=retry_policy)
+
+    # ___ Edges ___
     graph.add_edge(START, "generate_content_html")
+
+    graph.add_edge(START, "ai_short_description")
+    graph.add_edge("ai_short_description", "summarize")
+
     graph.add_edge("generate_content_html", "validate_content_html")
 
     def validation(state: GraphState):
@@ -191,25 +215,16 @@ def build_graph() -> StateGraph:
     return graph
 
 
-md_to_html_graph = build_graph()
-compile_md_to_html_graph = md_to_html_graph.compile()
+_llm_content = LLMService().openai()
+_llm_menu = LLMService().openai()
+_llm_gen_description = LLMService().openai()
 
-import sys
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-def _log():
-    fn = inspect.stack()[1].function
-    print(f"call: {fn}")
+_md_to_html_graph = build_graph(llm_content=_llm_content, llm_menu=_llm_menu, llm_gen_description=_llm_gen_description)
+compile_md_to_html_graph = _md_to_html_graph.compile()
 
 
-def _print(data):
-    pass
-    # from textwrap import indent, fill
-    #
-    # print(indent(
-    #     fill(data, width=100),
-    #     prefix="│ "
-    # ))
+def _log(step: str):
+    if mode == ApiMode.PROD:
+        return
+
+    print(f"node: {step}")

@@ -15,4 +15,4 @@ class ToHtmlConverterUseCase:
             {"mdFile": md}
         )
 
-        return JSONResponse({"html_menu": result.get('html_menu'), "html_content": result.get('html_content')})
+        return JSONResponse(result)
