@@ -75,7 +75,6 @@ services:
       driver: "none"
 
   backend-vn1:
-    container_name: backend-vn1
     build:
       context: .
       dockerfile: Dockerfile

@@ -26,7 +26,7 @@ class LLMService:
 
         return ChatOpenAI(
             api_key=api_key_openai(),
-            http_async_client=make_async_http_client(),  # ← ТОЛЬКО ТАК
+            http_async_client=make_async_http_client(),
             model=model,
             max_tokens=32000,
         )
@@ -37,7 +37,7 @@ class LLMService:
         return ChatOpenAI(
             api_key=api_key_deepseek(),
             base_url="https://api.deepseek.com",
-            http_async_client=make_async_http_client(),  # ← ТОЛЬКО ТАК
+            http_async_client=make_async_http_client(),
         )
 
 

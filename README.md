@@ -45,6 +45,8 @@ docker image prune -f
 sudo docker compose down
 sudo docker compose up --build -d
 
+
+docker compose up --scale backend-vn1=4
 sudo docker compose up -d
 
 ## разрешения
@@ -98,3 +100,6 @@ IMPORTANT: Make sure you follow the above steps in order. Step 5 will modify you
 
 
 
+
+## установка с dev зависимостяим 
+uv sync --extra dev

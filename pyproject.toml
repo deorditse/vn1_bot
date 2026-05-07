@@ -23,8 +23,16 @@ dependencies = [
     "uvicorn>=0.38.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "arize-phoenix",
+    "openinference-instrumentation-langchain",
+    "openinference-instrumentation-openai",
+    "opentelemetry-sdk",
+]
+
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
