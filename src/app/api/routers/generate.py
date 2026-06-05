@@ -11,12 +11,15 @@ router = APIRouter()
 
 @router.post(
     "/instruction",
-    description="Перевод docx to html",
+    description=(
+        "Генерирует TXT-инструкцию из DOCX-файла. "
+        "В ответе возвращается скачиваемый файл instruction.txt с HTML-меню и HTML-контентом."
+    ),
     status_code=status.HTTP_200_OK,
 )
 async def docx_to_markdown(file: UploadFile = File(...)):
     """
-    Эндпоинт принимает сырой docx-файл как bytes в теле запроса.
+    Эндпоинт принимает DOCX-файл и возвращает TXT-файл для скачивания.
     """
     try:
         file_bytes = await file.read()
