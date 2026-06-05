@@ -95,6 +95,7 @@ services:
       - PYTHONUNBUFFERED=1
       - API_PORT=8010
       - API_MODE=PROD
+      - API_ROOT=/api
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
 
