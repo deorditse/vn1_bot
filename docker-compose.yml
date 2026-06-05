@@ -61,7 +61,7 @@ services:
     restart: unless-stopped
     depends_on:
       - backend-vn1
-      - n8n-vn1
+#      - n8n-vn1
     networks:
       - vn1
     logging:
