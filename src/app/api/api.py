@@ -28,7 +28,7 @@ Api
 mode: ApiMode = env.api_mode()
 
 app = FastAPI(
-    title=f"✒️ ParserAPI",
+    title=f"✒️ VN1 API",
     description=info.description,
     version=info.api_version,
     openapi_tags=info.tags_metadata,
