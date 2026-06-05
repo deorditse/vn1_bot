@@ -11,8 +11,8 @@ Tags
 """
 
 
-# class Tags(str, Enum):
-#     searchParser = "Поиск через парсинг"
+class Tags(str, Enum):
+    searchParser = "Поиск через парсинг"
 
 
 """
@@ -47,12 +47,12 @@ description = description_template \
 # Metadata
 # ===================================================================================================================
 # """
-# tags_metadata = [
-#     {
-#         "name": Tags.searchParser,
-#         "description": '''
-#         Генерация с помощью AI
-#         ''',
-#     },
-#
-# ]
+tags_metadata = [
+    {
+        "name": Tags.searchParser,
+        "description": '''
+        Генерация с помощью AI
+        ''',
+    },
+
+]
