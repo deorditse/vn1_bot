@@ -1,10 +1,11 @@
 import logging as pylog
 import platform
 import uvicorn
-from app.configs import config
 from dotenv import load_dotenv
 
 load_dotenv()
+
+from app.configs import config
 
 if __name__ == '__main__':
     try:
