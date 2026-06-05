@@ -23,11 +23,13 @@ services:
       - N8N_GIT_NODE_DISABLE_BARE_REPOS=true
       - N8N_PROXY_HOPS=1
       - N8N_PROTOCOL=https
-      
+
+      - NODE_USE_ENV_PROXY=1
       - ALL_PROXY=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
       - HTTP_PROXY=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
       - HTTPS_PROXY=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-      - NO_PROXY=localhost,127.0.0.1,nginx,backend-vn1,n8n-vn1
+      - NO_PROXY=localhost,127.0.0.1,nginx,backend-vn1,n8n-vn1,ai-bot.vn1.ru
+
     volumes:
       - ./data:/home/node/.n8n
       - ./shared:/data
