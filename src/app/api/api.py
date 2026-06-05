@@ -33,7 +33,8 @@ app = FastAPI(
     version=info.api_version,
     openapi_tags=info.tags_metadata,
     root_path=config.api_root,
-    docs_url='/docs' if mode is ApiMode.DEV else None,
+    docs_url="/docs",
+    # docs_url='/docs' if mode is ApiMode.DEV else None,
     debug=False,
 )
 
@@ -43,7 +44,7 @@ Routers
 ===================================================================================================================
 """
 
-app.include_router(converter.router, prefix="/converter", tags=['converter']),
+(app.include_router(converter.router, prefix="/converter", tags=["converter"]),)
 
 """
 ===================================================================================================================
@@ -67,19 +68,20 @@ Middleware
 
 @app.middleware("http")
 async def check_is_frozen(request: Request, call_next):
-    if request.method in ['POST', 'PUT', 'DELETE'] and config.api_is_readonly:
+    if request.method in ["POST", "PUT", "DELETE"] and config.api_is_readonly:
         return JSONResponse(
             headers={"Access-Control-Allow-Origin": "*"},
             status_code=503,
             content=ErrorModel(
-                exception='Сервис временно не доступен',
-                cause='Сервис остановлен для профилактики',
-                details='',
+                exception="Сервис временно не доступен",
+                cause="Сервис остановлен для профилактики",
+                details="",
                 request_url=str(request.url),
                 request_method=str(request.method),
                 request_headers=[f"{k}: {v}" for k, v in request.headers.items()],
                 traceback=[],
-            ).dict())
+            ).dict(),
+        )
     return await call_next(request)
 
 
@@ -104,7 +106,7 @@ def exception_response(req: Request, err: Exception):
     return JSONResponse(
         headers={"Access-Control-Allow-Origin": "*"},
         status_code=get_error_status_code(err),
-        content=ErrorModel.make(err=err, req=req).dict()
+        content=ErrorModel.make(err=err, req=req).dict(),
     )
 
 
