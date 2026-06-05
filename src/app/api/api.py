@@ -8,7 +8,7 @@ from app.api.schemas.result import ErrorModel
 from app.configs import info
 from common import MyBaseError, ApiMode, env
 from app.configs import config
-from app.api.routers import converter
+from app.api.routers import generate
 from common.logger.my_logger import MyLogger
 
 """
@@ -44,7 +44,7 @@ Routers
 ===================================================================================================================
 """
 
-(app.include_router(converter.router, prefix="/converter", tags=["converter"]),)
+(app.include_router(generate.router, prefix="/generate", tags=["generate"]),)
 
 """
 ===================================================================================================================
