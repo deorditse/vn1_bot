@@ -26,7 +26,7 @@ api_release_notes = release_notes
 start_time = current_time_msk_str("%d %b %Y - %H:%M:%S MSK")
 
 description_template = f"""
-### Сервис подписания документов с помощью УНЭП 
+### Сервис VN1 
 * Версия: **{api_version}**
 * Запущен: **{start_time}** 
 * На порту: **{str(config.api_port)}**
