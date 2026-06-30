@@ -68,7 +68,6 @@ services:
       - KC_HTTP_ENABLED=true
       - KC_HTTP_RELATIVE_PATH=/keycloak
       - KC_PROXY_HEADERS=xforwarded
-      - KC_HOSTNAME=${KEYCLOAK_HOSTNAME:-http://localhost:8080/keycloak}
       - KC_HOSTNAME_STRICT=false
     ports:
       - "8080:8080"

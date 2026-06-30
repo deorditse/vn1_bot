@@ -20,7 +20,8 @@ FROM nginx:1.27-alpine AS deploy
 ARG BASE_HREF
 ARG APP
 
-COPY --from=build ${APP}/dist /usr/share/nginx/html/${BASE_HREF}
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build ${APP}/dist/ /usr/share/nginx/html/${BASE_HREF}
 COPY ci_cd/nginx-default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80

@@ -8,7 +8,7 @@ is_readonly = false
 
 [auth]
 enabled = true
-issuer_url = "http://localhost:8080/keycloak/realms/vn1"
+issuer_url = "http://keycloak:8080/keycloak/realms/vn1"
 jwks_url = "http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/certs"
 token_url = "http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/token"
 client_id = "vn1-api"
