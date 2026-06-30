@@ -103,3 +103,89 @@ IMPORTANT: Make sure you follow the above steps in order. Step 5 will modify you
 
 ## установка с dev зависимостяим 
 uv sync --extra dev
+
+
+## Авторизация через Keycloak
+
+Keycloak поднимается отдельным контейнером и импортирует realm из `keycloak/realm-export.json`.
+
+```bash
+sudo docker compose up -d --build keycloak backend-vn1
+```
+
+Админка Keycloak:
+
+- локально: `http://localhost:8080/keycloak`
+- через nginx: `https://ai-bot.vn1.ru/keycloak`
+- admin login: `${KEYCLOAK_ADMIN:-admin}`
+- admin password: `${KEYCLOAK_ADMIN_PASSWORD:-admindeor}`
+
+На сервере для корректного issuer токенов задайте:
+
+```bash
+KEYCLOAK_HOSTNAME=https://ai-bot.vn1.ru/keycloak
+```
+
+Импортированный тестовый пользователь:
+
+- username: `vn1-user`
+- password: `vn1-user`
+- role: `vn1-user`
+
+Получить access token через API:
+
+```bash
+curl -X POST 'http://localhost/api/auth/login' \
+  -H 'Content-Type: application/json' \
+  -d '{"username": "vn1-user", "password": "vn1-user"}'
+```
+
+В Swagger:
+
+- открыть `https://ai-bot.vn1.ru/api/docs`
+- нажать `Authorize`
+- ввести username/password пользователя из Keycloak
+- после авторизации вызывать защищенные эндпоинты
+
+Вызов API с токеном:
+
+```bash
+curl -X POST 'http://localhost/api/generate/instruction' \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -F 'file=@/path/to/instruction.docx'
+```
+
+Обновить токен:
+
+```bash
+curl -X POST 'http://localhost/api/auth/refresh' \
+  -H 'Content-Type: application/json' \
+  -d '{"refresh_token": "'"$REFRESH_TOKEN"'"}'
+```
+
+## Frontend
+
+Frontend находится в `frontend/` и сделан на Vite + React + TypeScript + Ant Design в стиле проекта
+`Dz-otus/frontend`.
+
+Локальный запуск:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+По умолчанию dev-сервер доступен на `http://localhost:5173`, а запросы `/api/*` проксируются на
+`http://localhost:8010`.
+
+Production-сборка:
+
+```bash
+cd frontend
+npm run build
+```
+
+В docker-compose frontend собирается отдельным сервисом `frontend`, а внешний nginx проксирует `/` на него.
+Страница входа использует backend endpoints `/api/auth/login`, `/api/auth/refresh`, `/api/auth/me`, которые
+работают с Keycloak.

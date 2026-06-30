@@ -1,0 +1,25 @@
+import type { ReactNode } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+
+import { useAuth } from '@features/auth/model/AuthProvider';
+import { PageLoader } from '@widgets/page-loader';
+import { getRouteLogin } from '@shared/const/router';
+
+type Props = {
+  children: ReactNode;
+};
+
+export function RequireAuth({ children }: Props) {
+  const { isAuthenticated, isLoading } = useAuth();
+  const location = useLocation();
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
+
+  if (!isAuthenticated) {
+    return <Navigate replace state={{ from: location }} to={getRouteLogin()} />;
+  }
+
+  return <>{children}</>;
+}

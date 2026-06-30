@@ -1,12 +1,13 @@
 import json
 import traceback
-from fastapi import APIRouter, File, UploadFile
+from fastapi import APIRouter, Depends, File, UploadFile
 from fastapi.responses import Response
 from starlette import status
+from app.api.dependencies.auth import require_auth
 from app.use_cases.docx_to_html_graph.docx_to_html import ToHtmlConverterUseCase
 from infrastructure.converters.docx_to_md_converter import DocxToMdConverter
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(require_auth)])
 
 
 @router.post(

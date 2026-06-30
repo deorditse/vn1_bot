@@ -20,6 +20,20 @@ class ApiConfig(BaseSettings):
 
     """
     ===================================================================================================================
+    Auth
+    ===================================================================================================================
+    """
+    auth_enabled: bool = env.auth_enabled()
+    auth_issuer_url: str = env.auth_issuer_url()
+    auth_jwks_url: str = env.auth_jwks_url()
+    auth_token_url: str = env.auth_token_url()
+    auth_client_id: str = env.auth_client_id()
+    auth_client_secret: str | None = env.auth_client_secret()
+    auth_audience: str | None = env.auth_audience()
+    auth_required_roles: list[str] = env.auth_required_roles()
+
+    """
+    ===================================================================================================================
     Logging
     ===================================================================================================================
     """

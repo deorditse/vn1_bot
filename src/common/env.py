@@ -73,3 +73,42 @@ def api_is_readonly() -> bool:
 
 def rate_limit(name: str) -> str:
     return get_env(f'RATE_LIMIT_{name.upper()}', default='RATE_LIMIT_5/minute')
+
+
+def auth_enabled() -> bool:
+    return get_env('AUTH_ENABLED', 'TRUE').upper() in ['1', 'TRUE', 'YES', 'Y']
+
+
+def auth_issuer_url() -> str:
+    return get_env('AUTH_ISSUER_URL', default='http://localhost:8080/keycloak/realms/vn1')
+
+
+def auth_jwks_url() -> str:
+    return get_env(
+        'AUTH_JWKS_URL',
+        default='http://localhost:8080/keycloak/realms/vn1/protocol/openid-connect/certs',
+    )
+
+
+def auth_token_url() -> str:
+    return get_env(
+        'AUTH_TOKEN_URL',
+        default='http://localhost:8080/keycloak/realms/vn1/protocol/openid-connect/token',
+    )
+
+
+def auth_client_id() -> str:
+    return get_env('AUTH_CLIENT_ID', default='vn1-api')
+
+
+def auth_client_secret() -> str | None:
+    return get_env('AUTH_CLIENT_SECRET')
+
+
+def auth_audience() -> str | None:
+    return get_env('AUTH_AUDIENCE')
+
+
+def auth_required_roles() -> list[str]:
+    value = get_env('AUTH_REQUIRED_ROLES', default='')
+    return [role.strip() for role in value.split(',') if role.strip()]

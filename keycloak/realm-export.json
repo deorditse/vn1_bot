@@ -1,0 +1,50 @@
+{
+  "realm": "vn1",
+  "enabled": true,
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "vn1-user",
+        "description": "Allows access to VN1 API"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "vn1-api",
+      "name": "VN1 API",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false,
+      "redirectUris": [
+        "http://localhost:8010/*",
+        "http://localhost:8080/*",
+        "https://ai-bot.vn1.ru/*"
+      ],
+      "webOrigins": [
+        "+"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "vn1-user",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "vn1-user",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "vn1-user"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+.layout {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(34, 199, 184, 0.12), transparent 34rem),
+    linear-gradient(180deg, #081116 0%, #0b151b 100%);
+}
+
+.sider {
+  position: sticky !important;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid #24343e;
+  background: #0b151b !important;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 20px;
+
+  > span {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 8px;
+    background: #22c7b8;
+    color: #061115;
+  }
+
+  strong,
+  small {
+    display: block;
+  }
+
+  strong {
+    color: #edf7f6;
+    font-size: 16px;
+  }
+
+  small {
+    color: #8da4ad;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.menu {
+  border-inline-end: 0 !important;
+  background: transparent !important;
+  padding: 0 12px;
+
+  :global(.ant-menu-item) {
+    height: 58px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+
+  :global(.ant-menu-item-selected) {
+    background: rgba(34, 199, 184, 0.14) !important;
+  }
+}
+
+.menuLabel {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+
+  span {
+    color: #edf7f6;
+    font-weight: 760;
+  }
+
+  small {
+    color: #8da4ad;
+    font-size: 12px;
+  }
+}
+
+.mainLayout {
+  min-width: 0;
+  background: transparent;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: auto;
+  min-height: 86px;
+  padding: 18px 28px 12px;
+  background: transparent;
+
+  h1 {
+    margin: 0 !important;
+    color: #edf7f6;
+    font-size: 26px !important;
+    line-height: 1.1 !important;
+  }
+}
+
+.titleBlock {
+  min-width: 0;
+}
+
+.kicker {
+  color: #8da4ad !important;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+
+  span {
+    max-width: 180px;
+    overflow: hidden;
+    color: #9fb4bb !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.drawerButton {
+  display: none;
+}
+
+.content {
+  padding: 0 28px 28px;
+}
+
+.drawer {
+  :global(.ant-drawer-content) {
+    background: #0b151b;
+  }
+
+  :global(.ant-drawer-body) {
+    padding: 8px;
+  }
+
+  :global(.ant-drawer-header-title) {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 960px) {
+  .sider {
+    display: none;
+  }
+
+  .drawerButton {
+    display: inline-grid;
+  }
+
+  .topbar {
+    padding: 16px 16px 12px;
+  }
+
+  .content {
+    padding: 0 16px 18px;
+  }
+}

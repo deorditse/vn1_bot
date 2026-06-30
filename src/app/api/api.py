@@ -8,7 +8,7 @@ from app.api.schemas.result import ErrorModel
 from app.configs import info
 from common import MyBaseError, ApiMode, env
 from app.configs import config
-from app.api.routers import generate
+from app.api.routers import auth, generate
 from common.logger.my_logger import MyLogger
 
 """
@@ -44,7 +44,8 @@ Routers
 ===================================================================================================================
 """
 
-(app.include_router(generate.router, prefix="/generate", tags=["generate"]),)
+app.include_router(auth.router, prefix="/auth", tags=["auth"])
+app.include_router(generate.router, prefix="/generate", tags=["generate"])
 
 """
 ===================================================================================================================
@@ -68,7 +69,12 @@ Middleware
 
 @app.middleware("http")
 async def check_is_frozen(request: Request, call_next):
-    if request.method in ["POST", "PUT", "DELETE"] and config.api_is_readonly:
+    if (
+        request.method in ["POST", "PUT", "DELETE"]
+        and config.api_is_readonly
+        and not request.url.path.endswith("/auth/login")
+        and not request.url.path.endswith("/auth/refresh")
+    ):
         return JSONResponse(
             headers={"Access-Control-Allow-Origin": "*"},
             status_code=503,

@@ -1,6 +1,9 @@
 networks:
   vn1:
 
+volumes:
+  keycloak_data:
+
 services:
 #  n8n-vn1:
 #    expose:
@@ -60,8 +63,23 @@ services:
 
     restart: unless-stopped
     depends_on:
+      - frontend
       - backend-vn1
+      - keycloak
 #      - n8n-vn1
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
     networks:
       - vn1
     logging:
@@ -85,6 +103,32 @@ services:
     logging:
       driver: "none"
 
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.6.1
+    container_name: keycloak
+    command: start-dev --import-realm
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_ADMIN:-admin}
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD:-admindeor}
+      - KC_HTTP_ENABLED=true
+      - KC_HTTP_RELATIVE_PATH=/keycloak
+      - KC_PROXY_HEADERS=xforwarded
+      - KC_HOSTNAME=${KEYCLOAK_HOSTNAME:-http://localhost:8080/keycloak}
+      - KC_HOSTNAME_STRICT=false
+    ports:
+      - "8080:8080"
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+      - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
+    restart: unless-stopped
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"
+
   backend-vn1:
     build:
       context: .
@@ -96,6 +140,14 @@ services:
       - API_PORT=8010
       - API_MODE=PROD
       - API_ROOT=/api
+      - AUTH_ENABLED=TRUE
+      - AUTH_ISSUER_URL=${KEYCLOAK_HOSTNAME:-http://localhost:8080/keycloak}/realms/vn1
+      - AUTH_JWKS_URL=http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/certs
+      - AUTH_TOKEN_URL=http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/token
+      - AUTH_CLIENT_ID=vn1-api
+      # Leave empty until an audience mapper is configured in Keycloak.
+      - AUTH_AUDIENCE=
+      - AUTH_REQUIRED_ROLES=["vn1-user"]
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
 
@@ -107,13 +159,14 @@ services:
       - ALL_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
       - HTTP_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
       - HTTPS_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1
+      - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
       - all_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
       - http_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
       - https_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1
+      - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
     restart: unless-stopped
-    # depends_on:
+    depends_on:
+      - keycloak
     #   - xray
     networks:
       - vn1
