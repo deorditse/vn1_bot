@@ -102,14 +102,14 @@ services:
       # - ALL_PROXY=socks5h://xray:10808
       # - HTTP_PROXY=socks5h://xray:10808
       # - HTTPS_PROXY=socks5h://xray:10808
-      - PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
-      - ALL_PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
-      - HTTP_PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
-      - HTTPS_PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
+      - ALL_PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
+      - HTTP_PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
+      - HTTPS_PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
       - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
-      - all_proxy=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
-      - http_proxy=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
-      - https_proxy=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - all_proxy=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
+      - http_proxy=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
+      - https_proxy=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
       - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
     restart: unless-stopped
     depends_on:
