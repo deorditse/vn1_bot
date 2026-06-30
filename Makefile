@@ -1,4 +1,4 @@
-.PHONY: sync ensure-local-cert run run-dev run-prod run-local run-local-prod stop stop-local frontend-install frontend-run frontend-build frontend-preview docker-up docker-build docker-down docker-logs docker-logs-backend docker-logs-frontend docker-logs-nginx docker-logs-keycloak
+.PHONY: sync ensure-local-cert run run-dev run-prod run-with-local-cert run-local run-local-prod stop stop-local frontend-install frontend-run frontend-build frontend-preview docker-up docker-build docker-down docker-logs docker-logs-backend docker-logs-frontend docker-logs-nginx docker-logs-keycloak
 
 PORT ?= 8010
 FRONTEND_PORT ?= 5173
@@ -18,10 +18,13 @@ ensure-local-cert:
 			-subj "/CN=$(CERT_DOMAIN)"; \
 	fi
 
-run: ensure-local-cert
+run:
 	$(COMPOSE) up -d --build
 
 run-prod: run
+
+run-with-local-cert: ensure-local-cert
+	$(COMPOSE) up -d --build
 
 run-local:
 	@set -a; \
@@ -56,10 +59,10 @@ frontend-build:
 frontend-preview:
 	cd frontend && npm run preview -- --port $(FRONTEND_PORT)
 
-docker-up: ensure-local-cert
+docker-up:
 	$(COMPOSE) up -d
 
-docker-build: ensure-local-cert
+docker-build:
 	$(COMPOSE) up -d --build
 
 docker-down:

@@ -114,15 +114,26 @@
 .account {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  min-height: 40px;
   margin-left: auto;
 
   span {
+    display: inline-flex;
+    align-items: center;
     max-width: 180px;
+    min-height: 32px;
     overflow: hidden;
     color: #9fb4bb !important;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

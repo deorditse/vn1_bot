@@ -1,6 +1,6 @@
 import {Alert, Button, Flex, Input, Progress, Typography, Upload} from 'antd';
 import type {UploadProps} from 'antd';
-import {Copy, FileText, Sparkles, UploadCloud} from 'lucide-react';
+import {Copy, FileCheck2, FileText, RefreshCcw, Sparkles, Trash2, UploadCloud} from 'lucide-react';
 import {useMemo, useState} from 'react';
 
 import {DynamicModuleLoader} from '@shared/lib/components/DynamicModuleLoader';
@@ -37,6 +37,10 @@ const InstructionPage = () => {
         () => ({
             accept: '.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document',
             beforeUpload: (nextFile) => {
+                if (isLoading || instruction) {
+                    return Upload.LIST_IGNORE;
+                }
+
                 setFile(nextFile);
                 setError(null);
                 setInstruction(null);
@@ -58,9 +62,23 @@ const InstructionPage = () => {
                 setInstruction(null);
                 setCopiedBlock(null);
             },
+            showUploadList: false,
         }),
-        [file],
+        [file, instruction, isLoading],
     );
+
+    const resetInstruction = () => {
+        setFile(null);
+        setError(null);
+        setInstruction(null);
+        setCopiedBlock(null);
+    };
+
+    const removeSelectedFile = () => {
+        setFile(null);
+        setError(null);
+        setCopiedBlock(null);
+    };
 
     const convert = async () => {
         if (!file) {
@@ -102,13 +120,51 @@ const InstructionPage = () => {
                     </Flex>
                 </Flex>
 
-                <Upload.Dragger className={styles.dropzone} disabled={isLoading} {...uploadProps}>
-                    <Flex align="center" className={styles.dropContent} gap={10} justify="center" vertical>
-                        <UploadCloud size={34}/>
-                        <strong>Перетащите DOCX сюда или выберите файл</strong>
-                        <span>После обработки появятся JSON-блоки MENU и Content для копирования.</span>
+                {!instruction ? (
+                    <Flex gap={12} vertical>
+                        <Upload.Dragger className={styles.dropzone} disabled={isLoading} {...uploadProps}>
+                            <Flex align="center" className={styles.dropContent} gap={14} justify="center">
+                                <Flex align="center" className={styles.uploadIcon} justify="center">
+                                    <UploadCloud size={24}/>
+                                </Flex>
+                                <Flex className={styles.uploadText} vertical>
+                                    <strong>{file ? 'Файл выбран' : 'Добавьте DOCX-инструкцию'}</strong>
+                                    <span>{file ? 'Для замены удалите текущий файл.' : 'Перетащите файл сюда или выберите вручную.'}</span>
+                                </Flex>
+                            </Flex>
+                        </Upload.Dragger>
+
+                        {file && (
+                            <Flex align="center" className={styles.selectedFileBar} gap={12} justify="space-between">
+                                <Flex align="center" gap={10}>
+                                    <Flex align="center" className={styles.selectedFileIcon} justify="center">
+                                        <FileCheck2 size={18}/>
+                                    </Flex>
+                                    <Flex className={styles.selectedFileInfo} vertical>
+                                        <Text className={styles.selectedFileLabel}>Готов к обработке</Text>
+                                        <Text className={styles.selectedFileName}>{file.name}</Text>
+                                    </Flex>
+                                </Flex>
+                                <Button disabled={isLoading} icon={<Trash2 size={17}/>} onClick={removeSelectedFile} type="text"/>
+                            </Flex>
+                        )}
                     </Flex>
-                </Upload.Dragger>
+                ) : (
+                    <Flex align="center" className={styles.loadedState} gap={14} justify="space-between" wrap="wrap">
+                        <Flex align="center" gap={12}>
+                            <Flex align="center" className={styles.loadedIcon} justify="center">
+                                <FileText size={20}/>
+                            </Flex>
+                            <Flex vertical>
+                                <Text className={styles.loadedLabel}>Загружена 1 инструкция</Text>
+                                <Text className={styles.loadedFile}>{file?.name ?? 'DOCX-файл обработан'}</Text>
+                            </Flex>
+                        </Flex>
+                        <Button icon={<RefreshCcw size={17}/>} onClick={resetInstruction}>
+                            Новая инструкция
+                        </Button>
+                    </Flex>
+                )}
 
                 {isLoading && <Progress percent={70} showInfo={false} status="active"/>}
                 {instruction && <Alert message="Инструкция сформирована" showIcon type="success"/>}
@@ -116,7 +172,7 @@ const InstructionPage = () => {
 
                 <Flex className={styles.actions} gap={12} justify="flex-end" wrap="wrap">
                     <Button
-                        disabled={!file}
+                        disabled={!file || Boolean(instruction)}
                         icon={<FileText size={18}/>}
                         loading={isLoading}
                         onClick={convert}
@@ -130,6 +186,20 @@ const InstructionPage = () => {
 
             {instruction && (
                 <Flex className={styles.results} gap={16} vertical>
+                    <Title className={styles.sectionTitle} level={3}>Разметка инструкции</Title>
+                    {markupBlocks.map((block) => (
+                        <InstructionBlockView
+                            block={block}
+                            copied={copiedBlock === block.key}
+                            key={block.key}
+                            onCopy={copyText}
+                        />
+                    ))}
+                </Flex>
+            )}
+
+            {instruction && (
+                <Flex className={styles.summary} gap={14} vertical>
                     <Flex align="center" gap={10}>
                         <Sparkles size={20}/>
                         <Title className={styles.sectionTitle} level={3}>ИИ обзор</Title>
@@ -148,16 +218,6 @@ const InstructionPage = () => {
                             </Button>
                         </Flex>
                     </Flex>
-
-                    <Title className={styles.sectionTitle} level={3}>Разметка инструкции</Title>
-                    {markupBlocks.map((block) => (
-                        <InstructionBlockView
-                            block={block}
-                            copied={copiedBlock === block.key}
-                            key={block.key}
-                            onCopy={copyText}
-                        />
-                    ))}
                 </Flex>
             )}
         </Flex>
