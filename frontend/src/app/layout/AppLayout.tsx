@@ -5,6 +5,7 @@ import { useMemo, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import { useAuth } from '@features/auth/model/AuthProvider';
+import { isDevAuthDisabled } from '@shared/config/env';
 import { defaultAppRoute, navRoutes } from '../router/config/routeConfig';
 import styles from './AppLayout.module.less';
 
@@ -41,6 +42,9 @@ export function AppLayout() {
 
   const logout = async () => {
     await signOut();
+    if (isDevAuthDisabled) {
+      return;
+    }
     navigate('/login', { replace: true });
   };
 
@@ -71,7 +75,7 @@ export function AppLayout() {
           </Space>
           <div className={styles.account}>
             <Text>{username}</Text>
-            <Button icon={<LogOut size={18} />} onClick={logout} type="text" />
+            {!isDevAuthDisabled && <Button icon={<LogOut size={18} />} onClick={logout} type="text" />}
           </div>
         </Header>
 

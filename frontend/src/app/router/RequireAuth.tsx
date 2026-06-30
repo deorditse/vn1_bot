@@ -3,6 +3,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 import { useAuth } from '@features/auth/model/AuthProvider';
 import { PageLoader } from '@widgets/page-loader';
+import { isDevAuthDisabled } from '@shared/config/env';
 import { getRouteLogin } from '@shared/const/router';
 
 type Props = {
@@ -12,6 +13,10 @@ type Props = {
 export function RequireAuth({ children }: Props) {
   const { isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
+
+  if (isDevAuthDisabled) {
+    return <>{children}</>;
+  }
 
   if (isLoading) {
     return <PageLoader />;
