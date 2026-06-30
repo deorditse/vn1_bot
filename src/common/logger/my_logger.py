@@ -105,7 +105,8 @@ class MyLogger:
         uvi_root.setLevel(level)  # pylog.INFO
         uvi_error.setLevel(level)  # pylog.CRITICAL
 
-    def _notify(cls, message: str):
+    @staticmethod
+    def _notify(message: str):
         """
         Отправка оповещения об ошибке в сторонний сервис.
         Если это Exception — отправляем в Sentry с полным traceback.
