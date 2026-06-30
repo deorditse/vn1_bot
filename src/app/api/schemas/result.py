@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from starlette.requests import Request
 
 from common import MyBaseError, traceback_list, ApiMode
-from app.configs import config
+from app.config import config
 from common.logger.my_logger import MyLogger
 
 """
@@ -62,7 +62,7 @@ class ResultModel(BaseModel):
 
     @classmethod
     def error(cls, err: MyBaseError):
-        from app.configs import config
+        from app.config import config
         from common import ApiMode
         MyLogger.exception(err)
 

@@ -13,6 +13,8 @@ logs/
 data/
 certbot/
 xray-config/
+result_normalize_markdown.md
+**/result_normalize_markdown.md
 
 # n8n
 **/.n8n/

@@ -1,18 +1,37 @@
-import {Alert, Button, Flex, Progress, Typography, Upload} from 'antd';
+import {Alert, Button, Flex, Input, Progress, Typography, Upload} from 'antd';
 import type {UploadProps} from 'antd';
-import {Download, FileText, UploadCloud} from 'lucide-react';
+import {Copy, FileText, Sparkles, UploadCloud} from 'lucide-react';
 import {useMemo, useState} from 'react';
 
-import {useGenerateInstructionMutation} from '../api/instructionApi';
+import {DynamicModuleLoader} from '@shared/lib/components/DynamicModuleLoader';
+import {instructionApi, useGenerateInstructionMutation} from '../api/instructionApi';
+import type {GenerateInstructionResponse} from '../api/types';
 import styles from './InstructionPage.module.less';
 
-const {Text, Title} = Typography;
+const {Paragraph, Text, Title} = Typography;
+const reducers = {[instructionApi.reducerPath]: instructionApi.reducer};
 
 const InstructionPage = () => {
     const [file, setFile] = useState<File | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const [isDone, setIsDone] = useState(false);
+    const [instruction, setInstruction] = useState<GenerateInstructionResponse | null>(null);
+    const [copiedBlock, setCopiedBlock] = useState<string | null>(null);
     const [generateInstruction, {isLoading}] = useGenerateInstructionMutation();
+
+    const markupBlocks: InstructionBlock[] = instruction
+        ? [
+            {
+                key: 'html_menu',
+                title: 'HTML menu',
+                content: instruction.html_menu,
+            },
+            {
+                key: 'html_content',
+                title: 'HTML content',
+                content: instruction.html_content,
+            },
+        ]
+        : [];
 
     const uploadProps = useMemo<UploadProps>(
         () => ({
@@ -20,7 +39,8 @@ const InstructionPage = () => {
             beforeUpload: (nextFile) => {
                 setFile(nextFile);
                 setError(null);
-                setIsDone(false);
+                setInstruction(null);
+                setCopiedBlock(null);
                 return false;
             },
             fileList: file
@@ -35,7 +55,8 @@ const InstructionPage = () => {
             maxCount: 1,
             onRemove: () => {
                 setFile(null);
-                setIsDone(false);
+                setInstruction(null);
+                setCopiedBlock(null);
             },
         }),
         [file],
@@ -48,19 +69,26 @@ const InstructionPage = () => {
         }
 
         setError(null);
-        setIsDone(false);
+        setInstruction(null);
+        setCopiedBlock(null);
 
         try {
-            const blob = await generateInstruction({file}).unwrap();
-            downloadBlob(blob, 'instruction.txt');
-            setIsDone(true);
+            const result = await generateInstruction({file}).unwrap();
+            setInstruction(result);
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Не удалось сформировать инструкцию');
         }
     };
 
+    const copyText = async (key: string, content: string) => {
+        await navigator.clipboard.writeText(content);
+        setCopiedBlock(key);
+        window.setTimeout(() => setCopiedBlock(null), 1600);
+    };
+
     return (
-        <Flex className={styles.page} vertical>
+        <DynamicModuleLoader reducers={reducers}>
+        <Flex className={styles.page} gap={18} vertical>
             <Flex className={styles.workspace} gap={22} vertical>
                 <Flex align="center" gap={14}>
                     <Flex align="center" className={styles.iconBox} justify="center">
@@ -78,41 +106,97 @@ const InstructionPage = () => {
                     <Flex align="center" className={styles.dropContent} gap={10} justify="center" vertical>
                         <UploadCloud size={34}/>
                         <strong>Перетащите DOCX сюда или выберите файл</strong>
-                        <span>После обработки будет скачан TXT с блоками MENU и Content.</span>
+                        <span>После обработки появятся JSON-блоки MENU и Content для копирования.</span>
                     </Flex>
                 </Upload.Dragger>
 
                 {isLoading && <Progress percent={70} showInfo={false} status="active"/>}
-                {isDone && <Alert message="Файл instruction.txt сформирован и скачан" showIcon type="success"/>}
+                {instruction && <Alert message="Инструкция сформирована" showIcon type="success"/>}
                 {error && <Alert message={error} showIcon type="error"/>}
 
-                <Flex className={styles.actions} justify="flex-end">
+                <Flex className={styles.actions} gap={12} justify="flex-end" wrap="wrap">
                     <Button
                         disabled={!file}
-                        icon={<Download size={18}/>}
+                        icon={<FileText size={18}/>}
                         loading={isLoading}
                         onClick={convert}
                         size="large"
                         type="primary"
                     >
-                        Сформировать TXT
+                        Сформировать инструкцию
                     </Button>
                 </Flex>
             </Flex>
+
+            {instruction && (
+                <Flex className={styles.results} gap={16} vertical>
+                    <Flex align="center" gap={10}>
+                        <Sparkles size={20}/>
+                        <Title className={styles.sectionTitle} level={3}>ИИ обзор</Title>
+                    </Flex>
+                    <Flex className={styles.summaryPreview} gap={14} vertical>
+                        <Paragraph className={styles.summaryText}>
+                            {instruction.ai_description || 'ИИ-описание не вернулось в ответе'}
+                        </Paragraph>
+                        <Flex justify="flex-end">
+                            <Button
+                                disabled={!instruction.ai_description}
+                                icon={<Copy size={17}/>}
+                                onClick={() => copyText('ai_description', instruction.ai_description)}
+                            >
+                                {copiedBlock === 'ai_description' ? 'Скопировано' : 'Копировать обзор'}
+                            </Button>
+                        </Flex>
+                    </Flex>
+
+                    <Title className={styles.sectionTitle} level={3}>Разметка инструкции</Title>
+                    {markupBlocks.map((block) => (
+                        <InstructionBlockView
+                            block={block}
+                            copied={copiedBlock === block.key}
+                            key={block.key}
+                            onCopy={copyText}
+                        />
+                    ))}
+                </Flex>
+            )}
+        </Flex>
+        </DynamicModuleLoader>
+    );
+};
+
+type InstructionBlockViewProps = {
+    block: InstructionBlock;
+    copied: boolean;
+    onCopy: (key: string, content: string) => Promise<void>;
+};
+
+type InstructionBlock = {
+    key: string;
+    title: string;
+    content: string;
+};
+
+function InstructionBlockView({block, copied, onCopy}: InstructionBlockViewProps) {
+    return (
+        <Flex className={styles.block} gap={12} vertical>
+            <Flex align="center" gap={12} justify="space-between">
+                <Flex gap={8} vertical>
+                    <Text className={styles.blockTitle}>{block.title}</Text>
+                    <Text className={styles.blockMeta}>{block.content.length} символов</Text>
+                </Flex>
+                <Button icon={<Copy size={17}/>} onClick={() => onCopy(block.key, block.content)}>
+                    {copied ? 'Скопировано' : 'Копировать'}
+                </Button>
+            </Flex>
+            <Input.TextArea
+                autoSize={{minRows: 8, maxRows: 18}}
+                className={styles.codeArea}
+                readOnly
+                value={block.content}
+            />
         </Flex>
     );
-}
-
-function downloadBlob(blob: Blob, filename: string) {
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
 }
 
 

@@ -3,7 +3,7 @@ import os
 
 
 from common import current_time_msk_str, datetime_msk
-from app.configs import config
+from app.config import config
 
 from common import traceback_list, CoreError, DataError, AccessError, LogicError
 from slowapi.errors import RateLimitExceeded

@@ -7,7 +7,7 @@ from fastapi import HTTPException
 from jwt import PyJWK
 from starlette import status
 
-from app.configs import config
+from app.config import config
 from domain.auth import AuthTokens, User, UserRole, AuthProvider
 
 

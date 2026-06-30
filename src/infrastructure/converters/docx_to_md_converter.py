@@ -1,16 +1,12 @@
 from typing import Iterable, Tuple
 
-from common import ApiMode, env
 from domain.services.converter import Converter
-
 import subprocess
 import tempfile
 import os
 
 
 class DocxToMdConverter(Converter):
-    mode: ApiMode = env.api_mode()
-
     async def convert(self, file_bytes: bytes) -> str:
         with tempfile.TemporaryDirectory() as tmpdir:
             docx_path = os.path.join(tmpdir, "input.docx")
@@ -34,10 +30,7 @@ class DocxToMdConverter(Converter):
                 text=True,
             )
 
-        res = normalize_markdown(result.stdout)
-        with open("result_normalize_markdown.md", "w") as f:
-            f.write(res)
-        return res
+        return normalize_markdown(result.stdout)
 
 
 import re

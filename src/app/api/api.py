@@ -5,9 +5,9 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 from app.api.dependencies.rate_limiting import set_limiter
 from app.api.schemas.result import ErrorModel
-from app.configs import info
+from app.config import info
 from common import MyBaseError, ApiMode, env
-from app.configs import config
+from app.config import config
 from app.api.routers import auth, generate
 from common.logger.my_logger import MyLogger
 

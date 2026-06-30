@@ -1,5 +1,7 @@
+from pydantic import field_validator
 from pydantic_settings import BaseSettings
 from app import __version__
+from common import ApiMode
 from common import env
 
 
@@ -16,7 +18,20 @@ class ApiConfig(BaseSettings):
     api_port: int = env.api_port()
     api_root: str = env.api_root()
     api_is_readonly: bool = env.api_is_readonly()
-    api_mode: str = env.api_mode()
+    api_mode: ApiMode | None = env.api_mode()
+
+    @field_validator("api_mode", mode="before")
+    @classmethod
+    def parse_api_mode(cls, value: ApiMode | str | int | None) -> ApiMode | None:
+        if value is None or isinstance(value, ApiMode):
+            return value
+        if isinstance(value, str):
+            normalized = value.upper()
+            if normalized in ApiMode.__members__:
+                return ApiMode[normalized]
+            if normalized.isdigit():
+                return ApiMode(int(normalized))
+        return ApiMode(value)
 
     """
     ===================================================================================================================

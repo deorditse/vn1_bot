@@ -2,7 +2,7 @@ from enum import Enum
 
 from app import __version__, release_notes
 from common import current_time_msk_str
-from app.configs.api_config import config
+from app.config import config
 
 """
 ===================================================================================================================

@@ -1,5 +1,9 @@
 import json
 import logging as pylog
+import tomllib
+from functools import lru_cache
+from pathlib import Path
+from typing import Any
 
 from . import ApiMode
 from .utils import get_env
@@ -12,8 +16,27 @@ Environment variables
 """
 
 
+SETTINGS_PATH = Path(__file__).resolve().parents[1] / "app" / "config" / "setting.toml"
+
+
+@lru_cache(maxsize=1)
+def _settings() -> dict[str, Any]:
+    if not SETTINGS_PATH.exists():
+        return {}
+    with SETTINGS_PATH.open("rb") as file:
+        return tomllib.load(file)
+
+
+def _setting(section: str, name: str, default: Any = None) -> Any:
+    return _settings().get(section, {}).get(name, default)
+
+
+def _env_or_setting(env_name: str, section: str, name: str, default: Any = None) -> Any:
+    return get_env(env_name, default=_setting(section, name, default))
+
+
 def api_mode() -> ApiMode | None:
-    match get_env('API_MODE', default='PROD'):
+    match str(_env_or_setting('API_MODE', 'api', 'mode', 'PROD')).upper():
         case 'DEV':
             return ApiMode.DEV
         case 'PROD':
@@ -23,15 +46,15 @@ def api_mode() -> ApiMode | None:
 
 
 def api_port() -> int:
-    return int(get_env('API_PORT', default=8010))
+    return int(_env_or_setting('API_PORT', 'api', 'port', 8010))
 
 
 def api_root() -> str:
-    return get_env('API_ROOT', default="")
+    return str(_env_or_setting('API_ROOT', 'api', 'root', ""))
 
 
 def api_log_path() -> str:
-    return get_env('API_LOG_PATH', default='./logs')
+    return str(_env_or_setting('API_LOG_PATH', 'api', 'log_path', './logs'))
 
 
 # LLM keys
@@ -53,7 +76,7 @@ def api_key_gigachat() -> str:
 
 def api_log_level() -> int | None:
     # CRITICAL, ERROR, WARNING, INFO, DEBUG
-    match get_env('API_LOG_LEVEL', default='INFO').upper():
+    match str(_env_or_setting('API_LOG_LEVEL', 'api', 'log_level', 'INFO')).upper():
         case 'CRITICAL':
             return pylog.CRITICAL
         case 'ERROR':
@@ -69,37 +92,63 @@ def api_log_level() -> int | None:
 
 
 def api_is_readonly() -> bool:
-    return get_env('API_IS_READONLY', 'FALSE').upper() in ['1', 'TRUE', 'YES', 'Y']
+    value = _env_or_setting('API_IS_READONLY', 'api', 'is_readonly', False)
+    if isinstance(value, bool):
+        return value
+    return str(value).upper() in ['1', 'TRUE', 'YES', 'Y']
 
 
 def rate_limit(name: str) -> str:
-    return get_env(f'RATE_LIMIT_{name.upper()}', default='RATE_LIMIT_5/minute')
+    return str(
+        get_env(
+            f'RATE_LIMIT_{name.upper()}',
+            default=_setting('rate_limit', name, _setting('rate_limit', 'default', '5/minute')),
+        )
+    )
 
 
 def auth_enabled() -> bool:
-    return get_env('AUTH_ENABLED', 'TRUE').upper() in ['1', 'TRUE', 'YES', 'Y']
+    value = _env_or_setting('AUTH_ENABLED', 'auth', 'enabled', True)
+    if isinstance(value, bool):
+        return value
+    return str(value).upper() in ['1', 'TRUE', 'YES', 'Y']
 
 
 def auth_issuer_url() -> str:
-    return get_env('AUTH_ISSUER_URL', default='http://localhost:8080/keycloak/realms/vn1')
+    return str(
+        _env_or_setting(
+            'AUTH_ISSUER_URL',
+            'auth',
+            'issuer_url',
+            'http://localhost:8080/keycloak/realms/vn1',
+        )
+    )
 
 
 def auth_jwks_url() -> str:
-    return get_env(
-        'AUTH_JWKS_URL',
-        default='http://localhost:8080/keycloak/realms/vn1/protocol/openid-connect/certs',
+    return str(
+        _env_or_setting(
+            'AUTH_JWKS_URL',
+            'auth',
+            'jwks_url',
+            'http://localhost:8080/keycloak/realms/vn1/protocol/openid-connect/certs',
+        )
     )
 
 
 def auth_token_url() -> str:
-    return get_env(
-        'AUTH_TOKEN_URL',
-        default='http://localhost:8080/keycloak/realms/vn1/protocol/openid-connect/token',
+    return str(
+        _env_or_setting(
+            'AUTH_TOKEN_URL',
+            'auth',
+            'token_url',
+            'http://localhost:8080/keycloak/realms/vn1/protocol/openid-connect/token',
+        )
     )
 
 
 def auth_client_id() -> str:
-    return get_env('AUTH_CLIENT_ID', default='vn1-api')
+    return str(_env_or_setting('AUTH_CLIENT_ID', 'auth', 'client_id', 'vn1-api'))
 
 
 def auth_client_secret() -> str | None:
@@ -107,11 +156,16 @@ def auth_client_secret() -> str | None:
 
 
 def auth_audience() -> str | None:
-    return get_env('AUTH_AUDIENCE')
+    value = _env_or_setting('AUTH_AUDIENCE', 'auth', 'audience')
+    if value == "":
+        return None
+    return value
 
 
 def auth_required_roles() -> list[str]:
-    value = get_env('AUTH_REQUIRED_ROLES', default='')
+    value = _env_or_setting('AUTH_REQUIRED_ROLES', 'auth', 'required_roles', [])
+    if isinstance(value, list):
+        return [str(role).strip() for role in value if str(role).strip()]
     if not value:
         return []
     try:

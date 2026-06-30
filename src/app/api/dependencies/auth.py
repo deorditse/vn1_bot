@@ -6,7 +6,8 @@ from fastapi import Depends, HTTPException, Request, Response, Security
 from fastapi.security import OAuth2PasswordBearer
 from starlette import status
 
-from app.configs import config
+from app.config import config
+from common import ApiMode
 from domain.auth import AuthTokens, User, UserRole
 from infrastructure.auth import KeycloakAuthProvider
 
@@ -15,6 +16,13 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token", auto_error=False)
 AUTH_ACCESS_COOKIE = "vn1_access_token"
 AUTH_REFRESH_COOKIE = "vn1_refresh_token"
 AUTH_COOKIE_SAMESITE = "lax"
+DEV_USER = User(
+    id="dev-user",
+    username="dev",
+    email="dev@local.test",
+    role=UserRole.ADMIN.value,
+    roles=[UserRole.ADMIN.value, UserRole.USER.value],
+)
 
 
 def _auth_error(detail: str) -> HTTPException:
@@ -38,8 +46,11 @@ class AuthDependency:
         return await self.auth_user(request=request, bearer_token=token)
 
     async def auth_user(self, request: Request, bearer_token: str | None = None) -> User | None:
+        if config.api_mode == ApiMode.DEV:
+            return DEV_USER
+
         if not config.auth_enabled:
-            return None
+            return DEV_USER
 
         token = self.get_request_access_token(request, bearer_token)
         payload = await self.decode_token(token)

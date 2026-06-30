@@ -18,6 +18,7 @@ mode: ApiMode = env.api_mode()
 
 class GraphState(TypedDict, total=False):
     mdFile: str
+    dispensing: str
     validation_attempts: int
     validation_errors: List[str]
     html_content_is_valid: bool
@@ -154,7 +155,12 @@ class GenerateShortDescriptionNode(BaseNode):
 
         response = await self._llm.ainvoke(
             [SystemMessage(content=self.ai_information_prompt.strip()),
-             HumanMessage(content=state.get('mdFile', '')),
+             HumanMessage(
+                 content=(
+                     f"Условие отпуска из карточки товара: {state.get('dispensing', 'По рецепту')}\n\n"
+                     f"Markdown инструкции:\n{state.get('mdFile', '')}"
+                 )
+             ),
              ]
         )
 
@@ -221,7 +227,6 @@ _llm_gen_description = LLMService().openai()
 
 _md_to_html_graph = build_graph(llm_content=_llm_content, llm_menu=_llm_menu, llm_gen_description=_llm_gen_description)
 compile_md_to_html_graph = _md_to_html_graph.compile()
-
 
 def _log(step: str):
     if mode == ApiMode.PROD:

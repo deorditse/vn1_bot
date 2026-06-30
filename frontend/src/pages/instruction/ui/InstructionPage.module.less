@@ -3,7 +3,6 @@
 }
 
 .workspace {
-  min-height: 460px;
   padding: 24px;
   border: 1px solid #263843;
   border-radius: 8px;
@@ -34,14 +33,14 @@
 
 .dropzone {
   :global(.ant-upload-drag) {
-    min-height: 260px;
+    min-height: 220px;
     border-color: #2f4652 !important;
     background: #0d171d !important;
   }
 }
 
 .dropContent {
-  min-height: 220px;
+  min-height: 180px;
   color: #8da4ad;
   text-align: center;
 
@@ -57,6 +56,58 @@
   span {
     max-width: 520px;
   }
+}
+
+.results {
+  padding: 22px;
+  border: 1px solid #263843;
+  border-radius: 8px;
+  background: #101b22;
+
+  svg {
+    color: #22c7b8;
+  }
+}
+
+.sectionTitle {
+  margin: 0 !important;
+  color: #edf7f6 !important;
+  font-size: 18px !important;
+}
+
+.block {
+  padding: 16px;
+  border: 1px solid #2a3c46;
+  border-radius: 8px;
+  background: #0d171d;
+}
+
+.blockTitle {
+  color: #edf7f6 !important;
+  font-weight: 800;
+}
+
+.blockMeta {
+  color: #8da4ad !important;
+  font-size: 12px;
+}
+
+.codeArea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+}
+
+.summaryPreview {
+  padding: 16px;
+  border: 1px solid rgba(34, 199, 184, 0.28);
+  border-radius: 8px;
+  background: rgba(34, 199, 184, 0.08);
+}
+
+.summaryText {
+  margin: 0 !important;
+  color: #d7e7e5 !important;
+  white-space: pre-wrap;
 }
 
 @media (max-width: 640px) {

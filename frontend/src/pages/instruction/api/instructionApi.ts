@@ -1,14 +1,19 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
 import { baseQueryWithReauth } from '@shared/api/middleware/auth/baseQueryWithReauth';
-import type { GenerateInstructionRequest } from './types';
+import type {
+  GenerateInstructionRequest,
+  GenerateInstructionResponse,
+  GenerateShortDescriptionRequest,
+  GenerateShortDescriptionResponse,
+} from './types';
 
 export const instructionApi = createApi({
   reducerPath: 'instructionApi',
   baseQuery: baseQueryWithReauth,
   tagTypes: ['INSTRUCTION'],
   endpoints: (builder) => ({
-    generateInstruction: builder.mutation<Blob, GenerateInstructionRequest>({
+    generateInstruction: builder.mutation<GenerateInstructionResponse, GenerateInstructionRequest>({
       query: ({ file }) => {
         const formData = new FormData();
         formData.append('file', file);
@@ -17,11 +22,20 @@ export const instructionApi = createApi({
           url: '/generate/instruction',
           method: 'POST',
           body: formData,
-          responseHandler: (response) => response.blob(),
         };
       },
+    }),
+    generateShortDescription: builder.mutation<GenerateShortDescriptionResponse, GenerateShortDescriptionRequest>({
+      query: ({ markdown, dispensing = 'По рецепту' }) => ({
+        url: '/generate/short-description',
+        method: 'POST',
+        body: {
+          markdown,
+          dispensing,
+        },
+      }),
     }),
   }),
 });
 
-export const { useGenerateInstructionMutation } = instructionApi;
+export const { useGenerateInstructionMutation, useGenerateShortDescriptionMutation } = instructionApi;

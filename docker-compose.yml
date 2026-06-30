@@ -92,32 +92,18 @@ services:
       - "8010"
     environment:
       - PYTHONUNBUFFERED=1
-      - API_PORT=8010
-      - API_MODE=PROD
-      - API_ROOT=/api
-      - AUTH_ENABLED=TRUE
-      - AUTH_ISSUER_URL=${KEYCLOAK_HOSTNAME:-http://localhost:8080/keycloak}/realms/vn1
-      - AUTH_JWKS_URL=http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/certs
-      - AUTH_TOKEN_URL=http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/token
-      - AUTH_CLIENT_ID=vn1-api
-      # Leave empty until an audience mapper is configured in Keycloak.
-      - AUTH_AUDIENCE=
-      - AUTH_REQUIRED_ROLES=["vn1-user"]
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-
-      # Temporarily use external SOCKS5 proxy instead of xray.
-      # - PROXY=${PROXY}
-      # - ALL_PROXY=socks5h://xray:10808
-      # - HTTP_PROXY=socks5h://xray:10808
-      # - HTTPS_PROXY=socks5h://xray:10808
-      - ALL_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - HTTP_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - HTTPS_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - GIGACHAT_API_KEY=${GIGACHAT_API_KEY:-}
+      - AUTH_CLIENT_SECRET=${AUTH_CLIENT_SECRET:-}
+      - PROXY=${PROXY:-}
+      - ALL_PROXY=${ALL_PROXY:-}
+      - HTTP_PROXY=${HTTP_PROXY:-}
+      - HTTPS_PROXY=${HTTPS_PROXY:-}
       - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
-      - all_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - http_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - https_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - all_proxy=${all_proxy:-}
+      - http_proxy=${http_proxy:-}
+      - https_proxy=${https_proxy:-}
       - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
     restart: unless-stopped
     depends_on:
