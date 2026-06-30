@@ -39,8 +39,8 @@ export function AppLayout() {
     setDrawerOpen(false);
   };
 
-  const logout = () => {
-    signOut();
+  const logout = async () => {
+    await signOut();
     navigate('/login', { replace: true });
   };
 

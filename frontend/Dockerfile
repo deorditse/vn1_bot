@@ -1,16 +1,28 @@
+# docker build -t vn1-frontend -f Dockerfile .
+# docker run -d -p 8080:80 vn1-frontend
+
+ARG BASE_HREF=/
+ARG APP=/app
+
 FROM node:22-alpine AS build
 
-WORKDIR /app
+ARG APP
+WORKDIR $APP
 
-COPY package*.json ./
+COPY ./package*.json ./
 RUN npm install
 
-COPY . .
+COPY ./ ./
 RUN npm run build
 
-FROM nginx:1.27-alpine
+FROM nginx:1.27-alpine AS deploy
 
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+ARG BASE_HREF
+ARG APP
+
+COPY --from=build ${APP}/dist /usr/share/nginx/html/${BASE_HREF}
+COPY ci_cd/nginx-default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

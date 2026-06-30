@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import AppRouter from './router/AppRouter';
 import { AuthProvider } from '@features/auth/model/AuthProvider';
+import { StoreProvider } from './providers/StoreProvider';
 import { appTheme } from './styles/theme';
 import 'antd/dist/reset.css';
 import './styles/global.less';
@@ -12,11 +13,13 @@ import './styles/global.less';
 createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <ConfigProvider theme={appTheme}>
-      <BrowserRouter>
-        <AuthProvider>
-          <AppRouter />
-        </AuthProvider>
-      </BrowserRouter>
+      <StoreProvider>
+        <BrowserRouter>
+          <AuthProvider>
+            <AppRouter />
+          </AuthProvider>
+        </BrowserRouter>
+      </StoreProvider>
     </ConfigProvider>
   </StrictMode>,
 );

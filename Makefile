@@ -1,28 +1,44 @@
-.PHONY: sync run run-dev run-prod stop frontend-install frontend-run frontend-build frontend-preview docker-up docker-build docker-down docker-logs docker-logs-backend docker-logs-frontend docker-logs-nginx docker-logs-keycloak
+.PHONY: sync ensure-local-cert run run-dev run-prod run-local run-local-prod stop stop-local frontend-install frontend-run frontend-build frontend-preview docker-up docker-build docker-down docker-logs docker-logs-backend docker-logs-frontend docker-logs-nginx docker-logs-keycloak
 
 PORT ?= 8010
 FRONTEND_PORT ?= 5173
 ENV_FILE ?= .env
 COMPOSE = docker compose -f docker-compose.yml
+CERT_DOMAIN ?= ai-bot.vn1.ru
 
 sync:
 	uv sync
 
-run:
+ensure-local-cert:
+	@if [ ! -f "certbot/conf/live/$(CERT_DOMAIN)/fullchain.pem" ] || [ ! -f "certbot/conf/live/$(CERT_DOMAIN)/privkey.pem" ]; then \
+		mkdir -p certbot/conf/live/$(CERT_DOMAIN); \
+		openssl req -x509 -nodes -newkey rsa:2048 -days 365 \
+			-keyout certbot/conf/live/$(CERT_DOMAIN)/privkey.pem \
+			-out certbot/conf/live/$(CERT_DOMAIN)/fullchain.pem \
+			-subj "/CN=$(CERT_DOMAIN)"; \
+	fi
+
+run: ensure-local-cert
+	$(COMPOSE) up -d --build
+
+run-prod: run
+
+run-local:
 	@set -a; \
 	if [ -f "$(ENV_FILE)" ]; then . "$(ENV_FILE)"; fi; \
 	set +a; \
 	API_MODE=DEV API_PORT=$(PORT) uv run python3 src/app/run.py
 
-run-dev: run
-
-run-prod:
+run-local-prod:
 	@set -a; \
 	if [ -f "$(ENV_FILE)" ]; then . "$(ENV_FILE)"; fi; \
 	set +a; \
 	API_MODE=PROD API_PORT=$(PORT) uv run python3 src/app/run.py
 
 stop:
+	$(COMPOSE) down
+
+stop-local:
 	@pids=$$(lsof -tiTCP:$(PORT) -sTCP:LISTEN); \
 	if [ -n "$$pids" ]; then kill $$pids; fi
 	@pids=$$(lsof -tiTCP:$(FRONTEND_PORT) -sTCP:LISTEN); \
@@ -40,10 +56,10 @@ frontend-build:
 frontend-preview:
 	cd frontend && npm run preview -- --port $(FRONTEND_PORT)
 
-docker-up:
+docker-up: ensure-local-cert
 	$(COMPOSE) up -d
 
-docker-build:
+docker-build: ensure-local-cert
 	$(COMPOSE) up -d --build
 
 docker-down:

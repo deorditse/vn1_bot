@@ -1,16 +1,16 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { PropsWithChildren } from 'react';
 
-import { getMe, login } from '@shared/api/client';
-import type { UserProfile } from '@shared/api/types';
-import { clearTokens, getStoredTokens } from '@shared/lib/auth/tokenStorage';
+import { useLazyGetMeQuery, useLoginMutation, useLogoutMutation } from '../api/authApi';
+import type { UserProfile } from '../api/types';
+import { AUTH_REQUIRED_EVENT } from '@shared/api/middleware/auth/baseQueryWithReauth';
 
 type AuthContextValue = {
   isAuthenticated: boolean;
   isLoading: boolean;
   user: UserProfile | null;
   signIn: (username: string, password: string) => Promise<void>;
-  signOut: () => void;
+  signOut: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -18,37 +18,43 @@ const AuthContext = createContext<AuthContextValue | null>(null);
 export function AuthProvider({ children }: PropsWithChildren) {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [getMe] = useLazyGetMeQuery();
+  const [login] = useLoginMutation();
+  const [logout] = useLogoutMutation();
 
   const loadProfile = useCallback(async () => {
-    if (!getStoredTokens()) {
-      setUser(null);
-      setIsLoading(false);
-      return;
-    }
-
     try {
-      setUser(await getMe());
+      setUser(await getMe().unwrap());
     } catch {
-      clearTokens();
       setUser(null);
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [getMe]);
 
   useEffect(() => {
     void loadProfile();
   }, [loadProfile]);
 
-  const signIn = useCallback(async (username: string, password: string) => {
-    await login(username, password);
-    setUser(await getMe());
+  useEffect(() => {
+    const handleAuthRequired = () => setUser(null);
+
+    window.addEventListener(AUTH_REQUIRED_EVENT, handleAuthRequired);
+    return () => window.removeEventListener(AUTH_REQUIRED_EVENT, handleAuthRequired);
   }, []);
 
-  const signOut = useCallback(() => {
-    clearTokens();
-    setUser(null);
-  }, []);
+  const signIn = useCallback(async (username: string, password: string) => {
+    await login({ username, password }).unwrap();
+    setUser(await getMe().unwrap());
+  }, [getMe, login]);
+
+  const signOut = useCallback(async () => {
+    try {
+      await logout().unwrap();
+    } finally {
+      setUser(null);
+    }
+  }, [logout]);
 
   const value = useMemo<AuthContextValue>(
     () => ({

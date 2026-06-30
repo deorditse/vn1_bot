@@ -1,3 +1,4 @@
+import json
 import logging as pylog
 
 from . import ApiMode
@@ -111,4 +112,12 @@ def auth_audience() -> str | None:
 
 def auth_required_roles() -> list[str]:
     value = get_env('AUTH_REQUIRED_ROLES', default='')
+    if not value:
+        return []
+    try:
+        parsed = json.loads(value)
+        if isinstance(parsed, list):
+            return [str(role).strip() for role in parsed if str(role).strip()]
+    except json.JSONDecodeError:
+        pass
     return [role.strip() for role in value.split(',') if role.strip()]

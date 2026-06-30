@@ -5,51 +5,6 @@ volumes:
   keycloak_data:
 
 services:
-#  n8n-vn1:
-#    expose:
-#      - "5678"
-#    #    ports:
-#    #      - "5678:5678"
-#    container_name: n8n-vn1
-#    image: docker.n8n.io/n8nio/n8n:latest
-#    environment:
-#      - N8N_HOST=ai-bot.vn1.ru
-#      - WEBHOOK_URL=https://ai-bot.vn1.ru/vn1/
-#      - N8N_PATH=/vn1/
-#      - N8N_PORT=5678
-#      - N8N_ENDPOINT_WEBHOOK_TEST=webhook-test
-#      - N8N_SECURE_COOKIE=false
-#      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
-#      - N8N_TRUST_PROXY=true
-#      - DB_SQLITE_POOL_SIZE=5
-#      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
-#      - N8N_GIT_NODE_DISABLE_BARE_REPOS=true
-#      - N8N_PROXY_HOPS=1
-#      - N8N_PROTOCOL=https
-#
-#      - NODE_USE_ENV_PROXY=1
-#      - ALL_PROXY=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-#      - HTTP_PROXY=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-#      - HTTPS_PROXY=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-#      - NO_PROXY=localhost,127.0.0.1,nginx,backend-vn1,n8n-vn1,ai-bot.vn1.ru
-#      - all_proxy=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-#      - http_proxy=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-#      - https_proxy=http://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:3128
-#      - no_proxy=localhost,127.0.0.1,nginx,backend-vn1,n8n-vn1,ai-bot.vn1.ru
-#
-#    volumes:
-#      - ./data:/home/node/.n8n
-#      - ./shared:/data
-#      - /var/run/docker.sock:/var/run/docker.sock
-#    restart: unless-stopped
-#    networks:
-#      - vn1
-#    logging:
-#      driver: "json-file"
-#      options:
-#        max-size: "5m"
-#        max-file: "1"
-
   nginx:
     container_name: nginx
     image: nginx:latest

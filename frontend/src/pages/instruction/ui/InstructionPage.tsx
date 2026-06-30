@@ -1,104 +1,119 @@
-import { Alert, Button, Progress, Typography, Upload } from 'antd';
-import type { UploadProps } from 'antd';
-import { Download, FileText, UploadCloud } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import {Alert, Button, Flex, Progress, Typography, Upload} from 'antd';
+import type {UploadProps} from 'antd';
+import {Download, FileText, UploadCloud} from 'lucide-react';
+import {useMemo, useState} from 'react';
 
-import { downloadInstruction } from '@features/instruction/api/instructionApi';
+import {useGenerateInstructionMutation} from '../api/instructionApi';
 import styles from './InstructionPage.module.less';
 
-const { Text, Title } = Typography;
+const {Text, Title} = Typography;
 
-export function InstructionPage() {
-  const [file, setFile] = useState<File | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isDone, setIsDone] = useState(false);
+const InstructionPage = () => {
+    const [file, setFile] = useState<File | null>(null);
+    const [error, setError] = useState<string | null>(null);
+    const [isDone, setIsDone] = useState(false);
+    const [generateInstruction, {isLoading}] = useGenerateInstructionMutation();
 
-  const uploadProps = useMemo<UploadProps>(
-    () => ({
-      accept: '.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-      beforeUpload: (nextFile) => {
-        setFile(nextFile);
+    const uploadProps = useMemo<UploadProps>(
+        () => ({
+            accept: '.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            beforeUpload: (nextFile) => {
+                setFile(nextFile);
+                setError(null);
+                setIsDone(false);
+                return false;
+            },
+            fileList: file
+                ? [
+                    {
+                        uid: file.name,
+                        name: file.name,
+                        status: 'done',
+                    },
+                ]
+                : [],
+            maxCount: 1,
+            onRemove: () => {
+                setFile(null);
+                setIsDone(false);
+            },
+        }),
+        [file],
+    );
+
+    const convert = async () => {
+        if (!file) {
+            setError('Выберите DOCX-файл');
+            return;
+        }
+
         setError(null);
         setIsDone(false);
-        return false;
-      },
-      fileList: file
-        ? [
-            {
-              uid: file.name,
-              name: file.name,
-              status: 'done',
-            },
-          ]
-        : [],
-      maxCount: 1,
-      onRemove: () => {
-        setFile(null);
-        setIsDone(false);
-      },
-    }),
-    [file],
-  );
 
-  const convert = async () => {
-    if (!file) {
-      setError('Выберите DOCX-файл');
-      return;
-    }
+        try {
+            const blob = await generateInstruction({file}).unwrap();
+            downloadBlob(blob, 'instruction.txt');
+            setIsDone(true);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Не удалось сформировать инструкцию');
+        }
+    };
 
-    setError(null);
-    setIsDone(false);
-    setIsLoading(true);
+    return (
+        <Flex className={styles.page} vertical>
+            <Flex className={styles.workspace} gap={22} vertical>
+                <Flex align="center" gap={14}>
+                    <Flex align="center" className={styles.iconBox} justify="center">
+                        <FileText size={22}/>
+                    </Flex>
+                    <Flex vertical>
+                        <Text className={styles.kicker}>Generator</Text>
+                        <Title className={styles.title} level={2}>
+                            DOCX в instruction.txt
+                        </Title>
+                    </Flex>
+                </Flex>
 
-    try {
-      await downloadInstruction(file);
-      setIsDone(true);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Не удалось сформировать инструкцию');
-    } finally {
-      setIsLoading(false);
-    }
-  };
+                <Upload.Dragger className={styles.dropzone} disabled={isLoading} {...uploadProps}>
+                    <Flex align="center" className={styles.dropContent} gap={10} justify="center" vertical>
+                        <UploadCloud size={34}/>
+                        <strong>Перетащите DOCX сюда или выберите файл</strong>
+                        <span>После обработки будет скачан TXT с блоками MENU и Content.</span>
+                    </Flex>
+                </Upload.Dragger>
 
-  return (
-    <div className={styles.page}>
-      <section className={styles.workspace}>
-        <div className={styles.intro}>
-          <span>
-            <FileText size={22} />
-          </span>
-          <div>
-            <Text className={styles.kicker}>Generator</Text>
-            <Title level={2}>DOCX в instruction.txt</Title>
-          </div>
-        </div>
+                {isLoading && <Progress percent={70} showInfo={false} status="active"/>}
+                {isDone && <Alert message="Файл instruction.txt сформирован и скачан" showIcon type="success"/>}
+                {error && <Alert message={error} showIcon type="error"/>}
 
-        <Upload.Dragger className={styles.dropzone} disabled={isLoading} {...uploadProps}>
-          <div className={styles.dropContent}>
-            <UploadCloud size={34} />
-            <strong>Перетащите DOCX сюда или выберите файл</strong>
-            <span>После обработки будет скачан TXT с блоками MENU и Content.</span>
-          </div>
-        </Upload.Dragger>
-
-        {isLoading && <Progress percent={70} showInfo={false} status="active" />}
-        {isDone && <Alert message="Файл instruction.txt сформирован и скачан" showIcon type="success" />}
-        {error && <Alert message={error} showIcon type="error" />}
-
-        <div className={styles.actions}>
-          <Button
-            disabled={!file}
-            icon={<Download size={18} />}
-            loading={isLoading}
-            onClick={convert}
-            size="large"
-            type="primary"
-          >
-            Сформировать TXT
-          </Button>
-        </div>
-      </section>
-    </div>
-  );
+                <Flex className={styles.actions} justify="flex-end">
+                    <Button
+                        disabled={!file}
+                        icon={<Download size={18}/>}
+                        loading={isLoading}
+                        onClick={convert}
+                        size="large"
+                        type="primary"
+                    >
+                        Сформировать TXT
+                    </Button>
+                </Flex>
+            </Flex>
+        </Flex>
+    );
 }
+
+function downloadBlob(blob: Blob, filename: string) {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+}
+
+
+export default InstructionPage;

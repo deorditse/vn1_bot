@@ -54,13 +54,11 @@ export function LoginPage() {
             <FileCode2 size={22} />
           </span>
           <div>
-            <strong>VN1 Bot</strong>
-            <small>Keycloak sign in</small>
+            <strong>TABLETKA</strong>
           </div>
         </div>
 
         <div className={styles.header}>
-          <Text className={styles.kicker}>Protected workspace</Text>
           <Title level={1}>Авторизация</Title>
         </div>
 

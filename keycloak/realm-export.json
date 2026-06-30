@@ -17,6 +17,7 @@
       "name": "VN1 API",
       "enabled": true,
       "publicClient": true,
+      "clientAuthenticatorType": "none",
       "standardFlowEnabled": true,
       "directAccessGrantsEnabled": true,
       "serviceAccountsEnabled": false,
@@ -34,7 +35,11 @@
     {
       "username": "vn1-user",
       "enabled": true,
+      "email": "vn1-user@local.test",
       "emailVerified": true,
+      "firstName": "VN1",
+      "lastName": "User",
+      "requiredActions": [],
       "credentials": [
         {
           "type": "password",

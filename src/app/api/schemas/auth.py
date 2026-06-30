@@ -7,7 +7,11 @@ class LoginRequest(BaseModel):
 
 
 class RefreshRequest(BaseModel):
-    refresh_token: str
+    refresh_token: str | None = None
+
+
+class AuthResponse(BaseModel):
+    authenticated: bool = True
 
 
 class TokenResponse(BaseModel):
