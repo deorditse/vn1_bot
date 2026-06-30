@@ -91,24 +91,25 @@ services:
       - "8010"
     environment:
       - PYTHONUNBUFFERED=1
+      - LANGCHAIN_OPENAI_TCP_KEEPALIVE=0
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
       - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
       - GIGACHAT_API_KEY=${GIGACHAT_API_KEY:-}
       - AUTH_CLIENT_SECRET=${AUTH_CLIENT_SECRET:-}
-      - PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
 
       # Temporarily use external SOCKS5 proxy instead of xray.
       # - PROXY=${PROXY}
       # - ALL_PROXY=socks5h://xray:10808
       # - HTTP_PROXY=socks5h://xray:10808
       # - HTTPS_PROXY=socks5h://xray:10808
-      - ALL_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - HTTP_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - HTTPS_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - ALL_PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - HTTP_PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - HTTPS_PROXY=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
       - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
-      - all_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - http_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
-      - https_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - all_proxy=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - http_proxy=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
+      - https_proxy=socks5h://proxyuser:Akrpq0N5pIR9UTIYXu4fjOKb7@72.56.72.28:1080
       - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
     restart: unless-stopped
     depends_on:
@@ -117,17 +118,17 @@ services:
     networks:
       - vn1
 
-  xray:
-    image: teddysun/xray
-    container_name: xray
-    restart: unless-stopped
-    volumes:
-      - ./xray-config/config.json:/etc/xray/config.json:ro
-    command: xray run -config /etc/xray/config.json
-    networks:
-      - vn1
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "5m"
-        max-file: "1"
+#  xray:
+#    image: teddysun/xray
+#    container_name: xray
+#    restart: unless-stopped
+#    volumes:
+#      - ./xray-config/config.json:/etc/xray/config.json:ro
+#    command: xray run -config /etc/xray/config.json
+#    networks:
+#      - vn1
+#    logging:
+#      driver: "json-file"
+#      options:
+#        max-size: "5m"
+#        max-file: "1"

@@ -92,6 +92,3 @@ check-proxy:
 
 check-openai:
 	$(COMPOSE) exec backend-vn1 uv run python -c 'import os, httpx; proxy = os.getenv("PROXY") or os.getenv("ALL_PROXY") or os.getenv("HTTPS_PROXY") or os.getenv("HTTP_PROXY"); print("proxy =", proxy); response = httpx.get("https://api.openai.com/v1/models", headers={"Authorization": "Bearer " + os.getenv("OPENAI_API_KEY", "")}, proxy=proxy, timeout=30); print(response.status_code); print(response.text[:300])'
-
-check-xray:
-	$(COMPOSE) exec backend-vn1 uv run python -c 'import socket; sock = socket.create_connection(("xray", 10808), timeout=5); print("xray:10808 ok"); sock.close()'
