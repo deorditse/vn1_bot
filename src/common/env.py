@@ -63,7 +63,15 @@ def api_key_openai() -> str:
 
 
 def proxy_url() -> str | None:
-    return get_env("PROXY")
+    return (
+        get_env("PROXY")
+        or get_env("ALL_PROXY")
+        or get_env("HTTPS_PROXY")
+        or get_env("HTTP_PROXY")
+        or get_env("all_proxy")
+        or get_env("https_proxy")
+        or get_env("http_proxy")
+    )
 
 
 def api_key_deepseek() -> str:

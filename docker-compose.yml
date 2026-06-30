@@ -21,7 +21,7 @@ services:
       - frontend
       - backend-vn1
       - keycloak
-#      - n8n-vn1
+    #      - n8n-vn1
     networks:
       - vn1
     logging:
@@ -95,14 +95,20 @@ services:
       - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
       - GIGACHAT_API_KEY=${GIGACHAT_API_KEY:-}
       - AUTH_CLIENT_SECRET=${AUTH_CLIENT_SECRET:-}
-      - PROXY=${PROXY:-}
-      - ALL_PROXY=${ALL_PROXY:-}
-      - HTTP_PROXY=${HTTP_PROXY:-}
-      - HTTPS_PROXY=${HTTPS_PROXY:-}
+      - PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+
+      # Temporarily use external SOCKS5 proxy instead of xray.
+      # - PROXY=${PROXY}
+      # - ALL_PROXY=socks5h://xray:10808
+      # - HTTP_PROXY=socks5h://xray:10808
+      # - HTTPS_PROXY=socks5h://xray:10808
+      - ALL_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - HTTP_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - HTTPS_PROXY=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
       - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
-      - all_proxy=${all_proxy:-}
-      - http_proxy=${http_proxy:-}
-      - https_proxy=${https_proxy:-}
+      - all_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - http_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
+      - https_proxy=socks5h://proxyuser:oHZfp9VBo6YZVfZQkaHYfcbTNmw2jj9m5L5AA99oXwEzoCP6vGeySb2W@185.169.107.20:1080
       - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
     restart: unless-stopped
     depends_on:
