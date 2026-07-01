@@ -1,18 +1,13 @@
-import { Alert, Button, Form, Input, Typography } from 'antd';
-import { FileCode2, Lock, User } from 'lucide-react';
-import { useState } from 'react';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import {useState} from 'react';
+import {Navigate, useLocation, useNavigate} from 'react-router-dom';
 
-import { useAuth } from '@features/auth/model/AuthProvider';
-import { getRouteInstruction } from '@shared/const/router';
+import {useAuth} from '@features/auth/model/AuthProvider';
+import {getRouteInstruction} from '@shared/const/router';
+import {Page} from '@widgets/Page';
+import {LoginForm} from './form/LoginForm';
+import type {LoginFormValues} from './form/LoginForm';
+import {LoginPanel} from './panel/LoginPanel';
 import styles from './LoginPage.module.less';
-
-const { Text, Title } = Typography;
-
-type LoginForm = {
-  username: string;
-  password: string;
-};
 
 type LocationState = {
   from?: {
@@ -21,7 +16,7 @@ type LocationState = {
 };
 
 export function LoginPage() {
-  const { isAuthenticated, signIn } = useAuth();
+  const {isAuthenticated, signIn} = useAuth();
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -32,13 +27,13 @@ export function LoginPage() {
     return <Navigate replace to={from} />;
   }
 
-  const onFinish = async (values: LoginForm) => {
+  const onFinish = async (values: LoginFormValues) => {
     setError(null);
     setIsSubmitting(true);
 
     try {
       await signIn(values.username, values.password);
-      navigate(from, { replace: true });
+      navigate(from, {replace: true});
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Не удалось выполнить вход');
     } finally {
@@ -47,45 +42,10 @@ export function LoginPage() {
   };
 
   return (
-    <main className={styles.page}>
-      <section className={styles.panel}>
-        <div className={styles.brand}>
-          <span>
-            <FileCode2 size={22} />
-          </span>
-          <div>
-            <strong>TABLETKA</strong>
-          </div>
-        </div>
-
-        <div className={styles.header}>
-          <Title level={1}>Авторизация</Title>
-        </div>
-
-        {error && <Alert message={error} showIcon type="error" />}
-
-        <Form<LoginForm> className={styles.form} layout="vertical" onFinish={onFinish} requiredMark={false}>
-          <Form.Item
-            label="Логин"
-            name="username"
-            rules={[{ message: 'Введите логин', required: true }]}
-          >
-            <Input autoComplete="username" prefix={<User size={17} />} size="large" />
-          </Form.Item>
-
-          <Form.Item
-            label="Пароль"
-            name="password"
-            rules={[{ message: 'Введите пароль', required: true }]}
-          >
-            <Input.Password autoComplete="current-password" prefix={<Lock size={17} />} size="large" />
-          </Form.Item>
-
-          <Button block htmlType="submit" loading={isSubmitting} size="large" type="primary">
-            Войти
-          </Button>
-        </Form>
-      </section>
-    </main>
+    <Page className={styles.page}>
+      <LoginPanel error={error}>
+        <LoginForm isSubmitting={isSubmitting} onFinish={onFinish} />
+      </LoginPanel>
+    </Page>
   );
 }

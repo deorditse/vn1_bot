@@ -1,0 +1,63 @@
+.dropzone {
+  :global(.ant-upload-drag) {
+    min-height: 118px;
+    border-color: var(--app-color-border-secondary) !important;
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--app-color-bg-container) 92%, transparent),
+      color-mix(in srgb, var(--app-color-bg-base) 96%, transparent)
+    ) !important;
+    transition: border-color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+      border-color: var(--app-color-primary) !important;
+      background: var(--app-color-bg-elevated) !important;
+    }
+  }
+}
+
+.dropContent {
+  min-height: 86px;
+  padding: 14px 18px;
+  color: var(--app-color-text-tertiary);
+  text-align: left;
+
+  svg {
+    color: var(--app-color-primary);
+  }
+
+  strong {
+    color: var(--app-color-text);
+    font-size: 16px;
+  }
+
+  span {
+    max-width: 520px;
+    font-size: 13px;
+  }
+}
+
+.uploadIcon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--app-color-primary) 28%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--app-color-primary) 10%, transparent);
+  color: var(--app-color-primary);
+}
+
+.uploadText {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .dropContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .uploadText {
+    text-align: center;
+  }
+}

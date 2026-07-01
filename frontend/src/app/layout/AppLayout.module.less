@@ -1,16 +1,16 @@
 .layout {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(34, 199, 184, 0.12), transparent 34rem),
-    linear-gradient(180deg, #081116 0%, #0b151b 100%);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--app-color-primary) 12%, transparent), transparent 34rem),
+    linear-gradient(180deg, var(--app-color-bg-base) 0%, var(--app-color-bg-elevated) 100%);
 }
 
 .sider {
   position: sticky !important;
   top: 0;
   height: 100vh;
-  border-right: 1px solid #24343e;
-  background: #0b151b !important;
+  border-right: 1px solid var(--app-color-border-secondary);
+  background: var(--app-color-bg-elevated) !important;
 }
 
 .brand {
@@ -25,8 +25,8 @@
     height: 42px;
     place-items: center;
     border-radius: 8px;
-    background: #22c7b8;
-    color: #061115;
+    background: var(--app-color-primary);
+    color: var(--app-color-bg-base);
   }
 
   strong,
@@ -35,12 +35,12 @@
   }
 
   strong {
-    color: #edf7f6;
+    color: var(--app-color-text);
     font-size: 16px;
   }
 
   small {
-    color: #8da4ad;
+    color: var(--app-color-text-tertiary);
     font-size: 12px;
     font-weight: 700;
   }
@@ -58,7 +58,7 @@
   }
 
   :global(.ant-menu-item-selected) {
-    background: rgba(34, 199, 184, 0.14) !important;
+    background: color-mix(in srgb, var(--app-color-primary) 14%, transparent) !important;
   }
 }
 
@@ -68,12 +68,12 @@
   line-height: 1.2;
 
   span {
-    color: #edf7f6;
+    color: var(--app-color-text);
     font-weight: 760;
   }
 
   small {
-    color: #8da4ad;
+    color: var(--app-color-text-tertiary);
     font-size: 12px;
   }
 }
@@ -94,7 +94,7 @@
 
   h1 {
     margin: 0 !important;
-    color: #edf7f6;
+    color: var(--app-color-text);
     font-size: 26px !important;
     line-height: 1.1 !important;
   }
@@ -105,7 +105,7 @@
 }
 
 .kicker {
-  color: #8da4ad !important;
+  color: var(--app-color-text-tertiary) !important;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
@@ -125,7 +125,7 @@
     max-width: 180px;
     min-height: 32px;
     overflow: hidden;
-    color: #9fb4bb !important;
+    color: var(--app-color-text-secondary) !important;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -147,7 +147,7 @@
 
 .drawer {
   :global(.ant-drawer-content) {
-    background: #0b151b;
+    background: var(--app-color-bg-elevated);
   }
 
   :global(.ant-drawer-body) {

@@ -19,8 +19,8 @@ export const toolRouteConfig: Record<ToolRoutes, AppRoutesProps> = {
     element: <InstructionPage />,
     authOnly: true,
     nav: {
-      label: 'Instruction',
-      description: 'DOCX to HTML txt',
+      label: 'Инструкция',
+      description: 'DOCX в HTML и описание',
       icon: <FileText size={18} />,
     },
   },
