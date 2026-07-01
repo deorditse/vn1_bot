@@ -73,7 +73,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
   const signOut = useCallback(async () => {
     if (isDevAuthDisabled) {
-      setUser(devUser);
+      setUser(null);
       return;
     }
 

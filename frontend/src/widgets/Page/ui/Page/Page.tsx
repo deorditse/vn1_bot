@@ -1,5 +1,7 @@
 import {memo, type ReactNode, useEffect, useRef} from 'react';
 
+import {classNames} from '@shared/lib/classNames';
+
 import styles from './Page.module.less';
 
 type PageProps = {
@@ -42,7 +44,7 @@ export const Page = memo((props: PageProps) => {
 
     return (
         <main
-            className={[styles.Page, className].filter(Boolean).join(' ')}
+            className={classNames(styles.Page, {}, [className])}
             data-testid={props['data-testid'] ?? 'Page'}
             id={PAGE_ID}
             ref={wrapperRef}
