@@ -1,4 +1,13 @@
 .form {
+  width: min(100%, 360px);
+  margin: 0 auto;
+
+  :global(.ant-form-item),
+  :global(.ant-input-affix-wrapper),
+  :global(.ant-btn) {
+    width: 100%;
+  }
+
   :global(.ant-form-item-label > label) {
     color: var(--app-color-text-secondary);
     font-weight: 760;
