@@ -1,5 +1,6 @@
-import {Flex, Typography} from 'antd';
+import {Typography} from 'antd';
 
+import {Card, VStack} from '@shared/ui';
 import type {CopyTextHandler, InstructionBlock} from '../types';
 import {InstructionBlockView} from './InstructionBlockView';
 import styles from './InstructionMarkupResults.module.less';
@@ -14,13 +15,15 @@ type InstructionMarkupResultsProps = {
 
 export function InstructionMarkupResults({blocks, copiedBlock, onCopy}: InstructionMarkupResultsProps) {
   return (
-    <Flex className={styles.results} gap={16} vertical>
+    <Card className={styles.results} padding="22">
+      <VStack gap="16" max>
       <Title className={styles.sectionTitle} level={3}>
         Разметка инструкции
       </Title>
       {blocks.map((block) => (
         <InstructionBlockView block={block} copied={copiedBlock === block.key} key={block.key} onCopy={onCopy} />
       ))}
-    </Flex>
+      </VStack>
+    </Card>
   );
 }

@@ -1,6 +1,7 @@
 import {memo, type ReactNode, useEffect, useRef} from 'react';
 
 import {classNames} from '@shared/lib/classNames';
+import {AppPaddings} from '@shared/lib/styles';
 
 import styles from './Page.module.less';
 
@@ -44,7 +45,7 @@ export const Page = memo((props: PageProps) => {
 
     return (
         <main
-            className={classNames(styles.Page, {}, [className])}
+            className={classNames(styles.Page, {}, [styles.content, AppPaddings.v24, className])}
             data-testid={props['data-testid'] ?? 'Page'}
             id={PAGE_ID}
             ref={wrapperRef}

@@ -1,6 +1,7 @@
-import {Alert, Button, Flex, Progress, Typography} from 'antd';
+import {Alert, Button, Progress, Typography} from 'antd';
 import {FileText} from 'lucide-react';
 
+import {Card, HStack, VStack} from '@shared/ui';
 import {InstructionLoadedState} from './InstructionLoadedState';
 import {InstructionUploadPanel} from './InstructionUploadPanel';
 import styles from './InstructionWorkspace.module.less';
@@ -29,13 +30,14 @@ export function InstructionWorkspace({
   onSelectFile,
 }: InstructionWorkspaceProps) {
   return (
-    <Flex className={styles.workspace} gap={22} vertical>
-      <Flex align="center" gap={14}>
-        <Flex align="center" className={styles.iconBox} justify="center">
+    <Card className={styles.workspace} padding="24">
+      <VStack gap="22" max>
+      <HStack align="center" gap="14">
+        <HStack align="center" className={styles.iconBox} justify="center">
           <FileText size={22} />
-        </Flex>
+        </HStack>
         <Text className={styles.kicker}>Генератор</Text>
-      </Flex>
+      </HStack>
 
       {!instructionReady ? (
         <InstructionUploadPanel
@@ -53,7 +55,7 @@ export function InstructionWorkspace({
       {instructionReady && <Alert message="Инструкция сформирована" showIcon type="success" />}
       {error && <Alert message={error} showIcon type="error" />}
 
-      <Flex className={styles.actions} gap={12} justify="flex-end" wrap="wrap">
+      <HStack className={styles.actions} gap="12" justify="end" max wrap="wrap">
         <Button
           disabled={!file || instructionReady}
           icon={<FileText size={18} />}
@@ -64,7 +66,8 @@ export function InstructionWorkspace({
         >
           Сформировать инструкцию
         </Button>
-      </Flex>
-    </Flex>
+      </HStack>
+      </VStack>
+    </Card>
   );
 }

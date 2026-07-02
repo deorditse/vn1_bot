@@ -1,14 +1,12 @@
 .workspace {
-  padding: 24px;
-  border: 1px solid var(--app-color-border);
-  border-radius: 8px;
-  background: var(--app-color-bg-container);
+  width: 100%;
 }
 
 .iconBox {
   width: 46px;
   height: 46px;
-  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--app-color-primary) 22%, transparent);
+  border-radius: 12px;
   background: color-mix(in srgb, var(--app-color-primary) 14%, transparent);
   color: var(--app-color-primary);
 }
@@ -18,16 +16,4 @@
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
-}
-
-@media (max-width: 640px) {
-  .workspace {
-    padding: 18px;
-  }
-
-  .actions {
-    button {
-      width: 100%;
-    }
-  }
 }

@@ -1,0 +1,20 @@
+.Skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.Skeleton::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.09), transparent);
+  content: "";
+  transform: translateX(-100%);
+  animation: skeleton-loading 1.35s infinite;
+}
+
+@keyframes skeleton-loading {
+  100% {
+    transform: translateX(100%);
+  }
+}

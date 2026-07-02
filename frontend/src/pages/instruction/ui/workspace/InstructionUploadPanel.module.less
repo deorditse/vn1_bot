@@ -1,24 +1,30 @@
 .dropzone {
+  width: 100%;
+
+  :global(.ant-upload-wrapper),
+  :global(.ant-upload),
+  :global(.ant-upload-drag) {
+    width: 100% !important;
+  }
+
   :global(.ant-upload-drag) {
     min-height: 118px;
-    border-color: var(--app-color-border-secondary) !important;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--app-color-bg-container) 92%, transparent),
-      color-mix(in srgb, var(--app-color-bg-base) 96%, transparent)
-    ) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.035) !important;
+    backdrop-filter: blur(12px);
     transition: border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
       border-color: var(--app-color-primary) !important;
-      background: var(--app-color-bg-elevated) !important;
+      background: color-mix(in srgb, var(--app-color-primary) 7%, rgba(255, 255, 255, 0.045)) !important;
     }
   }
 }
 
 .dropContent {
   min-height: 86px;
-  padding: 14px 18px;
+  padding: var(--app-space-14) var(--app-space-18);
   color: var(--app-color-text-tertiary);
   text-align: left;
 
@@ -32,7 +38,6 @@
   }
 
   span {
-    max-width: 520px;
     font-size: 13px;
   }
 }
@@ -42,22 +47,11 @@
   height: 44px;
   flex: 0 0 auto;
   border: 1px solid color-mix(in srgb, var(--app-color-primary) 28%, transparent);
-  border-radius: 8px;
+  border-radius: 12px;
   background: color-mix(in srgb, var(--app-color-primary) 10%, transparent);
   color: var(--app-color-primary);
 }
 
 .uploadText {
   min-width: 0;
-}
-
-@media (max-width: 640px) {
-  .dropContent {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .uploadText {
-    text-align: center;
-  }
 }

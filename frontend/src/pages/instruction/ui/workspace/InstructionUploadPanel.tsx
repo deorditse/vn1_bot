@@ -1,8 +1,9 @@
-import {Flex, Upload} from 'antd';
+import {Upload} from 'antd';
 import type {UploadProps} from 'antd';
 import {UploadCloud} from 'lucide-react';
 import {useMemo} from 'react';
 
+import {HStack, VStack} from '@shared/ui';
 import styles from './InstructionUploadPanel.module.less';
 import {SelectedFileBar} from './SelectedFileBar';
 
@@ -51,22 +52,22 @@ export function InstructionUploadPanel({
   );
 
   return (
-    <Flex gap={12} vertical>
+    <VStack gap="12" max>
       <Upload.Dragger className={styles.dropzone} disabled={isLoading} {...uploadProps}>
-        <Flex align="center" className={styles.dropContent} gap={14} justify="center">
-          <Flex align="center" className={styles.uploadIcon} justify="center">
+        <HStack align="center" className={styles.dropContent} gap="14" justify="center">
+          <HStack align="center" className={styles.uploadIcon} justify="center">
             <UploadCloud size={24} />
-          </Flex>
-          <Flex className={styles.uploadText} vertical>
+          </HStack>
+          <VStack className={styles.uploadText} gap="4">
             <strong>{file ? 'Файл выбран' : 'Добавьте DOCX-инструкцию'}</strong>
             <span>{file ? 'Для замены удалите текущий файл.' : 'Перетащите файл сюда или выберите вручную.'}</span>
-          </Flex>
-        </Flex>
+          </VStack>
+        </HStack>
       </Upload.Dragger>
 
       {file && (
         <SelectedFileBar disabled={isLoading} fileName={file.name} label="Готов к обработке" onRemove={onRemoveFile} />
       )}
-    </Flex>
+    </VStack>
   );
 }

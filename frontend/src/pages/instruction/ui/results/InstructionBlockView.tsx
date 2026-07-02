@@ -1,6 +1,7 @@
-import {Button, Flex, Input, Typography} from 'antd';
+import {Button, Input, Typography} from 'antd';
 import {Copy} from 'lucide-react';
 
+import {Card, HStack, VStack} from '@shared/ui';
 import type {CopyTextHandler, InstructionBlock} from '../types';
 import styles from './InstructionBlockView.module.less';
 
@@ -14,17 +15,19 @@ type InstructionBlockViewProps = {
 
 export function InstructionBlockView({block, copied, onCopy}: InstructionBlockViewProps) {
   return (
-    <Flex className={styles.block} gap={12} vertical>
-      <Flex align="center" gap={12} justify="space-between">
-        <Flex gap={8} vertical>
+    <Card className={styles.block} padding="16" variant="outlined">
+      <VStack gap="12" max>
+      <HStack align="center" gap="12" justify="between" max>
+        <VStack gap="8">
           <Text className={styles.blockTitle}>{block.title}</Text>
           <Text className={styles.blockMeta}>{block.content.length} символов</Text>
-        </Flex>
+        </VStack>
         <Button icon={<Copy size={17} />} onClick={() => onCopy(block.key, block.content)}>
           {copied ? 'Скопировано' : 'Копировать'}
         </Button>
-      </Flex>
+      </HStack>
       <Input.TextArea autoSize={{minRows: 8, maxRows: 18}} className={styles.codeArea} readOnly value={block.content} />
-    </Flex>
+      </VStack>
+    </Card>
   );
 }

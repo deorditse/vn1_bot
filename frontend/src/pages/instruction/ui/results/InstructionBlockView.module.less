@@ -1,8 +1,5 @@
 .block {
-  padding: 16px;
-  border: 1px solid var(--app-color-border-secondary);
-  border-radius: 8px;
-  background: var(--app-color-bg-elevated);
+  width: 100%;
 }
 
 .blockTitle {
@@ -18,4 +15,8 @@
 .codeArea {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 13px;
+
+  :global(.ant-input) {
+    background: rgba(0, 0, 0, 0.14);
+  }
 }

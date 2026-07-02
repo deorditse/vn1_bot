@@ -1,6 +1,7 @@
-import {Button, Flex, Typography} from 'antd';
+import {Button, Typography} from 'antd';
 import {FileText, RefreshCcw} from 'lucide-react';
 
+import {Card, HStack, VStack} from '@shared/ui';
 import styles from './InstructionLoadedState.module.less';
 
 const {Text} = Typography;
@@ -12,19 +13,21 @@ type InstructionLoadedStateProps = {
 
 export function InstructionLoadedState({fileName, onReset}: InstructionLoadedStateProps) {
   return (
-    <Flex align="center" className={styles.loadedState} gap={14} justify="space-between" wrap="wrap">
-      <Flex align="center" gap={12}>
-        <Flex align="center" className={styles.loadedIcon} justify="center">
+    <Card className={styles.loadedState} padding="18" variant="light">
+      <HStack align="center" gap="14" justify="between" max wrap="wrap">
+      <HStack align="center" gap="12">
+        <HStack align="center" className={styles.loadedIcon} justify="center">
           <FileText size={20} />
-        </Flex>
-        <Flex vertical>
+        </HStack>
+        <VStack>
           <Text className={styles.loadedLabel}>Загружена 1 инструкция</Text>
           <Text className={styles.loadedFile}>{fileName ?? 'DOCX-файл обработан'}</Text>
-        </Flex>
-      </Flex>
+        </VStack>
+      </HStack>
       <Button icon={<RefreshCcw size={17} />} onClick={onReset}>
         Новая инструкция
       </Button>
-    </Flex>
+      </HStack>
+    </Card>
   );
 }

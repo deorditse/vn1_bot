@@ -1,9 +1,5 @@
 .selectedFileBar {
   min-height: 58px;
-  padding: 10px 12px;
-  border: 1px solid var(--app-color-border);
-  border-radius: 8px;
-  background: var(--app-color-bg-elevated);
 }
 
 .selectedFileIcon {
@@ -11,7 +7,7 @@
   height: 34px;
   flex: 0 0 auto;
   border: 1px solid color-mix(in srgb, var(--app-color-primary) 28%, transparent);
-  border-radius: 8px;
+  border-radius: 10px;
   background: color-mix(in srgb, var(--app-color-primary) 12%, transparent);
   color: var(--app-color-primary);
 }
@@ -28,20 +24,8 @@
 }
 
 .selectedFileName {
-  max-width: min(560px, 70vw);
   color: var(--app-color-text-tertiary) !important;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .selectedFileInfo {
-    text-align: center;
-  }
-
-  .selectedFileBar {
-    align-items: stretch;
-    flex-direction: column;
-  }
 }

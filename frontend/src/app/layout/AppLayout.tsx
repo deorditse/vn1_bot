@@ -1,18 +1,21 @@
-import {Button, Drawer, Layout, Menu, Space, Typography} from 'antd';
+import {Button, Drawer, Layout, Menu, Typography} from 'antd';
 import type {MenuProps} from 'antd';
-import {FileCode2, LogOut, Menu as MenuIcon} from 'lucide-react';
+import {ChevronLeft, FileCode2, LogOut, Menu as MenuIcon} from 'lucide-react';
 import {useMemo, useState} from 'react';
 import {Outlet, useLocation, useNavigate} from 'react-router-dom';
 
 import {useAuth} from '@features/auth/model/AuthProvider';
+import {classNames} from '@shared/lib/classNames';
+import {VStack} from '@shared/ui';
 import {defaultAppRoute, navRoutes} from '../router/config/routeConfig';
 import styles from './AppLayout.module.less';
 
-const {Content, Header, Sider} = Layout;
+const {Header} = Layout;
 const {Text, Title} = Typography;
+const DRAWER_WIDTH = 328;
 
 export function AppLayout() {
-    const [drawerOpen, setDrawerOpen] = useState(false);
+    const [drawerOpen, setDrawerOpen] = useState(true);
     const {signOut, user} = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
@@ -36,7 +39,6 @@ export function AppLayout() {
 
     const selectTool: MenuProps['onClick'] = ({key}) => {
         navigate(key);
-        setDrawerOpen(false);
     };
 
     const logout = async () => {
@@ -45,9 +47,52 @@ export function AppLayout() {
     };
 
     return (
-        <Layout className={styles.layout}>
-            <Sider className={styles.sider} width={292}>
-                <Brand/>
+        <Layout className={classNames(styles.layout, {[styles.layoutDrawerOpen]: drawerOpen})}>
+            <Button
+                className={styles.drawerButton}
+                icon={<MenuIcon size={20}/>}
+                onClick={() => setDrawerOpen((prev) => !prev)}
+                type="text"
+            />
+            <Layout className={styles.mainLayout}>
+                <Header className={styles.topbar}>
+                    <VStack className={styles.titleBlock} gap="4">
+                        <Title level={1}>{active.nav?.label}</Title>
+                        <Text className={styles.kicker}>{active.nav?.description}</Text>
+                    </VStack>
+                    <div className={styles.account}>
+                        <Text>{username}</Text>
+                        <Button icon={<LogOut size={18}/>} onClick={logout} type="text"/>
+
+                    </div>
+                </Header>
+
+                <div className={styles.content}><Outlet/></div>
+
+
+            </Layout>
+
+            <Drawer
+                className={styles.drawerPanel}
+                closable={false}
+                mask={false}
+                onClose={() => setDrawerOpen(false)}
+                open={drawerOpen}
+                placement="left"
+                rootClassName={styles.drawerRoot}
+                title={null}
+                width={DRAWER_WIDTH}
+            >
+                <div className={styles.drawerHead}>
+                    <Brand/>
+                    <Button
+                        aria-label="Закрыть меню"
+                        className={styles.drawerClose}
+                        icon={<ChevronLeft size={20}/>}
+                        onClick={() => setDrawerOpen(false)}
+                        type="text"
+                    />
+                </div>
                 <Menu
                     className={styles.menu}
                     items={menuItems}
@@ -55,40 +100,6 @@ export function AppLayout() {
                     onClick={selectTool}
                     selectedKeys={[active.path]}
                 />
-            </Sider>
-
-            <Layout className={styles.mainLayout}>
-                <Header className={styles.topbar}>
-                    <Button
-                        className={styles.drawerButton}
-                        icon={<MenuIcon size={20}/>}
-                        onClick={() => setDrawerOpen(true)}
-                        type="text"
-                    />
-                    <Space className={styles.titleBlock} direction="vertical" size={0}>
-                        <Title level={1}>{active.nav?.label}</Title>
-                        <Text className={styles.kicker}>{active.nav?.description}</Text>
-                    </Space>
-                    <div className={styles.account}>
-                        <Text>{username}</Text>
-                        <Button icon={<LogOut size={18}/>} onClick={logout} type="text"/>
-                    </div>
-                </Header>
-
-                <Content className={styles.content}>
-                    <Outlet/>
-                </Content>
-            </Layout>
-
-            <Drawer
-                className={styles.drawer}
-                onClose={() => setDrawerOpen(false)}
-                open={drawerOpen}
-                placement="left"
-                title={<Brand/>}
-                width={320}
-            >
-                <Menu items={menuItems} mode="inline" onClick={selectTool} selectedKeys={[active.path]}/>
             </Drawer>
         </Layout>
     );
