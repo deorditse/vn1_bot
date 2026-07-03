@@ -1,5 +1,6 @@
 .block {
   width: 100%;
+  background: #fbfcfd;
 }
 
 .blockTitle {
@@ -13,10 +14,23 @@
 }
 
 .codeArea {
+  border-color: var(--app-color-border-secondary) !important;
+  border-radius: 14px !important;
+  background: #f4f6f9 !important;
+  color: var(--app-color-text) !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
 
-  :global(.ant-input) {
-    background: rgba(0, 0, 0, 0.14);
+  &:focus,
+  &:focus-within {
+    border-color: #c9d1dc !important;
+    box-shadow: 0 0 0 3px rgba(137, 143, 171, 0.1) !important;
+  }
+
+  &::selection {
+    background: rgba(137, 143, 171, 0.22);
+    color: var(--app-color-text);
   }
 }

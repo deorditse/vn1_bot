@@ -1,62 +1,52 @@
+@import "../../shared/ui/styles/spacing.less";
+
 .layout {
   --app-drawer-width: 328px;
 
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--app-color-bg-base) 92%, #ffffff) 0%, var(--app-color-bg-base) 100%);
+  background: linear-gradient(180deg, #f8fafc 0%, var(--app-color-bg-base) 260px),
+  var(--app-color-bg-base);
 }
 
 .content {
-  width: min(calc(100% - 36px), var(--app-content-max-width));
+  width: min(calc(100% - @layout-inline-gutter), @content-max-width);
   margin: 0 auto;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: var(--app-space-12);
+  justify-content: center;
   min-width: 0;
+  gap: @space-6;
 
-  > span {
-    display: grid;
-    width: 38px;
-    height: 38px;
-    place-items: center;
-    border-radius: 8px;
-    border: 1px solid color-mix(in srgb, var(--app-color-primary) 22%, transparent);
-    background: color-mix(in srgb, var(--app-color-primary) 13%, transparent);
-    color: var(--app-color-primary);
-    flex: 0 0 auto;
+  img {
+    display: block;
+    width: 150px;
+    height: auto;
   }
 
-  strong,
   small {
     display: block;
-  }
-
-  strong {
-    color: var(--app-color-text);
-    font-size: 16px;
-  }
-
-  small {
     color: var(--app-color-text-tertiary);
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 760;
   }
 }
 
 .menu {
   border-inline-end: 0 !important;
   background: transparent !important;
-  padding: var(--app-space-8) 2px;
+  padding: @space-8 2px;
 
   :global(.ant-menu-item) {
-    height: 58px;
-    margin: 0 0 var(--app-space-6) !important;
+    position: relative;
+    height: 54px;
+    margin: 0 0 @space-6 !important;
     padding-inline: 12px !important;
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 12px;
     color: var(--app-color-text-secondary);
     transition: background-color 150ms ease,
     border-color 150ms ease,
@@ -64,13 +54,29 @@
   }
 
   :global(.ant-menu-item:hover) {
-    border-color: rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.055) !important;
+    border-color: var(--app-color-border-secondary);
+    background: #f8fafc !important;
   }
 
   :global(.ant-menu-item-selected) {
-    border-color: color-mix(in srgb, var(--app-color-primary) 20%, transparent);
-    background: color-mix(in srgb, var(--app-color-primary) 12%, rgba(255, 255, 255, 0.05)) !important;
+    border-color: var(--app-color-border);
+    background: #ffffff !important;
+    box-shadow: 0 8px 22px rgba(27, 36, 52, 0.06);
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 14px;
+      bottom: 14px;
+      left: 6px;
+      width: 3px;
+      border-radius: 999px;
+      background: var(--app-color-primary);
+      content: "";
+    }
   }
 }
 
@@ -112,22 +118,22 @@
 .topbar {
   display: flex;
   align-items: center;
-  gap: var(--app-space-16);
-  width: min(calc(100% - 36px), var(--app-content-max-width));
+  gap: @space-16;
+  width: min(calc(100% - @layout-inline-gutter), @content-max-width);
   height: auto;
-  min-height: 72px;
-  margin: var(--app-space-18) auto 0;
-  padding: var(--app-space-12) var(--app-space-16);
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--app-color-bg-elevated) 72%, transparent);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(22px) saturate(1.08);
+  min-height: 68px;
+  margin: @space-20 auto 0;
+  padding: @space-10 @space-14 @space-10 @space-18;
+  border: 1px solid var(--app-color-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 34px rgba(27, 36, 52, 0.06);
+  backdrop-filter: blur(18px);
 
   h1 {
     margin: 0 !important;
     color: var(--app-color-text);
-    font-size: 20px !important;
+    font-size: 19px !important;
     line-height: 1.1 !important;
   }
 }
@@ -148,14 +154,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--app-space-6);
+  gap: @space-6;
   min-height: 40px;
   margin-left: auto;
-  padding: var(--app-space-4) var(--app-space-4) var(--app-space-4) var(--app-space-12);
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.045);
-  backdrop-filter: blur(14px);
+  padding: @space-4 @space-6 @space-4 @space-12;
+  border: 1px solid var(--app-color-border);
+  border-radius: 999px;
+  background: #f8fafc;
 
   span {
     display: inline-flex;
@@ -185,10 +190,10 @@
   width: 40px;
   height: 40px;
   flex: 0 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.055);
-  backdrop-filter: blur(18px) saturate(1.08);
+  border: 1px solid var(--app-color-border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(27, 36, 52, 0.1);
   transition: opacity 160ms ease,
   transform 160ms ease,
   background-color 160ms ease;
@@ -200,42 +205,34 @@
 
   :global(.ant-drawer-content-wrapper) {
     pointer-events: auto;
-    padding: var(--app-space-8) 0 var(--app-space-8) var(--app-space-8);
+    padding: @space-12 0 @space-12 @space-12;
     box-shadow: none !important;
   }
 
   :global(.ant-drawer-content) {
     overflow: hidden;
-    height: calc(100vh - 16px);
-    border: 1px solid rgba(255, 255, 255, 0.085);
-    border-radius: 12px;
-    background: rgba(20, 34, 43, 0.72) !important;
-    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(22px) saturate(1.12);
-    -webkit-backdrop-filter: blur(22px) saturate(1.12);
+    height: calc(100vh - 24px);
+    border: 1px solid var(--app-color-border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 20px 60px rgba(27, 36, 52, 0.1);
+    backdrop-filter: blur(20px);
   }
 
   :global(.ant-drawer-body) {
-    padding: var(--app-space-12);
+    padding: @space-14;
   }
 }
 
 .drawerPanel {
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.085);
-  border-radius: 12px;
-  background: rgba(20, 34, 43, 0.72) !important;
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(22px) saturate(1.12);
-  -webkit-backdrop-filter: blur(22px) saturate(1.12);
+  border: 1px solid var(--app-color-border);
+  border-radius: 22px;
+  background: var(--app-color-bg-container) !important;
+  box-shadow: var(--app-shadow-secondary);
 
   &::before {
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), transparent 42%);
-    content: "";
-    pointer-events: none;
+    display: none;
   }
 }
 
@@ -243,8 +240,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--app-space-12);
-  padding: var(--app-space-4) var(--app-space-4) var(--app-space-14);
+  gap: @space-12;
+  padding: @space-4 @space-4 @space-18;
 }
 
 .drawerClose {
@@ -253,15 +250,14 @@
   height: 36px;
   place-items: center;
   flex: 0 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 8px;
+  border: 1px solid var(--app-color-border);
+  border-radius: 12px;
   color: var(--app-color-text-secondary) !important;
-  background: rgba(255, 255, 255, 0.045);
-  backdrop-filter: blur(12px);
+  background: #f7fafc;
 
   &:hover {
     color: var(--app-color-text) !important;
-    background: rgba(255, 255, 255, 0.075) !important;
+    background: #ffffff !important;
   }
 }
 
@@ -280,12 +276,12 @@
   .drawerRoot {
     :global(.ant-drawer-content-wrapper) {
       width: min(var(--app-drawer-width), 100vw) !important;
-      padding: var(--app-space-8);
+      padding: @space-8;
     }
 
     :global(.ant-drawer-content) {
       height: calc(100vh - 16px);
-      border-radius: 12px;
+      border-radius: 18px;
     }
 
     :global(.ant-drawer-mask) {
@@ -296,9 +292,9 @@
   .topbar {
     align-items: flex-start;
     flex-wrap: wrap;
-    width: calc(100% - 20px);
-    margin: var(--app-space-10) auto 0;
-    padding: 58px var(--app-space-12) var(--app-space-12);
+    width: calc(100% - @layout-inline-gutter-mobile);
+    margin: @space-10 auto 0;
+    padding: 58px @space-12 @space-12;
   }
 
   .drawerButton {

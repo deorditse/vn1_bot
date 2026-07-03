@@ -1,12 +1,13 @@
 import {Button, Drawer, Layout, Menu, Typography} from 'antd';
 import type {MenuProps} from 'antd';
-import {ChevronLeft, FileCode2, LogOut, Menu as MenuIcon} from 'lucide-react';
+import {ChevronLeft, LogOut, Menu as MenuIcon} from 'lucide-react';
 import {useMemo, useState} from 'react';
 import {Outlet, useLocation, useNavigate} from 'react-router-dom';
 
-import {useAuth} from '@features/auth/model/AuthProvider';
+import {useAuth} from '@features/auth';
 import {classNames} from '@shared/lib/classNames';
 import {VStack} from '@shared/ui';
+import tabletkaLogo from '@shared/assets/tabletka-logo.svg';
 import {defaultAppRoute, navRoutes} from '../router/config/routeConfig';
 import styles from './AppLayout.module.less';
 
@@ -39,6 +40,7 @@ export function AppLayout() {
 
     const selectTool: MenuProps['onClick'] = ({key}) => {
         navigate(key);
+        setDrawerOpen(false);
     };
 
     const logout = async () => {
@@ -108,13 +110,8 @@ export function AppLayout() {
 function Brand() {
     return (
         <div className={styles.brand}>
-      <span>
-        <FileCode2 size={19}/>
-      </span>
-            <div>
-                <strong>TABLETKA</strong>
-                <small>Bot-api</small>
-            </div>
+            <img alt="Таблетка.ру" src={tabletkaLogo}/>
+            <small>| Bot-api</small>
         </div>
     );
 }

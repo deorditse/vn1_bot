@@ -1,3 +1,5 @@
+@import "../../../../../shared/ui/styles/spacing.less";
+
 .dropzone {
   width: 100%;
 
@@ -8,28 +10,28 @@
   }
 
   :global(.ant-upload-drag) {
-    min-height: 118px;
-    border-color: rgba(255, 255, 255, 0.08) !important;
-    border-radius: 12px !important;
-    background: rgba(255, 255, 255, 0.035) !important;
-    backdrop-filter: blur(12px);
+    min-height: 132px;
+    border: 1px dashed #ccd4df !important;
+    border-radius: 18px !important;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
     transition: border-color 0.2s ease, background 0.2s ease;
 
     &:hover {
-      border-color: var(--app-color-primary) !important;
-      background: color-mix(in srgb, var(--app-color-primary) 7%, rgba(255, 255, 255, 0.045)) !important;
+      border-color: #aab4c2 !important;
+      background: #ffffff !important;
     }
   }
 }
 
 .dropContent {
-  min-height: 86px;
-  padding: var(--app-space-14) var(--app-space-18);
+  min-height: 100px;
+  padding: @space-18 @space-20;
   color: var(--app-color-text-tertiary);
   text-align: left;
 
   svg {
-    color: var(--app-color-primary);
+    color: var(--app-color-text-secondary);
   }
 
   strong {
@@ -43,13 +45,14 @@
 }
 
 .uploadIcon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   flex: 0 0 auto;
-  border: 1px solid color-mix(in srgb, var(--app-color-primary) 28%, transparent);
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--app-color-primary) 10%, transparent);
-  color: var(--app-color-primary);
+  border: 1px solid var(--app-color-border);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--app-color-text-secondary);
+  box-shadow: 0 8px 20px rgba(27, 36, 52, 0.06);
 }
 
 .uploadText {

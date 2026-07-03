@@ -1,21 +1,24 @@
+@import "../styles/spacing.less";
+
 .Card {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  background: color-mix(in srgb, var(--app-color-bg-container) 74%, transparent);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
-  backdrop-filter: blur(18px) saturate(1.06);
+  border: 1px solid var(--app-color-border);
+  background: var(--app-color-bg-container);
+  box-shadow: 0 12px 34px rgba(27, 36, 52, 0.055);
 }
 
 .normal {
-  background: color-mix(in srgb, var(--app-color-bg-container) 74%, transparent);
+  background: var(--app-color-bg-container);
 }
 
 .outlined {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--app-color-bg-container);
+  box-shadow: none;
 }
 
 .light {
-  background: color-mix(in srgb, var(--app-color-primary) 9%, rgba(255, 255, 255, 0.025));
+  border-color: var(--app-color-border-secondary);
+  background: #f8fafc;
 }
 
 .max,
@@ -32,41 +35,61 @@
 }
 
 .padding8 {
-  padding: var(--app-space-8);
+  padding: @space-8;
 }
 
 .padding12 {
-  padding: var(--app-space-12);
+  padding: @space-12;
 }
 
 .padding16 {
-  padding: var(--app-space-16);
+  padding: @space-16;
 }
 
 .padding18 {
-  padding: var(--app-space-18);
+  padding: @space-18;
 }
 
 .padding22 {
-  padding: var(--app-space-22);
+  padding: @space-22;
 }
 
 .padding24 {
-  padding: var(--app-space-24);
+  padding: @space-24;
 }
 
 .padding28 {
-  padding: var(--app-space-28);
+  padding: @space-28;
+}
+
+@media (max-width: 760px) {
+  .padding12 {
+    padding: @space-mobile-12;
+  }
+
+  .padding16 {
+    padding: @space-mobile-16;
+  }
+
+  .padding18,
+  .padding22,
+  .padding24 {
+    padding: @space-mobile-16;
+  }
+
+  .padding28 {
+    padding: @space-mobile-18;
+  }
 }
 
 .round {
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 .normalBorder {
-  border-radius: 14px;
+  border-radius: 16px;
 }
 
 .partial {
-  border-radius: 12px;
+  border-radius: 14px;
 }

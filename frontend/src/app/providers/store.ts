@@ -1,10 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import type { Middleware, ReducersMapObject, UnknownAction } from '@reduxjs/toolkit';
+import type { ReducersMapObject, UnknownAction } from '@reduxjs/toolkit';
 import type { ThunkDispatch } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { instructionApi } from '@pages/instruction/api/instructionApi';
-import { baseApiSlice } from '@shared/api/baseApi/baseApi';
+import { baseApiSlice } from '@shared/api';
 import { createReducerManager } from './createReducerManager';
 import type { ReduxStoreWithManager, StateSchema } from './StateSchema';
 
@@ -24,9 +23,7 @@ export function createReduxStore(
   const store = configureStore({
     reducer: reducerManager.reduce,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware()
-        .concat(baseApiSlice.middleware)
-        .concat(instructionApi.middleware as Middleware<unknown, StateSchema>),
+      getDefaultMiddleware().concat(baseApiSlice.middleware),
     devTools: import.meta.env.DEV,
     preloadedState: initialState,
   }) as ReduxStoreWithManager;

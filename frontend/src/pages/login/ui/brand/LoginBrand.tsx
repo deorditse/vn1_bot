@@ -1,16 +1,13 @@
-import {FileCode2} from 'lucide-react';
-
 import {HStack} from '@shared/ui';
+import tabletkaLogo from '@shared/assets/tabletka-logo.svg';
 import styles from './LoginBrand.module.less';
 
 export function LoginBrand() {
   return (
     <HStack className={styles.brand} gap="12">
-      <span>
-        <FileCode2 size={22} />
-      </span>
+      <img alt="Таблетка.ру" src={tabletkaLogo} />
       <div>
-        <strong>TABLETKA</strong>
+        <strong>Bot-api</strong>
       </div>
     </HStack>
   );

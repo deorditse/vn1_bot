@@ -1,14 +1,10 @@
 import type { EnhancedStore, Reducer, ReducersMapObject, UnknownAction } from '@reduxjs/toolkit';
 import type { ReactNode } from 'react';
 
-import { instructionApi } from '@pages/instruction/api/instructionApi';
-import { baseApiSlice } from '@shared/api/baseApi/baseApi';
+import { baseApiSlice } from '@shared/api';
 
 export interface StateSchema {
   [baseApiSlice.reducerPath]: ReturnType<typeof baseApiSlice.reducer>;
-
-  // Async reducers
-  [instructionApi.reducerPath]?: ReturnType<typeof instructionApi.reducer>;
 }
 
 export type StateSchemaKey = keyof StateSchema;

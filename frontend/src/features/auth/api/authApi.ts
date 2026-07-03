@@ -1,4 +1,4 @@
-import { baseApiSlice } from '@shared/api/baseApi/baseApi';
+import { baseApiSlice } from '@shared/api';
 
 import type { AuthResponse, LoginRequest, UserProfile } from './types';
 

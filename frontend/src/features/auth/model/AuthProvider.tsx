@@ -3,7 +3,7 @@ import type { PropsWithChildren } from 'react';
 
 import { useLazyGetMeQuery, useLoginMutation, useLogoutMutation } from '../api/authApi';
 import type { UserProfile } from '../api/types';
-import { AUTH_REQUIRED_EVENT } from '@shared/api/middleware/auth/baseQueryWithReauth';
+import { AUTH_REQUIRED_EVENT } from '@shared/api';
 import { isDevAuthDisabled } from '@shared/config/env';
 
 type AuthContextValue = {

@@ -1,17 +1,18 @@
-import { theme } from 'antd';
 import type { ThemeConfig } from 'antd';
 
 export const appDesignTokens = {
-  colorBgBase: '#081116',
-  colorBgContainer: '#101b22',
-  colorBgElevated: '#14222b',
-  colorBorder: '#263843',
-  colorBorderSecondary: '#2f4652',
-  colorPrimary: '#22c7b8',
-  colorText: '#edf7f6',
-  colorTextSecondary: '#9fb4bb',
-  colorTextTertiary: '#8da4ad',
-  shadowSecondary: '0 24px 80px rgba(0, 0, 0, 0.34)',
+  colorBgBase: '#f3f5f8',
+  colorBgContainer: '#ffffff',
+  colorBgElevated: '#fbfcfd',
+  colorBorder: '#e2e7ee',
+  colorBorderSecondary: '#edf0f4',
+  colorPrimary: '#e31f2b',
+  colorPrimaryHover: '#c91722',
+  colorAction: '#e31f2b',
+  colorText: '#191b22',
+  colorTextSecondary: '#596273',
+  colorTextTertiary: '#8a93a3',
+  shadowSecondary: '0 18px 48px rgba(27, 36, 52, 0.08)',
 } as const;
 
 export function applyAppDesignTokens() {
@@ -24,7 +25,6 @@ export function applyAppDesignTokens() {
 }
 
 export const appTheme: ThemeConfig = {
-  algorithm: theme.darkAlgorithm,
   token: {
     colorBgBase: appDesignTokens.colorBgBase,
     colorBgContainer: appDesignTokens.colorBgContainer,
@@ -32,10 +32,46 @@ export const appTheme: ThemeConfig = {
     colorBorder: appDesignTokens.colorBorder,
     colorBorderSecondary: appDesignTokens.colorBorderSecondary,
     colorPrimary: appDesignTokens.colorPrimary,
+    colorPrimaryHover: appDesignTokens.colorPrimaryHover,
     colorText: appDesignTokens.colorText,
     colorTextSecondary: appDesignTokens.colorTextSecondary,
-    borderRadius: 8,
+    colorError: appDesignTokens.colorAction,
+    borderRadius: 10,
     fontFamily:
-      'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      '"Open Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  },
+  components: {
+    Button: {
+      controlHeight: 42,
+      borderRadius: 10,
+      fontWeight: 700,
+      primaryShadow: 'none',
+      defaultShadow: 'none',
+    },
+    Input: {
+      controlHeight: 42,
+      borderRadius: 10,
+      activeBorderColor: appDesignTokens.colorBorderSecondary,
+      hoverBorderColor: appDesignTokens.colorBorderSecondary,
+      activeShadow: '0 0 0 2px rgba(137, 143, 171, 0.14)',
+    },
+    Select: {
+      activeBorderColor: appDesignTokens.colorBorderSecondary,
+      activeOutlineColor: 'rgba(137, 143, 171, 0.14)',
+      hoverBorderColor: appDesignTokens.colorBorderSecondary,
+      optionSelectedBg: '#f1f3f6',
+      optionSelectedColor: appDesignTokens.colorText,
+    },
+    Menu: {
+      itemBorderRadius: 10,
+      itemHoverBg: '#f7fafc',
+      itemHoverColor: appDesignTokens.colorText,
+      itemSelectedBg: '#ffffff',
+      itemSelectedColor: appDesignTokens.colorText,
+    },
+    Progress: {
+      defaultColor: appDesignTokens.colorPrimary,
+      remainingColor: '#edf0f4',
+    },
   },
 };

@@ -1,9 +1,7 @@
 import {useState} from 'react';
 import {Navigate, useLocation, useNavigate} from 'react-router-dom';
 
-import {useAuth} from '@features/auth/model/AuthProvider';
-import {classNames} from '@shared/lib/classNames';
-import {AppPaddings} from '@shared/lib/styles';
+import {useAuth} from '@features/auth';
 import {getRouteInstruction} from '@shared/const/router';
 import {Page} from '@widgets/Page';
 import {LoginForm} from './form/LoginForm';
@@ -44,7 +42,7 @@ export function LoginPage() {
   };
 
   return (
-    <Page className={classNames(styles.page, {}, [AppPaddings.p24])}>
+    <Page className={styles.page} padding="24">
       <LoginPanel error={error}>
         <LoginForm isSubmitting={isSubmitting} onFinish={onFinish} />
       </LoginPanel>

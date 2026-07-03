@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 
-import { useAuth } from '@features/auth/model/AuthProvider';
+import { useAuth } from '@features/auth';
 import { PageLoader } from '@widgets/page-loader';
 import { isDevAuthDisabled } from '@shared/config/env';
 import { getRouteLogin } from '@shared/const/router';
