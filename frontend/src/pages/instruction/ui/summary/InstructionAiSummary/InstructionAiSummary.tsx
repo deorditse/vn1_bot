@@ -2,7 +2,7 @@ import {Button, Typography} from 'antd';
 import {Copy, Sparkles} from 'lucide-react';
 
 import {Card, HStack, MarkdownPreview, VStack} from '@shared/ui';
-import type {CopyTextHandler} from '../types';
+import type {CopyTextHandler} from '../../../model/types';
 import styles from './InstructionAiSummary.module.less';
 
 const {Title} = Typography;
@@ -39,3 +39,5 @@ export function InstructionAiSummary({copied, description, onCopy}: InstructionA
     </Card>
   );
 }
+
+export default InstructionAiSummary;

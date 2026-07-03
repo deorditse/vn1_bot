@@ -2,8 +2,8 @@ import {Alert, Button, Progress, Typography} from 'antd';
 import {FileText} from 'lucide-react';
 
 import {Card, HStack, VStack} from '@shared/ui';
-import {InstructionLoadedState} from './InstructionLoadedState';
-import {InstructionUploadPanel} from './InstructionUploadPanel';
+import {InstructionLoadedState} from '../InstructionLoadedState';
+import {InstructionUploadPanel} from '../InstructionUploadPanel';
 import styles from './InstructionWorkspace.module.less';
 
 const {Text} = Typography;

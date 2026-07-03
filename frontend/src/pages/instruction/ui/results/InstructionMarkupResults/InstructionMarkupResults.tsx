@@ -1,8 +1,8 @@
 import {Typography} from 'antd';
 
 import {Card, VStack} from '@shared/ui';
-import type {CopyTextHandler, InstructionBlock} from '../types';
-import {InstructionBlockView} from './InstructionBlockView';
+import type {CopyTextHandler, InstructionBlock} from '../../../model/types';
+import {InstructionBlockView} from '../InstructionBlockView';
 import styles from './InstructionMarkupResults.module.less';
 
 const {Title} = Typography;
@@ -27,3 +27,5 @@ export function InstructionMarkupResults({blocks, copiedBlock, onCopy}: Instruct
     </Card>
   );
 }
+
+export default InstructionMarkupResults;

@@ -2,7 +2,7 @@ import {Button, Input, Typography} from 'antd';
 import {Copy} from 'lucide-react';
 
 import {Card, HStack, VStack} from '@shared/ui';
-import type {CopyTextHandler, InstructionBlock} from '../types';
+import type {CopyTextHandler, InstructionBlock} from '../../../model/types';
 import styles from './InstructionBlockView.module.less';
 
 const {Text} = Typography;

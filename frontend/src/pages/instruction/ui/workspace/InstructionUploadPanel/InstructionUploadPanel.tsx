@@ -5,7 +5,7 @@ import {useMemo} from 'react';
 
 import {HStack, VStack} from '@shared/ui';
 import styles from './InstructionUploadPanel.module.less';
-import {SelectedFileBar} from './SelectedFileBar';
+import {SelectedFileBar} from '../SelectedFileBar';
 
 type InstructionUploadPanelProps = {
   file: File | null;
