@@ -4,6 +4,7 @@ import {useInstructionGenerator} from '../../model/useInstructionGenerator';
 import {InstructionMarkupResults, InstructionMarkupResultsSkeleton, InstructionResultsSkeleton} from '../results';
 import {InstructionAiSummary, InstructionAiSummarySkeleton} from '../summary';
 import {InstructionWorkspace} from '../workspace';
+import styles from './InstructionPage.module.less';
 
 const InstructionPage = () => {
     const {
@@ -34,7 +35,7 @@ const InstructionPage = () => {
     const isResultsVisible = hasResults || isInstructionSkeletonVisible || isAiDescriptionSkeletonVisible;
 
     return (
-        <Page>
+        <Page className={styles.resultsArea}>
             <InstructionWorkspace
                 error={error}
                 file={file}
