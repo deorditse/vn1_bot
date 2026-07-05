@@ -5,3 +5,8 @@ export type InstructionBlock = {
 };
 
 export type CopyTextHandler = (key: string, content: string) => Promise<void>;
+
+export type GenerationOptions = {
+  instruction: boolean;
+  aiDescription: boolean;
+};

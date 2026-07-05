@@ -3,6 +3,7 @@ networks:
 
 volumes:
   keycloak_data:
+  generated_files:
 
 services:
   nginx:
@@ -96,6 +97,8 @@ services:
       - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
       - GIGACHAT_API_KEY=${GIGACHAT_API_KEY:-}
       - AUTH_CLIENT_SECRET=${AUTH_CLIENT_SECRET:-}
+      - GENERATED_FILE_DB_PATH=/app/data/generated_files.sqlite3
+      - GENERATED_FILE_TTL_SECONDS=${GENERATED_FILE_TTL_SECONDS:-10800}
 
       # Temporarily use external SOCKS5 proxy instead of xray.
       # - PROXY=${PROXY}
@@ -115,6 +118,8 @@ services:
     depends_on:
       - keycloak
     #   - xray
+    volumes:
+      - generated_files:/app/data
     networks:
       - vn1
 

@@ -1,1 +1,1 @@
-export {InstructionResultsSkeleton} from './InstructionResultsSkeleton';
+export {InstructionMarkupResultsSkeleton, InstructionResultsSkeleton} from './InstructionResultsSkeleton';

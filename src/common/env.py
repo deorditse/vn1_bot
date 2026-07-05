@@ -57,6 +57,14 @@ def api_log_path() -> str:
     return str(_env_or_setting('API_LOG_PATH', 'api', 'log_path', './logs'))
 
 
+def generated_file_db_path() -> str:
+    return str(_env_or_setting('GENERATED_FILE_DB_PATH', 'generated_file', 'db_path', './data/generated_files.sqlite3'))
+
+
+def generated_file_ttl_seconds() -> int:
+    return int(_env_or_setting('GENERATED_FILE_TTL_SECONDS', 'generated_file', 'ttl_seconds', 60 * 60 * 3))
+
+
 # LLM keys
 def api_key_openai() -> str:
     return get_env('OPENAI_API_KEY')

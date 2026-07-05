@@ -1,7 +1,8 @@
-import {Alert, Button, Progress, Typography} from 'antd';
-import {FileText} from 'lucide-react';
+import {Alert, Button, Checkbox, Progress, Typography} from 'antd';
+import {FileText, Sparkles} from 'lucide-react';
 
 import {Card, HStack, VStack} from '@shared/ui';
+import type {GenerationOptions} from '../../../model/types';
 import {InstructionLoadedState} from '../InstructionLoadedState';
 import {InstructionUploadPanel} from '../InstructionUploadPanel';
 import styles from './InstructionWorkspace.module.less';
@@ -11,9 +12,11 @@ const {Text} = Typography;
 type InstructionWorkspaceProps = {
   error: string | null;
   file: File | null;
+  generationOptions: GenerationOptions;
   instructionReady: boolean;
   isLoading: boolean;
   onConvert: () => void;
+  onOptionsChange: (options: GenerationOptions) => void;
   onRemoveFile: () => void;
   onReset: () => void;
   onSelectFile: (file: File) => void;
@@ -22,9 +25,11 @@ type InstructionWorkspaceProps = {
 export function InstructionWorkspace({
   error,
   file,
+  generationOptions,
   instructionReady,
   isLoading,
   onConvert,
+  onOptionsChange,
   onRemoveFile,
   onReset,
   onSelectFile,
@@ -51,20 +56,37 @@ export function InstructionWorkspace({
         <InstructionLoadedState fileName={file?.name} onReset={onReset} />
       )}
 
+      <HStack className={styles.options} gap="16" max wrap="wrap">
+        <Checkbox
+          checked={generationOptions.instruction}
+          disabled={isLoading}
+          onChange={(event) => onOptionsChange({...generationOptions, instruction: event.target.checked})}
+        >
+          Генерация инструкции
+        </Checkbox>
+        <Checkbox
+          checked={generationOptions.aiDescription}
+          disabled={isLoading}
+          onChange={(event) => onOptionsChange({...generationOptions, aiDescription: event.target.checked})}
+        >
+          Генерация ИИ-описания
+        </Checkbox>
+      </HStack>
+
       {isLoading && <Progress percent={70} showInfo={false} status="active" />}
-      {instructionReady && <Alert message="Инструкция сформирована" showIcon type="success" />}
+      {instructionReady && <Alert message="Генерация выполнена" showIcon type="success" />}
       {error && <Alert message={error} showIcon type="error" />}
 
       <HStack className={styles.actions} gap="12" justify="end" max wrap="wrap">
         <Button
-          disabled={!file || instructionReady}
-          icon={<FileText size={18} />}
+          disabled={!file || isLoading || (!generationOptions.instruction && !generationOptions.aiDescription)}
+          icon={generationOptions.aiDescription && !generationOptions.instruction ? <Sparkles size={18} /> : <FileText size={18} />}
           loading={isLoading}
           onClick={onConvert}
           size="large"
           type="primary"
         >
-          Сформировать инструкцию
+          Сгенерировать
         </Button>
       </HStack>
       </VStack>

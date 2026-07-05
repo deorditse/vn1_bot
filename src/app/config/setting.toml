@@ -6,6 +6,10 @@ log_path = "./logs"
 log_level = "INFO"
 is_readonly = false
 
+[generated_file]
+db_path = "./data/generated_files.sqlite3"
+ttl_seconds = 10800
+
 [auth]
 enabled = true
 issuer_url = "http://keycloak:8080/keycloak/realms/vn1"

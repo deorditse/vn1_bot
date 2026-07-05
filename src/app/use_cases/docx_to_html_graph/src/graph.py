@@ -1,6 +1,4 @@
-import inspect
-from http.client import responses
-from typing import Any, TypedDict, List
+from typing import TypedDict, List
 from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import StateGraph, START, END
 from langgraph.types import RetryPolicy
@@ -25,7 +23,6 @@ class GraphState(TypedDict, total=False):
     # content
     html_menu: str
     html_content: str
-    ai_description: str
 
 
 # =======================================================
@@ -133,41 +130,11 @@ class GenerateMenuHtmlNode(BaseNode):
         }
 
 
-def summarize(state: GraphState) -> GraphState:
-    _log('summarize')
-    return state
-
-
-class GenerateShortDescriptionNode(BaseNode):
-    """Генерация ShortDescription из входного markdown"""
-
-    def __init__(self, llm):
-        super().__init__(
-            step="ai_short_description", title="Генерация Ai описания препарата"
-        )
-        self._llm = llm
-
-    ai_information_prompt = load_prompt('generation/ai_information.md')
-
-    async def __call__(self, state: GraphState) -> GraphState:
-        _log(self.step)
-
-        response = await self._llm.ainvoke(
-            [SystemMessage(content=self.ai_information_prompt.strip()),
-             HumanMessage(
-                 content=state.get('mdFile', '')
-             ),
-             ]
-        )
-
-        return {'ai_description': response.content.strip()}
-
-
 # =======================================================
 # Graph builder
 # =======================================================
 
-def build_graph(llm_content, llm_menu, llm_gen_description) -> StateGraph:
+def build_md_to_html_graph(llm_content, llm_menu) -> StateGraph:
     retry_policy = RetryPolicy(
         max_attempts=5,
         initial_interval=3,
@@ -182,16 +149,9 @@ def build_graph(llm_content, llm_menu, llm_gen_description) -> StateGraph:
 
     menu = GenerateMenuHtmlNode(llm_menu)
     graph.add_node("generate_menu_html", menu, retry_policy=retry_policy)
-    graph.add_node("summarize", summarize)
-
-    ai_description = GenerateShortDescriptionNode(llm_gen_description)
-    graph.add_node("ai_short_description", ai_description, retry_policy=retry_policy)
 
     # ___ Edges ___
     graph.add_edge(START, "generate_content_html")
-
-    graph.add_edge(START, "ai_short_description")
-    graph.add_edge("ai_short_description", "summarize")
 
     graph.add_edge("generate_content_html", "validate_content_html")
 
@@ -211,17 +171,15 @@ def build_graph(llm_content, llm_menu, llm_gen_description) -> StateGraph:
         },
     )
 
-    graph.add_edge("generate_menu_html", "summarize")
-    graph.add_edge("summarize", END)
+    graph.add_edge("generate_menu_html", END)
 
     return graph
 
 
 _llm_content = LLMService().openai()
 _llm_menu = LLMService().openai()
-_llm_gen_description = LLMService().openai()
 
-_md_to_html_graph = build_graph(llm_content=_llm_content, llm_menu=_llm_menu, llm_gen_description=_llm_gen_description)
+_md_to_html_graph = build_md_to_html_graph(llm_content=_llm_content, llm_menu=_llm_menu)
 compile_md_to_html_graph = _md_to_html_graph.compile()
 
 

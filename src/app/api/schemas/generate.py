@@ -1,8 +1,13 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
-class ShortDescriptionRequest(BaseModel):
-    markdown: str = Field(..., min_length=1, description="Markdown-разметка официальной инструкции препарата")
+class GenerateFileRequest(BaseModel):
+    file_id: str
+
+
+class GenerateFileResponse(BaseModel):
+    file_id: str
+    file_name: str
 
 
 class ShortDescriptionResponse(BaseModel):
@@ -12,4 +17,3 @@ class ShortDescriptionResponse(BaseModel):
 class GenerateInstructionResponse(BaseModel):
     html_menu: str
     html_content: str
-    ai_description: str

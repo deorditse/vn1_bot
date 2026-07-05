@@ -1,1 +1,1 @@
-export {InstructionAiSummary} from './InstructionAiSummary';
+export {InstructionAiSummary, InstructionAiSummarySkeleton} from './InstructionAiSummary';

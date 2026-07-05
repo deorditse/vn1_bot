@@ -10,3 +10,15 @@ export function InstructionResultsSkeleton() {
     </Card>
   );
 }
+
+export function InstructionMarkupResultsSkeleton() {
+  return (
+    <Card padding="22">
+      <VStack gap="16" max>
+        <Skeleton border="12px" height={28} width="210px" />
+        <Skeleton border="14px" height={120} width="100%" />
+        <Skeleton border="14px" height={220} width="100%" />
+      </VStack>
+    </Card>
+  );
+}
