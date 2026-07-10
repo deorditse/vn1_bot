@@ -1,0 +1,14 @@
+[default]
+API_MODE = "PROD"
+API_PORT = 8010
+API_ROOT = "/api"
+API_LOG_PATH = "./logs"
+API_LOG_LEVEL = "INFO"
+API_IS_READONLY = false
+
+GENERATED_FILE_DB_PATH = "./data/generated_files.sqlite3"
+GENERATED_FILE_TTL_SECONDS = 10800
+
+AUTH_CONTEXT_URL = "http://auth-service:8030/v1/auth/context"
+
+RATE_LIMIT_DEFAULT = "5/minute"

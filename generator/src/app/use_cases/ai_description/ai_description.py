@@ -5,9 +5,6 @@ from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
 
 
-_llm = LLMService().openai()
-
-
 class ShortDescriptionUseCase:
     ai_information_prompt = load_prompt('generation/ai_information.md')
 
@@ -20,7 +17,7 @@ class ShortDescriptionUseCase:
         return await self.generate_from_markdown(md)
 
     async def generate_from_markdown(self, md: str) -> str:
-        response = await _llm.ainvoke(
+        response = await LLMService().openai().ainvoke(
             [
                 SystemMessage(content=self.ai_information_prompt.strip()),
                 HumanMessage(content=md),

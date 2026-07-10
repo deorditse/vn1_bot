@@ -13,7 +13,7 @@ class ToHtmlConverterUseCase:
 
     async def convert_markdown(self, md: str) -> dict:
 
-        result = await compile_md_to_html_graph.ainvoke(
+        result = await compile_md_to_html_graph().ainvoke(
             {"mdFile": md}
         )
 

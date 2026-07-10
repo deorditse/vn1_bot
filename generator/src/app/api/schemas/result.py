@@ -1,45 +1,6 @@
-from typing import List
-
 from pydantic import BaseModel
-from starlette.requests import Request
-
-from common import MyBaseError, traceback_list, ApiMode
-from app.config import config
+from common import MyBaseError, traceback_list
 from common.logger.my_logger import MyLogger
-
-"""
-===================================================================================================================
-Неизвестная ошибка
-===================================================================================================================
-"""
-
-
-class ErrorModel(BaseModel):
-    exception: str  # Имя класса
-    cause: str  # Общее описание причины ошибки
-    details: str  # Конкретные данные послужившие возникновению ошибки
-    request_url: str  # Какой URL пришел в запросе
-    request_method: str  # POST/GET etc
-    request_headers: List[str]  # Список заголовков запроса
-    traceback: List[str]  # Путь в коде до ошибки, в режиме PROD=[] для безопасности, но в логе есть
-
-    @staticmethod
-    def make(err: Exception, req: Request):
-        match err:
-            case MyBaseError() as se:
-                cause = se.cause
-            case _:
-                cause = 'Причина ошибки неизвестна'
-
-        return ErrorModel(
-            exception=err.__class__.__name__,
-            cause=cause,
-            details=str(err),
-            request_url=str(req.url),
-            request_method=str(req.method),
-            request_headers=[f"{k}: {v}" for k, v in req.headers.items()],
-            traceback=traceback_list(err) if config.api_mode == ApiMode.DEV else [],
-        )
 
 
 """

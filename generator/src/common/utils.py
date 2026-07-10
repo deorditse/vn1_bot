@@ -1,10 +1,27 @@
 import os
+import re
 import traceback
 from datetime import datetime
+
+SECRET_PATTERNS = [
+    re.compile(r"\bsk-[A-Za-z0-9_\-\*]{6,}\b"),
+    re.compile(r"(?i)(authorization\s*:\s*bearer\s+)[^\s,'\"}]+"),
+    re.compile(r"(?i)(api[_-]?key['\"]?\s*[:=]\s*['\"]?)[^\s,'\"}]+"),
+]
 
 
 def traceback_list(exc: Exception):
     return list(traceback.format_list(traceback.extract_tb(exc.__traceback__)))
+
+
+def sanitize_sensitive_text(value):
+    if value is None:
+        return None
+
+    text = str(value)
+    for pattern in SECRET_PATTERNS:
+        text = pattern.sub(lambda match: f"{match.group(1)}<redacted>" if match.lastindex else "<redacted>", text)
+    return text
 
 
 def datetime_msk(utc: datetime | None = None) -> datetime:

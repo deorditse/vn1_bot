@@ -1,0 +1,34 @@
+networks:
+  vn1:
+    name: vn1
+
+volumes:
+  generated_files:
+
+services:
+  backend-vn1:
+    build:
+      context: ${REPO_ROOT:-.}/generator
+      dockerfile: Dockerfile
+    expose:
+      - "8010"
+    env_file:
+      - path: ${REPO_ROOT:-.}/generator/.env
+        required: false
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGCHAIN_OPENAI_TCP_KEEPALIVE=0
+      - GENERATED_FILE_DB_PATH=/app/data/generated_files.sqlite3
+      - GENERATED_FILE_TTL_SECONDS=${GENERATED_FILE_TTL_SECONDS:-10800}
+    restart: unless-stopped
+    depends_on:
+      - auth-service
+    volumes:
+      - generated_files:/app/data
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"

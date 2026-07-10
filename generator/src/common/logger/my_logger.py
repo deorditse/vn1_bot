@@ -6,6 +6,7 @@ from common import current_time_msk_str, datetime_msk
 from app.config import config
 
 from common import traceback_list, CoreError, DataError, AccessError, LogicError
+from common.utils import sanitize_sensitive_text
 from slowapi.errors import RateLimitExceeded
 
 
@@ -36,7 +37,7 @@ class MyLogger:
     @classmethod
     def exception(cls, err: Exception):
         tb = ''.join(traceback_list(err))
-        details = f"{err.__class__.__name__}: {err}\n{tb}"
+        details = sanitize_sensitive_text(f"{err.__class__.__name__}: {err}\n{tb}")
         match err:
             case RateLimitExceeded():
                 pylog.warning(str(err))

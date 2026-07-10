@@ -1,7 +1,7 @@
 import traceback
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from starlette import status
-from app.api.dependencies.auth import require_auth
+from app.api.dependencies.gateway_auth import require_gateway_user
 from app.api.schemas.generate import GenerateFileRequest, GenerateFileResponse, GenerateInstructionResponse, ShortDescriptionResponse
 from app.use_cases.ai_description.ai_description import ShortDescriptionUseCase
 from app.use_cases.docx_to_html_graph.docx_to_html import ToHtmlConverterUseCase
@@ -15,6 +15,7 @@ router = APIRouter()
 @router.post(
     "/file",
     response_model=GenerateFileResponse,
+    summary="Upload DOCX for generator",
     description=(
             "Загружает DOCX-файл, конвертирует его в markdown и возвращает file_id "
             "для последующей генерации инструкции или AI-описания."
@@ -23,7 +24,7 @@ router = APIRouter()
 )
 async def upload_instruction_file(
         file: UploadFile = File(...),
-        current_user: User = Depends(require_auth),
+        current_user: User = Depends(require_gateway_user),
 ):
     """
     Эндпоинт принимает DOCX-файл один раз и сохраняет markdown в короткоживущем cache.
@@ -52,6 +53,7 @@ async def upload_instruction_file(
 @router.post(
     "/instruction",
     response_model=GenerateInstructionResponse,
+    summary="Generate instruction HTML",
     description=(
             "Генерирует JSON-инструкцию по file_id ранее загруженного DOCX-файла. "
             "В ответе возвращаются HTML-меню и HTML-контент."
@@ -60,7 +62,7 @@ async def upload_instruction_file(
 )
 async def docx_to_markdown(
         request: GenerateFileRequest,
-        current_user: User = Depends(require_auth),
+        current_user: User = Depends(require_gateway_user),
 ):
     """
     Эндпоинт принимает file_id и возвращает JSON с результатом генерации инструкции.
@@ -88,12 +90,13 @@ async def docx_to_markdown(
 @router.post(
     "/ai_short_description",
     response_model=ShortDescriptionResponse,
+    summary="Generate short AI description",
     description="Генерирует короткое AI-описание по file_id ранее загруженного DOCX-файла.",
     status_code=status.HTTP_200_OK,
 )
 async def ai_short_description(
         request: GenerateFileRequest,
-        current_user: User = Depends(require_auth),
+        current_user: User = Depends(require_gateway_user),
 ):
     """
     Эндпоинт принимает file_id и запускает только генерацию AI-описания.

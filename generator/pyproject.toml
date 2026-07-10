@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "dotenv>=0.9.9",
+    "dynaconf>=3.3.2",
     "fastapi>=0.121.2",
     "httpx[socks]>=0.28.1",
     "langchain>=1.2.2",
@@ -13,16 +13,30 @@ dependencies = [
     "langgraph>=1.0.5",
     "langgraph-cli[inmem]>=0.4.11",
     "langsmith>=0.5.1",
-    "make>=0.1.6.post2",
-    "pandoc>=2.4",
-    "pydantic-settings>=2.12.0",
-    "pyjwt[crypto]>=2.10.1",
+    "python-dotenv>=1.2.1",
     "python-multipart>=0.0.20",
-    "rich>=14.2.0",
     "slowapi>=0.1.9",
     "starlette>=0.49.3",
     "uvicorn>=0.38.0",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+src = ["src"]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["TID251"]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"api_gateway".msg = "Cross-service imports are forbidden. Call api-gateway over HTTP/SSE."
+"skills".msg = "Cross-service imports are forbidden. Call skills through api-gateway."
+"generator".msg = "Do not import services as Python packages inside this monorepo."
+"vn1_bot".msg = "Do not import through the monorepo root. Keep imports inside the current service."
 
 [project.optional-dependencies]
 dev = [

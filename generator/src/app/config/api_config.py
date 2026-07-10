@@ -1,5 +1,4 @@
-from pydantic import field_validator
-from pydantic_settings import BaseSettings
+from pydantic import BaseModel, field_validator
 from app import __version__
 from common import ApiMode
 from common import env
@@ -8,7 +7,7 @@ from common import env
 # from common import env
 
 
-class ApiConfig(BaseSettings):
+class ApiConfig(BaseModel):
     """
     ===================================================================================================================
     Server
@@ -32,20 +31,6 @@ class ApiConfig(BaseSettings):
             if normalized.isdigit():
                 return ApiMode(int(normalized))
         return ApiMode(value)
-
-    """
-    ===================================================================================================================
-    Auth
-    ===================================================================================================================
-    """
-    auth_enabled: bool = env.auth_enabled()
-    auth_issuer_url: str = env.auth_issuer_url()
-    auth_jwks_url: str = env.auth_jwks_url()
-    auth_token_url: str = env.auth_token_url()
-    auth_client_id: str = env.auth_client_id()
-    auth_client_secret: str | None = env.auth_client_secret()
-    auth_audience: str | None = env.auth_audience()
-    auth_required_roles: list[str] = env.auth_required_roles()
 
     """
     ===================================================================================================================

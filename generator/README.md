@@ -16,39 +16,76 @@
 
 ## Локальный Запуск
 
+Код сервиса находится в `src/`.
+
 ```bash
 cd generator
-cp .env.example .env
-make sync
-make run-local
+make run
 ```
+
+`.env` необязателен. Если нужны локальные секреты, создайте его вручную по примеру `.env.example`.
 
 По умолчанию API запускается на порту `8010`.
 
+В `API_MODE=DEV` generator не требует Bearer-токен от Gateway и использует локального dev-пользователя. Это нужно только для локальной разработки и прямого тестирования сервиса.
+
+## Config
+
+Runtime-настройки лежат в:
+
+```text
+src/common/config/settings/
+```
+
+`settings.toml` содержит дефолты, `settings.dev.toml` и `settings.prod.toml` переопределяют их по `API_MODE`.
+Локальный `.env` необязателен и нужен для LLM-ключей, proxy и точечных override.
+
 ## Docker Compose
 
-Общий `docker-compose.yml` находится в корне монорепозитория, потому что поднимает не только `generator`, но и `frontend`, `nginx`, `keycloak`, `certbot`.
+Корневой `docker-compose.yml` содержит только nginx/proxy.
+Сам `generator` описан в `generator/docker-compose.yaml`, а полный стенд собирается через корневой `Makefile`.
 
-Из папки `generator` можно запускать общий compose через Makefile:
+Из корня монорепозитория:
+
+```bash
+make prod
+make restart SERVICE=backend-vn1
+make stop
+```
+
+Из папки `generator` старый Makefile тоже работает:
 
 ```bash
 make run
-make docker-logs-backend
-make docker-down
-```
-
-Эквивалентный прямой запуск из корня:
-
-```bash
-docker compose --env-file generator/.env -f docker-compose.yml up -d --build
+make run-prod
+make prod
+make test
+make restart
+make stop
 ```
 
 ## Keycloak
 
-Keycloak realm export теперь находится в:
+Generator больше не содержит login/refresh endpoints. Для user context он использует
+только переданный Bearer-токен и при необходимости обращается к `auth-service` context.
+
+`api-gateway` передает в generator только исходный security context:
 
 ```text
-../auth/keycloak/realm-export.json
+Authorization: Bearer <access_token>
 ```
 
-В compose он монтируется в контейнер Keycloak автоматически.
+Пример прямого получения user context в PROD:
+
+```bash
+curl -H 'Authorization: Bearer <access_token>' http://localhost:8030/v1/auth/context
+```
+
+Если generator нужен пользователь для `owner_id` или audit, он получает его по токену через
+`auth-service` context. URL задается через `AUTH_CONTEXT_URL`.
+
+Login/refresh находятся в `auth`, проверка доступа к `/api` и skills находится в `api-gateway`.
+
+## Errors
+
+HTTP-ошибки возвращаются в общем формате из `../docs/ERROR_PROTOCOL.md`.

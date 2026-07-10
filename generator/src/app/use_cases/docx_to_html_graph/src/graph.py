@@ -176,11 +176,11 @@ def build_md_to_html_graph(llm_content, llm_menu) -> StateGraph:
     return graph
 
 
-_llm_content = LLMService().openai()
-_llm_menu = LLMService().openai()
-
-_md_to_html_graph = build_md_to_html_graph(llm_content=_llm_content, llm_menu=_llm_menu)
-compile_md_to_html_graph = _md_to_html_graph.compile()
+def compile_md_to_html_graph():
+    return build_md_to_html_graph(
+        llm_content=LLMService().openai(),
+        llm_menu=LLMService().openai(),
+    ).compile()
 
 
 def _log(step: str):
