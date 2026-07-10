@@ -1,0 +1,22 @@
+networks:
+  vn1:
+    name: vn1
+
+services:
+  api-gateway:
+    build:
+      context: ${REPO_ROOT:-.}/api-gateway
+      dockerfile: Dockerfile
+    expose:
+      - "8000"
+    env_file:
+      - path: ${REPO_ROOT:-.}/api-gateway/.env
+        required: false
+    restart: unless-stopped
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"

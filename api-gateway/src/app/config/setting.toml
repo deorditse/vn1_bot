@@ -1,0 +1,44 @@
+[skills.gitlab]
+enabled = true
+name = "GitLab"
+description = "Поиск по issues, merge requests, коду, README и обсуждениям GitLab."
+base_url = "http://gitlab-skill:8022"
+stream_path = "/v1/run/stream"
+manifest_path = "/manifest"
+#required_roles = ["vn1-user"]
+
+[skills.product_kb]
+enabled = false
+name = "Product KB"
+description = "Поиск по внутренней базе знаний продукта."
+base_url = "http://product-kb-skill:8021"
+stream_path = "/v1/run/stream"
+manifest_path = "/manifest"
+#required_roles = ["vn1-user"]
+
+[skills.wiki]
+enabled = false
+name = "Wiki"
+description = "Поиск по wiki, Confluence, Notion, регламентам и FAQ."
+base_url = "http://wiki-skill:8023"
+stream_path = "/v1/run/stream"
+manifest_path = "/manifest"
+#required_roles = ["vn1-user"]
+
+[skills.figma]
+enabled = false
+name = "Figma"
+description = "Поиск по Figma-макетам, экранам, компонентам и UX-решениям."
+base_url = "http://figma-skill:8024"
+stream_path = "/v1/run/stream"
+manifest_path = "/manifest"
+#required_roles = ["vn1-user"]
+
+[skills.support]
+enabled = false
+name = "Support"
+description = "Поиск по обращениям пользователей, тикетам и инцидентам."
+base_url = "http://support-skill:8025"
+stream_path = "/v1/run/stream"
+manifest_path = "/manifest"
+#required_roles = ["vn1-user"]
