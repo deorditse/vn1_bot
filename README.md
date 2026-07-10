@@ -1,191 +1,129 @@
-### Шаги для установки на сервер
+# vn1_bot
 
-## клонируем репо по SSH
+Монорепозиторий AI-платформы VN1. Сейчас в нем живет рабочий сервис `generator`, frontend, auth-инфраструктура и заготовки под будущую архитектуру вокруг `api-gateway` и независимых `skills`.
 
-ssh-keygen -t ed25519 -C "deor_dima@vn-1"
-cat ~/.ssh/id_ed25519.pub
-ssh -T git@github.com
+## Текущая Архитектура
 
-## установка гита
-
-sudo apt update
-sudo apt install -y git
-sudo chown -R deor_dima:deor_dima ./
-
-git clone git@github.com:ORG/REPO.git /opt/REPO
-
-git@github.com:deorditse/vn1_bot.git /opt/vn1_bot
-## установка докер
-
-https://docs.docker.com/engine/install/debian/
-
-sudo apt-get update
-sudo apt-get install docker-compose-plugin
-
-sudo docker ps
-
-### пересобрать только один, например n8n-alliance:
-
-sudo docker compose restart n8n-vn1
-sudo docker compose restart backend-vn1
-sudo docker compose up -d --build n8n-vn1
-
-### обновление завсиимостей
-
-# 1. Обновить образ
-
-sudo docker compose pull
-sudo docker compose up -d --force-recreate
-docker compose up -d --force-recreate n8n-alliance-trucks
-
-docker image prune -f
-
-# 2. Пересоздать контейнер с новым образом
-
-sudo docker compose down
-sudo docker compose up --build -d
-
-
-docker compose up --scale backend-vn1=4
-sudo docker compose up -d
-
-## разрешения
-
-sudo chown -R 1000:1000 ./bots/alliance_trucks/data
-sudo chown -R 1000:1000 ./bots/test/data
-sudo chmod -R u+rwX ./bots/alliance_trucks/data
-sudo chmod -R u+rwX ./bots/test/data
-
-
-###### Запуск API
-
-```bash
-uv run python3 src/app/run.py   
-
+```text
+frontend
+   |
+   | HTTPS /api
+   v
+nginx
+   |
+   +-- generator
+   |   Текущий Python backend.
+   |   Сейчас принимает API-запросы frontend, работает с Keycloak и выполняет генерацию.
+   |
+   +-- auth/keycloak
+       Keycloak realm export и контейнер Keycloak из docker-compose.
 ```
 
-🔹 2. Удалить старые образы вручную:
-sudo docker image prune -a
+Сейчас `generator` является рабочим backend. Он временно совмещает несколько ответственностей, которые позже будут разнесены:
 
-docker-compose down
-sudo docker compose pull
-docker image prune -f
-docker compose up -d
+- backend API для frontend;
+- авторизация через Keycloak;
+- генерация ответов/файлов;
+- текущая бизнес-логика;
+- runtime-настройки текущего Python-проекта.
 
+## Структура Монорепозитория
 
-
-## Step 3: Setting up SSL with Certbot
-
-Certbot will obtain and install an SSL certificate from Let's Encrypt.
-
-sudo docker compose run --rm certbot certonly \
- --webroot \
- --webroot-path /var/www/certbot/ \
- --email deor.dima@gmail.com \
- --agree-tos \
- --no-eff-email \
- -d ai-bot.vn1.ru
-
-
-автопроддление 
-
-sudo docker compose run --rm certbot renew --dry-run
-
-
-Follow the on-screen instructions to complete the SSL setup.
-Once completed, n8n will be accessible securely over HTTPS at your-domain.com.
-
-IMPORTANT: Make sure you follow the above steps in order. Step 5 will modify your /etc/nginx/sites-available/n8n.conf file to something like this:
-![image](https://github.com/user-attachments/assets/344187ec-5bcf-4d97-ad35-21b6562182e5)
-
-
-
-
-## установка с dev зависимостяим 
-uv sync --extra dev
-
-
-## Авторизация через Keycloak
-
-Keycloak поднимается отдельным контейнером и импортирует realm из `keycloak/realm-export.json`.
-
-```bash
-sudo docker compose up -d --build keycloak backend-vn1
+```text
+vn1_bot/
+  frontend/        # текущий frontend
+  generator/       # текущий рабочий Python backend
+  api-gateway/     # будущая единая backend-точка входа
+  skills/          # будущие независимые сервисы-навыки
+  auth/            # Keycloak и auth-инфраструктура
+  shared/          # общая инфраструктура: certbot, xray config, ci-cd
+  docs/            # общая документация проекта
+  docker-compose.yml
+  nginx.conf
 ```
 
-Админка Keycloak:
+Коротко по слоям:
 
-- локально: `http://localhost:8080/keycloak`
-- через nginx: `https://ai-bot.vn1.ru/keycloak`
-- admin login: `${KEYCLOAK_ADMIN:-admin}`
-- admin password: `${KEYCLOAK_ADMIN_PASSWORD:-admindeor}`
+- `frontend` показывает UI, ход выполнения, результаты, источники и работает через `/api`.
+- `generator` сохраняет текущую работоспособность проекта до миграции.
+- `api-gateway` станет единственной backend-точкой входа для frontend.
+- `skills` будут отдельными сервисами, которые Gateway вызывает по единому HTTP/SSE-протоколу.
+- `auth` содержит Keycloak-конфигурацию.
+- `shared` содержит общие инфраструктурные и CI/CD-файлы, которые не принадлежат конкретному сервису.
 
-На сервере для корректного issuer токенов задайте:
+## Целевая Архитектура
 
-```bash
-KEYCLOAK_HOSTNAME=https://ai-bot.vn1.ru/keycloak
+```text
+frontend (https://ai-bot.vn1.ru/)
+   |
+   | HTTPS /api
+   | UI, авторизация, чат, SSE-прогресс, источники.
+   v
+api-gateway
+   |
+   +-- gateway-postgres
+   |   История чатов, сообщения, настройки пользователей,
+   |   skill runs, request metadata.
+   |
+   +-- telemetry stack
+   |   prometheus, grafana, loki/alloy, tempo.
+   |
+   v
+skills
+   |
+   +-- product-kb-skill
+   |   +-- kb-postgres
+   |   +-- opensearch
+   |
+   +-- gitlab-skill
+   +-- wiki-skill
+   +-- figma-skill
+   +-- support-skill
 ```
 
-Импортированный тестовый пользователь:
+`api-gateway` будет отвечать за:
 
-- username: `vn1-user`
-- password: `vn1-user`
-- role: `vn1-user`
+- авторизацию;
+- пользовательский контекст;
+- историю чатов;
+- настройки пользователя;
+- выбор skill через graph/orchestrator flow;
+- SSE-стримы во frontend;
+- вызов skills;
+- агрегацию событий;
+- финальную сборку ответа;
+- метрики, логи и трассировку.
 
-Получить access token через API:
+`skills` будут отвечать только за конкретные источники данных. Например, `product-kb-skill` ищет по базе знаний продукта, `gitlab-skill` по GitLab, `wiki-skill` по wiki/Confluence/Notion.
 
-```bash
-curl -X POST 'http://localhost/api/auth/login' \
-  -H 'Content-Type: application/json' \
-  -d '{"username": "vn1-user", "password": "vn1-user"}'
+Главное правило для будущих grounded answers:
+
+```text
+Нет подтвержденных источников = нет финального ответа.
 ```
 
-В Swagger:
+## Как Разнести По Микросервисам
 
-- открыть `https://ai-bot.vn1.ru/api/docs`
-- нажать `Authorize`
-- ввести username/password пользователя из Keycloak
-- после авторизации вызывать защищенные эндпоинты
+Перенос лучше делать постепенно, без остановки текущего `generator`.
 
-Вызов API с токеном:
+1. Зафиксировать общий HTTP/SSE-контракт skills: manifest, request, stream events, sources, final answer.
+2. Поднять минимальный `api-gateway`, который сначала проксирует текущие сценарии в `generator`.
+3. Перенести auth, пользовательский контекст и SSE во frontend из `generator` в `api-gateway`.
+4. Добавить `gateway-postgres` для истории, сообщений, настроек и metadata.
+5. Создать первый реальный skill: `product-kb-skill`.
+6. Вынести knowledge base в `product-kb-skill`, `kb-postgres` и OpenSearch.
+7. Добавить orchestrator flow в Gateway для выбора одного или нескольких skills.
+8. Постепенно добавить `gitlab-skill`, `wiki-skill`, `figma-skill`, `support-skill`.
+9. Перенести генерацию финального grounded answer в Gateway.
+10. Добавить telemetry stack: Prometheus, Grafana, Loki/Alloy, Tempo.
+11. После стабилизации решить судьбу `generator`: оставить как legacy-сервис, превратить в skill или разобрать на новые сервисы.
 
-```bash
-curl -X POST 'http://localhost/api/generate/instruction' \
-  -H "Authorization: Bearer $ACCESS_TOKEN" \
-  -F 'file=@/path/to/instruction.docx'
-```
+## Где Смотреть Детали
 
-Обновить токен:
-
-```bash
-curl -X POST 'http://localhost/api/auth/refresh' \
-  -H 'Content-Type: application/json' \
-  -d '{"refresh_token": "'"$REFRESH_TOKEN"'"}'
-```
-
-## Frontend
-
-Frontend находится в `frontend/` и сделан на Vite + React + TypeScript + Ant Design в стиле проекта
-`Dz-otus/frontend`.
-
-Локальный запуск:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-По умолчанию dev-сервер доступен на `http://localhost:5173`, а запросы `/api/*` проксируются на
-`http://localhost:8010`.
-
-Production-сборка:
-
-```bash
-cd frontend
-npm run build
-```
-
-В docker-compose frontend собирается отдельным сервисом `frontend`, а внешний nginx проксирует `/` на него.
-Страница входа использует backend endpoints `/api/auth/login`, `/api/auth/refresh`, `/api/auth/me`, которые
-работают с Keycloak.
+- [frontend/README.md](frontend/README.md)
+- [generator/README.md](generator/README.md)
+- [api-gateway/README.md](api-gateway/README.md)
+- [skills/README.md](skills/README.md)
+- [auth/README.md](auth/README.md)
+- [shared/README.md](shared/README.md)
+- [docs/README.md](docs/README.md)
