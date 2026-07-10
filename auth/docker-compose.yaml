@@ -1,0 +1,52 @@
+networks:
+  vn1:
+    name: vn1
+
+volumes:
+  keycloak_data:
+
+services:
+  auth-service:
+    build:
+      context: ${REPO_ROOT:-.}/auth
+      dockerfile: Dockerfile
+    expose:
+      - "8030"
+    env_file:
+      - path: ${REPO_ROOT:-.}/auth/.env
+        required: false
+    restart: unless-stopped
+    depends_on:
+      - keycloak
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.6.1
+    container_name: keycloak
+    command: start-dev --import-realm
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_ADMIN:-admin}
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD:-change-me}
+      - KC_HTTP_ENABLED=true
+      - KC_HTTP_RELATIVE_PATH=/keycloak
+      - KC_PROXY_HEADERS=xforwarded
+      - KC_HOSTNAME_STRICT=false
+    ports:
+      - "8080:8080"
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+      - ${REPO_ROOT:-.}/auth/src/infrastructure/keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
+    restart: unless-stopped
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"

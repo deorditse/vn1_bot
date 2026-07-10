@@ -1,42 +1,28 @@
 from typing import Annotated
 
 import httpx
-import jwt
-from fastapi import Depends, HTTPException, Request, Response, Security
+from fastapi import Depends, HTTPException, Request, Security
 from fastapi.security import OAuth2PasswordBearer
 from starlette import status
 
 from app.config import settings
-from domain.auth import AuthTokens, User, UserRole
-from infrastructure.auth import KeycloakAuthProvider
+from domain.auth import User, UserRole
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token", auto_error=False)
 
 AUTH_ACCESS_COOKIE = "vn1_access_token"
-AUTH_REFRESH_COOKIE = "vn1_refresh_token"
-AUTH_COOKIE_SAMESITE = "lax"
 DEV_USER = User(
     id="dev-user",
     username="dev",
     email="dev@local.test",
     role=UserRole.ADMIN.value,
     roles=[UserRole.ADMIN.value, UserRole.USER.value],
+    access_token="dev-access-token",
 )
 
 
 def is_auth_bypass_enabled() -> bool:
-    return str(settings.api_mode).upper() == "DEV"
-
-
-def create_dev_tokens() -> AuthTokens:
-    return AuthTokens(
-        access_token="dev-access-token",
-        expires_in=60 * 60 * 24,
-        refresh_expires_in=60 * 60 * 24 * 30,
-        refresh_token="dev-refresh-token",
-        token_type="bearer",
-        scope="dev",
-    )
+    return settings.is_dev
 
 
 def _auth_error(detail: str) -> HTTPException:
@@ -48,8 +34,7 @@ def _auth_error(detail: str) -> HTTPException:
 
 
 class AuthDependency:
-    def __init__(self, auth_provider: KeycloakAuthProvider, required_roles: list[str] | None = None) -> None:
-        self.auth_provider = auth_provider
+    def __init__(self, required_roles: list[str] | None = None) -> None:
         self.required_roles = set(required_roles or [])
 
     async def __call__(self, request: Request, token: str | None = Security(oauth2_scheme)) -> User | None:
@@ -60,9 +45,10 @@ class AuthDependency:
             return DEV_USER
 
         token = self.get_request_access_token(request, bearer_token)
-        payload = await self.decode_token(token)
-        self.check_required_roles(payload)
-        return self.auth_provider.build_user(payload)
+        user = await self.request_auth_context(token)
+        user.access_token = token
+        self.check_required_roles(user.roles)
+        return user
 
     def get_request_access_token(self, request: Request, bearer_token: str | None = None) -> str:
         token = bearer_token or request.cookies.get(AUTH_ACCESS_COOKIE)
@@ -70,22 +56,41 @@ class AuthDependency:
             raise _auth_error("Missing access token")
         return token
 
-    async def decode_token(self, token: str) -> dict:
+    async def request_auth_context(self, token: str) -> User:
         try:
-            return await self.auth_provider.decode_access_token(token)
-        except HTTPException:
-            raise
+            async with httpx.AsyncClient(trust_env=False, timeout=10.0) as client:
+                response = await client.get(
+                    str(settings.auth_context_url),
+                    headers={"Authorization": f"Bearer {token}"},
+                )
         except httpx.HTTPError as err:
-            raise _auth_error(f"Auth provider is unavailable: {err}") from err
-        except jwt.PyJWTError as err:
-            raise _auth_error(f"Invalid access token: {err}") from err
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail=f"Auth service is unavailable: {err}",
+            ) from err
 
-    def check_required_roles(self, payload: dict) -> None:
+        if response.status_code == status.HTTP_401_UNAUTHORIZED:
+            raise _auth_error("Invalid access token")
+        if response.is_error:
+            raise HTTPException(
+                status_code=status.HTTP_502_BAD_GATEWAY,
+                detail=f"Auth service returned {response.status_code}",
+            )
+
+        payload = response.json()
+        return User(
+            id=payload["sub"],
+            username=payload["username"],
+            email=payload.get("email"),
+            role=payload.get("role", UserRole.USER.value),
+            roles=payload.get("roles", []),
+        )
+
+    def check_required_roles(self, token_roles: list[str]) -> None:
         if not self.required_roles:
             return
 
-        token_roles = self.auth_provider.extract_roles(payload)
-        if not self.required_roles.issubset(token_roles):
+        if not self.required_roles.issubset(set(token_roles)):
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Insufficient token roles")
 
 
@@ -107,8 +112,7 @@ def has_access(current_user: User, role_required: UserRole) -> bool:
     return role_required.value in current_user.roles or UserRole.ADMIN.value in current_user.roles
 
 
-auth_provider = KeycloakAuthProvider()
-require_auth = AuthDependency(auth_provider=auth_provider, required_roles=settings.auth_required_roles)
+require_auth = AuthDependency(required_roles=settings.auth_required_roles)
 
 
 class AccessRightsChecker:
@@ -118,38 +122,6 @@ class AccessRightsChecker:
     def __call__(self, current_user: Annotated[User, Depends(require_auth)]) -> User:
         check_access(current_user, self.role_required)
         return current_user
-
-
-async def request_keycloak_token(data: dict[str, str]) -> AuthTokens:
-    return await auth_provider.request_token(data)
-
-
-def set_auth_cookies(response: Response, tokens: AuthTokens) -> None:
-    response.set_cookie(
-        AUTH_ACCESS_COOKIE,
-        tokens.access_token,
-        max_age=tokens.expires_in,
-        httponly=True,
-        secure=settings.auth_cookie_secure,
-        samesite=AUTH_COOKIE_SAMESITE,
-        path="/",
-    )
-    if tokens.refresh_token:
-        response.set_cookie(
-            AUTH_REFRESH_COOKIE,
-            tokens.refresh_token,
-            max_age=tokens.refresh_expires_in,
-            httponly=True,
-            secure=settings.auth_cookie_secure,
-            samesite=AUTH_COOKIE_SAMESITE,
-            path="/",
-        )
-
-
-def clear_auth_cookies(response: Response) -> None:
-    response.delete_cookie(AUTH_ACCESS_COOKIE, path="/", samesite=AUTH_COOKIE_SAMESITE)
-    response.delete_cookie(AUTH_REFRESH_COOKIE, path="/", samesite=AUTH_COOKIE_SAMESITE)
-
 
 user_required = AccessRightsChecker(UserRole.USER)
 admin_required = AccessRightsChecker(UserRole.ADMIN)

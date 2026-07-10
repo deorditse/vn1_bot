@@ -2,29 +2,27 @@ ROOT := ..
 SERVICE := api-gateway
 PORT ?= 8000
 
-.PHONY: init sync dev prod test logs restart down
+.PHONY: run run-prod test prod restart stop
 
-init:
-	@test -f .env || cp .env.example .env
-
-sync:
+run:
 	uv sync
+	@set -a; if [ -f .env ]; then . ./.env; fi; set +a; \
+	PYTHONPATH=src API_MODE=DEV API_PORT=$(PORT) uv run python src/app/run.py
 
-dev: init sync
-	@set -a; . ./.env; set +a; \
-	PYTHONPATH=src API_MODE=DEV AUTH_ENABLED=false API_PORT=$(PORT) uv run python src/app/run.py
-
-prod:
-	$(MAKE) -C $(ROOT) up SERVICE=$(SERVICE)
+run-prod:
+	uv sync
+	@set -a; if [ -f .env ]; then . ./.env; fi; set +a; \
+	PYTHONPATH=src API_MODE=PROD API_PORT=$(PORT) uv run python src/app/run.py
 
 test:
+	uv run ruff check src
 	python3 -m compileall -q src
 
-logs:
-	$(MAKE) -C $(ROOT) logs SERVICE=$(SERVICE)
+prod:
+	$(MAKE) -C $(ROOT) prod SERVICE=$(SERVICE)
 
 restart:
 	$(MAKE) -C $(ROOT) restart SERVICE=$(SERVICE)
 
-down:
-	$(MAKE) -C $(ROOT) down
+stop:
+	$(MAKE) -C $(ROOT) stop SERVICE=$(SERVICE)

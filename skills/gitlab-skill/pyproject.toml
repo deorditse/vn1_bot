@@ -1,0 +1,39 @@
+[project]
+name = "vn1-gitlab-skill"
+version = "0.1.0"
+description = "VN1 GitLab skill"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dynaconf>=3.3.2",
+    "fastapi>=0.121.2",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.38.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+src = ["src"]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["TID251"]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"api_gateway".msg = "Cross-service imports are forbidden. Skills are called by api-gateway over HTTP/SSE."
+"generator".msg = "Cross-service imports are forbidden. Skills must not import generator."
+"skills".msg = "Do not import sibling skills as Python packages."
+"vn1_bot".msg = "Do not import through the monorepo root. Keep imports inside the current service."
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

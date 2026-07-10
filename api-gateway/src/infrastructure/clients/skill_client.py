@@ -50,12 +50,10 @@ class SkillClient(HttpStreamClient):
 
     @staticmethod
     def _user_headers(current_user: User) -> dict[str, str]:
-        return {
-            "X-User-Id": str(current_user.id),
-            "X-User-Name": current_user.username,
-            "X-User-Email": current_user.email or "",
-            "X-User-Roles": ",".join(current_user.roles),
-        }
+        headers = {}
+        if current_user.access_token:
+            headers["Authorization"] = f"Bearer {current_user.access_token}"
+        return headers
 
 
 class SkillClientRegistry:

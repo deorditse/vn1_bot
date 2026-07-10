@@ -12,11 +12,17 @@
 
 ## Использование
 
-Пути подключаются из корневого `docker-compose.yml`:
+Пути подключаются из compose-файлов слоев:
 
 ```text
 ./shared/certbot/conf/
 ./shared/certbot/www/
 ./shared/xray-config/config.json
 ./shared/ci-cd/
+```
+
+Слой shared поднимается отдельно:
+
+```bash
+make prod SERVICE=certbot
 ```

@@ -1,0 +1,17 @@
+[default]
+API_MODE = "PROD"
+API_PORT = 8000
+SSE_EVENT_SET = "set"
+
+GENERATOR_BASE_URL = "http://backend-vn1:8010"
+
+AUTH_CONTEXT_URL = "http://auth-service:8030/v1/auth/context"
+AUTH_REQUIRED_ROLES = ["vn1-user"]
+
+CORS_ORIGINS = [
+  "http://localhost",
+  "http://localhost:5173",
+  "http://127.0.0.1",
+  "http://127.0.0.1:5173",
+  "https://ai-bot.vn1.ru",
+]

@@ -1,0 +1,3 @@
+[default]
+API_MODE = "DEV"
+CORS_ORIGINS = ["*"]

@@ -1,0 +1,11 @@
+[default]
+API_MODE = "PROD"
+API_PORT = 8030
+
+AUTH_TOKEN_URL = "http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/token"
+AUTH_LOGOUT_URL = "http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/logout"
+AUTH_USERINFO_URL = "http://keycloak:8080/keycloak/realms/vn1/protocol/openid-connect/userinfo"
+AUTH_CLIENT_ID = "vn1-api"
+AUTH_CLIENT_SECRET = ""
+AUTH_COOKIE_SECURE = false
+AUTH_COOKIE_SAMESITE = "lax"

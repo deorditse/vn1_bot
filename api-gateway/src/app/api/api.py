@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from app.api.errors import register_error_handlers
-from app.api.routers import auth, chat, generator, health, skills
-from app.config.settings import settings
+from app.api.routers import chat, generator, health, skills
+from common.config import settings
 
 app = FastAPI(
     title="VN1 API Gateway",
@@ -23,7 +23,6 @@ app.add_middleware(
 )
 
 app.include_router(health.router, tags=["health"])
-app.include_router(auth.router, prefix="/auth", tags=["auth"])
 app.include_router(chat.router, prefix="/chat", tags=["chat"])
 app.include_router(skills.router, prefix="/skills", tags=["skills"])
 app.include_router(generator.router, prefix="/generator", tags=["generator"])

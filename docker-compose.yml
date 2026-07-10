@@ -1,9 +1,6 @@
 networks:
   vn1:
-
-volumes:
-  keycloak_data:
-  generated_files:
+    name: vn1
 
 services:
   nginx:
@@ -13,16 +10,16 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./shared/certbot/conf/:/etc/letsencrypt/:ro
-      - ./shared/certbot/www/:/var/www/certbot/
-
+      - ${REPO_ROOT:-.}/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${REPO_ROOT:-.}/shared/certbot/conf/:/etc/letsencrypt/:ro
+      - ${REPO_ROOT:-.}/shared/certbot/www/:/var/www/certbot/
     restart: unless-stopped
     depends_on:
       - frontend
+      - api-gateway
+      - auth-service
       - backend-vn1
       - keycloak
-    #      - n8n-vn1
     networks:
       - vn1
     logging:
@@ -30,110 +27,3 @@ services:
       options:
         max-size: "5m"
         max-file: "1"
-
-  frontend:
-    build:
-      context: .
-      dockerfile: frontend/Dockerfile
-    restart: unless-stopped
-    networks:
-      - vn1
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "5m"
-        max-file: "1"
-
-  certbot:
-    image: certbot/certbot:latest
-    command: >
-      sh -c "trap exit TERM; while :; do
-      certbot renew --webroot -w /var/www/certbot;
-      sleep 12h;
-      done"
-    volumes:
-      - ./shared/certbot/conf/:/etc/letsencrypt/:rw
-      - ./shared/certbot/www/:/var/www/certbot/:rw
-    networks:
-      - vn1
-    logging:
-      driver: "none"
-
-  keycloak:
-    image: quay.io/keycloak/keycloak:26.6.1
-    container_name: keycloak
-    command: start-dev --import-realm
-    environment:
-      - KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_ADMIN:-admin}
-      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD:-admindeor}
-      - KC_HTTP_ENABLED=true
-      - KC_HTTP_RELATIVE_PATH=/keycloak
-      - KC_PROXY_HEADERS=xforwarded
-      - KC_HOSTNAME_STRICT=false
-    ports:
-      - "8080:8080"
-    volumes:
-      - keycloak_data:/opt/keycloak/data
-      - ./auth/keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
-    restart: unless-stopped
-    networks:
-      - vn1
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "5m"
-        max-file: "1"
-
-  backend-vn1:
-    build:
-      context: ./generator
-      dockerfile: Dockerfile
-    expose:
-      - "8010"
-    environment:
-      - PYTHONUNBUFFERED=1
-      - LANGCHAIN_OPENAI_TCP_KEEPALIVE=0
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
-      - GIGACHAT_API_KEY=${GIGACHAT_API_KEY:-}
-      - AUTH_CLIENT_SECRET=${AUTH_CLIENT_SECRET:-}
-      - GENERATED_FILE_DB_PATH=/app/data/generated_files.sqlite3
-      - GENERATED_FILE_TTL_SECONDS=${GENERATED_FILE_TTL_SECONDS:-10800}
-
-      # Temporarily use external SOCKS5 proxy instead of xray.
-      # - PROXY=${PROXY}
-      # - ALL_PROXY=socks5h://xray:10808
-      # - HTTP_PROXY=socks5h://xray:10808
-      # - HTTPS_PROXY=socks5h://xray:10808
-      - PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - ALL_PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - HTTP_PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - HTTPS_PROXY=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
-      - all_proxy=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - http_proxy=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - https_proxy=socks5h://proxyuser:qRR7BQ9GCuRMydA4nrUKxEfsyMj8fyYR@185.169.107.20:1080
-      - no_proxy=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
-    restart: unless-stopped
-    depends_on:
-      - keycloak
-    #   - xray
-    volumes:
-      - generated_files:/app/data
-    networks:
-      - vn1
-
-#  xray:
-#    image: teddysun/xray
-#    container_name: xray
-#    restart: unless-stopped
-#    volumes:
-#      - ./shared/xray-config/config.json:/etc/xray/config.json:ro
-#    command: xray run -config /etc/xray/config.json
-#    networks:
-#      - vn1
-#    logging:
-#      driver: "json-file"
-#      options:
-#        max-size: "5m"
-#        max-file: "1"

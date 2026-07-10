@@ -1,0 +1,6 @@
+[default]
+API_MODE = "PROD"
+API_PORT = 8022
+
+GITLAB_BASE_URL = "https://gitlab.com"
+GITLAB_TOKEN = ""

@@ -1,0 +1,22 @@
+networks:
+  vn1:
+    name: vn1
+
+services:
+  gitlab-skill:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "8022"
+    env_file:
+      - path: ${REPO_ROOT:-.}/skills/gitlab-skill/.env
+        required: false
+    restart: unless-stopped
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"

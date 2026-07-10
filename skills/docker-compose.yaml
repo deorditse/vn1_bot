@@ -1,0 +1,9 @@
+networks:
+  vn1:
+    name: vn1
+
+services:
+  gitlab-skill:
+    extends:
+      file: ./skills/gitlab-skill/docker-compose.yaml
+      service: gitlab-skill

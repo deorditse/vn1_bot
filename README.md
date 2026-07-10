@@ -11,18 +11,29 @@ frontend
    v
 nginx
    |
+   +-- api-gateway
+   |   Единая backend-точка входа.
+   |   Сейчас проксирует старые endpoints в generator и умеет вызывать skills по SSE.
+   |
+   +-- auth
+   |   Внутренний auth facade: login, refresh, logout, userinfo поверх Keycloak.
+   |
    +-- generator
    |   Текущий Python backend.
-   |   Сейчас принимает API-запросы frontend, работает с Keycloak и выполняет генерацию.
+   |   Пока содержит старые API-сценарии и генерацию.
    |
-   +-- auth/keycloak
-       Keycloak realm export и контейнер Keycloak из docker-compose.
+   |   Keycloak provider лежит в auth/src/infrastructure/keycloak.
+   |
+   +-- skills/gitlab-skill
+       Первый пример skill-сервиса с HTTP/SSE-контрактом.
 ```
 
-Сейчас `generator` является рабочим backend. Он временно совмещает несколько ответственностей, которые позже будут разнесены:
+Сейчас `api-gateway` уже должен быть входной точкой для клиентов. Старые frontend-запросы `/api/*` проходят через Gateway и fallback-проксируются в `generator`.
+Авторизация frontend идет через публичный префикс `/auth/*` в `auth-service`; cookie ставится как `httpOnly` на тот же домен и затем читается `api-gateway` при запросах `/api/*`.
+
+`generator` пока остается рабочим backend и временно содержит старые сценарии, которые позже будут разнесены:
 
 - backend API для frontend;
-- авторизация через Keycloak;
 - генерация ответов/файлов;
 - текущая бизнес-логика;
 - runtime-настройки текущего Python-проекта.
@@ -33,12 +44,12 @@ nginx
 vn1_bot/
   frontend/        # текущий frontend
   generator/       # текущий рабочий Python backend
-  api-gateway/     # будущая единая backend-точка входа
+  api-gateway/     # единая backend-точка входа
   skills/          # будущие независимые сервисы-навыки
-  auth/            # Keycloak и auth-инфраструктура
+  auth/            # auth-service; provider Keycloak внутри src/infrastructure/keycloak
   shared/          # общая инфраструктура: certbot, xray config, ci-cd
   docs/            # общая документация проекта
-  docker-compose.yml
+  docker-compose.yml # только nginx/proxy и общая сеть
   nginx.conf
 ```
 
@@ -46,9 +57,10 @@ vn1_bot/
 
 - `frontend` показывает UI, ход выполнения, результаты, источники и работает через `/api`.
 - `generator` сохраняет текущую работоспособность проекта до миграции.
-- `api-gateway` станет единственной backend-точкой входа для frontend.
+- `api-gateway` является единственной backend-точкой входа для frontend.
 - `skills` будут отдельными сервисами, которые Gateway вызывает по единому HTTP/SSE-протоколу.
-- `auth` содержит Keycloak-конфигурацию.
+- Skills перечислены в enum Gateway и подключаются через `api-gateway/src/app/config/setting.toml`.
+- `auth` содержит `auth-service` и provider Keycloak в `auth/src/infrastructure/keycloak`.
 - `shared` содержит общие инфраструктурные и CI/CD-файлы, которые не принадлежат конкретному сервису.
 
 ## Целевая Архитектура
@@ -60,6 +72,9 @@ frontend (https://ai-bot.vn1.ru/)
    | UI, авторизация, чат, SSE-прогресс, источники.
    v
 api-gateway
+   |
+   +-- auth-service
+   |   login, refresh, logout, userinfo поверх Keycloak.
    |
    +-- gateway-postgres
    |   История чатов, сообщения, настройки пользователей,
@@ -83,7 +98,8 @@ skills
 
 `api-gateway` будет отвечать за:
 
-- авторизацию;
+- browser-cookie auth facade;
+- проверку access token и ролей;
 - пользовательский контекст;
 - историю чатов;
 - настройки пользователя;
@@ -95,6 +111,8 @@ skills
 - метрики, логи и трассировку.
 
 `skills` будут отвечать только за конкретные источники данных. Например, `product-kb-skill` ищет по базе знаний продукта, `gitlab-skill` по GitLab, `wiki-skill` по wiki/Confluence/Notion.
+
+Frontend может получить список включенных skills через Gateway и передать в чат `available_skills`, чтобы Gateway выбирал только из разрешенных навыков.
 
 Главное правило для будущих grounded answers:
 
@@ -127,3 +145,62 @@ skills
 - [auth/README.md](auth/README.md)
 - [shared/README.md](shared/README.md)
 - [docs/README.md](docs/README.md)
+
+Единый формат ошибок описан в [docs/ERROR_PROTOCOL.md](docs/ERROR_PROTOCOL.md).
+
+## Запуск
+
+Корневой `docker-compose.yml` содержит только общий nginx/proxy и сеть `vn1`.
+Сервисы подключаются compose-файлами своих слоев, а запуск идет через корневой `Makefile`.
+
+```bash
+make prod
+make restart
+make stop
+make test
+```
+
+Для одного сервиса используйте `SERVICE`:
+
+```bash
+make prod SERVICE=frontend
+make restart SERVICE=gitlab-skill
+make stop SERVICE=api-gateway
+```
+
+Внутри сервисов есть свои Makefile с одинаковыми базовыми командами:
+
+```bash
+make run
+make run-prod
+make test
+make prod
+make restart
+make stop
+```
+
+`.env` файлы не создаются автоматически. Если сервису нужны локальные секреты, создайте `.env` вручную по соответствующему `.env.example`.
+
+Для локальной разработки используется dev-режим:
+
+```text
+api-gateway/.env: API_MODE=DEV
+generator/.env: API_MODE=DEV
+skills/gitlab-skill/.env: API_MODE=DEV
+```
+
+В этом режиме Gateway не проверяет токены Keycloak, `auth` может ставить dev-сессию, а `generator` принимает локального dev-пользователя без Bearer-токена. По умолчанию в `.env.example` стоит `API_MODE=PROD`, поэтому dev bypass включается только явно.
+
+Доступ к skills фильтруется в Gateway по ролям пользователя из Keycloak и `required_roles` в `api-gateway/src/app/config/setting.toml`.
+
+Под капотом `Makefile` подключает:
+
+```text
+docker-compose.yml
+shared/docker-compose.yaml
+auth/docker-compose.yaml
+frontend/docker-compose.yaml
+generator/docker-compose.yaml
+skills/docker-compose.yaml
+api-gateway/docker-compose.yaml
+```

@@ -7,12 +7,29 @@ requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.121.2",
     "httpx[socks]>=0.28.1",
-    "pydantic-settings>=2.12.0",
-    "pyjwt[crypto]>=2.10.1",
     "python-multipart>=0.0.20",
     "python-dotenv>=1.2.1",
     "uvicorn>=0.38.0",
+    "dynaconf>=3.3.2",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+src = ["src"]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["TID251"]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"generator".msg = "Cross-service imports are forbidden. Use HTTP/SSE contracts through api-gateway clients."
+"skills".msg = "Cross-service imports are forbidden. Use HTTP/SSE contracts through api-gateway clients."
+"api_gateway".msg = "Do not import services as Python packages inside this monorepo."
+"vn1_bot".msg = "Do not import through the monorepo root. Keep imports inside the current service."
 
 [tool.setuptools]
 package-dir = { "" = "src" }

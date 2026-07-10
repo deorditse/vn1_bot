@@ -1,0 +1,3 @@
+[default]
+API_MODE = "DEV"
+AUTH_COOKIE_SECURE = false

@@ -11,12 +11,7 @@ class GeneratorClient(HttpStreamClient):
         return await self.proxy(
             request=request,
             path=path,
-            extra_headers={
-                "X-User-Id": str(current_user.id),
-                "X-User-Name": current_user.username,
-                "X-User-Email": current_user.email or "",
-                "X-User-Roles": ",".join(current_user.roles),
-            },
+            extra_headers=self._user_headers(current_user),
         )
 
     async def stream_json_as_user(self, request, path: str, payload: dict, current_user: User):
@@ -24,10 +19,12 @@ class GeneratorClient(HttpStreamClient):
             request=request,
             path=path,
             payload=payload,
-            extra_headers={
-                "X-User-Id": str(current_user.id),
-                "X-User-Name": current_user.username,
-                "X-User-Email": current_user.email or "",
-                "X-User-Roles": ",".join(current_user.roles),
-            },
+            extra_headers=self._user_headers(current_user),
         )
+
+    @staticmethod
+    def _user_headers(current_user: User) -> dict[str, str]:
+        headers = {}
+        if current_user.access_token:
+            headers["Authorization"] = f"Bearer {current_user.access_token}"
+        return headers

@@ -1,0 +1,17 @@
+networks:
+  vn1:
+    name: vn1
+
+services:
+  frontend:
+    build:
+      context: ${REPO_ROOT:-.}
+      dockerfile: frontend/Dockerfile
+    restart: unless-stopped
+    networks:
+      - vn1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "1"

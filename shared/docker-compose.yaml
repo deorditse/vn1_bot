@@ -1,0 +1,34 @@
+networks:
+  vn1:
+    name: vn1
+
+services:
+  certbot:
+    image: certbot/certbot:latest
+    command: >
+      sh -c "trap exit TERM; while :; do
+      certbot renew --webroot -w /var/www/certbot;
+      sleep 12h;
+      done"
+    volumes:
+      - ${REPO_ROOT:-.}/shared/certbot/conf/:/etc/letsencrypt/:rw
+      - ${REPO_ROOT:-.}/shared/certbot/www/:/var/www/certbot/:rw
+    networks:
+      - vn1
+    logging:
+      driver: "none"
+
+#  xray:
+#    image: teddysun/xray
+#    container_name: xray
+#    restart: unless-stopped
+#    volumes:
+#      - ${REPO_ROOT:-.}/shared/xray-config/config.json:/etc/xray/config.json:ro
+#    command: xray run -config /etc/xray/config.json
+#    networks:
+#      - vn1
+#    logging:
+#      driver: "json-file"
+#      options:
+#        max-size: "5m"
+#        max-file: "1"

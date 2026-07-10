@@ -120,4 +120,4 @@ def _http_error_code(status_code: int) -> str:
 
 
 def _is_dev() -> bool:
-    return str(settings.api_mode).upper() == "DEV"
+    return settings.is_dev
