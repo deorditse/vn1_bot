@@ -1,3 +1,4 @@
+import json
 from typing import Any
 
 import httpx
@@ -9,6 +10,11 @@ from common.env import api_mode, auth_context_url
 from domain.auth import User, UserRole
 
 AUTH_ACCESS_COOKIE = "vn1_access_token"
+GATEWAY_USER_ID_HEADER = "x-vn1-user-id"
+GATEWAY_USERNAME_HEADER = "x-vn1-username"
+GATEWAY_USER_EMAIL_HEADER = "x-vn1-user-email"
+GATEWAY_USER_ROLE_HEADER = "x-vn1-user-role"
+GATEWAY_USER_ROLES_HEADER = "x-vn1-user-roles"
 DEV_USER = User(
     id="dev-user",
     username="dev",
@@ -25,6 +31,10 @@ async def require_gateway_user(
 ) -> User:
     if api_mode() == ApiMode.DEV:
         return DEV_USER
+
+    trusted_user = _trusted_gateway_user(request)
+    if trusted_user is not None:
+        return trusted_user
 
     token = _bearer_token(authorization) or request.cookies.get(AUTH_ACCESS_COOKIE)
     if token is None:
@@ -43,6 +53,33 @@ async def require_gateway_user(
         roles=auth_context.get("roles", []),
         access_token=token,
     )
+
+
+def _trusted_gateway_user(request: Request) -> User | None:
+    user_id = request.headers.get(GATEWAY_USER_ID_HEADER)
+    username = request.headers.get(GATEWAY_USERNAME_HEADER)
+    if not user_id or not username:
+        return None
+
+    return User(
+        id=user_id,
+        username=username,
+        email=request.headers.get(GATEWAY_USER_EMAIL_HEADER),
+        role=request.headers.get(GATEWAY_USER_ROLE_HEADER) or UserRole.USER.value,
+        roles=_json_list_header(request.headers.get(GATEWAY_USER_ROLES_HEADER)),
+    )
+
+
+def _json_list_header(value: str | None) -> list[str]:
+    if not value:
+        return []
+    try:
+        parsed = json.loads(value)
+    except json.JSONDecodeError:
+        return []
+    if not isinstance(parsed, list):
+        return []
+    return [item for item in parsed if isinstance(item, str)]
 
 
 def _bearer_token(authorization: str | None) -> str | None:

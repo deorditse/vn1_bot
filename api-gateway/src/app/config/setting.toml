@@ -5,7 +5,7 @@ description = "Поиск по issues, merge requests, коду, README и об�
 base_url = "http://gitlab-skill:8022"
 stream_path = "/v1/run/stream"
 manifest_path = "/manifest"
-#required_roles = ["vn1-user"]
+# required_roles = ["vn1-user"]  # раскомментируй, если skill должен быть доступен только роли vn1-user
 
 [skills.product_kb]
 enabled = false
@@ -14,7 +14,7 @@ description = "Поиск по внутренней базе знаний про
 base_url = "http://product-kb-skill:8021"
 stream_path = "/v1/run/stream"
 manifest_path = "/manifest"
-#required_roles = ["vn1-user"]
+# required_roles = ["vn1-user"]  # раскомментируй, если skill должен быть доступен только роли vn1-user
 
 [skills.wiki]
 enabled = false
@@ -23,7 +23,7 @@ description = "Поиск по wiki, Confluence, Notion, регламентам 
 base_url = "http://wiki-skill:8023"
 stream_path = "/v1/run/stream"
 manifest_path = "/manifest"
-#required_roles = ["vn1-user"]
+# required_roles = ["vn1-user"]  # раскомментируй, если skill должен быть доступен только роли vn1-user
 
 [skills.figma]
 enabled = false
@@ -32,7 +32,7 @@ description = "Поиск по Figma-макетам, экранам, компо�
 base_url = "http://figma-skill:8024"
 stream_path = "/v1/run/stream"
 manifest_path = "/manifest"
-#required_roles = ["vn1-user"]
+# required_roles = ["vn1-user"]  # раскомментируй, если skill должен быть доступен только роли vn1-user
 
 [skills.support]
 enabled = false
@@ -41,4 +41,4 @@ description = "Поиск по обращениям пользователей, 
 base_url = "http://support-skill:8025"
 stream_path = "/v1/run/stream"
 manifest_path = "/manifest"
-#required_roles = ["vn1-user"]
+# required_roles = ["vn1-user"]  # раскомментируй, если skill должен быть доступен только роли vn1-user

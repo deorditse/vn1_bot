@@ -2,82 +2,38 @@ from collections.abc import AsyncIterator
 
 from fastapi import Request
 
+from agents.common.streaming import SkillStreamState
+from agents.gitlab_skill.nodes import BuildResponseNode, SearchGitLabNode, ValidateRequestNode
 from app.api.schemas.skill import SkillRunRequest
-from common.sse import fragment, sse_event, terminal_payload
 from domain.services.gitlab_search import GitLabSearchService
+from vn1_protocol.sse import SkillProgressEmitter
+from vn1_protocol.sse_protocol import SkillId, TerminalStatus
 
 
 class RunGitLabSkillUseCase:
     def __init__(self) -> None:
-        self.search_service = GitLabSearchService()
+        search_service = GitLabSearchService()
+        self.nodes = (
+            ValidateRequestNode(),
+            SearchGitLabNode(search_service),
+            BuildResponseNode(),
+        )
 
     async def stream(self, request: Request, payload: SkillRunRequest) -> AsyncIterator[str]:
-        request_id = payload.request_id or ""
-        question = payload.message
-
-        yield sse_event(
-            {
-                "data": fragment(
-                    fragment_type="request",
-                    status="success",
-                    content=question,
-                    request_id=request_id,
-                    skill="gitlab",
-                )
-            }
-        )
-        yield sse_event(
-            {
-                "data": fragment(
-                    fragment_type="search",
-                    status="success",
-                    content=f"Ищем в GitLab: {question}",
-                    query=question,
-                )
-            }
+        state = SkillStreamState(
+            request=request,
+            payload=payload,
+            progress=SkillProgressEmitter(skill=SkillId.gitlab, request_id=payload.request_id),
         )
 
-        results = await self.search_service.search(question)
-        if await request.is_disconnected():
-            return
+        for node in self.nodes:
+            await node(state)
+            for event in state.drain_events():
+                yield event
+            if state.data.get("client_disconnected"):
+                return
+            if state.data.get("terminal_status") == TerminalStatus.error:
+                yield state.progress.terminal(TerminalStatus.error)
+                return
 
-        if not results:
-            yield sse_event(
-                terminal_payload(
-                    "error",
-                    [
-                        fragment(
-                            fragment_type="response",
-                            status="error",
-                            content="Не найдены подтвержденные источники в GitLab.",
-                        )
-                    ],
-                )
-            )
-            return
-
-        for result in results:
-            yield sse_event(
-                {
-                    "data": fragment(
-                        fragment_type="source",
-                        status="success",
-                        content=result.snippet,
-                        source=result.model_dump(),
-                    )
-                }
-            )
-
-        yield sse_event(
-            terminal_payload(
-                "success",
-                [
-                    fragment(
-                        fragment_type="response",
-                        status="success",
-                        content="GitLab skill пока работает в режиме заглушки. Подключите GitLab API в infrastructure/gitlab.",
-                        sources=[result.model_dump() for result in results],
-                    )
-                ],
-            )
-        )
+        yield state.progress.terminal(TerminalStatus.success)

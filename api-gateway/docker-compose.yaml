@@ -5,8 +5,8 @@ networks:
 services:
   api-gateway:
     build:
-      context: ${REPO_ROOT:-.}/api-gateway
-      dockerfile: Dockerfile
+      context: ${REPO_ROOT:-.}
+      dockerfile: api-gateway/Dockerfile
     expose:
       - "8000"
     env_file:

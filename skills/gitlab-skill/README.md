@@ -58,6 +58,8 @@ HTTP-ошибки и SSE-протокол описаны в `../../docs/ERROR_PR
 Skill должен завершать поток терминальным событием:
 
 ```text
+data: {"data":{"fragment_id":1,"fragment_type":"think","status":"in_progress","streaming":false,"content":"### Ищу..."}}
+data: {"data":{"fragment_id":1,"fragment_type":"think","status":"success","streaming":false,"content":"### Найдено..."}}
 data: {"data":{"status":"success","fragments":[...]}}
 ```
 

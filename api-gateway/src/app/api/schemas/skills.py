@@ -1,21 +1,23 @@
 from pydantic import BaseModel, Field
 
+from common.enums import SkillEnum
+
 
 class SkillInfo(BaseModel):
-    id: str = Field(description="Skill id.", examples=["gitlab"])
-    name: str = Field(description="Human-readable skill name.", examples=["GitLab"])
-    description: str = Field(default="", description="Skill description.")
-    required_roles: list[str] = Field(default_factory=list, description="Keycloak roles required to use this skill.")
+    id: SkillEnum = Field(description="Идентификатор skill.", examples=[SkillEnum.gitlab.value])
+    name: str = Field(description="Название skill.", examples=["GitLab"])
+    description: str = Field(default="", description="Описание skill.")
+    required_roles: list[str] = Field(default_factory=list, description="Роли Keycloak, необходимые для запуска skill.")
 
 
 class SkillsResponse(BaseModel):
-    skills: list[SkillInfo] = Field(default_factory=list, description="Skills available for current user.")
+    skills: list[SkillInfo] = Field(default_factory=list, description="Skills, доступные текущему пользователю.")
 
 
 class SkillManifestResponse(BaseModel):
-    id: str = Field(description="Skill id.", examples=["gitlab"])
-    name: str = Field(description="Skill name.", examples=["GitLab Skill"])
-    version: str = Field(description="Skill API version.", examples=["0.1.0"])
-    capabilities: list[str] = Field(default_factory=list, description="Skill capabilities.")
-    stream_endpoint: str = Field(description="SSE stream endpoint path.", examples=["/v1/run/stream"])
-    requires_sources: bool = Field(description="Whether skill must answer only with confirmed sources.")
+    id: SkillEnum = Field(description="Идентификатор skill.", examples=[SkillEnum.gitlab.value])
+    name: str = Field(description="Название skill.", examples=["GitLab Skill"])
+    version: str = Field(description="Версия API skill.", examples=["0.1.0"])
+    capabilities: list[str] = Field(default_factory=list, description="Возможности skill.")
+    stream_endpoint: str = Field(description="Путь SSE endpoint.", examples=["/v1/run/stream"])
+    requires_sources: bool = Field(description="Должен ли skill отвечать только по подтвержденным источникам.")

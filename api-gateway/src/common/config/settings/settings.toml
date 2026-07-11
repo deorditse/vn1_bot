@@ -6,7 +6,7 @@ SSE_EVENT_SET = "set"
 GENERATOR_BASE_URL = "http://backend-vn1:8010"
 
 AUTH_CONTEXT_URL = "http://auth-service:8030/v1/auth/context"
-AUTH_REQUIRED_ROLES = ["vn1-user"]
+AUTH_REQUIRED_ROLES = []
 
 CORS_ORIGINS = [
   "http://localhost",

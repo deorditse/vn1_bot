@@ -3,6 +3,7 @@ from fastapi.responses import StreamingResponse
 
 from app.api.schemas.skill import SkillManifestResponse, SkillRunRequest
 from app.use_cases.run_gitlab_skill import RunGitLabSkillUseCase
+from vn1_protocol.sse_protocol import SkillId
 
 router = APIRouter()
 
@@ -15,7 +16,7 @@ router = APIRouter()
 )
 async def manifest() -> SkillManifestResponse:
     return {
-        "id": "gitlab",
+        "id": SkillId.gitlab.value,
         "name": "GitLab Skill",
         "version": "0.1.0",
         "capabilities": ["search", "answer_with_sources"],

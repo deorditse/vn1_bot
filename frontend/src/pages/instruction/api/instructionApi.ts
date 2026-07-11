@@ -16,7 +16,7 @@ export const instructionApi = baseApiSlice.injectEndpoints({
                 formData.append('file', file);
 
                 return {
-                    url: '/generate/file',
+                    url: '/generator/generate/file',
                     method: 'POST',
                     body: formData,
                 };
@@ -25,7 +25,7 @@ export const instructionApi = baseApiSlice.injectEndpoints({
         }),
         generateInstruction: builder.mutation<GenerateInstructionResponse, GenerateInstructionRequest>({
             query: ({fileId}) => ({
-                url: '/generate/instruction',
+                url: '/generator/generate/instruction',
                 method: 'POST',
                 body: {
                     file_id: fileId,
@@ -35,7 +35,7 @@ export const instructionApi = baseApiSlice.injectEndpoints({
         }),
         generateAiDescription: builder.mutation<GenerateAiDescriptionResponse, GenerateAiDescriptionRequest>({
             query: ({fileId}) => ({
-                url: '/generate/ai_short_description',
+                url: '/generator/generate/ai_short_description',
                 method: 'POST',
                 body: {
                     file_id: fileId,

@@ -26,10 +26,10 @@ target-version = "py313"
 select = ["TID251"]
 
 [tool.ruff.lint.flake8-tidy-imports.banned-api]
-"generator".msg = "Cross-service imports are forbidden. Use HTTP/SSE contracts through api-gateway clients."
-"skills".msg = "Cross-service imports are forbidden. Use HTTP/SSE contracts through api-gateway clients."
-"api_gateway".msg = "Do not import services as Python packages inside this monorepo."
-"vn1_bot".msg = "Do not import through the monorepo root. Keep imports inside the current service."
+"generator".msg = "Межсервисные Python-импорты запрещены. Используй HTTP/SSE-контракты через клиентов api-gateway."
+"skills".msg = "Межсервисные Python-импорты запрещены. Используй HTTP/SSE-контракты через клиентов api-gateway."
+"api_gateway".msg = "Не импортируй сервисы как Python-пакеты внутри монорепозитория."
+"vn1_bot".msg = "Не импортируй через корень монорепозитория. Держи импорты внутри текущего сервиса."
 
 [tool.setuptools]
 package-dir = { "" = "src" }
@@ -38,4 +38,4 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["src", "../shared/python"]

@@ -21,7 +21,7 @@ def register_error_handlers(app: FastAPI) -> None:
 
 
 async def http_exception_handler(request: Request, exc: HTTPException | StarletteHTTPException) -> JSONResponse:
-    detail = exc.detail if isinstance(exc.detail, str) else "HTTP error"
+    detail = exc.detail if isinstance(exc.detail, str) else "HTTP-ошибка"
     return error_response(
         request=request,
         status_code=exc.status_code,
@@ -37,18 +37,18 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
         request=request,
         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
         code="validation_error",
-        message="Request validation failed",
+        message="Ошибка валидации запроса.",
         details=exc.errors(),
     )
 
 
 async def unexpected_exception_handler(request: Request, exc: Exception) -> JSONResponse:
-    logging.exception("Unhandled API error", exc_info=exc)
+    logging.exception("Необработанная ошибка API", exc_info=exc)
     return error_response(
         request=request,
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         code="internal_error",
-        message="Internal server error",
+        message="Внутренняя ошибка сервера.",
         details=str(exc) if _is_dev() else None,
         exc=exc,
     )

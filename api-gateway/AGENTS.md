@@ -1,40 +1,40 @@
-# Repository Guidelines
+# Правила Репозитория
 
-## Project Structure & Module Organization
+## Структура Проекта
 
-This repository contains the `vn1-api-gateway` FastAPI service. Runtime code lives under `src/`:
+Этот каталог содержит FastAPI-сервис `vn1-api-gateway`. Runtime-код находится в `src/`:
 
-- `src/app/api/`: FastAPI app setup, routers, schemas, dependencies, and error handling.
-- `src/app/use_cases/`: application orchestration for chat routing and generator proxying.
-- `src/domain/`: domain models, auth logic, and service selection rules.
-- `src/infrastructure/clients/`: HTTP/SSE clients for upstream services.
-- `src/common/`: shared exceptions, enums, SSE helpers, and Dynaconf settings.
-- `.env.example`, `Dockerfile`, and `docker-compose.yaml`: local and container configuration.
+- `src/app/api/`: создание FastAPI app, routers, schemas, dependencies и обработка ошибок.
+- `src/app/use_cases/`: прикладная orchestration для chat routing и proxy в generator.
+- `src/domain/`: domain models, auth-логика и правила выбора сервиса.
+- `src/infrastructure/clients/`: HTTP/SSE-клиенты для upstream-сервисов.
+- `src/common/`: общие исключения, enums и Dynaconf settings.
+- `.env.example`, `Dockerfile`, `docker-compose.yaml`: локальная и контейнерная конфигурация.
 
-No dedicated `tests/` directory is present yet. Add tests under `tests/` for behavior that can run without live upstream services.
+Отдельного каталога `tests/` пока нет. Новые тесты добавляй в `tests/`, если поведение можно проверить без живых upstream-сервисов.
 
-## Build, Test, and Development Commands
+## Команды
 
-- `make run`: sync dependencies, load `.env` if present, and run in `DEV` mode on `PORT` or `8000`.
-- `make run-prod`: run locally with `API_MODE=PROD`.
-- `make test`: run Ruff checks on `src/` and compile all Python modules.
-- `uv sync`: install project and development dependencies from `pyproject.toml`.
-- `docker compose up --build`: build and run the service in containers when testing deployment wiring.
+- `make run`: синхронизировать зависимости, загрузить `.env` при наличии и запустить сервис в `DEV` mode на `PORT` или `8000`.
+- `make run-prod`: локально запустить сервис с `API_MODE=PROD`.
+- `make test`: запустить Ruff checks для `src/` и скомпилировать Python-модули.
+- `uv sync`: установить project и dev dependencies из `pyproject.toml`.
+- `docker compose up --build`: собрать и запустить сервис в контейнерах для проверки deployment wiring.
 
-## Coding Style & Naming Conventions
+## Стиль Кода
 
-Use Python 3.13 syntax and package imports rooted at `src`. Keep modules organized by layer: API code should call use cases, and use cases should coordinate domain and infrastructure clients. Ruff is configured in `pyproject.toml`; run `make test` before submitting changes. Ruff banned-import rules prevent cross-service package imports such as `generator`, `skills`, `api_gateway`, or monorepo-root imports. Use HTTP/SSE contracts through gateway clients instead.
+Используй Python 3.13 и package imports от корня `src`. Держи слои разделенными: API вызывает use cases, а use cases координируют domain и infrastructure clients. Ruff настроен в `pyproject.toml`; перед сдачей изменений запускай `make test`. Ruff banned-import rules запрещают cross-service package imports вроде `generator`, `skills`, `api_gateway` и импортов от корня монорепозитория. Межсервисное взаимодействие должно идти через HTTP/SSE contracts.
 
-Prefer `snake_case` for modules, functions, and variables; `PascalCase` for classes and Pydantic-style schemas; and explicit, descriptive router/use-case names such as `route_chat_stream.py`.
+Используй `snake_case` для modules, functions и variables, `PascalCase` для classes и Pydantic schemas. Router/use-case имена должны явно описывать назначение, например `stream_skill.py`.
 
-## Testing Guidelines
+## Тестирование
 
-Current verification is linting plus `compileall`. When adding tests, use `pytest` conventions prepared in `pyproject.toml`: name files `tests/test_*.py`, keep fixtures close to the behavior under test, and mock network dependencies.
+Сейчас базовая проверка состоит из linting и `compileall`. При добавлении тестов используй pytest conventions из `pyproject.toml`: файлы `tests/test_*.py`, fixtures рядом с проверяемым поведением, сетевые зависимости мокать.
 
-## Commit & Pull Request Guidelines
+## Commits И Pull Requests
 
-Recent commits use short, lowercase summary messages such as `review`, `frontend`, `infra`, and `architecture`. Keep commits focused and use a concise imperative or descriptive subject. Pull requests should include the intent, affected endpoints or flows, configuration changes, and verification performed, for example `make test` or relevant manual API checks.
+Последние commits используют короткие lowercase summaries вроде `review`, `frontend`, `infra`, `architecture`. Держи commits сфокусированными. Pull request должен описывать цель, затронутые endpoints или flows, изменения конфигурации и выполненную проверку, например `make test` или ручные API checks.
 
-## Security & Configuration Tips
+## Безопасность И Конфигурация
 
-Do not commit real secrets. Copy `.env.example` to `.env` for local values. Keep environment-specific settings in `src/common/config/settings/settings.*.toml` and avoid hardcoding upstream service URLs, tokens, or mode-specific behavior in application code.
+Не коммить реальные secrets. Для локальных значений копируй `.env.example` в `.env`. Environment-specific settings держи в `src/common/config/settings/settings.*.toml`; не hardcode upstream URLs, tokens и mode-specific поведение в application code.

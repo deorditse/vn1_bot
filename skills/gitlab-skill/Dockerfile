@@ -2,12 +2,13 @@ FROM python:3.13.5-slim
 
 RUN pip install --no-cache-dir uv
 
-WORKDIR /app
+WORKDIR /repo/skills/gitlab-skill
 
-COPY pyproject.toml uv.lock ./
+COPY shared/python /repo/shared/python
+COPY skills/gitlab-skill/pyproject.toml skills/gitlab-skill/uv.lock ./
 RUN uv sync --no-dev
 
-COPY src ./src
-ENV PYTHONPATH=/app/src
+COPY skills/gitlab-skill/src ./src
+ENV PYTHONPATH=/repo/skills/gitlab-skill/src:/repo/shared/python
 
-CMD ["uv", "run", "uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8022"]
+CMD [".venv/bin/uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8022"]

@@ -1,4 +1,4 @@
-# docker build -t vn1-frontend -f frontend/Dockerfile .
+# docker build -t vn1-frontend frontend
 # docker run -d -p 8080:80 vn1-frontend
 
 ARG BASE_HREF=/
@@ -10,10 +10,10 @@ ARG APP
 
 WORKDIR $APP
 
-COPY frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-COPY frontend/ ./
+COPY . ./
 RUN npm run build
 
 FROM nginx:1.27-alpine AS deploy

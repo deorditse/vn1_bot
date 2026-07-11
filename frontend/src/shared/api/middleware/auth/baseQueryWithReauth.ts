@@ -8,11 +8,6 @@ const apiBaseQuery = fetchBaseQuery({
   credentials: 'include',
 });
 
-const generatorApiBaseQuery = fetchBaseQuery({
-  baseUrl: __GENERATOR_API_BASE_URL__,
-  credentials: 'include',
-});
-
 const authBaseQuery = fetchBaseQuery({
   baseUrl: __AUTH_BASE_URL__,
   credentials: 'include',
@@ -21,11 +16,6 @@ const authBaseQuery = fetchBaseQuery({
 function isAuthRequest(args: string | FetchArgs) {
   const url = typeof args === 'string' ? args : args.url;
   return url.startsWith('/auth/');
-}
-
-function isGeneratorRequest(args: string | FetchArgs) {
-  const url = typeof args === 'string' ? args : args.url;
-  return url.startsWith('/generate/');
 }
 
 function normalizeAuthArgs(args: string | FetchArgs): string | FetchArgs {
@@ -54,11 +44,7 @@ export const baseQueryWithReauth: BaseQueryFn<string | FetchArgs, unknown, Fetch
   api,
   extraOptions,
 ) => {
-  const baseQuery = isAuthRequest(args)
-    ? authBaseQuery
-    : isGeneratorRequest(args)
-      ? generatorApiBaseQuery
-      : apiBaseQuery;
+  const baseQuery = isAuthRequest(args) ? authBaseQuery : apiBaseQuery;
   const normalizedArgs = isAuthRequest(args) ? normalizeAuthArgs(args) : args;
   const result = await baseQuery(normalizedArgs, api, extraOptions);
 

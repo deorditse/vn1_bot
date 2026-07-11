@@ -10,6 +10,6 @@ class SkillSelector:
     ) -> SkillEnum:
         if requested_skill:
             return requested_skill
-        if SkillEnum.gitlab in available_skills and "gitlab" in question.lower():
+        if SkillEnum.gitlab in available_skills and SkillEnum.gitlab.value in question.lower():
             return SkillEnum.gitlab
         return available_skills[0]

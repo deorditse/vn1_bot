@@ -49,7 +49,7 @@ class AppSettings(BaseModel):
         if self.is_dev:
             return
         if "*" in self.cors_origins:
-            raise ConfigurationError("Invalid api-gateway configuration: CORS_ORIGINS must be explicit in prod")
+            raise ConfigurationError("Некорректная конфигурация api-gateway: CORS_ORIGINS в prod должен быть явным")
 
 
 def _parse_list(value: object) -> list[str]:
@@ -62,7 +62,7 @@ def _parse_list(value: object) -> list[str]:
         if stripped.startswith("["):
             parsed = json.loads(stripped)
             if not isinstance(parsed, list):
-                raise ValueError("Expected list value")
+                raise ValueError("Ожидался список")
             return [str(item).strip() for item in parsed if str(item).strip()]
         return [item.strip() for item in stripped.split(",") if item.strip()]
     return []
@@ -83,6 +83,7 @@ def _build_dynaconf() -> Dynaconf:
         validators=[
             Validator("API_MODE", must_exist=True),
             Validator("API_PORT", must_exist=True, gte=1),
+            Validator("SSE_EVENT_SET", must_exist=True),
             Validator("GENERATOR_BASE_URL", must_exist=True),
             Validator("AUTH_CONTEXT_URL", must_exist=True),
             Validator("AUTH_REQUIRED_ROLES", must_exist=True),
@@ -99,7 +100,7 @@ def get_settings() -> AppSettings:
         settings.validate_runtime()
         return settings
     except Exception as exc:
-        raise ConfigurationError(f"Invalid api-gateway configuration: {exc}") from exc
+        raise ConfigurationError(f"Некорректная конфигурация api-gateway: {exc}") from exc
 
 
 settings = get_settings()

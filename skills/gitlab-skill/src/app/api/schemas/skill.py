@@ -1,6 +1,8 @@
 from typing import Any
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field
+
+from vn1_protocol.sse_protocol import SkillId
 
 
 class SkillRunRequest(BaseModel):
@@ -9,31 +11,19 @@ class SkillRunRequest(BaseModel):
     message_id: str | None = Field(default=None, description="Assistant message id allocated by Gateway.")
     data: dict[str, Any] = Field(default_factory=dict, description="Sber-compatible skill payload.")
 
-    request_id: str | None = Field(default=None, description="Legacy request id.")
-    question: str | None = Field(default=None, description="Legacy question field.")
-    context: dict[str, Any] = Field(default_factory=dict, description="Legacy context field.")
-
-    @model_validator(mode="after")
-    def normalize_legacy_payload(self) -> "SkillRunRequest":
-        if self.question is None:
-            message = self.data.get("message")
-            if isinstance(message, str):
-                self.question = message
-        if self.request_id is None:
-            request_id = self.data.get("request_id")
-            if isinstance(request_id, str):
-                self.request_id = request_id
-        if self.context == {}:
-            self.context = {key: value for key, value in self.data.items() if key not in {"message", "request_id"}}
-        return self
+    @property
+    def request_id(self) -> str:
+        request_id = self.data.get("request_id")
+        return request_id if isinstance(request_id, str) else ""
 
     @property
     def message(self) -> str:
-        return self.question or ""
+        message = self.data.get("message")
+        return message if isinstance(message, str) else ""
 
 
 class SkillManifestResponse(BaseModel):
-    id: str = Field(description="Skill id.", examples=["gitlab"])
+    id: SkillId = Field(description="Skill id.", examples=[SkillId.gitlab.value])
     name: str = Field(description="Skill name.", examples=["GitLab Skill"])
     version: str = Field(description="Skill API version.", examples=["0.1.0"])
     capabilities: list[str] = Field(default_factory=list, description="Skill capabilities.")

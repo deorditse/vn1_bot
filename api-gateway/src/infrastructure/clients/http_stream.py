@@ -3,9 +3,7 @@ from typing import Any
 
 import httpx
 from fastapi import Request
-from fastapi.responses import StreamingResponse
-
-from common.sse import encode_sse
+from fastapi.responses import JSONResponse, Response
 
 
 class HttpStreamClient:
@@ -17,59 +15,31 @@ class HttpStreamClient:
         request: Request,
         path: str,
         extra_headers: dict[str, str] | None = None,
-    ) -> StreamingResponse:
+    ) -> Response:
         url = f"{self.base_url}/{path.lstrip('/')}"
         body = await request.body()
         headers = self._forward_headers(request)
         if extra_headers:
             headers.update(extra_headers)
 
-        async def iterator() -> AsyncIterator[bytes]:
+        try:
             async with httpx.AsyncClient(timeout=None) as client:
-                try:
-                    async with client.stream(
-                        request.method,
-                        url,
-                        params=request.query_params,
-                        content=body,
-                        headers=headers,
-                    ) as response:
-                        response.raise_for_status()
-                        async for chunk in response.aiter_bytes():
-                            yield chunk
-                except httpx.HTTPError as err:
-                    yield self._stream_error_event(request=request, err=err).encode()
+                response = await client.request(
+                    request.method,
+                    url,
+                    params=request.query_params,
+                    content=body,
+                    headers=headers,
+                )
+        except httpx.HTTPError as err:
+            return self._proxy_error_response(request=request, err=err)
 
-        return StreamingResponse(iterator(), media_type=request.headers.get("accept", "application/octet-stream"))
-
-    async def stream_json(
-        self,
-        path: str,
-        payload: dict[str, Any],
-        request: Request,
-        extra_headers: dict[str, str] | None = None,
-    ) -> StreamingResponse:
-        url = f"{self.base_url}/{path.lstrip('/')}"
-        headers = self._forward_headers(request)
-        if extra_headers:
-            headers.update(extra_headers)
-
-        async def iterator() -> AsyncIterator[bytes]:
-            async with httpx.AsyncClient(timeout=None) as client:
-                try:
-                    async with client.stream(
-                        "POST",
-                        url,
-                        json=payload,
-                        headers=headers,
-                    ) as response:
-                        response.raise_for_status()
-                        async for chunk in response.aiter_bytes():
-                            yield chunk
-                except httpx.HTTPError as err:
-                    yield self._stream_error_event(request=request, err=err).encode()
-
-        return StreamingResponse(iterator(), media_type="text/event-stream")
+        return Response(
+            content=response.content,
+            status_code=response.status_code,
+            headers=self._response_headers(response),
+            media_type=response.headers.get("content-type"),
+        )
 
     async def stream_json_bytes(
         self,
@@ -108,7 +78,12 @@ class HttpStreamClient:
         return {key: value for key, value in request.headers.items() if key.lower() not in skip}
 
     @staticmethod
-    def _stream_error_event(request: Request, err: httpx.HTTPError) -> str:
+    def _response_headers(response: httpx.Response) -> dict[str, str]:
+        skip = {"content-length", "content-encoding", "transfer-encoding", "connection"}
+        return {key: value for key, value in response.headers.items() if key.lower() not in skip}
+
+    @staticmethod
+    def _proxy_error_response(request: Request, err: httpx.HTTPError) -> JSONResponse:
         status_code = 502
         details: dict[str, Any] = {"upstream_error": str(err)}
         if isinstance(err, httpx.HTTPStatusError):
@@ -116,13 +91,13 @@ class HttpStreamClient:
             details["upstream_status"] = err.response.status_code
             details["upstream_body"] = err.response.text[:1000]
 
-        return encode_sse(
-            "error",
-            {
+        return JSONResponse(
+            status_code=status_code,
+            content={
                 "success": False,
                 "error": {
                     "code": "upstream_error",
-                    "message": "Upstream service error",
+                    "message": "Ошибка upstream-сервиса",
                     "details": details,
                 },
                 "request": {

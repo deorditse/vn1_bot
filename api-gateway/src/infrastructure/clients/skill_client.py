@@ -1,7 +1,8 @@
-from fastapi.responses import StreamingResponse
+from collections.abc import AsyncIterator
+from typing import Any
 
+from fastapi import Request
 from app.config.skills import load_skill_descriptors
-from common.sse import error_stream
 from common.enums import SkillEnum
 from domain.auth import User
 from domain.models.skill import SkillDescriptor
@@ -13,7 +14,7 @@ class SkillClient(HttpStreamClient):
         super().__init__(descriptor.base_url)
         self.descriptor = descriptor
 
-    async def manifest(self) -> dict:
+    async def manifest(self) -> dict[str, Any]:
         import httpx
 
         async with httpx.AsyncClient(timeout=30) as client:
@@ -21,25 +22,12 @@ class SkillClient(HttpStreamClient):
             response.raise_for_status()
             return response.json()
 
-    async def stream(self, request):
-        return await self.proxy(request=request, path=self.descriptor.stream_path)
-
-    async def stream_as_user(self, request, current_user: User):
-        return await self.proxy(
-            request=request,
-            path=self.descriptor.stream_path,
-            extra_headers=self._user_headers(current_user),
-        )
-
-    async def stream_json_as_user(self, request, payload: dict, current_user: User):
-        return await self.stream_json(
-            request=request,
-            path=self.descriptor.stream_path,
-            payload=payload,
-            extra_headers=self._user_headers(current_user),
-        )
-
-    async def stream_json_bytes_as_user(self, request, payload: dict, current_user: User):
+    async def stream_json_bytes_as_user(
+        self,
+        request: Request,
+        payload: dict[str, Any],
+        current_user: User,
+    ) -> AsyncIterator[bytes]:
         async for chunk in self.stream_json_bytes(
             request=request,
             path=self.descriptor.stream_path,
@@ -76,7 +64,7 @@ class SkillClientRegistry:
         return sorted(
             skill_id
             for skill_id, descriptor in self._descriptors.items()
-            if self._has_required_roles(descriptor, user_roles)
+            if self._has_required_roles(descriptor=descriptor, user_roles=user_roles)
         )
 
     def available_skills(self, user_roles: list[str] | None = None) -> list[dict]:
@@ -89,12 +77,8 @@ class SkillClientRegistry:
                 "required_roles": descriptor.required_roles,
             }
             for descriptor in self._descriptors.values()
-            if self._has_required_roles(descriptor, roles)
+            if self._has_required_roles(descriptor=descriptor, user_roles=roles)
         ]
-
-    @staticmethod
-    def unknown_skill_response(skill_id: SkillEnum | str) -> StreamingResponse:
-        return StreamingResponse(error_stream(f"Unknown skill: {skill_id}"), media_type="text/event-stream")
 
     @staticmethod
     def _has_required_roles(descriptor: SkillDescriptor, user_roles: list[str]) -> bool:

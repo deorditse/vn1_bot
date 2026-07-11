@@ -10,7 +10,6 @@ export default defineConfig(({ mode }) => {
   const plugins = [react()];
   const clientEnv = {
     __API_BASE_URL__: JSON.stringify(env.API_BASE_URL),
-    __GENERATOR_API_BASE_URL__: JSON.stringify(env.GENERATOR_API_BASE_URL),
     __AUTH_BASE_URL__: JSON.stringify(env.AUTH_BASE_URL),
   };
 
@@ -36,12 +35,6 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           secure: false,
           rewrite: (url) => url.replace(/^\/api/, ''),
-        },
-        '/generator-api': {
-          target: env.DEV_PROXY_GENERATOR_API_TARGET,
-          changeOrigin: true,
-          secure: false,
-          rewrite: (url) => url.replace(/^\/generator-api/, ''),
         },
         '/auth': {
           target: env.DEV_PROXY_AUTH_TARGET,

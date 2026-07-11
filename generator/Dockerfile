@@ -19,11 +19,9 @@ RUN apt-get update && apt-get install -y \
  && rm pandoc-${PANDOC_VERSION}-1-${PANDOC_ARCH}.deb \
  && rm -rf /var/lib/apt/lists/*
 
-# locale — критично для pandoc
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-# uv
 RUN pip install --no-cache-dir uv
 
 WORKDIR /app
@@ -34,4 +32,4 @@ RUN uv sync --no-dev
 COPY src ./src
 ENV PYTHONPATH=/app/src
 
-CMD ["uv", "run", "uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8010"]
+CMD [".venv/bin/uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8010"]

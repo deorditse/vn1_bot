@@ -39,12 +39,12 @@ function getGenerationErrorMessage(err: unknown, fallback: string) {
   }
 
   if ('status' in err && err.status === 'FETCH_ERROR') {
-    return `Backend недоступен. Проверьте, что generator API доступен по ${__GENERATOR_API_BASE_URL__}`;
+    return `Backend недоступен. Проверьте, что API доступен по ${__API_BASE_URL__}`;
   }
 
   if ('error' in err && typeof err.error === 'string') {
     if (err.error.includes('Failed to fetch') || err.error.includes('ECONNREFUSED')) {
-      return `Backend недоступен. Проверьте, что generator API доступен по ${__GENERATOR_API_BASE_URL__}`;
+      return `Backend недоступен. Проверьте, что API доступен по ${__API_BASE_URL__}`;
     }
   }
 

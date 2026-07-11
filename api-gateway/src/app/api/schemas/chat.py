@@ -1,4 +1,4 @@
-from typing import Any, Literal
+from typing import Any
 from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
@@ -10,10 +10,8 @@ class ChatStreamRequest(BaseModel):
     request_id: UUID = Field(default_factory=uuid4)
     chat_id: UUID = Field(default_factory=uuid4)
     question: str = Field(min_length=1)
-    target: Literal["generator", "skill"] = "skill"
     skill_id: SkillEnum | None = None
     available_skills: list[SkillEnum] = Field(default_factory=list)
-    generator_path: str = "generate/instruction"
     context: dict[str, Any] = Field(default_factory=dict)
 
 

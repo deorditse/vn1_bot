@@ -11,10 +11,13 @@
 **/*.pyc
 **/.DS_Store
 
-api-gateway
 auth
 docs
+frontend
 generator
-skills
-shared/certbot
-shared/xray-config
+skills/*
+!skills/gitlab-skill
+!skills/gitlab-skill/**
+shared/*
+!shared/python
+!shared/python/**

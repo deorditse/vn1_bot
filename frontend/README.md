@@ -17,17 +17,16 @@
 
 Сейчас frontend работает с публичными префиксами одного домена.
 
-Через nginx frontend доступен на `/`, auth API проксируется через `/auth` в `auth-service`, generator API через `/generator-api` в `backend-vn1`, а остальные backend API через `/api` в `api-gateway`.
+Через nginx frontend доступен на `/`, auth API проксируется через `/auth` в `auth-service`, а все backend API frontend отправляет через `/api` в `api-gateway`.
 
-Gateway сам решает, куда отправить запрос дальше:
+Gateway сам решает, куда отправить запрос дальше, включая текущие generator-сценарии:
 
 ```text
 frontend -> /auth -> auth-service -> Keycloak
-frontend -> /generator-api -> generator
-frontend -> /api -> api-gateway -> skills | other backend logic
+frontend -> /api -> api-gateway -> generator | skills | other backend logic
 ```
 
-Прямых вызовов skills из frontend быть не должно.
+Прямых вызовов generator и skills из frontend быть не должно.
 
 ## Команды
 
@@ -44,14 +43,9 @@ Dev proxy:
 
 ```text
 /api  -> http://localhost:8000
-/generator-api -> http://localhost:8010
 /auth -> http://localhost:8030/v1/auth
 ```
 
 ## Deployment
 
-Dockerfile frontend лежит здесь, но nginx-конфиг для образа вынесен в:
-
-```text
-../shared/ci-cd/frontend/nginx-default.conf
-```
+Dockerfile frontend лежит здесь. Внешний routing выполняет root `nginx.conf` в корне репозитория.

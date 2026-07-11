@@ -34,18 +34,19 @@
 
 В `API_MODE=DEV` unexpected errors могут содержать `error.trace`. В `PROD` traceback не возвращается.
 
-Для SSE skills используется тот же подход, что в `chat-service`:
+Для SSE skills используется общий протокол `docs/protocol/sse-stream.md`, по форме совместимый с `chat-service`.
 
-Промежуточные события от skill проходят как есть:
+Промежуточные события от skill проходят через gateway как есть:
 
 ```text
-data: {"data":{"fragment_type":"search","status":"success","content":"Ищем..."}}
+data: {"data":{"fragment_id":1,"fragment_type":"think","status":"in_progress","streaming":false,"content":"### Ищу...","token_usage":null,"duration_s":null}}
+data: {"data":{"fragment_id":1,"fragment_type":"think","status":"success","streaming":false,"content":"### Найдено","token_usage":123,"duration_s":1.2}}
 ```
 
 Терминальный payload от skill:
 
 ```text
-data: {"data":{"status":"success","fragments":[{"fragment_type":"response","status":"success","content":"Ответ"}]}}
+data: {"data":{"status":"success","fragments":[{"fragment_id":2,"fragment_type":"response","status":"success","streaming":false,"content":"Ответ"}]}}
 ```
 
 Gateway перехватывает терминальный payload и вместо него отправляет финальное message-событие:

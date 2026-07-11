@@ -5,8 +5,8 @@ networks:
 services:
   gitlab-skill:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ${REPO_ROOT:-.}
+      dockerfile: skills/gitlab-skill/Dockerfile
     expose:
       - "8022"
     env_file:

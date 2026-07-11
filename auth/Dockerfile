@@ -10,4 +10,4 @@ RUN uv sync --no-dev
 COPY src ./src
 ENV PYTHONPATH=/app/src
 
-CMD ["uv", "run", "uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8030"]
+CMD [".venv/bin/uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8030"]
