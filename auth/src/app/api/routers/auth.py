@@ -232,12 +232,15 @@ async def logout(
     responses={status.HTTP_401_UNAUTHORIZED: {"description": "Missing or invalid bearer token."}},
 )
 async def userinfo(
+    request: Request,
     authorization: str | None = Header(default=None, include_in_schema=False),
 ) -> UserInfoResponse:
     if is_auth_bypass_enabled():
         return dev_userinfo()
 
-    return await KeycloakAuthProvider().userinfo(authorization)
+    return await KeycloakAuthProvider().userinfo(
+        _bearer_or_cookie_authorization(request, authorization)
+    )
 
 
 @router.get(

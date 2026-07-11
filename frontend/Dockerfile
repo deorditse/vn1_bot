@@ -23,7 +23,6 @@ ARG APP
 
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build ${APP}/dist/ /usr/share/nginx/html/${BASE_HREF}
-COPY shared/ci-cd/frontend/nginx-default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

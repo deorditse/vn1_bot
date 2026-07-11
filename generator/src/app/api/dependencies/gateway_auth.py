@@ -1,13 +1,14 @@
 from typing import Any
 
 import httpx
-from fastapi import Header, HTTPException
+from fastapi import Header, HTTPException, Request
 from starlette import status
 
 from common import ApiMode
 from common.env import api_mode, auth_context_url
 from domain.auth import User, UserRole
 
+AUTH_ACCESS_COOKIE = "vn1_access_token"
 DEV_USER = User(
     id="dev-user",
     username="dev",
@@ -19,16 +20,17 @@ DEV_USER = User(
 
 
 async def require_gateway_user(
+    request: Request,
     authorization: str | None = Header(default=None, include_in_schema=False),
 ) -> User:
     if api_mode() == ApiMode.DEV:
         return DEV_USER
 
-    token = _bearer_token(authorization)
+    token = _bearer_token(authorization) or request.cookies.get(AUTH_ACCESS_COOKIE)
     if token is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Missing bearer access token",
+            detail="Missing access token",
             headers={"WWW-Authenticate": "Bearer"},
         )
 

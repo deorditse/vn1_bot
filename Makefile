@@ -19,7 +19,6 @@ COMPOSE = REPO_ROOT=$(REPO_ROOT) $(DOCKER) compose $(COMPOSE_FILES)
 
 run: prod
 
-run-prod: prod
 
 test:
 	$(COMPOSE) config >/dev/null

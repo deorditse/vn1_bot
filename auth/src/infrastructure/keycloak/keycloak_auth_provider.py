@@ -14,6 +14,7 @@ class KeycloakAuthProvider:
                 "grant_type": "password",
                 "username": username,
                 "password": password,
+                "scope": "openid profile email",
             }
         )
 
