@@ -7,6 +7,7 @@ ARG APP=/app
 FROM node:22-alpine AS build
 
 ARG APP
+
 WORKDIR $APP
 
 COPY frontend/package*.json ./

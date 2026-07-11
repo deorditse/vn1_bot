@@ -16,7 +16,6 @@ if __name__ == '__main__':
             proxy_headers=True,
             server_header=True,
             port=config.api_port,
-            # forwarded_allow_ips=[],
         )
     except Exception as err:
         pylog.critical(err)

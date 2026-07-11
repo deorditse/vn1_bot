@@ -4,7 +4,6 @@ import type { PropsWithChildren } from 'react';
 import { useLazyGetMeQuery, useLoginMutation, useLogoutMutation } from '../api/authApi';
 import type { UserProfile } from '../api/types';
 import { AUTH_REQUIRED_EVENT } from '@shared/api';
-import { isDevAuthDisabled } from '@shared/config/env';
 
 type AuthContextValue = {
   isAuthenticated: boolean;
@@ -22,6 +21,8 @@ const devUser: UserProfile = {
   email: 'dev@local.test',
   roles: ['dev'],
 };
+
+const isDevAuthDisabled = import.meta.env.DEV;
 
 export function AuthProvider({ children }: PropsWithChildren) {
   const [user, setUser] = useState<UserProfile | null>(isDevAuthDisabled ? devUser : null);

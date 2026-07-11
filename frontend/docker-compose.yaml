@@ -7,6 +7,10 @@ services:
     build:
       context: ${REPO_ROOT:-.}
       dockerfile: frontend/Dockerfile
+    environment:
+      API_BASE_URL: ${FRONTEND_API_BASE_URL:-/api}
+      GENERATOR_API_BASE_URL: ${FRONTEND_GENERATOR_API_BASE_URL:-/generator-api}
+      AUTH_BASE_URL: ${FRONTEND_AUTH_BASE_URL:-/auth}
     restart: unless-stopped
     networks:
       - vn1

@@ -3,12 +3,13 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 import { useAuth } from '@features/auth';
 import { PageLoader } from '@widgets/page-loader';
-import { isDevAuthDisabled } from '@shared/config/env';
 import { getRouteLogin } from '@shared/const/router';
 
 type Props = {
   children: ReactNode;
 };
+
+const isDevAuthDisabled = import.meta.env.DEV;
 
 export function RequireAuth({ children }: Props) {
   const { isAuthenticated, isLoading } = useAuth();

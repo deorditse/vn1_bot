@@ -15,15 +15,16 @@
 
 ## Текущая Интеграция
 
-Сейчас frontend работает с двумя публичными префиксами одного домена.
+Сейчас frontend работает с публичными префиксами одного домена.
 
-Через nginx frontend доступен на `/`, auth API проксируется через `/auth` в `auth-service`, а backend API через `/api` в `api-gateway`.
+Через nginx frontend доступен на `/`, auth API проксируется через `/auth` в `auth-service`, generator API через `/generator-api` в `backend-vn1`, а остальные backend API через `/api` в `api-gateway`.
 
 Gateway сам решает, куда отправить запрос дальше:
 
 ```text
 frontend -> /auth -> auth-service -> Keycloak
-frontend -> /api  -> api-gateway -> generator | skills
+frontend -> /generator-api -> generator
+frontend -> /api -> api-gateway -> skills | other backend logic
 ```
 
 Прямых вызовов skills из frontend быть не должно.
@@ -43,6 +44,7 @@ Dev proxy:
 
 ```text
 /api  -> http://localhost:8000
+/generator-api -> http://localhost:8010
 /auth -> http://localhost:8030/v1/auth
 ```
 

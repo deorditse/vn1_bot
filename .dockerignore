@@ -3,6 +3,7 @@
 .venv
 .env
 .env.*
+!frontend/.env.example
 
 **/node_modules
 **/dist
@@ -17,4 +18,3 @@ generator
 skills
 shared/certbot
 shared/xray-config
-
