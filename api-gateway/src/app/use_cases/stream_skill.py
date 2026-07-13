@@ -231,6 +231,7 @@ class StreamSkillUseCase:
             sender="assistant",
             data=text,
             skill=skill_name,
+            skills=_extract_used_skills(terminal_payload, fallback_skill=skill_name),
             processing_data=terminal_payload,
             created_at=datetime.now(tz=UTC).isoformat(),
             status=terminal_payload.get("status"),
@@ -260,6 +261,7 @@ class StreamSkillUseCase:
             sender="assistant",
             data=text,
             skill=skill_name,
+            skills=[skill_name],
             processing_data=terminal_payload,
             created_at=datetime.now(tz=UTC).isoformat(),
             status=terminal_payload.get("status"),
@@ -359,6 +361,22 @@ def _normalize_requested_skills(skill_id: SkillEnum | list[SkillEnum] | None) ->
     if isinstance(skill_id, list):
         return list(dict.fromkeys(skill_id))
     return [skill_id]
+
+
+def _extract_used_skills(terminal_payload: dict, fallback_skill: str) -> list[str]:
+    fragments = terminal_payload.get("fragments")
+    if not isinstance(fragments, list):
+        return [fallback_skill]
+
+    skills: list[str] = []
+    for fragment in fragments:
+        if not isinstance(fragment, dict):
+            continue
+        skill = fragment.get("skill")
+        if isinstance(skill, str) and skill and skill not in skills:
+            skills.append(skill)
+
+    return skills or [fallback_skill]
 
 
 def _uuid_or_new(value: Any) -> UUID:

@@ -22,6 +22,7 @@ class ChatMessageStreamEvent(BaseModel):
     data: str
     data_type: str = "text"
     skill: str
+    skills: list[str] = Field(default_factory=list)
     links: list[Any] | None = None
     processing_data: dict[str, Any] | None = None
     see_more: list[str] = Field(default_factory=list)
