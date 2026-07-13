@@ -6,7 +6,7 @@ from infrastructure.llm.llm import LLMService
 
 
 class ShortDescriptionUseCase:
-    ai_information_prompt = load_prompt('generation/ai_information.md')
+    ai_information_prompt = load_prompt('generation/ai_information.yaml')
 
     def __init__(self, converter: Converter):
         self._converter = converter

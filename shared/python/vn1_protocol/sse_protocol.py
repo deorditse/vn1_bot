@@ -9,6 +9,7 @@ class SseProtocolModel(BaseModel):
 
 
 class SkillId(StrEnum):
+    orchestrator = "orchestrator"
     gitlab = "gitlab"
 
 
@@ -39,6 +40,7 @@ class SseFragment(SseProtocolModel):
     file_id: str | None = None
     request_id: str | None = None
     skill: SkillId | None = None
+    step: str | None = None
     query: str | None = None
     sources: list[dict[str, Any]] | None = None
 

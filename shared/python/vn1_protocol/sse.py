@@ -98,7 +98,7 @@ def parse_terminal_payload(event_bytes: bytes) -> dict[str, Any] | None:
 
 
 def build_error_terminal_payload(message: str = "Не удалось обработать запрос.") -> dict[str, Any]:
-    payload = TerminalPayload(
+    return terminal_payload_data(
         status=TerminalStatus.error,
         fragments=[
             SseFragment(
@@ -108,7 +108,6 @@ def build_error_terminal_payload(message: str = "Не удалось обраб�
             )
         ],
     )
-    return payload.model_dump(mode="json", exclude_none=True)
 
 
 def extract_final_text(payload: dict[str, Any]) -> tuple[str, str | None]:
@@ -117,24 +116,18 @@ def extract_final_text(payload: dict[str, Any]) -> tuple[str, str | None]:
         return "", None
 
     def pick_file_id() -> str | None:
-        for fragment in fragments:
-            if not isinstance(fragment, dict):
-                continue
-            if fragment.get("fragment_type") == FragmentType.response and fragment.get("status") == FragmentStatus.success:
-                file_id = fragment.get("file_id")
-                if isinstance(file_id, str) and file_id.strip():
-                    return file_id.strip()
+        for fragment in _response_fragments(fragments, FragmentStatus.success):
+            file_id = fragment.get("file_id")
+            if isinstance(file_id, str) and file_id.strip():
+                return file_id.strip()
         return None
 
     def pick(fragment_status: FragmentStatus) -> str:
         parts: list[str] = []
-        for fragment in fragments:
-            if not isinstance(fragment, dict):
-                continue
-            if fragment.get("fragment_type") == FragmentType.response and fragment.get("status") == fragment_status:
-                content = fragment.get("content")
-                if isinstance(content, str) and content:
-                    parts.append(content)
+        for fragment in _response_fragments(fragments, fragment_status):
+            content = fragment.get("content")
+            if isinstance(content, str) and content:
+                parts.append(content)
         return "".join(parts).strip()
 
     text = pick(FragmentStatus.success)
@@ -146,6 +139,17 @@ def extract_final_text(payload: dict[str, Any]) -> tuple[str, str | None]:
         return text, pick_file_id()
 
     return "", pick_file_id()
+
+
+def _response_fragments(fragments: list[Any], status: FragmentStatus):
+    for fragment_payload in fragments:
+        if not isinstance(fragment_payload, dict):
+            continue
+        if fragment_payload.get("fragment_type") != FragmentType.response:
+            continue
+        if fragment_payload.get("status") != status:
+            continue
+        yield fragment_payload
 
 
 def fragment(
@@ -171,9 +175,16 @@ def fragment_event(fragment_payload: SseFragment) -> dict[str, Any]:
     return SseDataEnvelope(data=fragment_payload).model_dump(mode="json", exclude_none=True)
 
 
-def terminal_payload(status: TerminalStatus, fragments: list[SseFragment]) -> dict[str, Any]:
+def terminal_payload_data(status: TerminalStatus, fragments: list[SseFragment]) -> dict[str, Any]:
     payload = TerminalPayload(status=status, fragments=fragments)
-    return TerminalEnvelope(data=payload).model_dump(mode="json", exclude_none=True)
+    return payload.model_dump(mode="json", exclude_none=True)
+
+
+def terminal_payload(status: TerminalStatus, fragments: list[SseFragment]) -> dict[str, Any]:
+    return TerminalEnvelope(data=terminal_payload_data(status=status, fragments=fragments)).model_dump(
+        mode="json",
+        exclude_none=True,
+    )
 
 
 class SkillProgressEmitter:

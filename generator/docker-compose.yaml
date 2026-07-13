@@ -8,8 +8,8 @@ volumes:
 services:
   backend-vn1:
     build:
-      context: ${REPO_ROOT:-.}/generator
-      dockerfile: Dockerfile
+      context: ${REPO_ROOT:-.}
+      dockerfile: generator/Dockerfile
     expose:
       - "8010"
     env_file:

@@ -20,14 +20,12 @@ from vn1_protocol.sse import (
     sse_headers,
 )
 from domain.auth import User
-from domain.services.skill_selector import SkillSelector
 from infrastructure.clients.skill_client import SkillClient, SkillClientRegistry
 
 
 class StreamSkillUseCase:
     def __init__(self, skill_registry: SkillClientRegistry) -> None:
         self.skill_registry = skill_registry
-        self.skill_selector = SkillSelector()
 
     async def execute_chat(self, request: Request, payload: ChatStreamRequest, current_user: User) -> StreamingResponse:
         registry_skill_ids = self.skill_registry.accessible_skill_ids(current_user.roles)
@@ -39,31 +37,61 @@ class StreamSkillUseCase:
                 message="Нет доступных skills.",
             )
 
-        selected_skill = self.skill_selector.select(
-            requested_skill=payload.skill_id,
-            question=payload.question,
-            available_skills=available_skills,
-        )
-        if selected_skill not in available_skills:
-            return self._error_stream_response(
-                chat_id=payload.chat_id,
-                skill_name=selected_skill.value,
-                message=f"Skill недоступен для этого чата: {selected_skill.value}",
-            )
+        requested_skills = _normalize_requested_skills(payload.skill_id)
+        if requested_skills and SkillEnum.orchestrator not in requested_skills and len(requested_skills) == 1:
+            selected_skill = requested_skills[0]
+            candidate_skills = [skill_id for skill_id in available_skills if skill_id != SkillEnum.orchestrator]
+            if selected_skill not in available_skills:
+                return self._error_stream_response(
+                    chat_id=payload.chat_id,
+                    skill_name=selected_skill.value,
+                    message=f"Skill недоступен для этого чата: {selected_skill.value}",
+                )
+            skill = self.skill_registry.get(selected_skill)
+            if skill is None:
+                return self._error_stream_response(
+                    chat_id=payload.chat_id,
+                    skill_name=selected_skill.value,
+                    message=f"Неизвестный skill: {selected_skill.value}",
+                )
+        else:
+            selected_skill = SkillEnum.orchestrator
+            orchestrator = self.skill_registry.get(SkillEnum.orchestrator)
+            if orchestrator is None or SkillEnum.orchestrator not in registry_skill_ids:
+                return self._error_stream_response(
+                    chat_id=payload.chat_id,
+                    skill_name=SkillEnum.orchestrator.value,
+                    message="Orchestrator skill недоступен.",
+                )
+            skill = orchestrator
+            candidate_skills = [skill_id for skill_id in requested_skills if skill_id != SkillEnum.orchestrator]
+            if not candidate_skills:
+                candidate_skills = [skill_id for skill_id in available_skills if skill_id != SkillEnum.orchestrator]
 
-        skill = self.skill_registry.get(selected_skill)
-        if skill is None:
+            unavailable_skills = [skill_id for skill_id in candidate_skills if skill_id not in available_skills]
+            if unavailable_skills:
+                skill_names = ", ".join(skill_id.value for skill_id in unavailable_skills)
+                return self._error_stream_response(
+                    chat_id=payload.chat_id,
+                    skill_name=skill_names,
+                    message=f"Skill недоступен для этого чата: {skill_names}",
+                )
+
+        if selected_skill == SkillEnum.orchestrator and not candidate_skills:
             return self._error_stream_response(
                 chat_id=payload.chat_id,
-                skill_name=selected_skill.value,
-                message=f"Неизвестный skill: {selected_skill.value}",
+                skill_name=SkillEnum.orchestrator.value,
+                message="Нет доступных навыков для оркестрации.",
             )
 
         upstream_payload = self._chat_upstream_payload(
             payload=payload,
             current_user=current_user,
             message_id=uuid4(),
-            available_skills=available_skills,
+            available_skills=self._available_skill_payloads(
+                skill_ids=candidate_skills if selected_skill == SkillEnum.orchestrator else available_skills,
+                current_user=current_user,
+            ),
             selected_skill=selected_skill,
         )
         return self._stream_response(
@@ -243,7 +271,7 @@ class StreamSkillUseCase:
         payload: ChatStreamRequest,
         current_user: User,
         message_id,
-        available_skills: list[SkillEnum],
+        available_skills: list[dict[str, Any]],
         selected_skill: SkillEnum,
     ) -> dict:
         data = {
@@ -253,7 +281,7 @@ class StreamSkillUseCase:
             **payload.context,
         }
         if available_skills:
-            data["available_skills"] = [skill_id.value for skill_id in available_skills]
+            data["available_skills"] = available_skills
 
         return {
             "thread_id": str(payload.chat_id),
@@ -298,6 +326,14 @@ class StreamSkillUseCase:
         registry_set = set(registry_skill_ids)
         return [skill for skill in requested_available_skills if skill in registry_set]
 
+    def _available_skill_payloads(self, skill_ids: list[SkillEnum], current_user: User) -> list[dict[str, Any]]:
+        requested = {skill_id.value for skill_id in skill_ids}
+        return [
+            skill
+            for skill in self.skill_registry.available_skills(current_user.roles)
+            if skill["id"] in requested
+        ]
+
 
 def _upstream_error_text(exc: httpx.HTTPError) -> str:
     response = getattr(exc, "response", None)
@@ -315,6 +351,14 @@ def _upstream_error_text(exc: httpx.HTTPError) -> str:
         if isinstance(error, dict) and isinstance(error.get("message"), str):
             return error["message"]
     return "Ошибка обработки на upstream."
+
+
+def _normalize_requested_skills(skill_id: SkillEnum | list[SkillEnum] | None) -> list[SkillEnum]:
+    if skill_id is None:
+        return []
+    if isinstance(skill_id, list):
+        return list(dict.fromkeys(skill_id))
+    return [skill_id]
 
 
 def _uuid_or_new(value: Any) -> UUID:

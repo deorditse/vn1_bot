@@ -58,8 +58,8 @@ class GenerateContentHtmlNode(BaseNode):
     async def __call__(self, state: GraphState) -> GraphState:
         _log(self.step)
 
-        content_prompt = load_prompt('md_to_html/content_prompt.md').format(markdown_example=md_example,
-                                                                            html_content_example=content_example)
+        content_prompt = load_prompt('md_to_html/content_prompt.yaml').format(markdown_example=md_example,
+                                                                              html_content_example=content_example)
         messages = [
             SystemMessage(content=content_prompt.strip()),
             HumanMessage(content=state.get('mdFile', '')),
@@ -111,9 +111,9 @@ class GenerateMenuHtmlNode(BaseNode):
         )
         self._llm = llm
 
-    menu_prompt = load_prompt('md_to_html/menu_prompt.md').format(html_menu_example=menu_example,
-                                                                  html_input_example=content_example,
-                                                                  )
+    menu_prompt = load_prompt('md_to_html/menu_prompt.yaml').format(html_menu_example=menu_example,
+                                                                    html_input_example=content_example,
+                                                                    )
 
     async def __call__(self, state: GraphState) -> GraphState:
         _log(self.step)

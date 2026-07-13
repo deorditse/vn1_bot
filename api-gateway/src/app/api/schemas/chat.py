@@ -10,7 +10,7 @@ class ChatStreamRequest(BaseModel):
     request_id: UUID = Field(default_factory=uuid4)
     chat_id: UUID = Field(default_factory=uuid4)
     question: str = Field(min_length=1)
-    skill_id: SkillEnum | None = None
+    skill_id: SkillEnum | list[SkillEnum] | None = None
     available_skills: list[SkillEnum] = Field(default_factory=list)
     context: dict[str, Any] = Field(default_factory=dict)
 

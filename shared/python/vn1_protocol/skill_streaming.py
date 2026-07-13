@@ -49,6 +49,7 @@ def emit_ui_event(
         token_usage=token_usage,
         duration_s=duration_s,
         persist=persist,
+        step=step,
         **extra,
     )
     state.events.append(event)

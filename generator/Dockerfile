@@ -26,10 +26,11 @@ RUN pip install --no-cache-dir uv
 
 WORKDIR /app
 
-COPY pyproject.toml uv.lock ./
+COPY generator/pyproject.toml generator/uv.lock ./
 RUN uv sync --no-dev
 
-COPY src ./src
-ENV PYTHONPATH=/app/src
+COPY generator/src ./src
+COPY shared/python /shared/python
+ENV PYTHONPATH=/app/src:/shared/python
 
 CMD [".venv/bin/uvicorn", "app.api.api:app", "--host", "0.0.0.0", "--port", "8010"]

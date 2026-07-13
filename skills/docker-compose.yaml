@@ -3,6 +3,11 @@ networks:
     name: vn1
 
 services:
+  orchestrator-skill:
+    extends:
+      file: ./skills/orchestrator-skill/docker-compose.yaml
+      service: orchestrator-skill
+
   gitlab-skill:
     extends:
       file: ./skills/gitlab-skill/docker-compose.yaml

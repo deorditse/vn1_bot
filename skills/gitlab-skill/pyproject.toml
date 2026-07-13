@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "dynaconf>=3.3.2",
     "fastapi>=0.121.2",
+    "langgraph>=1.0.5",
     "python-dotenv>=1.2.1",
     "uvicorn>=0.38.0",
 ]

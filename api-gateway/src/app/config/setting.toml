@@ -1,3 +1,11 @@
+[skills.orchestrator]
+enabled = true
+name = "Orchestrator"
+description = "Выбор подходящих навыков для обработки пользовательского запроса."
+base_url = "http://orchestrator-skill:8020"
+stream_path = "/v1/run/stream"
+manifest_path = "/manifest"
+
 [skills.gitlab]
 enabled = true
 name = "GitLab"

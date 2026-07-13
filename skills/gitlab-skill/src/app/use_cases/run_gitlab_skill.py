@@ -2,23 +2,14 @@ from collections.abc import AsyncIterator
 
 from fastapi import Request
 
-from agents.common.streaming import SkillStreamState
-from agents.gitlab_skill.nodes import BuildResponseNode, SearchGitLabNode, ValidateRequestNode
 from app.api.schemas.skill import SkillRunRequest
-from domain.services.gitlab_search import GitLabSearchService
+from app.workflows.gitlab_skill.app import gitlab_app
 from vn1_protocol.sse import SkillProgressEmitter
+from vn1_protocol.skill_streaming import SkillStreamState
 from vn1_protocol.sse_protocol import SkillId, TerminalStatus
 
 
 class RunGitLabSkillUseCase:
-    def __init__(self) -> None:
-        search_service = GitLabSearchService()
-        self.nodes = (
-            ValidateRequestNode(),
-            SearchGitLabNode(search_service),
-            BuildResponseNode(),
-        )
-
     async def stream(self, request: Request, payload: SkillRunRequest) -> AsyncIterator[str]:
         state = SkillStreamState(
             request=request,
@@ -26,8 +17,7 @@ class RunGitLabSkillUseCase:
             progress=SkillProgressEmitter(skill=SkillId.gitlab, request_id=payload.request_id),
         )
 
-        for node in self.nodes:
-            await node(state)
+        async for _ in gitlab_app.astream({"stream": state}, stream_mode="updates"):
             for event in state.drain_events():
                 yield event
             if state.data.get("client_disconnected"):

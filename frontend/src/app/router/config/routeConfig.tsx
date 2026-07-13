@@ -1,13 +1,15 @@
 import { Navigate } from 'react-router-dom';
-import { FileText } from 'lucide-react';
+import { BookOpen, FileText } from 'lucide-react';
 
 import { AppLayout } from '@app/layout/AppLayout';
 import { InstructionPage } from '@pages/instruction';
+import { KnowledgeBasePage } from '@pages/knowledgeBase';
 import { LoginPage } from '@pages/login';
 import {
   AppRoutes,
   ToolRoutes,
   getRouteInstruction,
+  getRouteKnowledgeBase,
   getRouteLogin,
   getRouteRoot,
 } from '@shared/const/router';
@@ -22,6 +24,16 @@ export const toolRouteConfig: Record<ToolRoutes, AppRoutesProps> = {
       label: 'Инструкция',
       description: 'DOCX в HTML и описание',
       icon: <FileText size={18} />,
+    },
+  },
+  [ToolRoutes.KNOWLEDGE_BASE]: {
+    path: getRouteKnowledgeBase(),
+    element: <KnowledgeBasePage />,
+    authOnly: true,
+    nav: {
+      label: 'База знаний',
+      description: 'Поиск и управление материалами',
+      icon: <BookOpen size={18} />,
     },
   },
 };

@@ -1,12 +1,9 @@
 from pathlib import Path
-from functools import lru_cache
+
+from vn1_prompts.policies_loader import load_prompt as _load_prompt
 
 BASE_DIR = Path(__file__).parent / "prompts"
 
 
-@lru_cache(maxsize=None)
-def load_prompt(path: str) -> str:
-    """
-    Загружает prompt один раз и кеширует его.
-    """
-    return (BASE_DIR / path).read_text(encoding="utf-8")
+def load_prompt(path: str, role: str | None = None) -> str:
+    return _load_prompt(path, base_dir=BASE_DIR, role=role)
