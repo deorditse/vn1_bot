@@ -3,6 +3,7 @@ from __future__ import annotations
 from time import perf_counter
 
 from app.workflows.common.nodes import BaseNode
+from app.workflows.gitlab_skill.app import GitLabSkillStep
 from app.workflows.gitlab_skill.state import GitLabGraphState
 from domain.ports import GitLabSearchPort
 from vn1_protocol.skill_streaming import emit_ui_event
@@ -11,7 +12,7 @@ from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStat
 
 class SearchGitLabNode(BaseNode):
     def __init__(self, search_service: GitLabSearchPort) -> None:
-        super().__init__(step="search_gitlab", title="Search GitLab")
+        super().__init__(step=GitLabSkillStep.search_gitlab, title="Search GitLab")
         self.search_service = search_service
 
     async def __call__(self, state: GitLabGraphState) -> GitLabGraphState:

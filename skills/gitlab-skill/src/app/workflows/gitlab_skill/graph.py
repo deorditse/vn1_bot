@@ -5,6 +5,7 @@ from typing import Literal
 from langgraph.graph import END, START, StateGraph
 from vn1_protocol.sse_protocol import TerminalStatus
 
+from app.workflows.gitlab_skill.app import GitLabSkillStep
 from app.workflows.gitlab_skill.nodes import BuildResponseNode, SearchGitLabNode, ValidateRequestNode
 from app.workflows.gitlab_skill.state import GitLabGraphState
 from domain.ports import GitLabSearchPort
@@ -17,28 +18,28 @@ def build_gitlab_skill_graph(
     search_service = search_service or GitLabSearchService()
 
     graph = StateGraph(GitLabGraphState)
-    graph.add_node("validate_request", ValidateRequestNode())
-    graph.add_node("search_gitlab", SearchGitLabNode(search_service))
-    graph.add_node("build_response", BuildResponseNode())
+    graph.add_node(GitLabSkillStep.validate_request, ValidateRequestNode())
+    graph.add_node(GitLabSkillStep.search_gitlab, SearchGitLabNode(search_service))
+    graph.add_node(GitLabSkillStep.build_response, BuildResponseNode())
 
-    graph.add_edge(START, "validate_request")
+    graph.add_edge(START, GitLabSkillStep.validate_request)
     graph.add_conditional_edges(
-        "validate_request",
+        GitLabSkillStep.validate_request,
         _route_after_guarded_node,
         {
-            "continue": "search_gitlab",
+            "continue": GitLabSkillStep.search_gitlab,
             "finish": END,
         },
     )
     graph.add_conditional_edges(
-        "search_gitlab",
+        GitLabSkillStep.search_gitlab,
         _route_after_guarded_node,
         {
-            "continue": "build_response",
+            "continue": GitLabSkillStep.build_response,
             "finish": END,
         },
     )
-    graph.add_edge("build_response", END)
+    graph.add_edge(GitLabSkillStep.build_response, END)
     return graph
 
 

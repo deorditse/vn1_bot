@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from app.workflows.common.nodes import BaseNode
+from app.workflows.orchestrator.app import OrchestratorStep
 from app.workflows.orchestrator.state import OrchestratorGraphState
 from vn1_protocol.skill_streaming import emit_ui_event
 from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStatus
@@ -10,7 +11,7 @@ from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStat
 
 class SelectSkillsNode(BaseNode):
     def __init__(self) -> None:
-        super().__init__(step="select_skills", title="Select skills")
+        super().__init__(step=OrchestratorStep.select_skills, title="Select skills")
 
     async def __call__(self, state: OrchestratorGraphState) -> OrchestratorGraphState:
         stream = state["stream"]

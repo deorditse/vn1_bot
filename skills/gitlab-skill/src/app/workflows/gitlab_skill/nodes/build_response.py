@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from app.workflows.common.nodes import BaseNode
+from app.workflows.gitlab_skill.app import GitLabSkillStep
 from app.workflows.gitlab_skill.state import GitLabGraphState
 from vn1_protocol.skill_streaming import emit_ui_event
 from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStatus
@@ -8,7 +9,7 @@ from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStat
 
 class BuildResponseNode(BaseNode):
     def __init__(self) -> None:
-        super().__init__(step="build_response", title="Build response")
+        super().__init__(step=GitLabSkillStep.build_response, title="Build response")
 
     async def __call__(self, state: GitLabGraphState) -> GitLabGraphState:
         stream = state["stream"]

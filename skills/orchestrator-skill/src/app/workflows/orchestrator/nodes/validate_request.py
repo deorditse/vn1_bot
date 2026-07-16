@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from app.workflows.common.nodes import BaseNode
+from app.workflows.orchestrator.app import OrchestratorStep
 from app.workflows.orchestrator.state import OrchestratorGraphState
 from vn1_protocol.skill_streaming import emit_ui_event
 from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStatus
@@ -8,7 +9,7 @@ from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStat
 
 class ValidateRequestNode(BaseNode):
     def __init__(self) -> None:
-        super().__init__(step="validate_request", title="Validate request")
+        super().__init__(step=OrchestratorStep.validate_request, title="Validate request")
 
     async def __call__(self, state: OrchestratorGraphState) -> OrchestratorGraphState:
         stream = state["stream"]

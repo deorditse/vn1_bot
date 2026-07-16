@@ -1,7 +1,15 @@
 from __future__ import annotations
 
+from enum import StrEnum
 from pathlib import Path
 from typing import Any
+
+
+class GitLabSkillStep(StrEnum):
+    validate_request = "validate_request"
+    search_gitlab = "search_gitlab"
+    build_response = "build_response"
+
 
 from app.workflows.gitlab_skill.graph import build_gitlab_skill_graph
 
@@ -31,4 +39,4 @@ def save_graph_image(compiled_graph: Any = _compiled_graph, path: Path = GRAPH_I
 
 save_graph_image()
 
-__all__ = ["GRAPH_IMAGE_PATH", "gitlab_app", "gitlab_graph", "save_graph_image"]
+__all__ = ["GRAPH_IMAGE_PATH", "GitLabSkillStep", "gitlab_app", "gitlab_graph", "save_graph_image"]

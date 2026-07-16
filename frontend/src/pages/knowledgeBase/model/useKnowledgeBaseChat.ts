@@ -5,7 +5,6 @@ import {AUTH_REQUIRED_EVENT} from '@shared/api';
 
 import {parseSseMessages} from './sse';
 import type {KnowledgeBaseChatSettings} from './settings';
-import type {AvailableSkill} from './useAvailableSkills';
 
 type ChatRole = 'user' | 'assistant';
 type ChatStatus = 'idle' | 'streaming' | 'success' | 'error';
@@ -16,15 +15,28 @@ export type KnowledgeBaseChatMessage = {
     content: string;
     status: ChatStatus;
     skill?: string;
-    thinking?: string[];
+    skills?: string[];
+    thinking?: ThinkingItem[];
+};
+
+export type ThinkingItem = {
+    id: string;
+    content: string;
+    status?: string;
+    step?: string;
+    skill?: string;
+    duration_s?: number;
 };
 
 type FragmentPayload = {
+    fragment_id?: number | string;
     fragment_type?: string;
     status?: string;
     content?: string;
     streaming?: boolean;
     step?: string;
+    skill?: string;
+    duration_s?: number;
 };
 
 type FinalPayload = {
@@ -32,19 +44,16 @@ type FinalPayload = {
     message_id?: string;
     data?: string;
     skill?: string;
+    skills?: string[];
     status?: string;
+    processing_data?: {
+        fragments?: FragmentPayload[];
+    };
 };
 
-const initialMessages: KnowledgeBaseChatMessage[] = [
-    {
-        id: 'welcome',
-        role: 'assistant',
-        content: 'Задайте вопрос по базе знаний. Я покажу ход обработки и финальный ответ в одном диалоге.',
-        status: 'success',
-    },
-];
+const initialMessages: KnowledgeBaseChatMessage[] = [];
 
-export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings, availableSkills: AvailableSkill[]) {
+export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings) {
     const [messages, setMessages] = useState<KnowledgeBaseChatMessage[]>(initialMessages);
     const [input, setInput] = useState('');
     const [isStreaming, setIsStreaming] = useState(false);
@@ -93,11 +102,6 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings, availa
                     chat_id: chatIdRef.current,
                     question,
                     skill_id: settings.skillId,
-                    available_skills: settings.skillId === 'orchestrator'
-                        ? availableSkills
-                            .map((skill) => skill.id)
-                            .filter((skillId) => skillId !== 'orchestrator')
-                        : [],
                     context: {
                         search_mode: settings.searchMode,
                         include_sources: settings.includeSources,
@@ -135,7 +139,7 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings, availa
                         return;
                     }
 
-                    applyFragment(assistantId, message.data as FragmentPayload, setMessages);
+                    applyFragment(assistantId, unwrapFragmentPayload(message.data), setMessages);
                 });
             }
         } catch (error) {
@@ -147,7 +151,7 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings, availa
             abortRef.current = null;
             setIsStreaming(false);
         }
-    }, [availableSkills, input, isStreaming, settings]);
+    }, [input, isStreaming, settings]);
 
     const stop = useCallback(() => {
         abortRef.current?.abort();
@@ -176,7 +180,7 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings, availa
 
 function applyFragment(
     assistantId: string,
-    fragment: FragmentPayload,
+    fragment: FragmentPayload | null,
     setMessages: Dispatch<SetStateAction<KnowledgeBaseChatMessage[]>>,
 ) {
     if (!fragment || typeof fragment.content !== 'string') {
@@ -199,7 +203,8 @@ function applyFragment(
         }
 
         return updateAssistant(prev, assistantId, {
-            thinking: [...(message.thinking ?? []), content],
+            skill: fragment.skill ?? message.skill,
+            thinking: upsertThinking(message.thinking ?? [], fragment),
             status: fragment.status === 'error' ? 'error' : 'streaming',
         });
     });
@@ -214,7 +219,9 @@ function applyFinalMessage(
         id: payload.id ?? payload.message_id ?? assistantId,
         content: payload.data ?? '',
         skill: payload.skill,
+        skills: payload.skills,
         status: payload.status === 'error' ? 'error' : 'success',
+        thinking: mergeFinalThinking(prev.find((message) => message.id === assistantId)?.thinking ?? [], payload),
     }));
 }
 
@@ -228,4 +235,54 @@ function updateAssistant(
             ? {...message, ...patch}
             : message
     ));
+}
+
+function unwrapFragmentPayload(data: unknown): FragmentPayload | null {
+    if (!isRecord(data)) {
+        return null;
+    }
+
+    const nestedData = data.data;
+    if (isRecord(nestedData)) {
+        return nestedData as FragmentPayload;
+    }
+
+    return data as FragmentPayload;
+}
+
+function upsertThinking(items: ThinkingItem[], fragment: FragmentPayload): ThinkingItem[] {
+    const nextItem = fragmentToThinkingItem(fragment);
+    const existingIndex = items.findIndex((item) => item.id === nextItem.id);
+
+    if (existingIndex === -1) {
+        return [...items, nextItem];
+    }
+
+    return items.map((item, index) => (
+        index === existingIndex
+            ? {...item, ...nextItem}
+            : item
+    ));
+}
+
+function mergeFinalThinking(items: ThinkingItem[], payload: FinalPayload): ThinkingItem[] {
+    const fragments = payload.processing_data?.fragments ?? [];
+    return fragments
+        .filter((fragment) => fragment.fragment_type !== 'response' && typeof fragment.content === 'string')
+        .reduce(upsertThinking, items);
+}
+
+function fragmentToThinkingItem(fragment: FragmentPayload): ThinkingItem {
+    return {
+        id: `${fragment.fragment_id ?? fragment.step ?? crypto.randomUUID()}`,
+        content: fragment.content ?? '',
+        duration_s: fragment.duration_s,
+        skill: fragment.skill,
+        status: fragment.status,
+        step: fragment.step,
+    };
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+    return typeof value === 'object' && value !== null;
 }

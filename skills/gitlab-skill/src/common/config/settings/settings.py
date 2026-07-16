@@ -23,6 +23,7 @@ class AppSettings(BaseModel):
     api_port: int = Field(alias="API_PORT")
     gitlab_base_url: AnyHttpUrl = Field(alias="GITLAB_BASE_URL")
     gitlab_token: str = Field(default="", alias="GITLAB_TOKEN")
+    gitlab_skill_mock_enabled: bool = Field(default=False, alias="GITLAB_SKILL_MOCK_ENABLED")
 
     @field_validator("api_mode", mode="before")
     @classmethod

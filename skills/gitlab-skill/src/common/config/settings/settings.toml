@@ -4,3 +4,4 @@ API_PORT = 8022
 
 GITLAB_BASE_URL = "https://gitlab.com"
 GITLAB_TOKEN = ""
+GITLAB_SKILL_MOCK_ENABLED = false
