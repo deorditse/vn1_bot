@@ -2,6 +2,38 @@
 API_MODE = "PROD"
 API_PORT = 8022
 
-GITLAB_BASE_URL = "https://gitlab.com"
-GITLAB_TOKEN = ""
+GITLAB_SEARCH_PER_PROJECT_LIMIT = 10
+GITLAB_QUERY_PLANNER_PROVIDER = "openai"
+GITLAB_QUERY_PLANNER_MODEL = "gpt-4o-mini"
+GITLAB_REPOSITORY_SELECTOR_MODEL = "gpt-4o-mini"
+GITLAB_QUERY_PLANNER_BASE_URL = "https://api.openai.com/v1"
+GITLAB_QUERY_PLANNER_TOKEN_ENV = "OPENAI_API_KEY"
+GITLAB_QUERY_PLANNER_MAX_QUERIES = 6
+GITLAB_QUERY_PLANNER_MIN_WORDS = 3
+GITLAB_ANSWER_USE_LLM = false
+GITLAB_ANSWER_MAX_SOURCES = 8
+GITLAB_ANSWER_MAX_DESCRIPTION_CHARS = 120
 GITLAB_SKILL_MOCK_ENABLED = false
+
+[[default.GITLAB_REPOSITORIES]]
+id = "flutter_mobile_vn1"
+base_url = "https://gitlab.avgr.su"
+project_path = "amiga/flutter_mobile_vn1"
+token_env = "GITLAB_AVGR_TOKEN"
+enabled = true
+
+[[default.GITLAB_REPOSITORIES]]
+id = "backend_vn1"
+base_url = "https://gitlab.avgr.su"
+project_path = "amiga/vn1"
+token_env = "GITLAB_AVGR_TOKEN"
+enabled = true
+
+# Пример второго репозитория. Раскомментируйте и настройте при необходимости.
+# [[default.GITLAB_REPOSITORIES]]
+# id = "another_repo"
+# base_url = "https://gitlab.avgr.su"
+# project_path = "group/another_repo"
+# token_env = "GITLAB_AVGR_TOKEN"
+# enabled = true
+# per_project_limit = 5

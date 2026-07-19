@@ -21,17 +21,34 @@ class SearchGitLabNode(BaseNode):
             return state
 
         question = stream.data["message"]
+        repository_ids = state.get("selected_repository_ids")
         t0 = perf_counter()
         emit_ui_event(
             stream,
             self.step,
-            2,
+            3,
             status=FragmentStatus.in_progress,
-            content=f"### Ищу в GitLab: {question}",
+            content=(
+                f"### Ищу в GitLab: {question}\n"
+                f"Репозитории: {', '.join(f'`{repository_id}`' for repository_id in repository_ids or [])}"
+            ),
             query=question,
         )
 
-        results = await self.search_service.search(question)
+        try:
+            results = await self.search_service.search(question, repository_ids=repository_ids)
+        except Exception as exc:
+            emit_ui_event(
+                stream,
+                self.step,
+                4,
+                fragment_type=FragmentType.response,
+                status=FragmentStatus.error,
+                content=f"GitLab code search завершился ошибкой: {type(exc).__name__}: {exc}",
+            )
+            stream.data["terminal_status"] = TerminalStatus.error
+            return state
+
         if await stream.request.is_disconnected():
             stream.data["client_disconnected"] = True
             return state
@@ -41,7 +58,7 @@ class SearchGitLabNode(BaseNode):
             emit_ui_event(
                 stream,
                 self.step,
-                3,
+                4,
                 fragment_type=FragmentType.response,
                 status=FragmentStatus.error,
                 content="Не найдены подтвержденные источники в GitLab.",
@@ -52,7 +69,7 @@ class SearchGitLabNode(BaseNode):
         emit_ui_event(
             stream,
             self.step,
-            2,
+            3,
             status=FragmentStatus.success,
             content=f"### Документов найдено в GitLab: {len(results)} шт.",
             query=question,

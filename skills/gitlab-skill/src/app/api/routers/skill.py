@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
 
-from app.api.schemas.skill import SkillManifestResponse, SkillRunRequest
+from app.api.schemas.skill import SkillManifestResponse, SkillRunRequestBody
 from app.use_cases.run_gitlab_skill import RunGitLabSkillUseCase
 from vn1_protocol.sse_protocol import SkillId
 
@@ -40,7 +40,10 @@ async def manifest() -> SkillManifestResponse:
         }
     },
 )
-async def run_stream(request: Request, payload: SkillRunRequest) -> StreamingResponse:
+async def run_stream(
+    request: Request,
+    payload: SkillRunRequestBody,
+) -> StreamingResponse:
     use_case = RunGitLabSkillUseCase()
     return StreamingResponse(
         use_case.stream(request=request, payload=payload),
