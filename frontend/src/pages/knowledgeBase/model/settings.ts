@@ -23,10 +23,14 @@ export function loadKnowledgeBaseChatSettings(): KnowledgeBaseChatSettings {
         }
 
         const parsed = JSON.parse(raw) as Partial<KnowledgeBaseChatSettings>;
+        const skillId = typeof parsed.skillId === 'string' && parsed.skillId.trim()
+            ? parsed.skillId
+            : defaultKnowledgeBaseChatSettings.skillId;
+
         return {
             ...defaultKnowledgeBaseChatSettings,
             ...parsed,
-            skillId: parsed.skillId === 'orchestrator' ? 'orchestrator' : 'product_kb',
+            skillId,
             searchMode: parsed.searchMode === 'deep' ? 'deep' : 'balanced',
             includeSources: parsed.includeSources ?? defaultKnowledgeBaseChatSettings.includeSources,
         };

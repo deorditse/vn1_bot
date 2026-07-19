@@ -411,6 +411,7 @@ function formatStepName(step: string) {
     const labels: Record<string, string> = {
         build_response: 'Ответ',
         search_gitlab: 'Поиск',
+        select_repositories: 'Выбор репозиториев',
         validate_request: 'Проверка',
     };
     return labels[step] ?? step.replaceAll('_', ' ');
