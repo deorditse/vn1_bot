@@ -1,0 +1,72 @@
+.optionPanel {
+  width: 100%;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--app-color-border-secondary);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+  svg {
+    color: var(--app-color-text-tertiary);
+  }
+
+  &:hover {
+    border-color: #c9d1dc;
+    background: #ffffff;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: #aab4c2;
+    box-shadow: 0 0 0 3px rgba(137, 143, 171, 0.12);
+  }
+
+  &[aria-disabled="true"] {
+    cursor: default;
+    opacity: 0.72;
+  }
+}
+
+.optionPanelChecked {
+  border-color: #aab4c2;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(27, 36, 52, 0.06);
+}
+
+.optionIcon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  border: 1px solid var(--app-color-border);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.optionCheckbox {
+  flex: 0 0 auto;
+  margin-top: 8px;
+
+  :global(.ant-checkbox) {
+    margin-inline-end: 0;
+  }
+}
+
+.optionTitle {
+  color: var(--app-color-text) !important;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.optionCaption {
+  color: var(--app-color-text-tertiary) !important;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  .optionPanel {
+    padding: 14px;
+  }
+}

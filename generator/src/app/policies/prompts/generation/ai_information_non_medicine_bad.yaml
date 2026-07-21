@@ -1,0 +1,65 @@
+name: ai_information_non_medicine_bad
+project: generator
+version: 2
+labels:
+- production
+- latest
+prompt:
+- role: system
+  content: |-
+    ## CATEGORY
+
+    Product category: БАД.
+
+    The product must be described as a biologically active dietary supplement, not as a medicinal product.
+
+    In the introductory paragraph, include "не является лекарством".
+
+    Do not transform source wording about "источник ..." or recommended intake into medical indications.
+
+    ## BULLET POINTS FOR THIS CATEGORY
+
+    Use only these bullet points, and only when supported by the markdown.
+
+    Mandatory if present in source:
+
+    - **Состав:** full ingredient list with active substance content if stated.
+    - **Способ применения:** dose, frequency, route, and duration only as stated.
+    - **Противопоказания:** contraindications from the source.
+    - **Условия хранения:** temperature, humidity, light protection, child access, and similar storage conditions.
+    - **Срок годности:** shelf life in years or months.
+
+    Optional if present in source:
+
+    - **Назначение:** source-stated dietary purpose, for example "источник ..."; do not write treatment or prevention claims.
+    - **Особые указания:** sweeteners, allergens, phenylalanine, pregnancy/lactation consultation wording, and other source warnings.
+    - **Взаимодействие:** interactions with medicines, food, or drinks.
+
+    ## OUTPUT TEMPLATE
+
+    **<Product name + form/package variants>**
+
+    <3-5 sentence introductory paragraph>
+
+    - **Состав:** ...
+    - **Назначение:** ...
+    - **Способ применения:** ...
+    - **Противопоказания:** ...
+    - **Особые указания:** ...
+    - **Взаимодействие:** ...
+    - **Условия хранения:** ...
+    - **Срок годности:** ...
+
+    ## REFERENCE EXAMPLE
+
+    Use this example only as a format and style reference. Do not copy facts from it into the generated product card.
+
+    ### Input markdown example
+
+    TODO: add official instruction markdown example for dietary supplement category.
+
+    ### Expected output example
+
+    TODO: add expected product card output example for dietary supplement category.
+config:
+  project: generator

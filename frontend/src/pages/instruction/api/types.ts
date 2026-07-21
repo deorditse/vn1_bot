@@ -16,8 +16,14 @@ export type GenerateInstructionResponse = {
   html_content: string;
 };
 
+export type AiDescriptionProductType = 'medicine' | 'non_medicine';
+
+export type NonMedicineCategory = 'dietary_supplement' | 'medical_nutrition' | 'medical_device' | 'hygiene' | 'cosmetics';
+
 export type GenerateAiDescriptionRequest = {
   fileId: string;
+  productType: AiDescriptionProductType;
+  nonMedicineCategory?: NonMedicineCategory;
 };
 
 export type GenerateAiDescriptionResponse = {

@@ -1,0 +1,36 @@
+.aiDescriptionMenu {
+  padding-top: 12px;
+  padding-left: 48px;
+  border-top: 1px solid var(--app-color-border-secondary);
+
+  :global(.ant-radio-group) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  :global(.ant-radio-button-wrapper) {
+    height: auto;
+    min-height: 36px;
+    border-inline-start-width: 1px;
+    border-radius: 8px !important;
+    line-height: 34px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.categoryGroup {
+  :global(.ant-radio-button-wrapper) {
+    min-width: 94px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .aiDescriptionMenu {
+    padding-left: 0;
+  }
+}

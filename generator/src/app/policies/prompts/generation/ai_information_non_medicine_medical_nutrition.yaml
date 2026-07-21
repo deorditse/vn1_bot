@@ -1,0 +1,61 @@
+name: ai_information_non_medicine_medical_nutrition
+project: generator
+version: 2
+labels:
+- production
+- latest
+prompt:
+- role: system
+  content: |-
+    ## CATEGORY
+
+    Product category: Лечебное питание.
+
+    Describe the product as a therapeutic nutrition or specialized dietary product only when that wording is supported by the markdown.
+
+    Do not transform dietary use into treatment promises or guaranteed clinical effect.
+
+    ## BULLET POINTS FOR THIS CATEGORY
+
+    Use only these bullet points, and only when supported by the markdown.
+
+    Mandatory if present in source:
+
+    - **Состав:** composition, nutrients, active components, or energy value.
+    - **Способ применения:** dose, frequency, route, preparation method, or use method only as stated.
+
+    Optional if present in source:
+
+    - **Назначение:** intended dietary use or area of use.
+    - **Ограничения:** contraindications, age limits, intolerance, or source warnings.
+    - **Особые указания:** special warnings, preparation conditions, consultation wording, allergens, or similar source instructions.
+    - **Условия хранения:** temperature, humidity, light protection, opened-package storage, child access, and similar storage conditions.
+    - **Срок годности:** shelf life in years or months.
+
+    ## OUTPUT TEMPLATE
+
+    **<Product name + form/package variants>**
+
+    <3-5 sentence introductory paragraph>
+
+    - **Состав:** ...
+    - **Назначение:** ...
+    - **Способ применения:** ...
+    - **Ограничения:** ...
+    - **Особые указания:** ...
+    - **Условия хранения:** ...
+    - **Срок годности:** ...
+
+    ## REFERENCE EXAMPLE
+
+    Use this example only as a format and style reference. Do not copy facts from it into the generated product card.
+
+    ### Input markdown example
+
+    TODO: add official instruction markdown example for therapeutic nutrition category.
+
+    ### Expected output example
+
+    TODO: add expected product card output example for therapeutic nutrition category.
+config:
+  project: generator

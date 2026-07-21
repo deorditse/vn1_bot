@@ -3,9 +3,10 @@ from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from starlette import status
 from app.api.dependencies.gateway_auth import require_gateway_user
 from app.api.schemas.generate import GenerateFileRequest, GenerateFileResponse, GenerateInstructionResponse, ShortDescriptionResponse
-from app.use_cases.ai_description.ai_description import ShortDescriptionUseCase
+from app.use_cases.ai_description.ai_description import NonMedicineShortDescriptionUseCase, ShortDescriptionUseCase
 from app.use_cases.docx_to_html_graph.docx_to_html import ToHtmlConverterUseCase
 from app.use_cases.generated_file_storage import UploadGeneratedFileUseCase, generated_file_storage
+from common.enums import AiDescriptionProductType
 from domain.auth import User
 from infrastructure.converters.docx_to_md_converter import DocxToMdConverter
 
@@ -107,8 +108,21 @@ async def ai_short_description(
             owner_id=str(current_user.id),
         )
 
-        use_case = ShortDescriptionUseCase(DocxToMdConverter())
-        description = await use_case.generate_from_markdown(generated_file.markdown)
+        if request.product_type == AiDescriptionProductType.NON_MEDICINE:
+            if request.non_medicine_category is None:
+                raise HTTPException(
+                    status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                    detail="Для нелекарственного препарата нужно выбрать категорию",
+                )
+
+            use_case = NonMedicineShortDescriptionUseCase(DocxToMdConverter())
+            description = await use_case.generate_from_markdown(
+                md=generated_file.markdown,
+                category=request.non_medicine_category,
+            )
+        else:
+            use_case = ShortDescriptionUseCase(DocxToMdConverter())
+            description = await use_case.generate_from_markdown(generated_file.markdown)
 
         return ShortDescriptionResponse(description=description)
 

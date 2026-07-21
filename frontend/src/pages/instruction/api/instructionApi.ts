@@ -34,11 +34,13 @@ export const instructionApi = baseApiSlice.injectEndpoints({
             invalidatesTags: ['INSTRUCTION'],
         }),
         generateAiDescription: builder.mutation<GenerateAiDescriptionResponse, GenerateAiDescriptionRequest>({
-            query: ({fileId}) => ({
+            query: ({fileId, nonMedicineCategory, productType}) => ({
                 url: '/generator/generate/ai_short_description',
                 method: 'POST',
                 body: {
                     file_id: fileId,
+                    product_type: productType,
+                    non_medicine_category: nonMedicineCategory,
                 },
             }),
             invalidatesTags: ['INSTRUCTION'],

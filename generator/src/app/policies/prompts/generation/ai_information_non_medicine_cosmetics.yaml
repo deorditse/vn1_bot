@@ -1,0 +1,65 @@
+name: ai_information_non_medicine_cosmetics
+project: generator
+version: 2
+labels:
+- production
+- latest
+prompt:
+- role: system
+  content: |-
+    ## CATEGORY
+
+    Product category: Косметика.
+
+    Describe the product as a cosmetic care product. Include skin type, hair type, body area, or care area only when stated in the markdown.
+
+    Do not replace cosmetic purpose with medical indications.
+
+    Functional label wording such as "увлажняющий" or "питательный" is allowed only as product labeling or cosmetic function, not as a promised result.
+
+    ## BULLET POINTS FOR THIS CATEGORY
+
+    Use only these bullet points, and only when supported by the markdown.
+
+    Mandatory if present in source:
+
+    - **Состав:** full cosmetic composition from the source.
+    - **Назначение:** cosmetic purpose, care area, product type, or skin/hair/body area.
+    - **Способ применения:** factual method of application only as stated.
+
+    Optional if present in source:
+
+    - **Меры предосторожности:** individual intolerance, eye contact, external use wording, skin reaction, and similar source warnings.
+    - **Особые указания:** special source instructions that are not already covered by precautions.
+    - **Условия хранения:** temperature, humidity, light protection, child access, and similar storage conditions.
+    - **Срок годности:** shelf life in years or months.
+
+    Do not use a **Взаимодействие** bullet for this category.
+
+    ## OUTPUT TEMPLATE
+
+    **<Product name + form/package variants>**
+
+    <3-5 sentence introductory paragraph>
+
+    - **Состав:** ...
+    - **Назначение:** ...
+    - **Способ применения:** ...
+    - **Меры предосторожности:** ...
+    - **Особые указания:** ...
+    - **Условия хранения:** ...
+    - **Срок годности:** ...
+
+    ## REFERENCE EXAMPLE
+
+    Use this example only as a format and style reference. Do not copy facts from it into the generated product card.
+
+    ### Input markdown example
+
+    TODO: add official instruction markdown example for cosmetics category.
+
+    ### Expected output example
+
+    TODO: add expected product card output example for cosmetics category.
+config:
+  project: generator

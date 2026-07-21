@@ -1,0 +1,61 @@
+name: ai_information_non_medicine_hygiene
+project: generator
+version: 2
+labels:
+- production
+- latest
+prompt:
+- role: system
+  content: |-
+    ## CATEGORY
+
+    Product category: Средство гигиены.
+
+    Describe the product as intended for hygienic care only when supported by the markdown.
+
+    Do not describe hygiene use as treatment or prevention.
+
+    ## BULLET POINTS FOR THIS CATEGORY
+
+    Use only these bullet points, and only when supported by the markdown.
+
+    Mandatory if present in source:
+
+    - **Состав/материалы:** material, impregnation, layer count, size, absorbent layer, polymer, cotton, cellulose, or similar source details.
+    - **Назначение:** hygiene purpose or area of use, for example for children, adults, face, hands, body, and similar source wording.
+    - **Способ применения:** factual method of use only as stated.
+
+    Optional if present in source:
+
+    - **Меры предосторожности:** allergy to material, do not reuse disposable products, eye contact, skin reaction, and similar source warnings.
+    - **Условия хранения:** temperature, humidity, light protection, child access, and similar storage conditions.
+    - **Срок годности:** shelf life in years or months.
+
+    Do not use a **Взаимодействие** bullet for this category.
+
+    ## OUTPUT TEMPLATE
+
+    **<Product name + form/package variants>**
+
+    <3-5 sentence introductory paragraph>
+
+    - **Состав/материалы:** ...
+    - **Назначение:** ...
+    - **Способ применения:** ...
+    - **Меры предосторожности:** ...
+    - **Условия хранения:** ...
+    - **Срок годности:** ...
+
+    ## REFERENCE EXAMPLE
+
+    Use this example only as a format and style reference. Do not copy facts from it into the generated product card.
+
+    ### Input markdown example
+
+    TODO: add official instruction markdown example for hygiene product category.
+
+    ### Expected output example
+
+    TODO: add expected product card output example for hygiene product category.
+config:
+  project: generator

@@ -1,10 +1,11 @@
-import {Alert, Button, Checkbox, Progress, Typography} from 'antd';
+import {Alert, Button, Progress, Typography} from 'antd';
 import {FileText, Sparkles} from 'lucide-react';
 
 import {Card, HStack, VStack} from '@shared/ui';
 import type {GenerationOptions} from '../../../model/types';
 import {InstructionLoadedState} from '../InstructionLoadedState';
 import {InstructionUploadPanel} from '../InstructionUploadPanel';
+import {GenerationOptionsPicker} from './ui/GenerationOptionsPicker/GenerationOptionsPicker';
 import styles from './InstructionWorkspace.module.less';
 
 const {Text} = Typography;
@@ -56,25 +57,11 @@ export function InstructionWorkspace({
                     <InstructionLoadedState fileName={file?.name} onReset={onReset}/>
                 )}
 
-                <HStack className={styles.options} gap="16" max wrap="wrap">
-                    <Checkbox
-                        checked={generationOptions.instruction}
-                        disabled={isLoading}
-                        onChange={(event) => onOptionsChange({...generationOptions, instruction: event.target.checked})}
-                    >
-                        Генерация инструкции
-                    </Checkbox>
-                    <Checkbox
-                        checked={generationOptions.aiDescription}
-                        disabled={isLoading}
-                        onChange={(event) => onOptionsChange({
-                            ...generationOptions,
-                            aiDescription: event.target.checked
-                        })}
-                    >
-                        Генерация ИИ-описания
-                    </Checkbox>
-                </HStack>
+                <GenerationOptionsPicker
+                    disabled={isLoading}
+                    generationOptions={generationOptions}
+                    onOptionsChange={onOptionsChange}
+                />
 
                 <VStack gap="8" max>
                     {isLoading && <Progress percent={70} showInfo={false} status="active"/>}

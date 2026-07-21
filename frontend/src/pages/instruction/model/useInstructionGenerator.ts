@@ -12,8 +12,10 @@ import type {GenerationOptions} from './types';
 const GENERATION_OPTIONS_STORAGE_KEY = 'vn1:generation-options';
 
 const DEFAULT_GENERATION_OPTIONS: GenerationOptions = {
-  instruction: true,
+  instruction: false,
   aiDescription: false,
+  aiDescriptionProductType: 'medicine',
+  nonMedicineCategory: 'dietary_supplement',
 };
 
 function getStoredGenerationOptions(): GenerationOptions {
@@ -154,7 +156,13 @@ export function useInstructionGenerator() {
       }
 
       if (generationOptions.aiDescription) {
-        const result = await generateAiDescription({fileId: uploadedFileId}).unwrap();
+        const result = await generateAiDescription({
+          fileId: uploadedFileId,
+          productType: generationOptions.aiDescriptionProductType,
+          nonMedicineCategory: generationOptions.aiDescriptionProductType === 'non_medicine'
+            ? generationOptions.nonMedicineCategory
+            : undefined,
+        }).unwrap();
         setAiDescription(result.description);
       }
     } catch (err) {
@@ -174,7 +182,13 @@ export function useInstructionGenerator() {
 
     try {
       const uploadedFileId = await ensureFileUploaded();
-      const result = await generateAiDescription({fileId: uploadedFileId}).unwrap();
+      const result = await generateAiDescription({
+        fileId: uploadedFileId,
+        productType: generationOptions.aiDescriptionProductType,
+        nonMedicineCategory: generationOptions.aiDescriptionProductType === 'non_medicine'
+          ? generationOptions.nonMedicineCategory
+          : undefined,
+      }).unwrap();
       setAiDescription(result.description);
     } catch (err) {
       setError(getGenerationErrorMessage(err, 'Не удалось сформировать ИИ-описание'));

@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, StrEnum
 
 
 class AsMinutes(int, Enum):
@@ -18,3 +18,16 @@ class ApiMode(Enum):
     UNDEFINED = 0
     DEV = 1
     PROD = 9
+
+
+class AiDescriptionProductType(StrEnum):
+    MEDICINE = "medicine"
+    NON_MEDICINE = "non_medicine"
+
+
+class NonMedicineCategory(StrEnum):
+    DIETARY_SUPPLEMENT = "dietary_supplement"
+    MEDICAL_NUTRITION = "medical_nutrition"
+    MEDICAL_DEVICE = "medical_device"
+    HYGIENE = "hygiene"
+    COSMETICS = "cosmetics"

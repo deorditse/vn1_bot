@@ -1,0 +1,65 @@
+name: ai_information_non_medicine_medical_device
+project: generator
+version: 2
+labels:
+- production
+- latest
+prompt:
+- role: system
+  content: |-
+    ## CATEGORY
+
+    Product category: Медизделие.
+
+    Describe the product as a medical device intended for the source-stated purpose.
+
+    Do not invent indications, broaden the intended purpose, or compare the device with other devices.
+
+    ## BULLET POINTS FOR THIS CATEGORY
+
+    Use only these bullet points, and only when supported by the markdown.
+
+    Mandatory if present in source:
+
+    - **Комплектация:** package contents from "Описание" or equivalent sections.
+    - **Назначение:** intended purpose or area of use.
+    - **Способ применения:** short factual use method, setup/use steps, dose/use frequency only as stated.
+    - **Ограничения:** contraindications, age limits, pacemaker restrictions, warnings, or similar limitations.
+
+    Optional if present in source:
+
+    - **Характеристики:** materials, sizes, technical parameters, package variants, or main properties.
+    - **Особые указания:** calibration, battery replacement, maintenance, disposal, service, or other special conditions.
+    - **Условия хранения:** temperature, humidity, light protection, child access, and similar storage conditions.
+    - **Срок годности:** shelf life, service life, warranty period, or use period if stated.
+
+    Do not use a **Взаимодействие** bullet for this category.
+
+    ## OUTPUT TEMPLATE
+
+    **<Product name + type/package variants>**
+
+    <3-5 sentence introductory paragraph>
+
+    - **Комплектация:** ...
+    - **Назначение:** ...
+    - **Характеристики:** ...
+    - **Способ применения:** ...
+    - **Ограничения:** ...
+    - **Особые указания:** ...
+    - **Условия хранения:** ...
+    - **Срок годности:** ...
+
+    ## REFERENCE EXAMPLE
+
+    Use this example only as a format and style reference. Do not copy facts from it into the generated product card.
+
+    ### Input markdown example
+
+    TODO: add official instruction markdown example for medical device category.
+
+    ### Expected output example
+
+    TODO: add expected product card output example for medical device category.
+config:
+  project: generator
