@@ -3,6 +3,7 @@ from functools import lru_cache
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from app.policies.policies_loader import load_prompt_text
+from app.use_cases.ai_description.markdown import normalize_generated_markdown
 from common.enums import NonMedicineCategory
 from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
@@ -48,7 +49,7 @@ class NonMedicineShortDescriptionUseCase:
             ]
         )
 
-        return response.content.strip()
+        return normalize_generated_markdown(response.content)
 
     @classmethod
     @lru_cache(maxsize=len(category_prompt_paths))

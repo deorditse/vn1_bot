@@ -1,6 +1,7 @@
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from app.policies.policies_loader import load_prompt
+from app.use_cases.ai_description.markdown import normalize_generated_markdown
 from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
 
@@ -24,4 +25,4 @@ class ShortDescriptionUseCase:
             ]
         )
 
-        return response.content.strip()
+        return normalize_generated_markdown(response.content)
