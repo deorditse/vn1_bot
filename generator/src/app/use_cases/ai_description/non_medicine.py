@@ -3,10 +3,10 @@ from functools import lru_cache
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from app.policies.policies_loader import load_prompt_text
-from app.use_cases.ai_description.markdown import normalize_generated_markdown
 from common.enums import NonMedicineCategory
 from domain.services.converter import Converter
 from infrastructure.llm.llm import LLMService
+from vn1_markdown import normalize_generated_markdown
 
 
 class NonMedicineShortDescriptionUseCase:

@@ -28,7 +28,7 @@ class GitLabQueryPlanner(GitLabQueryPlannerPort):
             return fallback_queries
 
         planned_queries = await self._build_llm_queries(query)
-        queries = self._merge_queries(fallback_queries, planned_queries)
+        queries = self._merge_queries(planned_queries) or fallback_queries
         self._save_cache(cache_key, queries)
         return queries
 
@@ -39,20 +39,33 @@ class GitLabQueryPlanner(GitLabQueryPlannerPort):
             return []
 
         tokens = re.findall(r"[\w.-]{3,}", normalized, flags=re.UNICODE)
-        camel_tokens = [
+        code_like_tokens = [
             token
             for token in tokens
-            if any(char.isupper() for char in token[1:]) or "_" in token or "." in token or "-" in token
+            if GitLabQueryPlanner._looks_like_code_identifier(token)
         ]
-        return list(dict.fromkeys([normalized, *camel_tokens, *tokens]))
+
+        queries = [*code_like_tokens]
+        if len(tokens) == 1:
+            queries.insert(0, normalized)
+        return [item for item in dict.fromkeys(queries) if item]
+
+    @staticmethod
+    def _looks_like_code_identifier(token: str) -> bool:
+        return (
+            any(char.isupper() for char in token[1:])
+            or "_" in token
+            or "." in token
+            or "-" in token
+            or bool(re.search(r"[A-Za-z]+\d|\d+[A-Za-z]+", token))
+        )
 
     @staticmethod
     def _should_call_llm(query: str) -> bool:
         normalized = " ".join(query.strip().split())
-        words = re.findall(r"\w+", normalized, flags=re.UNICODE)
-        if len(words) < settings.gitlab_query_planner_min_words:
+        if not normalized:
             return False
-        if normalized.isascii() and re.fullmatch(r"[\w./:-]+", normalized):
+        if normalized.isascii() and re.fullmatch(r"[\w./:-]+", normalized) and GitLabQueryPlanner._looks_like_code_identifier(normalized):
             return False
         return True
 

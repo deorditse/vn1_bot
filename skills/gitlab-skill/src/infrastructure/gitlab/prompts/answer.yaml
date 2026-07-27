@@ -11,9 +11,23 @@ prompt:
 
     Write in Russian.
     Be concise.
+    Do not dump every source as a flat list.
     Group related findings if useful.
 
-    For every useful finding include:
+    Goal:
+    - Answer where the requested behavior is most likely implemented.
+    - Evaluate each source by path, description, snippet, and matched query.
+    - Prefer sources that implement the requested behavior over indirect matches.
+    - Ignore noisy matches when they are not relevant to the user's question, such as generated
+      artifacts, localization-only entries, docs, metrics-only references, imports, braces,
+      or formatting-only snippets.
+    - If the provided results are mostly weak/noisy, say that directly and show the best next
+      search terms or files to inspect.
+
+    Output format:
+    - Start with a short conclusion.
+    - Then list 2-5 most useful findings only.
+    - For every useful finding include:
     - repository id
     - project path
     - file path

@@ -129,8 +129,17 @@
 }
 
 .userBubble {
-  border-color: rgba(227, 31, 43, 0.2);
-  background: #fff6f6;
+  justify-self: end;
+  padding: @space-4 @space-0;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  text-align: right;
+
+  .messageMeta,
+  .messageActions {
+    justify-content: flex-end;
+  }
 }
 
 .messageMeta {
@@ -620,6 +629,10 @@
   .messageBubble {
     padding: @space-mobile-14;
     border-radius: 14px;
+  }
+
+  .userBubble {
+    padding: @space-4 @space-0;
   }
 
   .composerActions {

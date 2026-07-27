@@ -10,6 +10,21 @@ def normalize_generated_markdown(value: object) -> str:
     return markdown.strip()
 
 
+def sanitize_markdown_inline(value: object) -> str:
+    text = _coerce_to_text(value)
+    text = _remove_html(text)
+    text = re.sub(r"\s+", " ", text).strip()
+    text = text.replace("\\", "\\\\")
+    text = text.replace("**", "\\*\\*")
+    text = text.replace("[", "\\[")
+    text = text.replace("]", "\\]")
+    text = re.sub(r"^(#{1,6})\s+", r"\\\1 ", text)
+    text = re.sub(r"^([*+-])\s+", r"\\\1 ", text)
+    text = re.sub(r"^(\d+)[.)]\s+", r"\1\\. ", text)
+
+    return text
+
+
 def _coerce_to_text(value: object) -> str:
     if value is None:
         return ""
@@ -60,7 +75,7 @@ def _normalize_lines(markdown: str) -> str:
             previous_blank = True
             continue
 
-        line = _normalize_markdown_line(stripped)
+        line = _normalize_markdown_line(line)
         normalized_lines.append(line)
         previous_blank = False
 
@@ -71,16 +86,20 @@ def _normalize_lines(markdown: str) -> str:
 
 
 def _normalize_markdown_line(line: str) -> str:
-    heading_match = re.match(r"^(#{1,6})(?!#)\s*(.+)$", line)
+    leading_match = re.match(r"^([ \t]*)(.*)$", line)
+    indent = leading_match.group(1) if leading_match else ""
+    content = leading_match.group(2) if leading_match else line
+
+    heading_match = re.match(r"^(#{1,6})(?!#)\s*(.+)$", content)
     if heading_match:
         return f"{heading_match.group(1)} {heading_match.group(2).strip()}"
 
-    unordered_list_match = re.match(r"^([*+-])\s*(.+)$", line)
+    unordered_list_match = re.match(r"^([*+-])\s*(.+)$", content)
     if unordered_list_match:
-        return f"- {unordered_list_match.group(2).strip()}"
+        return f"{indent}- {unordered_list_match.group(2).strip()}"
 
-    ordered_list_match = re.match(r"^(\d+)[.)]\s*(.+)$", line)
+    ordered_list_match = re.match(r"^(\d+)[.)]\s*(.+)$", content)
     if ordered_list_match:
-        return f"{ordered_list_match.group(1)}. {ordered_list_match.group(2).strip()}"
+        return f"{indent}{ordered_list_match.group(1)}. {ordered_list_match.group(2).strip()}"
 
-    return re.sub(r"[ \t]{2,}", " ", line)
+    return f"{indent}{re.sub(r'[ \t]{2,}', ' ', content)}"

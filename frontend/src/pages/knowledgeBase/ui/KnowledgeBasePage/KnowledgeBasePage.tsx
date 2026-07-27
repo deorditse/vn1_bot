@@ -18,7 +18,7 @@ import {useEffect, useMemo, useRef, useState} from 'react';
 import type {ReactNode} from 'react';
 
 import {classNames} from '@shared/lib/classNames';
-import {Card, HStack, VStack} from '@shared/ui';
+import {Card, HStack, MarkdownPreview, VStack} from '@shared/ui';
 import {Page} from '@widgets/Page';
 
 import {
@@ -343,7 +343,11 @@ function ChatMessage({
                 ) : null}
 
                 {message.content ? (
-                    <div className={styles.messageText}>{message.content}</div>
+                    isUser ? (
+                        <div className={styles.messageText}>{message.content}</div>
+                    ) : (
+                        <MarkdownPreview markdown={message.content}/>
+                    )
                 ) : (
                     <span className={styles.typingDots} aria-label="Ожидаю ответ">
                         <i/>
