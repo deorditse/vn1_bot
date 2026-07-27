@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+from collections import OrderedDict
 
 from app.config import settings
 from domain.models.source import GitLabSource
@@ -22,25 +23,14 @@ class GitLabAnswerService:
         if not os.getenv(settings.gitlab_query_planner_token_env):
             return fallback
 
-        payload = [
-            {
-                "description": source.description,
-                "snippet": source.snippet,
-                "repository_id": source.repository_id,
-                "project_path": source.project_path,
-                "file_path": source.file_path,
-                "line": source.line,
-                "url": source.url,
-            }
-            for source in sources[: settings.gitlab_answer_max_sources]
-        ]
+        payload = self._build_grouped_sources_payload(sources)
 
         try:
             prompt = get_prompt("answer").add_user_message(
                 json.dumps(
                     {
                         "question": query,
-                        "sources": payload,
+                        "repositories": payload,
                     },
                     ensure_ascii=False,
                 )
@@ -56,16 +46,53 @@ class GitLabAnswerService:
     @staticmethod
     def build_fallback_answer(sources: list[GitLabSource]) -> str:
         lines = ["### Найденные места в GitLab"]
-        visible_sources = sources[: settings.gitlab_answer_max_sources]
-        for index, source in enumerate(visible_sources, start=1):
-            line_suffix = f":{source.line}" if source.line else ""
-            lines.append(
-                f"{index}. **{sanitize_markdown_inline(source.description)}**\n"
-                f"   Репозиторий: `{source.repository_id}` (`{source.project_path}`)\n"
-                f"   Место: `{source.file_path}{line_suffix}`\n"
-                f"   Найдено по: `{source.matched_query}`\n"
-                f"   Ссылка: [открыть в GitLab]({source.url})"
-            )
-        if len(sources) > len(visible_sources):
-            lines.append(f"\nПоказаны первые {len(visible_sources)} из {len(sources)} найденных мест.")
+        visible_count = 0
+        for repository_id, repository_sources in GitLabAnswerService._group_sources_by_repository(sources).items():
+            lines.append(f"\n#### Репозиторий `{repository_id}`")
+            for index, source in enumerate(repository_sources[: settings.gitlab_answer_max_sources], start=1):
+                visible_count += 1
+                line_suffix = f":{source.line}" if source.line else ""
+                lines.append(
+                    f"{index}. **{sanitize_markdown_inline(source.description)}**\n"
+                    f"   Проект: `{source.project_path}`\n"
+                    f"   Место: `{source.file_path}{line_suffix}`\n"
+                    f"   Найдено по: `{source.matched_query}`\n"
+                    f"   Ссылка: [открыть в GitLab]({source.url})"
+                )
+        if len(sources) > visible_count:
+            lines.append(f"\nПоказаны {visible_count} из {len(sources)} найденных мест.")
         return normalize_generated_markdown("\n".join(lines))
+
+    @staticmethod
+    def _build_grouped_sources_payload(sources: list[GitLabSource]) -> list[dict[str, object]]:
+        repositories: list[dict[str, object]] = []
+        for repository_id, repository_sources in GitLabAnswerService._group_sources_by_repository(sources).items():
+            visible_sources = repository_sources[: settings.gitlab_answer_max_sources]
+            project_path = visible_sources[0].project_path if visible_sources else ""
+            repositories.append(
+                {
+                    "repository_id": repository_id,
+                    "project_path": project_path,
+                    "total_sources": len(repository_sources),
+                    "sources": [
+                        {
+                            "description": source.description,
+                            "snippet": source.snippet,
+                            "matched_query": source.matched_query,
+                            "file_path": source.file_path,
+                            "line": source.line,
+                            "url": source.url,
+                        }
+                        for source in visible_sources
+                    ],
+                }
+            )
+
+        return repositories
+
+    @staticmethod
+    def _group_sources_by_repository(sources: list[GitLabSource]) -> OrderedDict[str, list[GitLabSource]]:
+        grouped: OrderedDict[str, list[GitLabSource]] = OrderedDict()
+        for source in sources:
+            grouped.setdefault(source.repository_id, []).append(source)
+        return grouped

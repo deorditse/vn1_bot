@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+from collections import OrderedDict
+
 from app.config import settings
 from app.workflows.common.nodes import BaseNode
 from app.workflows.gitlab_skill.app import GitLabSkillStep
 from app.workflows.gitlab_skill.state import GitLabGraphState
+from domain.models.source import GitLabSource
 from infrastructure.gitlab.answer import GitLabAnswerService
 from vn1_protocol.skill_streaming import emit_ui_event
 from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, TerminalStatus
@@ -20,7 +23,7 @@ class BuildResponseNode(BaseNode):
             return state
 
         results = stream.data.get("results") or []
-        visible_results = results[: settings.gitlab_answer_max_sources]
+        visible_results = self._select_visible_results(results)
         sources = [result.model_dump() for result in visible_results]
         emit_ui_event(
             stream,
@@ -44,3 +47,15 @@ class BuildResponseNode(BaseNode):
         )
         stream.data["terminal_status"] = TerminalStatus.success
         return state
+
+    @staticmethod
+    def _select_visible_results(results: list[GitLabSource]) -> list[GitLabSource]:
+        grouped: OrderedDict[str, list[GitLabSource]] = OrderedDict()
+        for result in results:
+            grouped.setdefault(result.repository_id, []).append(result)
+
+        visible_results: list[GitLabSource] = []
+        for repository_results in grouped.values():
+            visible_results.extend(repository_results[: settings.gitlab_answer_max_sources])
+
+        return visible_results
