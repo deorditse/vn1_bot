@@ -18,6 +18,11 @@ prompt:
     - Answer where the requested behavior is most likely implemented.
     - Evaluate each source by path, description, snippet, and matched query.
     - Prefer sources that implement the requested behavior over indirect matches.
+    - If the user asks about a button, page, screen, widget, or UI behavior, prefer files under
+      ui/widgets/pages/features/routes/bloc/use_cases that contain executable source code.
+      Do not answer with localization/generated files unless no implementation files are present.
+    - Treat tests, generated route files, localization, and metrics as secondary evidence unless
+      the user explicitly asks about tests, routing, translations, or analytics.
     - Ignore noisy matches when they are not relevant to the user's question, such as generated
       artifacts, localization-only entries, docs, metrics-only references, imports, braces,
       or formatting-only snippets.

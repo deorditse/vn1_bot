@@ -21,11 +21,6 @@ class RepositorySelection(BaseModel):
 class SelectRepositoriesNode(BaseNode):
     """Определяет через LLM, в каких GitLab-репозиториях искать."""
 
-    _repository_descriptions = {
-        "flutter_mobile_vn1": "Flutter mobile application repository for VN1 mobile app.",
-        "backend_vn1": "VN1 backend API/server repository.",
-    }
-
     def __init__(self) -> None:
         super().__init__(step=GitLabSkillStep.select_repositories, title="Select repositories")
 
@@ -99,7 +94,7 @@ class SelectRepositoriesNode(BaseNode):
             {
                 "id": repository.id,
                 "project_path": repository.project_path,
-                "description": cls._repository_descriptions.get(repository.id, ""),
+                "description": repository.description,
             }
             for repository in settings.enabled_gitlab_repositories
         ]

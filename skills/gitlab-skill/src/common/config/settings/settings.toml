@@ -19,15 +19,35 @@ GITLAB_SKILL_MOCK_ENABLED = false
 id = "flutter_mobile_vn1"
 base_url = "https://gitlab.avgr.su"
 project_path = "amiga/flutter_mobile_vn1"
+description = "Flutter mobile application repository. Use it for frontend, mobile app, UI, screen, page, widget, button, cart, auth in mobile app."
 token_env = "GITLAB_AVGR_TOKEN"
 enabled = true
+ignore_path_patterns = [
+  "packages/app/lib/generated/**",
+  "packages/app/lib/l10n/**",
+  "**/generated/**",
+  "**/l10n/**",
+  "**/*.freezed.dart",
+  "**/*.g.dart",
+  "**/*.gr.dart",
+  "**/*.gen.dart",
+  "**/*.arb",
+]
 
 [[default.GITLAB_REPOSITORIES]]
 id = "backend_vn1"
 base_url = "https://gitlab.avgr.su"
 project_path = "amiga/vn1"
+description = "VN1 backend repository. Use it for backend, server, API, Bitrix, PHP, import, catalog backend, auth backend."
 token_env = "GITLAB_AVGR_TOKEN"
 enabled = true
+ignore_path_patterns = [
+  "vendor/**",
+  "node_modules/**",
+  "upload/**",
+  "bitrix/cache/**",
+  "bitrix/managed_cache/**",
+]
 
 # Пример второго репозитория. Раскомментируйте и настройте при необходимости.
 # [[default.GITLAB_REPOSITORIES]]

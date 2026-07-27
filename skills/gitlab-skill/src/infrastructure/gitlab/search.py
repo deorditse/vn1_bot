@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from fnmatch import fnmatch
 import os
 from typing import Any
 
@@ -71,6 +72,9 @@ class GitLabSearchService(GitLabSearchPort):
         sources: list[GitLabSource] = []
         for index, row in enumerate(rows, start=1):
             path = str(row.get("path") or row.get("filename") or row.get("basename") or "unknown")
+            if self._is_ignored_path(path, repository.ignore_path_patterns):
+                continue
+
             ref = str(row.get("ref") or "main")
             start_line = self._to_int(row.get("startline"))
             code = str(row.get("data") or "").strip()
@@ -91,7 +95,7 @@ class GitLabSearchService(GitLabSearchPort):
                         line=start_line,
                         code=code,
                     ),
-                    description=self._build_description(code, path),
+                    description=self._build_description(code, path, matched_query),
                     matched_query=matched_query,
                     repository_id=repository.id,
                     project_path=repository.project_path,
@@ -101,6 +105,11 @@ class GitLabSearchService(GitLabSearchPort):
                 )
             )
         return sources
+
+    @staticmethod
+    def _is_ignored_path(path: str, patterns: list[str]) -> bool:
+        normalized_path = path.strip("/")
+        return any(fnmatch(normalized_path, pattern.strip("/")) for pattern in patterns)
 
     @staticmethod
     def _to_int(value: object) -> int | None:
@@ -117,7 +126,13 @@ class GitLabSearchService(GitLabSearchPort):
         return f"{location}\n{code}" if code else location
 
     @staticmethod
-    def _build_description(code: str, path: str) -> str:
+    def _build_description(code: str, path: str, matched_query: str) -> str:
+        normalized_query = matched_query.casefold()
+        for line in code.splitlines():
+            cleaned = " ".join(line.strip().split())
+            if cleaned and normalized_query in cleaned.casefold():
+                return cleaned[: settings.gitlab_answer_max_description_chars]
+
         for line in code.splitlines():
             cleaned = " ".join(line.strip().split())
             if cleaned:

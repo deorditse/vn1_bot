@@ -20,9 +20,11 @@ class GitLabRepositorySettings(BaseModel):
     id: str
     base_url: AnyHttpUrl
     project_path: str
+    description: str = ""
     token_env: str = "GITLAB_TOKEN"
     enabled: bool = True
     per_project_limit: int | None = None
+    ignore_path_patterns: list[str] = Field(default_factory=list)
 
 
 class AppSettings(BaseModel):

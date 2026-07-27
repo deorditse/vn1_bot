@@ -26,4 +26,7 @@ prompt:
       how/where the user wants to search. Keep them only if they are the actual feature name.
     - Keep the meaningful action/entity phrase intact when it matters.
       Example: "где код кнопки добавить в корзину в мобилке" -> ["добавить в корзину", "addToCart", "AddToCart", "cart", "basket"].
+      Example: "кнопка авторизации" -> ["AuthorizationWidget", "AuthorizationPage", "AuthorizationRoute", "authorization_page", "auth"].
+    - For UI/page/widget/button questions, prefer code identifiers, route names, widget/page
+      class names, and feature folder names over localized Russian UI text.
     - Do not return isolated low-value words from the original request.
