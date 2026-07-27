@@ -29,6 +29,9 @@ class GitLabQueryPlanner(GitLabQueryPlannerPort):
 
         planned_queries = await self._build_llm_queries(query)
         queries = self._merge_queries(planned_queries) or fallback_queries
+        if not queries:
+            raise RuntimeError("GitLab query planner не вернул поисковые запросы")
+
         self._save_cache(cache_key, queries)
         return queries
 
@@ -72,7 +75,7 @@ class GitLabQueryPlanner(GitLabQueryPlannerPort):
     async def _build_llm_queries(self, query: str) -> list[str]:
         token = os.getenv(settings.gitlab_query_planner_token_env, "")
         if not token:
-            return []
+            raise RuntimeError(f"не задан токен {settings.gitlab_query_planner_token_env}")
 
         try:
             prompt = get_prompt("query_planner").add_user_message(query)
@@ -81,8 +84,8 @@ class GitLabQueryPlanner(GitLabQueryPlannerPort):
             )
             content = str(response.content)
             parsed = self._parse_json_array(content)
-        except Exception:
-            return []
+        except Exception as exc:
+            raise RuntimeError(f"LLM query planner завершился ошибкой: {type(exc).__name__}: {exc}") from exc
 
         if not isinstance(parsed, list):
             return []
