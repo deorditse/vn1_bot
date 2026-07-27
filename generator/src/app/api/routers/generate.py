@@ -3,7 +3,8 @@ from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from starlette import status
 from app.api.dependencies.gateway_auth import require_gateway_user
 from app.api.schemas.generate import GenerateFileRequest, GenerateFileResponse, GenerateInstructionResponse, ShortDescriptionResponse
-from app.use_cases.ai_description.ai_description import NonMedicineShortDescriptionUseCase, ShortDescriptionUseCase
+from app.use_cases.ai_description.medicine import ShortDescriptionUseCase
+from app.use_cases.ai_description.non_medicine import NonMedicineShortDescriptionUseCase
 from app.use_cases.docx_to_html_graph.docx_to_html import ToHtmlConverterUseCase
 from app.use_cases.generated_file_storage import UploadGeneratedFileUseCase, generated_file_storage
 from common.enums import AiDescriptionProductType

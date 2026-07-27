@@ -2,6 +2,7 @@ from .errors import (
     MyBaseError,
     CoreError,
     AccessError,
+    ConversionError,
     DataError,
     LogicError,
     AdapterError,

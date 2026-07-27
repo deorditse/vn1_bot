@@ -71,6 +71,14 @@ class LogicError(MyBaseError):
     code_status = status.HTTP_400_BAD_REQUEST
 
 
+class ConversionError(MyBaseError):
+    code_status = status.HTTP_422_UNPROCESSABLE_ENTITY
+
+    def __init__(self, cause: str = "Не удалось обработать файл"):
+        self.cause = cause
+        super().__init__(cause)
+
+
 class AccessError(MyBaseError):
     cause = "Пользователь не имеет доступа к функционалу или данным"
     code_status = status.HTTP_403_FORBIDDEN

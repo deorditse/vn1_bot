@@ -58,3 +58,68 @@
 .uploadText {
   min-width: 0;
 }
+
+.selectedContent {
+  min-height: 100px;
+  padding: @space-18 @space-20;
+  text-align: left;
+}
+
+.selectedFileSummary {
+  min-width: 0;
+}
+
+.selectedFileIcon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  border: 1px solid var(--app-color-border);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--app-color-text-secondary);
+  box-shadow: 0 8px 20px rgba(27, 36, 52, 0.06);
+}
+
+.selectedFileInfo {
+  min-width: 0;
+}
+
+.selectedFileName {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--app-color-text);
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectedFileMeta {
+  color: var(--app-color-text-tertiary);
+  font-size: 13px;
+}
+
+.selectedFileActions {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .selectedContent {
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+
+  .selectedFileActions {
+    width: 100%;
+
+    :global(.ant-btn) {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .selectedFileActions {
+    flex-direction: column !important;
+  }
+}

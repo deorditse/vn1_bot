@@ -58,6 +58,14 @@ function getGenerationErrorMessage(err: unknown, fallback: string) {
     }
   }
 
+  if ('data' in err && typeof err.data === 'object' && err.data !== null && 'error' in err.data) {
+    const error = err.data.error;
+
+    if (typeof error === 'object' && error !== null && 'message' in error && typeof error.message === 'string') {
+      return error.message;
+    }
+  }
+
   if (err instanceof Error) {
     return err.message;
   }

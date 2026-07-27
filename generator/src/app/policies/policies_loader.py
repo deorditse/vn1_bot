@@ -7,3 +7,7 @@ BASE_DIR = Path(__file__).parent / "prompts"
 
 def load_prompt(path: str) -> str:
     return _load_prompt(path, prompts_dir=BASE_DIR)
+
+
+def load_prompt_text(path: str) -> str:
+    return (BASE_DIR / path).read_text(encoding="utf-8")

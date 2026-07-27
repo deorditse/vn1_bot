@@ -1,5 +1,6 @@
 from typing import Iterable, Tuple
 
+from common.errors import ConversionError
 from domain.services.converter import Converter
 import subprocess
 import tempfile
@@ -16,19 +17,24 @@ class DocxToMdConverter(Converter):
                 f.write(file_bytes)
 
             # 2. Pandoc → Markdown через stdout
-            result = subprocess.run(
-                [
-                    "pandoc",
-                    docx_path,
-                    "-t",
-                    "markdown_strict",
-                    "--wrap=none",
-                ],
-                check=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-            )
+            try:
+                result = subprocess.run(
+                    [
+                        "pandoc",
+                        docx_path,
+                        "-t",
+                        "markdown_strict",
+                        "--wrap=none",
+                    ],
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                )
+            except subprocess.CalledProcessError as exc:
+                raise ConversionError(
+                    "Не удалось прочитать DOCX-файл. Проверьте, что файл не поврежден и сохранен в формате .docx."
+                ) from exc
 
         return normalize_markdown(result.stdout)
 
