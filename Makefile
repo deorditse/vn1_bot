@@ -19,12 +19,15 @@ COMPOSE = REPO_ROOT=$(REPO_ROOT) $(DOCKER) compose $(COMPOSE_FILES)
 
 run: prod
 
-
 test:
 	$(COMPOSE) config >/dev/null
 
 prod:
-	$(COMPOSE) up -d --build $(SERVICE)
+	@if [ -n "$(SERVICE)" ]; then \
+		$(COMPOSE) up -d --build $(SERVICE); \
+	else \
+		$(COMPOSE) up -d --build; \
+	fi1
 
 restart:
 	$(COMPOSE) up -d --build --force-recreate $(SERVICE)

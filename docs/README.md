@@ -56,7 +56,7 @@ make restart
 
 `make restart` использует `docker compose up -d --build --force-recreate`, поэтому контейнеры будут пересозданы из актуального кода.
 
-Не запускай `make run prod`: это две make-цели подряд. Используй одну команду:
+Для полного запуска можно использовать одну из команд:
 
 ```bash
 make run
@@ -67,6 +67,14 @@ make run
 ```bash
 make prod
 ```
+
+или явную алиас-цель:
+
+```bash
+make run-prod
+```
+
+Команда `make run prod` тоже отработает через цель `prod`, но `make run-prod` читается однозначнее.
 
 ### 4. Проверить статус контейнеров
 
@@ -149,4 +157,25 @@ git status --short .dockerignore generator/src skills/orchestrator-skill/src
 ```bash
 make restart SERVICE=backend-vn1
 make restart SERVICE=orchestrator-skill
+```
+
+### Ошибка `404 Not Found nginx/1.27.x`
+
+Если главная страница открывается, но прямой переход на `/instruction`, `/knowledge-base` или обновление страницы внутри приложения отдаёт:
+
+```text
+404 Not Found
+nginx/1.27.x
+```
+
+это означает, что nginx не отдал React SPA fallback на `index.html`. После обновления корневого `nginx.conf` пересобери и перезапусти nginx:
+
+```bash
+git pull
+make restart SERVICE=nginx
+```
+Если frontend-контейнер тоже был пересобран из старого образа, перезапусти frontend:
+
+```bash
+make restart SERVICE=frontend
 ```
