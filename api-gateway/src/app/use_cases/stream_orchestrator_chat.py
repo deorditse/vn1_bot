@@ -37,6 +37,12 @@ class OrchestratorChatUseCase:
             candidate_skills=candidate_skills,
             current_user=current_user,
         )
+        if selected_skill is None:
+            return self.stream_use_case._error_stream_response(
+                chat_id=payload.chat_id,
+                skill_name=SkillEnum.orchestrator.value,
+                message="Не удалось выбрать навык для запроса. Уточните, где искать или что нужно найти.",
+            )
 
         next_payload = payload.model_copy(
             update={
@@ -61,13 +67,12 @@ class OrchestratorChatUseCase:
 
         return []
 
-    def _select_skill(self, question: str, candidate_skills: list[SkillEnum], current_user: User) -> SkillEnum:
+    def _select_skill(self, question: str, candidate_skills: list[SkillEnum], current_user: User) -> SkillEnum | None:
         available_payloads = self.stream_use_case._available_skill_payloads(
             skill_ids=candidate_skills,
             current_user=current_user,
         )
-        selected = _select_skill(question=question, skills=available_payloads)
-        return selected or candidate_skills[0]
+        return _select_skill(question=question, skills=available_payloads)
 
 
 def _auto_candidate_skills(registry_skill_ids: list[SkillEnum]) -> list[SkillEnum]:

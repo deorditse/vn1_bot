@@ -4,7 +4,7 @@ from app.api.dependencies.auth import require_auth
 from app.api.schemas.chat import ChatStreamRequest
 from app.use_cases.stream_orchestrator_chat import OrchestratorChatUseCase
 from app.use_cases.stream_skill import StreamSkillUseCase
-from app.use_cases.validate_chat_request import ValidateChatRequestUseCase, validation_error_stream_response
+from app.use_cases.validate_chat_request import ValidateChatRequestUseCase, validation_error_stream_response, validation_success_stream_response
 from common.enums import SkillEnum
 from domain.auth import User
 from infrastructure.clients.skill_client import SkillClientRegistry
@@ -37,6 +37,12 @@ async def stream_chat(
         payload=payload,
         current_user=current_user,
     )
+    if validation.answer:
+        return validation_success_stream_response(
+            chat_id=payload.chat_id,
+            skill_name=SkillEnum.orchestrator.value,
+            message=validation.answer,
+        )
     if not validation.is_valid:
         return validation_error_stream_response(
             chat_id=payload.chat_id,
