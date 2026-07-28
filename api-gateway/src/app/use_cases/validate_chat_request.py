@@ -58,6 +58,8 @@ Allow:
   - "тикет по падению оплаты"
 
 Reject:
+- Standalone greetings, thanks, small talk, or conversational messages that do not ask to search,
+  explain, find, inspect, compare, summarize, or work with any object covered by available skills.
 - Political topics, political opinions, propaganda, elections, parties, politicians,
   governments, geopolitical disputes, or requests to search/discuss political content.
 - Insults, slurs, harassment, humiliating language, or requests targeting a person/group
@@ -68,6 +70,8 @@ Reject:
 Rules:
 - If the request is clearly and specifically about a skill that is listed as not available to the user,
   set is_valid=false, unavailable_skill_id to that skill id, and reason to a concise Russian explanation.
+- A standalone greeting, thanks, or small talk message such as "привет", "hello", "hi", "добрый день",
+  "как дела", or "спасибо" MUST be invalid.
 - When unsure, allow the request.
 - If rejected, set is_valid=false and give a concise Russian reason without quoting abusive text.
 - If allowed, set is_valid=true and reason="Запрос прошёл проверку".
