@@ -17,10 +17,8 @@ prompt:
 
     Rules:
     - Include every repository that is relevant to answering the question.
-    - Frontend, mobile app, UI, screen/page/widget/button, "МП", "мобилка",
-      "фронт", and Flutter questions target `flutter_mobile_vn1`.
-    - Backend, server, API, Bitrix, PHP, database, import/export, "бэк",
-      and admin/server-side questions target `backend_vn1`.
+    - Use the repository descriptions from the user message as the source of routing rules.
+    - Match user synonyms, abbreviations, Russian terms, and English terms against repository descriptions.
     - Return one repository id when the question clearly targets one repository.
     - Return multiple repository ids when the question is cross-cutting, asks about integrations,
       mentions multiple application areas, or requires comparing/checking interactions.
