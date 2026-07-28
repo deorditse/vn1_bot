@@ -59,17 +59,6 @@ const KnowledgeBasePage = () => {
         messagesEndRef.current?.scrollIntoView({block: 'end'});
     }, [messages]);
 
-    useEffect(() => {
-        if (skills.some((skill) => skill.id === settings.skillId)) {
-            return;
-        }
-
-        const nextSkillId = skills[0]?.id;
-        if (nextSkillId) {
-            updateSettings({skillId: nextSkillId});
-        }
-    }, [settings.skillId, skills]);
-
     const updateSettings = (patch: Partial<KnowledgeBaseChatSettings>) => {
         setSettings((prev) => {
             const next = {...prev, ...patch};
@@ -81,9 +70,34 @@ const KnowledgeBasePage = () => {
     const orchestratorSkill = skills.find((skill) => skill.id === 'orchestrator');
     const directSkills = skills.filter((skill) => skill.id !== 'orchestrator');
     const isOrchestratorMode = settings.skillId === 'orchestrator';
+    const directSkillIds = directSkills.map((skill) => skill.id);
     const orchestratorSkillSelectValue = settings.orchestratorSkillIds.length
         ? settings.orchestratorSkillIds
         : [AUTO_SKILLS_VALUE];
+
+    useEffect(() => {
+        const availableSkillIds = new Set(skills.map((skill) => skill.id));
+        const availableDirectSkillIds = new Set(directSkillIds);
+        const nextOrchestratorSkillIds = settings.orchestratorSkillIds.filter((skillId) => (
+            availableDirectSkillIds.has(skillId)
+        ));
+        const patch: Partial<KnowledgeBaseChatSettings> = {};
+
+        if (nextOrchestratorSkillIds.length !== settings.orchestratorSkillIds.length) {
+            patch.orchestratorSkillIds = nextOrchestratorSkillIds;
+        }
+
+        if (!availableSkillIds.has(settings.skillId)) {
+            const nextSkillId = availableSkillIds.has('orchestrator') ? 'orchestrator' : directSkillIds[0];
+            if (nextSkillId) {
+                patch.skillId = nextSkillId;
+            }
+        }
+
+        if (patch.skillId || patch.orchestratorSkillIds) {
+            updateSettings(patch);
+        }
+    }, [directSkillIds.join('|'), settings.orchestratorSkillIds, settings.skillId, skills]);
     const isEmpty = messages.length === 0;
     const statusText = isStreaming
         ? 'Поток активен'
@@ -202,8 +216,8 @@ const KnowledgeBasePage = () => {
             >
                 <VStack align="start" gap="14" max>
                     <SettingField title="Навык">
-                        {orchestratorSkill ? (
-                            <div className={styles.skillSection}>
+                        <div className={styles.skillSection}>
+                            {orchestratorSkill ? (
                                 <div className={styles.switchRow}>
                                     <div>
                                         <Text strong>Автоопределение</Text>
@@ -223,49 +237,49 @@ const KnowledgeBasePage = () => {
                                         unCheckedChildren="Выкл"
                                     />
                                 </div>
-                                {isOrchestratorMode ? (
-                                    <div className={styles.orchestratorSkillPicker}>
-                                        <Text className={styles.skillSectionTitle}>Скиллы для поиска</Text>
-                                        <Select
-                                            allowClear
-                                            className={styles.skillSelect}
-                                            disabled={isSkillsLoading}
-                                            mode="multiple"
-                                            onChange={(values) => updateSettings({
-                                                orchestratorSkillIds: normalizeOrchestratorSkillIds(values),
-                                            })}
-                                            options={[
-                                                {
-                                                    label: 'Авто',
-                                                    value: AUTO_SKILLS_VALUE,
-                                                },
-                                                ...directSkills.map((skill) => ({
-                                                    label: skill.name || skill.id,
-                                                    value: skill.id,
-                                                })),
-                                            ]}
-                                            placeholder="Авто"
-                                            value={orchestratorSkillSelectValue}
-                                        />
-                                    </div>
-                                ) : (
-                                    <div className={styles.orchestratorSkillPicker}>
-                                        <Text className={styles.skillSectionTitle}>Скиллы для поиска</Text>
-                                        <Select
-                                            className={styles.skillSelect}
-                                            disabled={isSkillsLoading || !directSkills.length}
-                                            onChange={(skillId) => updateSettings({skillId})}
-                                            options={directSkills.map((skill) => ({
+                            ) : null}
+                            {orchestratorSkill && isOrchestratorMode ? (
+                                <div className={styles.orchestratorSkillPicker}>
+                                    <Text className={styles.skillSectionTitle}>Скиллы для поиска</Text>
+                                    <Select
+                                        allowClear
+                                        className={styles.skillSelect}
+                                        disabled={isSkillsLoading}
+                                        mode="multiple"
+                                        onChange={(values) => updateSettings({
+                                            orchestratorSkillIds: normalizeOrchestratorSkillIds(values),
+                                        })}
+                                        options={[
+                                            {
+                                                label: 'Авто',
+                                                value: AUTO_SKILLS_VALUE,
+                                            },
+                                            ...directSkills.map((skill) => ({
                                                 label: skill.name || skill.id,
                                                 value: skill.id,
-                                            }))}
-                                            placeholder="Выберите скилл"
-                                            value={settings.skillId}
-                                        />
-                                    </div>
-                                )}
-                            </div>
-                        ) : null}
+                                            })),
+                                        ]}
+                                        placeholder="Авто"
+                                        value={orchestratorSkillSelectValue}
+                                    />
+                                </div>
+                            ) : (
+                                <div className={styles.orchestratorSkillPicker}>
+                                    <Text className={styles.skillSectionTitle}>Скиллы для поиска</Text>
+                                    <Select
+                                        className={styles.skillSelect}
+                                        disabled={isSkillsLoading || !directSkills.length}
+                                        onChange={(skillId) => updateSettings({skillId})}
+                                        options={directSkills.map((skill) => ({
+                                            label: skill.name || skill.id,
+                                            value: skill.id,
+                                        }))}
+                                        placeholder="Выберите скилл"
+                                        value={directSkills.some((skill) => skill.id === settings.skillId) ? settings.skillId : undefined}
+                                    />
+                                </div>
+                            )}
+                        </div>
                     </SettingField>
                     <SettingField title="Режим">
                         <div className={styles.switchRow}>
@@ -362,7 +376,6 @@ function ChatMessage({
     reaction?: MessageReaction;
 }) {
     const isUser = message.role === 'user';
-    const messageSkills = message.skills?.length ? message.skills : message.skill ? [message.skill] : [];
     const canReact = !isUser && message.status !== 'streaming';
 
     return (
@@ -373,8 +386,6 @@ function ChatMessage({
             <div className={classNames(styles.messageBubble, {[styles.userBubble]: isUser})}>
                 <HStack className={styles.messageMeta} gap="8" wrap="wrap">
                     <Text strong>{isUser ? 'Вы' : 'База знаний'}</Text>
-                    {messageSkills.map((skill) => <Tag key={skill}>{skill}</Tag>)}
-                    {message.status === 'streaming' ? <Tag color="processing">SSE</Tag> : null}
                     {message.status === 'error' ? <Tag color="error">Ошибка</Tag> : null}
                 </HStack>
 
@@ -449,6 +460,7 @@ function ThinkingStep({item}: {item: ThinkingItem}) {
     return (
         <div className={styles.thinkingStep}>
             <HStack className={styles.thinkingStepMeta} gap="6" wrap="wrap">
+                {item.skill ? <Tag color="processing">Навык: {formatSkillName(item.skill)}</Tag> : null}
                 {item.step ? <Tag>{formatStepName(item.step)}</Tag> : null}
                 {item.status && item.status !== 'success' ? (
                     <Tag color={item.status === 'error' ? 'error' : 'default'}>{formatStatus(item.status)}</Tag>
@@ -472,6 +484,14 @@ function formatStepName(step: string) {
         validate_request: 'Проверка',
     };
     return labels[step] ?? step.replaceAll('_', ' ');
+}
+
+function formatSkillName(skill: string) {
+    const labels: Record<string, string> = {
+        gitlab: 'GitLab',
+        orchestrator: 'Orchestrator',
+    };
+    return labels[skill] ?? skill;
 }
 
 function formatStatus(status: string) {

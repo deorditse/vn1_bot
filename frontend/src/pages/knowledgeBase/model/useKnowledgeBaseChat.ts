@@ -99,9 +99,10 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings) {
                     Accept: 'text/event-stream',
                 },
                 body: JSON.stringify({
+                    available_skills: getRequestAvailableSkills(settings),
                     chat_id: chatIdRef.current,
                     question,
-                    skill_id: getRequestSkillId(settings),
+                    skill: getRequestSkill(settings),
                     context: {
                         search_mode: settings.searchMode,
                         include_sources: settings.includeSources,
@@ -178,12 +179,16 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings) {
     };
 }
 
-function getRequestSkillId(settings: KnowledgeBaseChatSettings) {
-    if (settings.skillId !== 'orchestrator' || settings.orchestratorSkillIds.length === 0) {
-        return settings.skillId;
+function getRequestSkill(settings: KnowledgeBaseChatSettings) {
+    return settings.skillId;
+}
+
+function getRequestAvailableSkills(settings: KnowledgeBaseChatSettings) {
+    if (settings.skillId !== 'orchestrator') {
+        return [];
     }
 
-    return ['orchestrator', ...settings.orchestratorSkillIds];
+    return settings.orchestratorSkillIds;
 }
 
 function applyFragment(

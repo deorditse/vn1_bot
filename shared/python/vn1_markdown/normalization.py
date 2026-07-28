@@ -138,12 +138,16 @@ def _normalize_markdown_line(line: str) -> str:
     indent = _normalize_indent(leading_match.group(1) if leading_match else "")
     content = leading_match.group(2) if leading_match else line
     content = _unescape_structural_prefix(content)
+    repaired_content = _repair_broken_section_heading(content)
+    if repaired_content != content:
+        return f"{indent}{repaired_content}"
+    content = repaired_content
 
     heading_match = re.match(r"^(#{1,6})(?!#)\s*(.+)$", content)
     if heading_match:
         return f"{heading_match.group(1)} {heading_match.group(2).strip()}"
 
-    unordered_list_match = re.match(r"^([*+-])\s*(.+)$", content)
+    unordered_list_match = re.match(r"^([*+-])\s+(.+)$", content)
     if unordered_list_match:
         return f"{indent}- {unordered_list_match.group(2).strip()}"
 
@@ -173,3 +177,11 @@ def _unescape_structural_prefix(content: str) -> str:
     content = re.sub(r"^\\([*+-])(\s+)", r"\1\2", content)
     content = re.sub(r"^(\d+)\\[.)](\s+)", r"\1.\2", content)
     return content
+
+
+def _repair_broken_section_heading(content: str) -> str:
+    match = re.match(r"^[-*+]\s+[*_]{1,2}([^*_\n:][^*_\n:]{1,80})[*_]{1,2}\s*$", content)
+    if not match:
+        return content
+
+    return f"**{match.group(1).strip()}**"

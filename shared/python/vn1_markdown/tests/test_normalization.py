@@ -41,6 +41,30 @@ class MarkdownNormalizationTest(unittest.TestCase):
 
         self.assertEqual(normalize_generated_markdown(value), "1. **\\- build \\[x\\]**\n   OK")
 
+    def test_repairs_broken_section_heading_from_llm(self) -> None:
+        value = "- *Состав**\n\nВода, сахар.\n\n- *Способ применения**\n\nПринимать внутрь."
+
+        self.assertEqual(
+            normalize_generated_markdown(value),
+            "**Состав**\n\nВода, сахар.\n\n**Способ применения**\n\nПринимать внутрь.",
+        )
+
+    def test_repairs_common_broken_non_medicine_section_headings(self) -> None:
+        value = (
+            "- *Состав**\n\nВода.\n\n"
+            "- _Способ применения__\n\nПринимать внутрь.\n\n"
+            "- **Меры предосторожности*\n\nНе применять при непереносимости."
+        )
+
+        self.assertEqual(
+            normalize_generated_markdown(value),
+            (
+                "**Состав**\n\nВода.\n\n"
+                "**Способ применения**\n\nПринимать внутрь.\n\n"
+                "**Меры предосторожности**\n\nНе применять при непереносимости."
+            ),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

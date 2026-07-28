@@ -141,7 +141,7 @@ make restart SERVICE=nginx
 
 ```text
 COPY generator/src ./src
-COPY skills/orchestrator-skill/src ./src
+COPY skills/gitlab-skill/src ./src
 failed to calculate checksum ... not found
 ```
 
@@ -149,14 +149,14 @@ failed to calculate checksum ... not found
 
 ```bash
 git pull
-git status --short .dockerignore generator/src skills/orchestrator-skill/src
+git status --short .dockerignore generator/src skills/gitlab-skill/src
 ```
 
 После обновления `.dockerignore` пересобери сервисы:
 
 ```bash
 make restart SERVICE=backend-vn1
-make restart SERVICE=orchestrator-skill
+make restart SERVICE=gitlab-skill
 ```
 
 ### Ошибка `404 Not Found nginx/1.27.x`

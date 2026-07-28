@@ -6,14 +6,14 @@
 
 **Блок 2. Основная информация**
 
-- **Состав**
+**Состав**
 
-  Aqua / Water, Homosalate, Dicaprylyl Ether, Diisopropyl Sebacate, Octocrylene, Ethylhexyl Triazone, Dicaprylyl Carbonate, Ethylhexyl Salicylate, Alcohol Denat, Butyl Methoxydibenzoylmethane, Glycerin, Phenylbenzimidazole Sulfonic Acid, Propanediol, Triethanolamine, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Caprylyl Glycol, Hydrolyzed Hyaluronic Acid, Phenoxyethanol, Poly C10-30 Alkyl Acrylate, Terephthalylidene Dicamphor Sulfonic Acid, Tocopherol, Trisodium Ethylenediamine Disuccinate, Parfum / Fragrance.
+Aqua / Water, Homosalate, Dicaprylyl Ether, Diisopropyl Sebacate, Octocrylene, Ethylhexyl Triazone, Dicaprylyl Carbonate, Ethylhexyl Salicylate, Alcohol Denat, Butyl Methoxydibenzoylmethane, Glycerin, Phenylbenzimidazole Sulfonic Acid, Propanediol, Triethanolamine, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Caprylyl Glycol, Hydrolyzed Hyaluronic Acid, Phenoxyethanol, Poly C10-30 Alkyl Acrylate, Terephthalylidene Dicamphor Sulfonic Acid, Tocopherol, Trisodium Ethylenediamine Disuccinate, Parfum / Fragrance.
 
-- **Способ применения**
+**Способ применения**
 
-  Перед использованием встряхнуть флакон. Для тела распылить средство на кожу и распределить руками. Для лица сначала нанести средство на ладони, затем распределить по коже лица, избегая области вокруг глаз. Применять перед выходом на солнце. Рекомендуется обновлять нанесение после каждого купания и при интенсивном потоотделении.
+Перед использованием встряхнуть флакон. Для тела распылить средство на кожу и распределить руками. Для лица сначала нанести средство на ладони, затем распределить по коже лица, избегая области вокруг глаз. Применять перед выходом на солнце. Рекомендуется обновлять нанесение после каждого купания и при интенсивном потоотделении.
 
-- **Меры предосторожности**
+**Меры предосторожности**
 
-  Не применять при индивидуальной непереносимости компонентов, входящих в состав средства.
+Не применять при индивидуальной непереносимости компонентов, входящих в состав средства.

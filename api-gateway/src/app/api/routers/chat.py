@@ -2,7 +2,10 @@ from fastapi import APIRouter, Depends, Request
 from fastapi.responses import StreamingResponse
 from app.api.dependencies.auth import require_auth
 from app.api.schemas.chat import ChatStreamRequest
+from app.use_cases.stream_orchestrator_chat import OrchestratorChatUseCase
 from app.use_cases.stream_skill import StreamSkillUseCase
+from app.use_cases.validate_chat_request import ValidateChatRequestUseCase, validation_error_stream_response
+from common.enums import SkillEnum
 from domain.auth import User
 from infrastructure.clients.skill_client import SkillClientRegistry
 
@@ -29,5 +32,27 @@ async def stream_chat(
     payload: ChatStreamRequest,
     current_user: User = Depends(require_auth),
 ) -> StreamingResponse:
-    use_case = StreamSkillUseCase(skill_registry=SkillClientRegistry.from_settings())
+    registry = SkillClientRegistry.from_settings()
+    validation = await ValidateChatRequestUseCase(skill_registry=registry).execute(
+        payload=payload,
+        current_user=current_user,
+    )
+    if not validation.is_valid:
+        return validation_error_stream_response(
+            chat_id=payload.chat_id,
+            skill_name=(payload.skill or SkillEnum.orchestrator).value,
+            message=validation.reason,
+        )
+
+    if _is_orchestrator_request(payload.skill):
+        use_case = OrchestratorChatUseCase(skill_registry=registry)
+        return await use_case.execute(request=request, payload=payload, current_user=current_user)
+
+    use_case = StreamSkillUseCase(skill_registry=registry)
     return await use_case.execute_chat(request=request, payload=payload, current_user=current_user)
+
+
+def _is_orchestrator_request(skill: SkillEnum | None) -> bool:
+    if skill is None:
+        return True
+    return skill == SkillEnum.orchestrator

@@ -37,51 +37,27 @@ class StreamSkillUseCase:
                 message="Нет доступных skills.",
             )
 
-        requested_skills = _normalize_requested_skills(payload.skill_id)
-        if requested_skills and SkillEnum.orchestrator not in requested_skills and len(requested_skills) == 1:
-            selected_skill = requested_skills[0]
-            candidate_skills = [skill_id for skill_id in available_skills if skill_id != SkillEnum.orchestrator]
-            if selected_skill not in available_skills:
-                return self._error_stream_response(
-                    chat_id=payload.chat_id,
-                    skill_name=selected_skill.value,
-                    message=f"Skill недоступен для этого чата: {selected_skill.value}",
-                )
-            skill = self.skill_registry.get(selected_skill)
-            if skill is None:
-                return self._error_stream_response(
-                    chat_id=payload.chat_id,
-                    skill_name=selected_skill.value,
-                    message=f"Неизвестный skill: {selected_skill.value}",
-                )
-        else:
-            selected_skill = SkillEnum.orchestrator
-            orchestrator = self.skill_registry.get(SkillEnum.orchestrator)
-            if orchestrator is None or SkillEnum.orchestrator not in registry_skill_ids:
-                return self._error_stream_response(
-                    chat_id=payload.chat_id,
-                    skill_name=SkillEnum.orchestrator.value,
-                    message="Orchestrator skill недоступен.",
-                )
-            skill = orchestrator
-            candidate_skills = [skill_id for skill_id in requested_skills if skill_id != SkillEnum.orchestrator]
-            if not candidate_skills:
-                candidate_skills = [skill_id for skill_id in available_skills if skill_id != SkillEnum.orchestrator]
-
-            unavailable_skills = [skill_id for skill_id in candidate_skills if skill_id not in available_skills]
-            if unavailable_skills:
-                skill_names = ", ".join(skill_id.value for skill_id in unavailable_skills)
-                return self._error_stream_response(
-                    chat_id=payload.chat_id,
-                    skill_name=skill_names,
-                    message=f"Skill недоступен для этого чата: {skill_names}",
-                )
-
-        if selected_skill == SkillEnum.orchestrator and not candidate_skills:
+        selected_skill = payload.skill
+        if selected_skill is None or selected_skill == SkillEnum.orchestrator:
             return self._error_stream_response(
                 chat_id=payload.chat_id,
                 skill_name=SkillEnum.orchestrator.value,
-                message="Нет доступных навыков для оркестрации.",
+                message="Orchestrator-запрос должен обрабатываться отдельным use case.",
+            )
+
+        if selected_skill not in available_skills:
+            return self._error_stream_response(
+                chat_id=payload.chat_id,
+                skill_name=selected_skill.value,
+                message=f"Skill недоступен для этого чата: {selected_skill.value}",
+            )
+
+        skill = self.skill_registry.get(selected_skill)
+        if skill is None:
+            return self._error_stream_response(
+                chat_id=payload.chat_id,
+                skill_name=selected_skill.value,
+                message=f"Неизвестный skill: {selected_skill.value}",
             )
 
         upstream_payload = self._chat_upstream_payload(
@@ -89,7 +65,7 @@ class StreamSkillUseCase:
             current_user=current_user,
             message_id=uuid4(),
             available_skills=self._available_skill_payloads(
-                skill_ids=candidate_skills if selected_skill == SkillEnum.orchestrator else available_skills,
+                skill_ids=[skill_id for skill_id in available_skills if skill_id != SkillEnum.orchestrator],
                 current_user=current_user,
             ),
             selected_skill=selected_skill,
@@ -340,7 +316,8 @@ class StreamSkillUseCase:
 def _upstream_error_text(exc: httpx.HTTPError) -> str:
     response = getattr(exc, "response", None)
     if response is None:
-        return "Ошибка обработки на upstream."
+        detail = str(exc).strip()
+        return f"Ошибка подключения к upstream: {detail}" if detail else "Ошибка подключения к upstream."
     try:
         body = response.json()
     except ValueError:
@@ -353,14 +330,6 @@ def _upstream_error_text(exc: httpx.HTTPError) -> str:
         if isinstance(error, dict) and isinstance(error.get("message"), str):
             return error["message"]
     return "Ошибка обработки на upstream."
-
-
-def _normalize_requested_skills(skill_id: SkillEnum | list[SkillEnum] | None) -> list[SkillEnum]:
-    if skill_id is None:
-        return []
-    if isinstance(skill_id, list):
-        return list(dict.fromkeys(skill_id))
-    return [skill_id]
 
 
 def _extract_used_skills(terminal_payload: dict, fallback_skill: str) -> list[str]:

@@ -8,6 +8,13 @@ from domain.auth import User
 from domain.models.skill import SkillDescriptor
 from infrastructure.clients.http_stream import HttpStreamClient
 
+ORCHESTRATOR_SKILL_INFO = {
+    "id": SkillEnum.orchestrator.value,
+    "name": "Orchestrator",
+    "description": "Автоматический выбор подходящих навыков для обработки пользовательского запроса.",
+    "required_roles": [],
+}
+
 
 class SkillClient(HttpStreamClient):
     def __init__(self, descriptor: SkillDescriptor) -> None:
@@ -58,18 +65,23 @@ class SkillClientRegistry:
         return self._clients.get(skill_id)
 
     def skill_ids(self) -> list[SkillEnum]:
-        return sorted(self._clients)
+        return sorted([SkillEnum.orchestrator, *self._clients])
 
     def accessible_skill_ids(self, user_roles: list[str]) -> list[SkillEnum]:
         return sorted(
-            skill_id
-            for skill_id, descriptor in self._descriptors.items()
-            if self._has_required_roles(descriptor=descriptor, user_roles=user_roles)
+            [
+                SkillEnum.orchestrator,
+                *[
+                    skill_id
+                    for skill_id, descriptor in self._descriptors.items()
+                    if self._has_required_roles(descriptor=descriptor, user_roles=user_roles)
+                ],
+            ]
         )
 
     def available_skills(self, user_roles: list[str] | None = None) -> list[dict]:
         roles = user_roles or []
-        return [
+        skills = [
             {
                 "id": descriptor.id.value,
                 "name": descriptor.name,
@@ -79,6 +91,7 @@ class SkillClientRegistry:
             for descriptor in self._descriptors.values()
             if self._has_required_roles(descriptor=descriptor, user_roles=roles)
         ]
+        return [ORCHESTRATOR_SKILL_INFO, *skills]
 
     @staticmethod
     def _has_required_roles(descriptor: SkillDescriptor, user_roles: list[str]) -> bool:

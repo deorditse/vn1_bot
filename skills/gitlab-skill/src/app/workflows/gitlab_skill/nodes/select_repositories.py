@@ -41,7 +41,7 @@ class SelectRepositoriesNode(BaseNode):
             stream.data["terminal_status"] = TerminalStatus.error
             return state
 
-        question = stream.data["message"]
+        question = stream.data.setdefault("message", stream.payload.message.strip())
         repository_ids = await self._select_repository_ids_with_llm(question)
         state["selected_repository_ids"] = repository_ids
 

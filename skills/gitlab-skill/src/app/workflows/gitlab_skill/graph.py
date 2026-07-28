@@ -10,7 +10,6 @@ from app.workflows.gitlab_skill.nodes import (
     BuildResponseNode,
     SearchGitLabNode,
     SelectRepositoriesNode,
-    ValidateRequestNode,
 )
 from app.workflows.gitlab_skill.state import GitLabGraphState
 from domain.ports import GitLabSearchPort
@@ -23,20 +22,11 @@ def build_gitlab_skill_graph(
     search_service = search_service or GitLabSearchService()
 
     graph = StateGraph(GitLabGraphState)
-    graph.add_node(GitLabSkillStep.validate_request, ValidateRequestNode())
     graph.add_node(GitLabSkillStep.select_repositories, SelectRepositoriesNode())
     graph.add_node(GitLabSkillStep.search_gitlab, SearchGitLabNode(search_service))
     graph.add_node(GitLabSkillStep.build_response, BuildResponseNode())
 
-    graph.add_edge(START, GitLabSkillStep.validate_request)
-    graph.add_conditional_edges(
-        GitLabSkillStep.validate_request,
-        _route_after_guarded_node,
-        {
-            "continue": GitLabSkillStep.select_repositories,
-            "finish": END,
-        },
-    )
+    graph.add_edge(START, GitLabSkillStep.select_repositories)
     graph.add_conditional_edges(
         GitLabSkillStep.select_repositories,
         _route_after_repository_selection,

@@ -6,7 +6,6 @@ from typing import Any
 
 
 class GitLabSkillStep(StrEnum):
-    validate_request = "validate_request"
     select_repositories = "select_repositories"
     search_gitlab = "search_gitlab"
     build_response = "build_response"

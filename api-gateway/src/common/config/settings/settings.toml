@@ -15,3 +15,5 @@ CORS_ORIGINS = [
   "http://127.0.0.1:5173",
   "https://ai-bot.vn1.ru",
 ]
+
+VALIDATION_MODEL = "gpt-4o-mini"

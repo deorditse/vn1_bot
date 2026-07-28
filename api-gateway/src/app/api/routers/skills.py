@@ -8,7 +8,7 @@ from app.api.schemas.skills import SkillManifestResponse, SkillsResponse
 from app.use_cases.stream_skill import StreamSkillUseCase
 from common.enums import SkillEnum
 from domain.auth import User
-from infrastructure.clients.skill_client import SkillClientRegistry
+from infrastructure.clients.skill_client import ORCHESTRATOR_SKILL_INFO, SkillClientRegistry
 
 router = APIRouter()
 
@@ -43,6 +43,15 @@ async def skill_manifest(skill_id: SkillEnum, current_user: User = Depends(requi
     registry = SkillClientRegistry.from_settings()
     if skill_id not in registry.accessible_skill_ids(current_user.roles):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Skill недоступен для этого пользователя.")
+    if skill_id == SkillEnum.orchestrator:
+        return {
+            "id": ORCHESTRATOR_SKILL_INFO["id"],
+            "name": ORCHESTRATOR_SKILL_INFO["name"],
+            "version": "gateway",
+            "capabilities": ["select_skills", "route_chat"],
+            "stream_endpoint": "/chat/stream",
+            "requires_sources": False,
+        }
     client = registry.get(skill_id)
     if client is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Неизвестный skill.")

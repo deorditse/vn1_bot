@@ -18,6 +18,21 @@ class RunGitLabSkillUseCase:
             payload=payload,
             progress=SkillProgressEmitter(skill=SkillId.gitlab, request_id=payload.request_id),
         )
+        state.data["message"] = payload.message.strip()
+
+        if not state.data["message"]:
+            emit_ui_event(
+                state,
+                GitLabSkillStep.select_repositories,
+                1,
+                fragment_type=FragmentType.response,
+                status=FragmentStatus.error,
+                content="Пустой запрос для GitLab skill.",
+            )
+            for event in state.drain_events():
+                yield event
+            yield state.progress.terminal(TerminalStatus.error)
+            return
 
         if settings.gitlab_skill_mock_enabled:
             async for event in self._mock_stream(state):
@@ -40,10 +55,10 @@ class RunGitLabSkillUseCase:
 
         emit_ui_event(
             state,
-            GitLabSkillStep.validate_request,
+            GitLabSkillStep.select_repositories,
             1,
             status=FragmentStatus.in_progress,
-            content="Проверяю запрос и готовлю mock-поиск по GitLab...",
+            content="Готовлю mock-поиск по GitLab...",
         )
         for event in state.drain_events():
             yield event
@@ -51,7 +66,7 @@ class RunGitLabSkillUseCase:
 
         emit_ui_event(
             state,
-            GitLabSkillStep.validate_request,
+            GitLabSkillStep.select_repositories,
             1,
             status=FragmentStatus.success,
             content="Запрос принят. Mock-режим включён, реальные GitLab API не вызываются.",
