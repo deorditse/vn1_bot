@@ -36,9 +36,12 @@
 }
 
 .menu {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
   border-inline-end: 0 !important;
   background: transparent !important;
-  padding: @space-8 2px;
+  padding: @space-8 2px @space-12;
 
   :global(.ant-menu-item) {
     position: relative;
@@ -118,22 +121,21 @@
 .topbar {
   display: flex;
   align-items: center;
-  gap: @space-16;
   width: min(calc(100% - @layout-inline-gutter), @content-max-width);
   height: auto;
-  min-height: 68px;
+  min-height: 56px;
   margin: @space-20 auto 0;
-  padding: @space-10 @space-14 @space-10 @space-18;
+  padding: @space-12 @space-18;
   border: 1px solid var(--app-color-border);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 12px 34px rgba(27, 36, 52, 0.06);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 28px rgba(27, 36, 52, 0.05);
   backdrop-filter: blur(18px);
 
   h1 {
     margin: 0 !important;
     color: var(--app-color-text);
-    font-size: 19px !important;
+    font-size: 20px !important;
     line-height: 1.1 !important;
   }
 }
@@ -141,43 +143,6 @@
 .titleBlock {
   min-width: 0;
   flex: 1 1 auto;
-}
-
-.kicker {
-  color: var(--app-color-text-tertiary) !important;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.account {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: @space-6;
-  min-height: 40px;
-  margin-left: auto;
-  padding: @space-4 @space-6 @space-4 @space-12;
-  border: 1px solid var(--app-color-border);
-  border-radius: 999px;
-  background: #f8fafc;
-
-  span {
-    display: inline-flex;
-    align-items: center;
-    max-width: 180px;
-    min-height: 32px;
-    overflow: hidden;
-    color: var(--app-color-text-secondary) !important;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .drawerButton {
@@ -220,6 +185,9 @@
   }
 
   :global(.ant-drawer-body) {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
     padding: @space-14;
   }
 }
@@ -240,6 +208,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 0 0 auto;
   gap: @space-12;
   padding: @space-4 @space-4 @space-18;
 }
@@ -258,6 +227,41 @@
   &:hover {
     color: var(--app-color-text) !important;
     background: #ffffff !important;
+  }
+}
+
+.profilePanel {
+  flex: 0 0 auto;
+  margin-top: auto;
+  padding-top: @space-14;
+  border-top: 1px solid var(--app-color-border-secondary);
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 42px;
+  padding: 0 @space-12;
+  border: 1px solid var(--app-color-border);
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--app-color-text) !important;
+  font-weight: 760;
+  text-align: left;
+
+  span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    border-color: var(--app-color-border-secondary) !important;
+    background: #f8fafc !important;
+    color: var(--app-color-text) !important;
   }
 }
 
@@ -290,11 +294,9 @@
   }
 
   .topbar {
-    align-items: flex-start;
-    flex-wrap: wrap;
     width: calc(100% - @layout-inline-gutter-mobile);
     margin: @space-10 auto 0;
-    padding: 58px @space-12 @space-12;
+    padding: @space-12 @space-14 @space-12 58px;
   }
 
   .drawerButton {
@@ -302,13 +304,8 @@
     left: 22px;
   }
 
-  .titleBlock {
-    order: 3;
-    flex-basis: 100%;
-  }
-
-  .account {
-    max-width: calc(100% - 56px);
+  .topbar h1 {
+    font-size: 18px !important;
   }
 
   .mainLayout {

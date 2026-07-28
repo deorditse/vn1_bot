@@ -3,6 +3,7 @@ export type KnowledgeBaseSearchMode = 'balanced' | 'deep';
 
 export type KnowledgeBaseChatSettings = {
     skillId: KnowledgeBaseSkillId;
+    orchestratorSkillIds: KnowledgeBaseSkillId[];
     searchMode: KnowledgeBaseSearchMode;
     includeSources: boolean;
 };
@@ -10,7 +11,8 @@ export type KnowledgeBaseChatSettings = {
 const STORAGE_KEY = 'vn1:knowledge-base-chat-settings';
 
 export const defaultKnowledgeBaseChatSettings: KnowledgeBaseChatSettings = {
-    skillId: 'product_kb',
+    skillId: 'orchestrator',
+    orchestratorSkillIds: [],
     searchMode: 'balanced',
     includeSources: true,
 };
@@ -31,6 +33,9 @@ export function loadKnowledgeBaseChatSettings(): KnowledgeBaseChatSettings {
             ...defaultKnowledgeBaseChatSettings,
             ...parsed,
             skillId,
+            orchestratorSkillIds: Array.isArray(parsed.orchestratorSkillIds)
+                ? parsed.orchestratorSkillIds.filter((item): item is string => typeof item === 'string' && Boolean(item))
+                : defaultKnowledgeBaseChatSettings.orchestratorSkillIds,
             searchMode: parsed.searchMode === 'deep' ? 'deep' : 'balanced',
             includeSources: parsed.includeSources ?? defaultKnowledgeBaseChatSettings.includeSources,
         };

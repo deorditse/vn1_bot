@@ -1,4 +1,4 @@
-import {Button, Input, Modal, Switch, Tag, Tooltip, Typography} from 'antd';
+import {Button, Input, Modal, Select, Switch, Tag, Tooltip, Typography} from 'antd';
 import {
     ArrowUp,
     Bot,
@@ -34,6 +34,7 @@ import styles from './KnowledgeBasePage.module.less';
 const {Text} = Typography;
 const {TextArea} = Input;
 type MessageReaction = 'like' | 'dislike';
+const AUTO_SKILLS_VALUE = '__auto__';
 
 const KnowledgeBasePage = () => {
     const initialSettings = useMemo(() => loadKnowledgeBaseChatSettings(), []);
@@ -77,6 +78,12 @@ const KnowledgeBasePage = () => {
         });
     };
     const selectedSkill = skills.find((skill) => skill.id === settings.skillId);
+    const orchestratorSkill = skills.find((skill) => skill.id === 'orchestrator');
+    const directSkills = skills.filter((skill) => skill.id !== 'orchestrator');
+    const isOrchestratorMode = settings.skillId === 'orchestrator';
+    const orchestratorSkillSelectValue = settings.orchestratorSkillIds.length
+        ? settings.orchestratorSkillIds
+        : [AUTO_SKILLS_VALUE];
     const isEmpty = messages.length === 0;
     const statusText = isStreaming
         ? 'Поток активен'
@@ -188,59 +195,96 @@ const KnowledgeBasePage = () => {
                 title={(
                     <HStack gap="8">
                         <SlidersHorizontal size={18}/>
-                        <span>Параметры запроса</span>
+                        <span>Параметры</span>
                     </HStack>
                 )}
-                width="min(720px, calc(100vw - 32px))"
+                width="min(640px, calc(100vw - 32px))"
             >
-                <VStack align="start" gap="16" max>
-                    <div className={styles.settingsSummary}>
-                        <Text strong>{selectedSkill?.name || settings.skillId}</Text>
-                        <Text>
-                            {settings.searchMode === 'deep' ? 'Глубокий поиск' : 'Сбалансированный поиск'}
-                            {settings.includeSources ? ' · источники включены' : ' · без источников'}
-                        </Text>
-                    </div>
+                <VStack align="start" gap="14" max>
                     <SettingField title="Навык">
-                        <div className={styles.optionGrid}>
-                            {skills.map((skill) => (
-                                <button
-                                    className={classNames(styles.optionCard, {
-                                        [styles.optionCardActive]: settings.skillId === skill.id,
-                                    })}
-                                    disabled={isSkillsLoading}
-                                    key={skill.id}
-                                    onClick={() => updateSettings({skillId: skill.id})}
-                                    type="button"
-                                >
-                                    <span>{skill.name || skill.id}</span>
-                                    {skill.description ? <small>{skill.description}</small> : null}
-                                </button>
-                            ))}
-                        </div>
+                        {orchestratorSkill ? (
+                            <div className={styles.skillSection}>
+                                <div className={styles.switchRow}>
+                                    <div>
+                                        <Text strong>Автоопределение</Text>
+                                        <Text>
+                                            {isOrchestratorMode
+                                                ? 'Оркестратор выберет подходящие скиллы.'
+                                                : 'Запрос отправится напрямую в выбранный скилл.'}
+                                        </Text>
+                                    </div>
+                                    <Switch
+                                        checked={isOrchestratorMode}
+                                        checkedChildren="Вкл"
+                                        disabled={isSkillsLoading || !directSkills.length}
+                                        onChange={(checked) => updateSettings({
+                                            skillId: checked ? orchestratorSkill.id : directSkills[0]?.id ?? orchestratorSkill.id,
+                                        })}
+                                        unCheckedChildren="Выкл"
+                                    />
+                                </div>
+                                {isOrchestratorMode ? (
+                                    <div className={styles.orchestratorSkillPicker}>
+                                        <Text className={styles.skillSectionTitle}>Скиллы для поиска</Text>
+                                        <Select
+                                            allowClear
+                                            className={styles.skillSelect}
+                                            disabled={isSkillsLoading}
+                                            mode="multiple"
+                                            onChange={(values) => updateSettings({
+                                                orchestratorSkillIds: normalizeOrchestratorSkillIds(values),
+                                            })}
+                                            options={[
+                                                {
+                                                    label: 'Авто',
+                                                    value: AUTO_SKILLS_VALUE,
+                                                },
+                                                ...directSkills.map((skill) => ({
+                                                    label: skill.name || skill.id,
+                                                    value: skill.id,
+                                                })),
+                                            ]}
+                                            placeholder="Авто"
+                                            value={orchestratorSkillSelectValue}
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className={styles.orchestratorSkillPicker}>
+                                        <Text className={styles.skillSectionTitle}>Скиллы для поиска</Text>
+                                        <Select
+                                            className={styles.skillSelect}
+                                            disabled={isSkillsLoading || !directSkills.length}
+                                            onChange={(skillId) => updateSettings({skillId})}
+                                            options={directSkills.map((skill) => ({
+                                                label: skill.name || skill.id,
+                                                value: skill.id,
+                                            }))}
+                                            placeholder="Выберите скилл"
+                                            value={settings.skillId}
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                        ) : null}
                     </SettingField>
                     <SettingField title="Режим">
-                        <div className={styles.optionGrid}>
-                            <button
-                                className={classNames(styles.optionCard, {
-                                    [styles.optionCardActive]: settings.searchMode === 'balanced',
-                                })}
-                                onClick={() => updateSettings({searchMode: 'balanced'})}
-                                type="button"
-                            >
-                                <span>Сбалансированный</span>
-                                <small>Быстрый ответ для обычных запросов</small>
-                            </button>
-                            <button
-                                className={classNames(styles.optionCard, {
-                                    [styles.optionCardActive]: settings.searchMode === 'deep',
-                                })}
-                                onClick={() => updateSettings({searchMode: 'deep'})}
-                                type="button"
-                            >
-                                <span>Глубокий</span>
-                                <small>Больше времени на поиск и проверку</small>
-                            </button>
+                        <div className={styles.switchRow}>
+                            <div>
+                                <Text strong>
+                                    {settings.searchMode === 'deep' ? 'Глубокий поиск' : 'Сбалансированный поиск'}
+                                </Text>
+                                <Text>
+                                    {settings.searchMode === 'deep'
+                                        ? 'Больше времени на поиск и проверку.'
+                                        : 'Быстрый ответ для обычных запросов.'}
+                                </Text>
+                            </div>
+                            <Switch
+                                checked={settings.searchMode === 'deep'}
+                                checkedChildren="Глубокий"
+                                onChange={(checked) => updateSettings({searchMode: checked ? 'deep' : 'balanced'})}
+                                unCheckedChildren="Баланс"
+                            />
                         </div>
                     </SettingField>
                     <SettingField title="Источники">
@@ -293,6 +337,15 @@ function SettingField({children, title}: {children: ReactNode; title: string}) {
             {children}
         </div>
     );
+}
+
+function normalizeOrchestratorSkillIds(values: string[]) {
+    if (!values.length || values.at(-1) === AUTO_SKILLS_VALUE) {
+        return [];
+    }
+
+    const directValues = values.filter((value) => value !== AUTO_SKILLS_VALUE);
+    return Array.from(new Set(directValues));
 }
 
 function ChatMessage({

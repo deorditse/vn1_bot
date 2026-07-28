@@ -101,7 +101,7 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings) {
                 body: JSON.stringify({
                     chat_id: chatIdRef.current,
                     question,
-                    skill_id: settings.skillId,
+                    skill_id: getRequestSkillId(settings),
                     context: {
                         search_mode: settings.searchMode,
                         include_sources: settings.includeSources,
@@ -176,6 +176,14 @@ export function useKnowledgeBaseChat(settings: KnowledgeBaseChatSettings) {
         stop,
         submit,
     };
+}
+
+function getRequestSkillId(settings: KnowledgeBaseChatSettings) {
+    if (settings.skillId !== 'orchestrator' || settings.orchestratorSkillIds.length === 0) {
+        return settings.skillId;
+    }
+
+    return ['orchestrator', ...settings.orchestratorSkillIds];
 }
 
 function applyFragment(

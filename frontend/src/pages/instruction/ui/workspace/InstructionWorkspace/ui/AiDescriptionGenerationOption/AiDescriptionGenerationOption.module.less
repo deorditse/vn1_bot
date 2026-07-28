@@ -1,36 +1,210 @@
 .aiDescriptionMenu {
-  padding-top: 12px;
+  animation: revealOptions 0.18s ease-out;
+  padding-top: 14px;
   padding-left: 48px;
   border-top: 1px solid var(--app-color-border-secondary);
+}
 
-  :global(.ant-radio-group) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.productTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.choiceCard,
+.categoryCard {
+  appearance: none;
+  border: 1px solid var(--app-color-border-secondary);
+  background: #ffffff;
+  color: var(--app-color-text);
+  cursor: pointer;
+  text-align: left;
+  transform: translateY(0);
+  transition:
+    border-color 0.16s ease,
+    background 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+
+  &:hover {
+    border-color: rgba(227, 31, 43, 0.34);
+    background: #fbfcfd;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(27, 36, 52, 0.06);
   }
 
-  :global(.ant-radio-button-wrapper) {
-    height: auto;
-    min-height: 36px;
-    border-inline-start-width: 1px;
-    border-radius: 8px !important;
-    line-height: 34px;
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
 
-    &::before {
-      display: none;
-    }
+  &:focus-visible {
+    outline: none;
+    border-color: var(--app-color-primary);
+    box-shadow: 0 0 0 3px rgba(227, 31, 43, 0.12);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.64;
+    transform: none;
+    box-shadow: none;
   }
 }
 
-.categoryGroup {
-  :global(.ant-radio-button-wrapper) {
-    min-width: 94px;
-    text-align: center;
+.choiceCard {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 18px;
+  gap: 10px;
+  align-items: start;
+  min-height: 102px;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.choiceCardActive {
+  border-color: var(--app-color-primary);
+  background: #fff7f7;
+  box-shadow: inset 0 0 0 1px rgba(227, 31, 43, 0.16), 0 8px 18px rgba(227, 31, 43, 0.08);
+
+  .choiceIcon {
+    border-color: rgba(227, 31, 43, 0.24);
+    color: var(--app-color-primary);
+  }
+
+  .choiceText strong,
+  .choiceCheck {
+    color: var(--app-color-primary);
+  }
+}
+
+.choiceIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ececf1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--app-color-text-secondary);
+}
+
+.choiceText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+
+  strong {
+    color: var(--app-color-text);
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  small {
+    color: var(--app-color-text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+.choiceCheck {
+  animation: popIn 0.16s ease-out;
+  margin-top: 8px;
+  color: var(--app-color-primary);
+}
+
+.sectionLabel {
+  color: var(--app-color-text-tertiary) !important;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  animation: revealOptions 0.18s ease-out;
+}
+
+.categoryCard {
+  display: flex;
+  min-height: 56px;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  strong {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  small {
+    color: var(--app-color-text-secondary);
+    font-size: 10px;
+    line-height: 1.25;
+  }
+}
+
+.categoryCardActive {
+  border-color: var(--app-color-primary);
+  background: #fff7f7;
+  box-shadow: inset 0 0 0 1px rgba(227, 31, 43, 0.16), 0 6px 14px rgba(227, 31, 43, 0.07);
+
+  strong {
+    color: var(--app-color-primary);
+  }
+}
+
+@keyframes revealOptions {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 980px) {
+  .productTypeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
   .aiDescriptionMenu {
     padding-left: 0;
+  }
+
+  .choiceCard {
+    min-height: 0;
+  }
+
+  .categoryGrid {
+    grid-template-columns: 1fr;
   }
 }

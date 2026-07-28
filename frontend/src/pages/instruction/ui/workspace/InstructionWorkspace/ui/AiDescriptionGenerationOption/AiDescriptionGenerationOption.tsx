@@ -1,18 +1,42 @@
-import {Radio} from 'antd';
-import {PackageCheck, Pill, Sparkles} from 'lucide-react';
+import type {ReactNode, SyntheticEvent} from 'react';
+import {Check, PackageCheck, Pill, Sparkles} from 'lucide-react';
 
-import {HStack, VStack} from '@shared/ui';
-import type {GenerationOptions} from '../../../../../model/types';
+import {VStack} from '@shared/ui';
+import type {
+    AiDescriptionProductType,
+    GenerationOptions,
+    NonMedicineCategory,
+} from '../../../../../model/types';
 import {GenerationOptionPanel} from '../GenerationOptionPanel/GenerationOptionPanel';
 import styles from './AiDescriptionGenerationOption.module.less';
 
 const nonMedicineCategoryOptions = [
-    {label: 'БАД', value: 'dietary_supplement'},
-    {label: 'Лечебное питание', value: 'medical_nutrition'},
-    {label: 'Медизделия', value: 'medical_device'},
-    {label: 'Средства гигиены', value: 'hygiene'},
-    {label: 'Косметика', value: 'cosmetics'},
-];
+    {description: 'Добавки, витамины, нутрицевтики', label: 'БАД', value: 'dietary_supplement'},
+    {description: 'Специализированные продукты питания', label: 'Лечебное питание', value: 'medical_nutrition'},
+    {description: 'Приборы, тесты, расходные материалы', label: 'Медизделия', value: 'medical_device'},
+    {description: 'Уход, личная гигиена, бытовые товары', label: 'Средства гигиены', value: 'hygiene'},
+    {description: 'Косметика и средства ухода', label: 'Косметика', value: 'cosmetics'},
+] satisfies Array<{description: string; label: string; value: NonMedicineCategory}>;
+
+const productTypeOptions = [
+    {
+        description: 'Для препаратов с действующим веществом, формой выпуска и фармакологической информацией.',
+        icon: <Pill size={18}/>,
+        label: 'Лекарственный препарат',
+        value: 'medicine',
+    },
+    {
+        description: 'Для БАД, лечебного питания, медизделий, гигиены и косметики.',
+        icon: <PackageCheck size={18}/>,
+        label: 'Нелекарственный товар',
+        value: 'non_medicine',
+    },
+] satisfies Array<{
+    description: string;
+    icon: ReactNode;
+    label: string;
+    value: AiDescriptionProductType;
+}>;
 
 type AiDescriptionGenerationOptionProps = {
     disabled: boolean;
@@ -27,60 +51,79 @@ export function AiDescriptionGenerationOption({
                                               }: AiDescriptionGenerationOptionProps) {
     return (
         <GenerationOptionPanel
-            caption="Для лекарственных и нелекарственных препаратов"
+            caption="Короткое маркетинговое описание товара. Перед запуском выберите тип товара."
             checked={generationOptions.aiDescription}
             disabled={disabled}
             icon={<Sparkles size={18}/>}
             onToggle={(checked) => onOptionsChange({...generationOptions, aiDescription: checked})}
-            title="ИИ-описания"
+            title="ИИ-описание"
         >
             {generationOptions.aiDescription && (
                 <VStack
                     className={styles.aiDescriptionMenu}
-                    gap="10"
+                    gap="14"
                     max
-                    onClick={(event) => event.stopPropagation()}
-                    onKeyDown={(event) => event.stopPropagation()}
+                    onClick={stopPanelToggle}
+                    onKeyDown={stopPanelToggle}
                 >
-                    <Radio.Group
-                        buttonStyle="solid"
-                        disabled={disabled}
-                        onChange={(event) => onOptionsChange({
-                            ...generationOptions,
-                            aiDescriptionProductType: event.target.value
+                    <div className={styles.productTypeGrid}>
+                        {productTypeOptions.map((option) => {
+                            const active = generationOptions.aiDescriptionProductType === option.value;
+
+                            return (
+                                <button
+                                    className={`${styles.choiceCard} ${active ? styles.choiceCardActive : ''}`}
+                                    disabled={disabled}
+                                    key={option.value}
+                                    onClick={() => onOptionsChange({
+                                        ...generationOptions,
+                                        aiDescriptionProductType: option.value,
+                                    })}
+                                    type="button"
+                                >
+                                    <span className={styles.choiceIcon}>{option.icon}</span>
+                                    <span className={styles.choiceText}>
+                                        <strong>{option.label}</strong>
+                                        <small>{option.description}</small>
+                                    </span>
+                                    {active ? <Check className={styles.choiceCheck} size={17}/> : null}
+                                </button>
+                            );
                         })}
-                        optionType="button"
-                        value={generationOptions.aiDescriptionProductType}
-                    >
-                        <Radio.Button value="medicine">
-                            <HStack align="center" gap="6">
-                                <Pill size={15}/>
-                                Лекарственные препараты
-                            </HStack>
-                        </Radio.Button>
-                        <Radio.Button value="non_medicine">
-                            <HStack align="center" gap="6">
-                                <PackageCheck size={15}/>
-                                Нелекарственные препараты
-                            </HStack>
-                        </Radio.Button>
-                    </Radio.Group>
+                    </div>
 
                     {generationOptions.aiDescriptionProductType === 'non_medicine' && (
-                        <Radio.Group
-                            className={styles.categoryGroup}
-                            disabled={disabled}
-                            onChange={(event) => onOptionsChange({
-                                ...generationOptions,
-                                nonMedicineCategory: event.target.value
-                            })}
-                            optionType="button"
-                            options={nonMedicineCategoryOptions}
-                            value={generationOptions.nonMedicineCategory}
-                        />
+                        <VStack align="start" gap="8" max>
+                            <span className={styles.sectionLabel}>Категория нелекарственного товара</span>
+                            <div className={styles.categoryGrid}>
+                                {nonMedicineCategoryOptions.map((option) => {
+                                    const active = generationOptions.nonMedicineCategory === option.value;
+
+                                    return (
+                                        <button
+                                            className={`${styles.categoryCard} ${active ? styles.categoryCardActive : ''}`}
+                                            disabled={disabled}
+                                            key={option.value}
+                                            onClick={() => onOptionsChange({
+                                                ...generationOptions,
+                                                nonMedicineCategory: option.value,
+                                            })}
+                                            type="button"
+                                        >
+                                            <strong>{option.label}</strong>
+                                            <small>{option.description}</small>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </VStack>
                     )}
                 </VStack>
             )}
         </GenerationOptionPanel>
     );
+}
+
+function stopPanelToggle(event: SyntheticEvent) {
+    event.stopPropagation();
 }
