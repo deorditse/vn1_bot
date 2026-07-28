@@ -24,7 +24,7 @@ class SkillClient(HttpStreamClient):
     async def manifest(self) -> dict[str, Any]:
         import httpx
 
-        async with httpx.AsyncClient(timeout=30) as client:
+        async with httpx.AsyncClient(timeout=30, trust_env=False) as client:
             response = await client.get(f"{self.base_url}{self.descriptor.manifest_path}")
             response.raise_for_status()
             return response.json()

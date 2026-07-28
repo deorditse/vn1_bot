@@ -23,7 +23,7 @@ class HttpStreamClient:
             headers.update(extra_headers)
 
         try:
-            async with httpx.AsyncClient(timeout=None) as client:
+            async with httpx.AsyncClient(timeout=None, trust_env=False) as client:
                 response = await client.request(
                     request.method,
                     url,
@@ -60,7 +60,7 @@ class HttpStreamClient:
         if extra_headers:
             headers.update(extra_headers)
 
-        async with httpx.AsyncClient(timeout=None) as client:
+        async with httpx.AsyncClient(timeout=None, trust_env=False) as client:
             async with client.stream(
                 "POST",
                 url,
