@@ -15,7 +15,13 @@ from domain.auth import User
 from infrastructure.clients.skill_client import SkillClientRegistry
 from infrastructure.llm import LLMService
 from vn1_protocol.skill_streaming import SkillStreamState, emit_ui_event
-from vn1_protocol.sse import SkillProgressEmitter, extract_final_text, parse_terminal_payload, sse_event_bytes, sse_headers
+from vn1_protocol.sse import (
+    SkillProgressEmitter,
+    extract_final_text,
+    parse_terminal_payload,
+    sse_event_bytes,
+    sse_headers,
+)
 from vn1_protocol.sse_protocol import FragmentStatus, FragmentType, SkillId, TerminalStatus
 
 
@@ -25,24 +31,19 @@ The user message is JSON with:
 - message: user's request.
 - available_skills: enabled skills with id, name, and description.
 
-Return structured output:
-- skill_id: one available skill id or null.
-- answer: short Russian assistant answer or null.
-- reason: short Russian explanation.
-
 Rules:
-- For work/search requests, choose exactly one available skill and set answer=null.
+- For work/search requests, call exactly one available skill tool.
 - A work/search request can ask to find, inspect, explain, compare, summarize, debug, or work with code,
   files, repositories, issues, merge requests, docs, wiki, Figma layouts, tickets, incidents, product features,
   frontend/mobile UI, screens, pages, widgets, buttons, backend, API, services, configs, tests, or CI/CD.
 - Short phrases naming a concrete object are work/search requests, even with typos.
 - Match the request semantically against skill descriptions. Handle Russian/English synonyms and typos.
 - For standalone greetings, thanks, small talk, "how are you", and "what can you do / how can you help",
-  set skill_id=null and answer to a concise Russian chat reply.
+  do not call tools; answer directly in Russian.
 - For capability questions, answer that you can chat and search through available skills when the user asks
   for a concrete object or task.
-- If no available skill is relevant, set skill_id=null and answer to a concise Russian chat reply.
-- Use only ids from available_skills. Do not invent skill ids.
+- If no available skill is relevant, do not call tools; answer directly in Russian.
+- Use only provided tools. Do not invent skill ids.
 - When unsure between a skill and chat, choose the skill if the message mentions a concrete object or task."""
 
 
@@ -131,10 +132,12 @@ def _auto_candidate_skills(registry_skill_ids: list[SkillEnum]) -> list[SkillEnu
 
 async def _route_with_llm(question: str, skills: list[dict]) -> OrchestratorRoute:
     try:
-        router = LLMService().openai(model=settings.orchestrator_router_model).with_structured_output(
-            OrchestratorRoute
+        router = LLMService().openai(model=settings.orchestrator_router_model).bind_tools(
+            _skill_tools(skills),
+            tool_choice="auto",
+            parallel_tool_calls=False,
         )
-        route = await router.ainvoke(
+        response = await router.ainvoke(
             [
                 ("system", _ROUTER_PROMPT),
                 (
@@ -152,14 +155,69 @@ async def _route_with_llm(question: str, skills: list[dict]) -> OrchestratorRout
     except Exception:
         return OrchestratorRoute(answer="Не смог быстро выбрать навык. Уточните, где искать или что нужно найти.")
 
+    skill_id = _called_skill_id(response=response, skills=skills)
+    if skill_id:
+        return OrchestratorRoute(skill_id=skill_id, reason="LLM called skill tool.")
+
+    answer = _message_content(response).strip()
+    return OrchestratorRoute(answer=answer or "Чем помочь?", reason="LLM answered without tool call.")
+
+
+def _skill_tools(skills: list[dict]) -> list[dict]:
+    tools = []
+    for skill in skills:
+        try:
+            skill_id = SkillEnum(skill["id"])
+        except (KeyError, ValueError):
+            continue
+
+        description = " ".join(
+            part.strip()
+            for part in (str(skill.get("name", "")), str(skill.get("description", "")))
+            if part.strip()
+        )
+        tools.append(
+            {
+                "type": "function",
+                "function": {
+                    "name": skill_id.value,
+                    "description": description or f"Route request to {skill_id.value} skill.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "reason": {
+                                "type": "string",
+                                "description": "Short reason why this skill should handle the request.",
+                            }
+                        },
+                    },
+                },
+            }
+        )
+
+    return tools
+
+
+def _called_skill_id(response: object, skills: list[dict]) -> SkillEnum | None:
     available_ids = {skill.get("id") for skill in skills}
-    if route.skill_id and route.skill_id.value not in available_ids:
-        return OrchestratorRoute(answer=route.answer or "Чем помочь?")
-    if route.skill_id is None and not (route.answer and route.answer.strip()):
-        return OrchestratorRoute(answer="Чем помочь?")
-    if route.answer:
-        route.answer = route.answer.strip()
-    return route
+    for tool_call in getattr(response, "tool_calls", None) or []:
+        tool_name = tool_call.get("name") if isinstance(tool_call, dict) else getattr(tool_call, "name", None)
+        if tool_name in available_ids:
+            return SkillEnum(tool_name)
+    return None
+
+
+def _message_content(response: object) -> str:
+    content = getattr(response, "content", "")
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        return "".join(
+            item.get("text", "")
+            for item in content
+            if isinstance(item, dict) and item.get("type") in {None, "text"}
+        )
+    return str(content) if content else ""
 
 
 def _chat_stream_response(chat_id: UUID, message: str) -> StreamingResponse:
