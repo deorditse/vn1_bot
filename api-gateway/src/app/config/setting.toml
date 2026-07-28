@@ -1,7 +1,7 @@
 [skills.gitlab]
 enabled = true
 name = "GitLab"
-description = "Поиск по issues, merge requests, коду, README и обсуждениям GitLab."
+description = "Поиск по GitLab: код, файлы, README, issues, merge requests, обсуждения, frontend/mobile UI, экраны, страницы, виджеты, кнопки, фичи, backend, API и сервисы."
 base_url = "http://gitlab-skill:8022"
 stream_path = "/v1/run/stream"
 manifest_path = "/manifest"

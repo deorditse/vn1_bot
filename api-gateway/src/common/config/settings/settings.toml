@@ -16,4 +16,4 @@ CORS_ORIGINS = [
   "https://ai-bot.vn1.ru",
 ]
 
-VALIDATION_MODEL = "gpt-4o-mini"
+ORCHESTRATOR_ROUTER_MODEL = "gpt-4o-mini"

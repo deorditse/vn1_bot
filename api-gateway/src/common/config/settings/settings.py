@@ -31,7 +31,7 @@ class AppSettings(BaseModel):
 
     cors_origins: list[str] = Field(alias="CORS_ORIGINS")
 
-    validation_model: str = Field(default="gpt-4o-mini", alias="VALIDATION_MODEL")
+    orchestrator_router_model: str = Field(default="gpt-4o-mini", alias="ORCHESTRATOR_ROUTER_MODEL")
     openai_api_key: str | None = Field(default=None, alias="OPENAI_API_KEY")
 
     @field_validator("api_mode", mode="before")
