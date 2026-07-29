@@ -10,6 +10,8 @@ export type AiDescriptionProductType = 'medicine' | 'non_medicine';
 
 export type NonMedicineCategory = 'dietary_supplement' | 'medical_nutrition' | 'medical_device' | 'hygiene' | 'cosmetics';
 
+export type InstructionInputMode = 'file' | 'text';
+
 export type GenerationOptions = {
   instruction: boolean;
   aiDescription: boolean;

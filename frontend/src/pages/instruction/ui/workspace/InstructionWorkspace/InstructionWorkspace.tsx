@@ -2,7 +2,7 @@ import {Alert, Button, Progress, Typography} from 'antd';
 import {FileText, Sparkles} from 'lucide-react';
 
 import {Card, HStack, VStack} from '@shared/ui';
-import type {GenerationOptions} from '../../../model/types';
+import type {GenerationOptions, InstructionInputMode} from '../../../model/types';
 import {InstructionLoadedState} from '../InstructionLoadedState';
 import {InstructionUploadPanel} from '../InstructionUploadPanel';
 import {GenerationOptionsPicker} from './ui/GenerationOptionsPicker/GenerationOptionsPicker';
@@ -14,26 +14,36 @@ type InstructionWorkspaceProps = {
     error: string | null;
     file: File | null;
     generationOptions: GenerationOptions;
+    hasInstructionSource: boolean;
+    inputMode: InstructionInputMode;
+    instructionText: string;
     instructionReady: boolean;
     isLoading: boolean;
     onConvert: () => void;
     onOptionsChange: (options: GenerationOptions) => void;
     onRemoveFile: () => void;
     onReset: () => void;
+    onSelectInputMode: (mode: InstructionInputMode) => void;
     onSelectFile: (file: File) => void;
+    onTextChange: (value: string) => void;
 };
 
 export function InstructionWorkspace({
                                          error,
                                          file,
                                          generationOptions,
+                                         hasInstructionSource,
+                                         inputMode,
+                                         instructionText,
                                          instructionReady,
                                          isLoading,
                                          onConvert,
                                          onOptionsChange,
                                          onRemoveFile,
                                          onReset,
+                                         onSelectInputMode,
                                          onSelectFile,
+                                         onTextChange,
                                      }: InstructionWorkspaceProps) {
     return (
         <Card className={styles.workspace} padding="24">
@@ -48,17 +58,26 @@ export function InstructionWorkspace({
                 {!instructionReady ? (
                     <InstructionUploadPanel
                         file={file}
+                        inputMode={inputMode}
+                        instructionText={instructionText}
                         instructionReady={instructionReady}
                         isLoading={isLoading}
                         onRemoveFile={onRemoveFile}
+                        onSelectInputMode={onSelectInputMode}
                         onSelectFile={onSelectFile}
+                        onTextChange={onTextChange}
                     />
                 ) : (
-                    <InstructionLoadedState fileName={file?.name} onReset={onReset}/>
+                    <InstructionLoadedState
+                        fileName={inputMode === 'file' ? file?.name : 'Текст инструкции'}
+                        sourceText={inputMode === 'text' ? instructionText : undefined}
+                        onReset={onReset}
+                    />
                 )}
 
                 <GenerationOptionsPicker
                     disabled={isLoading}
+                    instructionDisabled={inputMode === 'text'}
                     generationOptions={generationOptions}
                     onOptionsChange={onOptionsChange}
                 />
@@ -71,7 +90,7 @@ export function InstructionWorkspace({
 
                 <HStack className={styles.actions} justify="end" max wrap="wrap">
                     <Button
-                        disabled={!file || isLoading || (!generationOptions.instruction && !generationOptions.aiDescription)}
+                        disabled={!hasInstructionSource || isLoading || (!generationOptions.instruction && !generationOptions.aiDescription)}
                         icon={generationOptions.aiDescription && !generationOptions.instruction ?
                             <Sparkles size={18}/> : <FileText size={18}/>}
                         loading={isLoading}

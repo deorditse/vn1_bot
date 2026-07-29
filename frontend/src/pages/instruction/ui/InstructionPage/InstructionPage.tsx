@@ -13,7 +13,10 @@ const InstructionPage = () => {
         error,
         file,
         generationOptions,
+        hasInstructionSource,
+        inputMode,
         instruction,
+        instructionText,
         isAiDescriptionLoading,
         isFileUploading,
         isInstructionLoading,
@@ -24,7 +27,9 @@ const InstructionPage = () => {
         generateDescriptionOnly,
         removeSelectedFile,
         resetInstruction,
+        selectInputMode,
         selectFile,
+        updateInstructionText,
         updateGenerationOptions,
     } = useInstructionGenerator();
 
@@ -40,13 +45,18 @@ const InstructionPage = () => {
                 error={error}
                 file={file}
                 generationOptions={generationOptions}
+                hasInstructionSource={hasInstructionSource}
+                inputMode={inputMode}
+                instructionText={instructionText}
                 instructionReady={hasResults}
                 isLoading={isLoading}
                 onConvert={convert}
                 onOptionsChange={updateGenerationOptions}
                 onRemoveFile={removeSelectedFile}
                 onReset={resetInstruction}
+                onSelectInputMode={selectInputMode}
                 onSelectFile={selectFile}
+                onTextChange={updateInstructionText}
             />
 
             {isResultsVisible && (

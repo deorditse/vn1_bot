@@ -1,5 +1,9 @@
 @import "../../../../../shared/ui/styles/spacing.less";
 
+.sourceSwitch {
+  align-self: flex-start;
+}
+
 .dropzone {
   width: 100%;
 
@@ -100,6 +104,27 @@
 
 .selectedFileActions {
   flex: 0 0 auto;
+}
+
+.textInputPanel {
+  padding: @space-16;
+  border: 1px solid var(--app-color-border);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.instructionTextArea {
+  font-family: inherit;
+
+  :global(.ant-input) {
+    resize: vertical;
+  }
+}
+
+.textInputMeta,
+.textInputCounter {
+  color: var(--app-color-text-tertiary);
+  font-size: 12px;
 }
 
 @media (max-width: 640px) {

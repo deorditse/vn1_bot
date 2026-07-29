@@ -5,19 +5,21 @@ import styles from './GenerationOptionsPicker.module.less';
 
 type GenerationOptionsPickerProps = {
     disabled: boolean;
+    instructionDisabled?: boolean;
     generationOptions: GenerationOptions;
     onOptionsChange: (options: GenerationOptions) => void;
 };
 
 export function GenerationOptionsPicker({
                                             disabled,
+                                            instructionDisabled = false,
                                             generationOptions,
                                             onOptionsChange,
                                         }: GenerationOptionsPickerProps) {
     return (
         <div className={styles.generationGrid}>
             <InstructionGenerationOption
-                disabled={disabled}
+                disabled={disabled || instructionDisabled}
                 generationOptions={generationOptions}
                 onOptionsChange={onOptionsChange}
             />

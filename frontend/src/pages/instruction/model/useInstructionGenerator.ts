@@ -7,9 +7,10 @@ import {
   useUploadInstructionFileMutation,
 } from '../api/instructionApi';
 import {buildInstructionBlocks} from '../lib/buildInstructionBlocks';
-import type {GenerationOptions} from './types';
+import type {GenerationOptions, InstructionInputMode} from './types';
 
 const GENERATION_OPTIONS_STORAGE_KEY = 'vn1:generation-options';
+const INPUT_MODE_STORAGE_KEY = 'vn1:instruction-input-mode';
 
 const DEFAULT_GENERATION_OPTIONS: GenerationOptions = {
   instruction: false,
@@ -32,6 +33,15 @@ function getStoredGenerationOptions(): GenerationOptions {
     };
   } catch {
     return DEFAULT_GENERATION_OPTIONS;
+  }
+}
+
+function getStoredInputMode(): InstructionInputMode {
+  try {
+    const value = window.localStorage.getItem(INPUT_MODE_STORAGE_KEY);
+    return value === 'text' || value === 'file' ? value : 'file';
+  } catch {
+    return 'file';
   }
 }
 
@@ -74,8 +84,10 @@ function getGenerationErrorMessage(err: unknown, fallback: string) {
 }
 
 export function useInstructionGenerator() {
+  const [inputMode, setInputMode] = useState<InstructionInputMode>(getStoredInputMode);
   const [file, setFile] = useState<File | null>(null);
   const [fileId, setFileId] = useState<string | null>(null);
+  const [instructionText, setInstructionText] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [instruction, setInstruction] = useState<GenerateInstructionResponse | null>(null);
   const [aiDescription, setAiDescription] = useState<string>('');
@@ -87,9 +99,43 @@ export function useInstructionGenerator() {
   const isLoading = isFileUploading || isInstructionLoading || isAiDescriptionLoading;
 
   const markupBlocks = useMemo(() => buildInstructionBlocks(instruction), [instruction]);
+  const hasInstructionSource = inputMode === 'file' ? Boolean(file) : Boolean(instructionText.trim());
 
   const selectFile = (nextFile: File) => {
+    setInputMode('file');
+    window.localStorage.setItem(INPUT_MODE_STORAGE_KEY, 'file');
     setFile(nextFile);
+    setFileId(null);
+    setError(null);
+    setInstruction(null);
+    setAiDescription('');
+    setCopiedBlock(null);
+  };
+
+  const selectInputMode = (nextMode: InstructionInputMode) => {
+    setInputMode(nextMode);
+    window.localStorage.setItem(INPUT_MODE_STORAGE_KEY, nextMode);
+    setError(null);
+    setCopiedBlock(null);
+
+    if (nextMode === 'text') {
+      setFile(null);
+      setFileId(null);
+      setGenerationOptions((currentOptions) => {
+        const nextOptions = {
+          ...currentOptions,
+          instruction: false,
+          aiDescription: true,
+        };
+        window.localStorage.setItem(GENERATION_OPTIONS_STORAGE_KEY, JSON.stringify(nextOptions));
+        return nextOptions;
+      });
+    }
+  };
+
+  const updateInstructionText = (value: string) => {
+    setInstructionText(value);
+    setFile(null);
     setFileId(null);
     setError(null);
     setInstruction(null);
@@ -100,6 +146,7 @@ export function useInstructionGenerator() {
   const resetInstruction = () => {
     setFile(null);
     setFileId(null);
+    setInstructionText('');
     setError(null);
     setInstruction(null);
     setAiDescription('');
@@ -114,8 +161,15 @@ export function useInstructionGenerator() {
   };
 
   const updateGenerationOptions = (nextOptions: GenerationOptions) => {
-    setGenerationOptions(nextOptions);
-    window.localStorage.setItem(GENERATION_OPTIONS_STORAGE_KEY, JSON.stringify(nextOptions));
+    const normalizedOptions = inputMode === 'text'
+      ? {
+          ...nextOptions,
+          instruction: false,
+          aiDescription: true,
+        }
+      : nextOptions;
+    setGenerationOptions(normalizedOptions);
+    window.localStorage.setItem(GENERATION_OPTIONS_STORAGE_KEY, JSON.stringify(normalizedOptions));
   };
 
   const ensureFileUploaded = async () => {
@@ -134,8 +188,8 @@ export function useInstructionGenerator() {
   };
 
   const convert = async () => {
-    if (!file) {
-      setError('Выберите DOCX-файл');
+    if (!hasInstructionSource) {
+      setError(inputMode === 'file' ? 'Выберите DOCX-файл' : 'Вставьте текст инструкции');
       return;
     }
 
@@ -156,16 +210,21 @@ export function useInstructionGenerator() {
     }
 
     try {
-      const uploadedFileId = await ensureFileUploaded();
+      const uploadedFileId = inputMode === 'file' ? await ensureFileUploaded() : null;
 
       if (generationOptions.instruction) {
+        if (!uploadedFileId) {
+          setError('Генерация HTML-инструкции доступна только для DOCX-файла');
+          return;
+        }
         const result = await generateInstruction({fileId: uploadedFileId}).unwrap();
         setInstruction(result);
       }
 
       if (generationOptions.aiDescription) {
         const result = await generateAiDescription({
-          fileId: uploadedFileId,
+          fileId: uploadedFileId ?? undefined,
+          instructionText: inputMode === 'text' ? instructionText : undefined,
           productType: generationOptions.aiDescriptionProductType,
           nonMedicineCategory: generationOptions.aiDescriptionProductType === 'non_medicine'
             ? generationOptions.nonMedicineCategory
@@ -179,8 +238,8 @@ export function useInstructionGenerator() {
   };
 
   const generateDescriptionOnly = async () => {
-    if (!file) {
-      setError('Выберите DOCX-файл');
+    if (!hasInstructionSource) {
+      setError(inputMode === 'file' ? 'Выберите DOCX-файл' : 'Вставьте текст инструкции');
       return;
     }
 
@@ -189,9 +248,10 @@ export function useInstructionGenerator() {
     setAiDescription('');
 
     try {
-      const uploadedFileId = await ensureFileUploaded();
+      const uploadedFileId = inputMode === 'file' ? await ensureFileUploaded() : null;
       const result = await generateAiDescription({
-        fileId: uploadedFileId,
+        fileId: uploadedFileId ?? undefined,
+        instructionText: inputMode === 'text' ? instructionText : undefined,
         productType: generationOptions.aiDescriptionProductType,
         nonMedicineCategory: generationOptions.aiDescriptionProductType === 'non_medicine'
           ? generationOptions.nonMedicineCategory
@@ -216,7 +276,10 @@ export function useInstructionGenerator() {
     file,
     fileId,
     generationOptions,
+    hasInstructionSource,
+    inputMode,
     instruction,
+    instructionText,
     isAiDescriptionLoading,
     isFileUploading,
     isInstructionLoading,
@@ -227,7 +290,9 @@ export function useInstructionGenerator() {
     generateDescriptionOnly,
     removeSelectedFile,
     resetInstruction,
+    selectInputMode,
     selectFile,
+    updateInstructionText,
     updateGenerationOptions,
   };
 }

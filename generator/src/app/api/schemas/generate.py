@@ -4,7 +4,12 @@ from common.enums import AiDescriptionProductType, NonMedicineCategory
 
 
 class GenerateFileRequest(BaseModel):
-    file_id: str = Field(description="Uploaded generated file id.", examples=["01JABCDEF1234567890"])
+    file_id: str | None = Field(default=None, description="Uploaded generated file id.", examples=["01JABCDEF1234567890"])
+    instruction_text: str | None = Field(
+        default=None,
+        description="Plain instruction text for AI description generation.",
+        examples=["Состав: ...\nПоказания к применению: ..."],
+    )
     product_type: AiDescriptionProductType = Field(
         default=AiDescriptionProductType.MEDICINE,
         description="AI description product type.",

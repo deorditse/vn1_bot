@@ -71,7 +71,7 @@ async def docx_to_markdown(
     """
     try:
         generated_file = _get_generated_file_or_404(
-            file_id=request.file_id,
+            file_id=_require_file_id(request),
             owner_id=str(current_user.id),
         )
 
@@ -93,7 +93,7 @@ async def docx_to_markdown(
     "/ai_short_description",
     response_model=ShortDescriptionResponse,
     summary="Generate short AI description",
-    description="Генерирует короткое AI-описание по file_id ранее загруженного DOCX-файла.",
+    description="Генерирует короткое AI-описание по file_id ранее загруженного DOCX-файла или по переданному тексту.",
     status_code=status.HTTP_200_OK,
 )
 async def ai_short_description(
@@ -101,13 +101,10 @@ async def ai_short_description(
         current_user: User = Depends(require_gateway_user),
 ):
     """
-    Эндпоинт принимает file_id и запускает только генерацию AI-описания.
+    Эндпоинт принимает file_id или instruction_text и запускает только генерацию AI-описания.
     """
     try:
-        generated_file = _get_generated_file_or_404(
-            file_id=request.file_id,
-            owner_id=str(current_user.id),
-        )
+        markdown = _resolve_ai_description_markdown(request=request, owner_id=str(current_user.id))
 
         if request.product_type == AiDescriptionProductType.NON_MEDICINE:
             if request.non_medicine_category is None:
@@ -118,12 +115,12 @@ async def ai_short_description(
 
             use_case = NonMedicineShortDescriptionUseCase(DocxToMdConverter())
             description = await use_case.generate_from_markdown(
-                md=generated_file.markdown,
+                md=markdown,
                 category=request.non_medicine_category,
             )
         else:
             use_case = ShortDescriptionUseCase(DocxToMdConverter())
-            description = await use_case.generate_from_markdown(generated_file.markdown)
+            description = await use_case.generate_from_markdown(markdown)
 
         return ShortDescriptionResponse(description=description)
 
@@ -131,6 +128,36 @@ async def ai_short_description(
         print("ERROR:", e)
         traceback.print_exc()
         raise
+
+
+def _require_file_id(request: GenerateFileRequest) -> str:
+    if request.file_id:
+        return request.file_id
+    raise HTTPException(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        detail="Для генерации инструкции нужно передать file_id",
+    )
+
+
+def _resolve_ai_description_markdown(request: GenerateFileRequest, owner_id: str) -> str:
+    instruction_text = " ".join((request.instruction_text or "").split())
+    has_file = bool(request.file_id)
+    has_text = bool(instruction_text)
+
+    if has_file == has_text:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Передайте ровно один источник инструкции: file_id или instruction_text",
+        )
+
+    if has_text:
+        return request.instruction_text or ""
+
+    generated_file = _get_generated_file_or_404(
+        file_id=request.file_id or "",
+        owner_id=owner_id,
+    )
+    return generated_file.markdown
 
 
 def _get_generated_file_or_404(file_id: str, owner_id: str):

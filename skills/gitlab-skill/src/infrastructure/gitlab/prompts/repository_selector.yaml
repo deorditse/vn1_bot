@@ -24,11 +24,25 @@ prompt:
     Selection policy:
     - Use repository descriptions as the primary source of ownership and routing rules.
     - Match Russian and English terms, synonyms, abbreviations, typos, product words, UI words, code terms, and domain concepts.
-    - Include every repository that is needed to answer the question with code evidence.
-    - Return one repository id when the question clearly targets one repository.
+    - Prefer explicit scope words over broad domain words. For example, if the user says МП,
+      мобильное приложение, мобилка, mobile app, Flutter, UI, screen, page, widget, or button,
+      select the mobile/frontend repository only, unless the question also explicitly asks about
+      backend, API, server-side logic, database, Bitrix, or integration with backend.
+    - Broad domain words such as auth, authorization, login, cart, catalog, user, or order are not
+      enough by themselves to include every repository. Combine them with the explicit scope words
+      and repository descriptions.
+    - Include every repository that is needed to answer the question with code evidence, but do not
+      add repositories just because they share a broad domain word.
+    - Return one repository id when the question clearly targets one repository or one application layer.
     - Return multiple repository ids when the question is cross-cutting, asks about integrations,
       mentions multiple application areas, or requires comparing/checking interactions.
     - Return all repository ids when the target repository is unclear or cannot be confidently assigned.
+
+    Examples:
+    - "авторизация в МП" -> only the mobile/frontend repository.
+    - "страница авторизации в мобильном приложении" -> only the mobile/frontend repository.
+    - "auth backend" -> only the backend repository.
+    - "как мобильная авторизация ходит в backend API" -> mobile/frontend and backend repositories.
 
     Constraints:
     - Use only repository ids from the provided repositories list.
