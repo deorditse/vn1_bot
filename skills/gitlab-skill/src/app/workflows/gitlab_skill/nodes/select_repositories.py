@@ -65,7 +65,9 @@ class SelectRepositoriesNode(BaseNode):
             return fallback
 
         try:
-            prompt = get_prompt("repository_selector").add_user_message(
+            prompt = get_prompt("repository_selector").compile(
+                repositories=self._repository_prompt_catalog()
+            ).add_user_message(
                 json.dumps(
                     {
                         "question": query,
@@ -98,6 +100,22 @@ class SelectRepositoriesNode(BaseNode):
             }
             for repository in settings.enabled_gitlab_repositories
         ]
+
+    @classmethod
+    def _repository_prompt_catalog(cls) -> str:
+        lines = []
+        for repository in settings.enabled_gitlab_repositories:
+            description = repository.description.strip() or "No description provided."
+            lines.append(
+                "\n".join(
+                    [
+                        f"- id: {repository.id}",
+                        f"  project_path: {repository.project_path}",
+                        f"  description: {description}",
+                    ]
+                )
+            )
+        return "\n".join(lines)
 
     @classmethod
     def _filter_enabled_repository_ids(cls, repository_ids: list[object]) -> list[str]:
