@@ -51,13 +51,10 @@ class GitLabAnswerService:
             lines.append(f"\n#### Репозиторий `{repository_id}`")
             for index, source in enumerate(repository_sources[: settings.gitlab_answer_max_sources], start=1):
                 visible_count += 1
-                line_suffix = f":{source.line}" if source.line else ""
                 lines.append(
-                    f"{index}. **{sanitize_markdown_inline(source.description)}**\n"
-                    f"   Проект: `{source.project_path}`\n"
-                    f"   Место: `{source.file_path}{line_suffix}`\n"
-                    f"   Найдено по: `{source.matched_query}`\n"
-                    f"   Ссылка: [открыть в GitLab]({source.url})"
+                    f"{index}. **{sanitize_markdown_inline(source.title)}**\n"
+                    f"   Описание: {sanitize_markdown_inline(source.description)}\n"
+                    f"   URL: [открыть в GitLab]({source.url})"
                 )
         if len(sources) > visible_count:
             lines.append(f"\nПоказаны {visible_count} из {len(sources)} найденных мест.")
@@ -76,6 +73,7 @@ class GitLabAnswerService:
                     "total_sources": len(repository_sources),
                     "sources": [
                         {
+                            "title": source.title,
                             "description": source.description,
                             "snippet": source.snippet,
                             "matched_query": source.matched_query,
