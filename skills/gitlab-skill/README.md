@@ -156,7 +156,7 @@ docker-compose.yaml
 
 ## Errors
 
-HTTP-ошибки и SSE-протокол описаны в `../../docs/ERROR_PROTOCOL.md`.
+HTTP-ошибки описаны в `../../shared/docs/protocol/error-protocol.md`, SSE-протокол - в `../../shared/docs/protocol/sse-stream.md`.
 
 Skill должен завершать поток терминальным событием:
 

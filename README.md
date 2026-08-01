@@ -75,10 +75,11 @@ frontend/          React/Vite frontend
 generator/         текущий generator backend, compose service backend-vn1
 auth/              auth-service и Keycloak realm export
 api-gateway/       gateway для /api и skills
+api-gateway/docs/  runbooks и specs gateway-слоя
 skills/            skill-сервисы, сейчас gitlab-skill
+skills/docs/       specs skill-слоя и candidates для будущих skills
 shared/            certbot, общая инфраструктура, shared/python protocol contracts
-docs/protocol/     межсервисные protocol contracts
-docs/              общая документация
+shared/docs/       межсервисные protocol contracts и shared specs
 nginx.conf         root nginx routing
 docker-compose.yml root nginx и общая сеть
 Makefile           единая точка запуска compose-файлов

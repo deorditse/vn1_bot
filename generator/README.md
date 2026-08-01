@@ -88,4 +88,4 @@ Login/refresh находятся в `auth`, проверка доступа к `
 
 ## Errors
 
-HTTP-ошибки возвращаются в общем формате из `../docs/ERROR_PROTOCOL.md`.
+HTTP-ошибки возвращаются в общем формате из `../shared/docs/protocol/error-protocol.md`.
