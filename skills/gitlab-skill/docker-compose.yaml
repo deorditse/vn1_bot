@@ -13,6 +13,7 @@ services:
       - path: ${REPO_ROOT:-.}/skills/gitlab-skill/.env
         required: false
     environment:
+      - GITLAB_AVGR_TOKEN=${GITLAB_AVGR_TOKEN:-}
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
       - PROXY=${ALL_PROXY:-}
       - ALL_PROXY=${ALL_PROXY:-}
