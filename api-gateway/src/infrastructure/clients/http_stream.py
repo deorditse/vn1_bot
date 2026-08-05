@@ -79,7 +79,14 @@ class HttpStreamClient:
 
     @staticmethod
     def _response_headers(response: httpx.Response) -> dict[str, str]:
-        skip = {"content-length", "content-encoding", "transfer-encoding", "connection"}
+        skip = {
+            "connection",
+            "content-encoding",
+            "content-length",
+            "date",
+            "server",
+            "transfer-encoding",
+        }
         return {key: value for key, value in response.headers.items() if key.lower() not in skip}
 
     @staticmethod

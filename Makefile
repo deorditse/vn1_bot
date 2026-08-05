@@ -15,12 +15,18 @@ COMPOSE_FILES = \
 
 COMPOSE = REPO_ROOT=$(REPO_ROOT) $(DOCKER) compose $(COMPOSE_FILES)
 
-.PHONY: run test prod restart stop
+.PHONY: run test ps logs prod restart stop
 
 run: prod
 
 test:
 	$(COMPOSE) config >/dev/null
+
+ps:
+	$(COMPOSE) ps
+
+logs:
+	$(COMPOSE) logs --tail=100 $(SERVICE)
 
 prod:
 ifeq ($(strip $(SERVICE)),)
