@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
-    environment: production
+    environment: OPENAI_API_KEY
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       GITLAB_AVGR_TOKEN: ${{ secrets.GITLAB_AVGR_TOKEN }}
