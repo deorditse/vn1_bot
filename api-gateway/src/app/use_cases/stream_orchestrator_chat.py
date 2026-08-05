@@ -1,4 +1,6 @@
+import asyncio
 import json
+import logging
 from collections.abc import AsyncIterator
 from datetime import UTC, datetime
 from uuid import UUID, uuid4
@@ -46,10 +48,13 @@ Rules:
 - Use only provided tools. Do not invent skill ids.
 - When unsure between a skill and chat, choose the skill if the message mentions a concrete object or task."""
 
+logger = logging.getLogger(__name__)
+
 
 class OrchestratorRoute(BaseModel):
     skill_id: SkillEnum | None = Field(default=None, description="Selected available skill id, or null for chat.")
     answer: str | None = Field(default=None, description="Direct assistant answer for chat/no-skill messages.")
+    error: str | None = Field(default=None, description="User-facing routing error.")
     reason: str = Field(default="", description="Short Russian routing reason.")
 
 
@@ -82,6 +87,12 @@ class OrchestratorChatUseCase:
             candidate_skills=candidate_skills,
             current_user=current_user,
         )
+        if selected_skill.error:
+            return self.stream_use_case._error_stream_response(
+                chat_id=payload.chat_id,
+                skill_name=SkillEnum.orchestrator.value,
+                message=selected_skill.error,
+            )
         if selected_skill.answer:
             return _chat_stream_response(
                 chat_id=payload.chat_id,
@@ -137,23 +148,42 @@ async def _route_with_llm(question: str, skills: list[dict]) -> OrchestratorRout
             tool_choice="auto",
             parallel_tool_calls=False,
         )
-        response = await router.ainvoke(
-            [
-                ("system", _ROUTER_PROMPT),
-                (
-                    "user",
-                    json.dumps(
-                        {
-                            "message": question,
-                            "available_skills": skills,
-                        },
-                        ensure_ascii=False,
+        response = await asyncio.wait_for(
+            router.ainvoke(
+                [
+                    ("system", _ROUTER_PROMPT),
+                    (
+                        "user",
+                        json.dumps(
+                            {
+                                "message": question,
+                                "available_skills": skills,
+                            },
+                            ensure_ascii=False,
+                        ),
                     ),
-                ),
-            ]
+                ]
+            ),
+            timeout=settings.orchestrator_router_timeout_seconds,
         )
-    except Exception:
-        return OrchestratorRoute(answer="Не смог быстро выбрать навык. Уточните, где искать или что нужно найти.")
+    except TimeoutError:
+        logger.warning(
+            "orchestrator router timed out after %.1fs",
+            settings.orchestrator_router_timeout_seconds,
+        )
+        return OrchestratorRoute(
+            error=(
+                "Сервис недоступен или proxy не отвечает. "
+                "Не удалось выбрать навык за отведенное время."
+            ),
+            reason="Router LLM timeout.",
+        )
+    except Exception as exc:
+        logger.warning("orchestrator router failed: %s", exc.__class__.__name__)
+        return OrchestratorRoute(
+            error="Сервис недоступен. Проверьте proxy/регион/ключи на сервере.",
+            reason="Router LLM failed.",
+        )
 
     skill_id = _called_skill_id(response=response, skills=skills)
     if skill_id:
