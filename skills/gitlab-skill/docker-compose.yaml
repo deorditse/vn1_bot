@@ -12,6 +12,12 @@ services:
     env_file:
       - path: ${REPO_ROOT:-.}/skills/gitlab-skill/.env
         required: false
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - PROXY=${PROXY:-}
+      - ALL_PROXY=${ALL_PROXY:-}
+      - HTTP_PROXY=${HTTP_PROXY:-}
+      - HTTPS_PROXY=${HTTPS_PROXY:-}
     restart: unless-stopped
     networks:
       - vn1
