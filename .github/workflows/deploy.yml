@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      GITLAB_AVGR_TOKEN: ${{ secrets.GITLAB_AVGR_TOKEN }}
+      ALL_PROXY: ${{ vars.ALL_PROXY }}
+
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ vars.DEPLOY_HOST }}
+          username: ${{ vars.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          port: ${{ vars.DEPLOY_PORT || 22 }}
+          envs: OPENAI_API_KEY,GITLAB_AVGR_TOKEN,ALL_PROXY
+          script: |
+            cd /opt/docker/vn1_bot
+            git pull
+            sudo -E make run
