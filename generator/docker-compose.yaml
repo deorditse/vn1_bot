@@ -19,10 +19,10 @@ services:
       - PYTHONUNBUFFERED=1
       - LANGCHAIN_OPENAI_TCP_KEEPALIVE=0
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-      - PROXY=${PROXY:-}
+      - PROXY=${ALL_PROXY:-}
       - ALL_PROXY=${ALL_PROXY:-}
-      - HTTP_PROXY=${HTTP_PROXY:-}
-      - HTTPS_PROXY=${HTTPS_PROXY:-}
+      - HTTP_PROXY=${ALL_PROXY:-}
+      - HTTPS_PROXY=${ALL_PROXY:-}
       - GENERATED_FILE_DB_PATH=/app/data/generated_files.sqlite3
       - GENERATED_FILE_TTL_SECONDS=${GENERATED_FILE_TTL_SECONDS:-10800}
     restart: unless-stopped
