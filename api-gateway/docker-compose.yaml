@@ -12,6 +12,8 @@ services:
     env_file:
       - path: ${REPO_ROOT:-.}/api-gateway/.env
         required: false
+    environment:
+      - LANGCHAIN_OPENAI_TCP_KEEPALIVE=0
     restart: unless-stopped
     depends_on:
       - auth-service
