@@ -23,6 +23,7 @@ services:
       - ALL_PROXY=${ALL_PROXY:-}
       - HTTP_PROXY=${ALL_PROXY:-}
       - HTTPS_PROXY=${ALL_PROXY:-}
+      - NO_PROXY=localhost,127.0.0.1,nginx,n8n-vn1,keycloak
       - GENERATED_FILE_DB_PATH=/app/data/generated_files.sqlite3
       - GENERATED_FILE_TTL_SECONDS=${GENERATED_FILE_TTL_SECONDS:-10800}
     restart: unless-stopped
