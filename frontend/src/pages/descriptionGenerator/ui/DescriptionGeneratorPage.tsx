@@ -7,6 +7,7 @@ import dancingCat from '@shared/assets/dancing-cat.gif';
 import {Page} from '@widgets/Page';
 import {AnimatedLoader, Card, HStack, TablePreview, VStack} from '@shared/ui';
 import {useGenerateDescriptionMutation} from '../api/descriptionGeneratorApi';
+import type {GenerateDescriptionReport} from '../api/types';
 import styles from './DescriptionGeneratorPage.module.less';
 
 const {Text} = Typography;
@@ -51,6 +52,7 @@ const DescriptionGeneratorPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [completed, setCompleted] = useState(false);
   const [lastResult, setLastResult] = useState<Blob | null>(null);
+  const [report, setReport] = useState<GenerateDescriptionReport | null>(null);
   const [generateDescription, {isLoading}] = useGenerateDescriptionMutation();
   const activeRequestRef = useRef<AbortableRequest | null>(null);
   const cancelRequestedRef = useRef(false);
@@ -71,6 +73,7 @@ const DescriptionGeneratorPage = () => {
       setError(null);
       setCompleted(false);
       setLastResult(null);
+      setReport(null);
       return false;
     },
     fileList: file ? [{uid: file.name, name: file.name, status: 'done'}] : [],
@@ -79,6 +82,7 @@ const DescriptionGeneratorPage = () => {
       setFile(null);
       setCompleted(false);
       setLastResult(null);
+      setReport(null);
     },
     showUploadList: false,
   }), [file]);
@@ -95,6 +99,7 @@ const DescriptionGeneratorPage = () => {
 
     setError(null);
     setCompleted(false);
+    setReport(null);
     cancelRequestedRef.current = false;
     const request = generateDescription(
       mode === 'file'
@@ -103,9 +108,10 @@ const DescriptionGeneratorPage = () => {
     );
     activeRequestRef.current = request;
     try {
-      const blob = await request.unwrap();
-      downloadWorkbook(blob);
-      setLastResult(blob);
+      const result = await request.unwrap();
+      downloadWorkbook(result.blob);
+      setLastResult(result.blob);
+      setReport(result.report);
       setCompleted(true);
     } catch (requestError) {
       setError(cancelRequestedRef.current ? 'Генерация остановлена' : errorMessage(requestError));
@@ -124,6 +130,7 @@ const DescriptionGeneratorPage = () => {
     setError(null);
     setCompleted(false);
     setLastResult(null);
+    setReport(null);
   };
 
   return (
@@ -204,6 +211,7 @@ const DescriptionGeneratorPage = () => {
                 setItemId(event.target.value);
                 setCompleted(false);
                 setLastResult(null);
+                setReport(null);
               }}
               placeholder="72128"
               value={itemId}
@@ -217,6 +225,7 @@ const DescriptionGeneratorPage = () => {
                 setRawDescription(event.target.value);
                 setCompleted(false);
                 setLastResult(null);
+                setReport(null);
               }}
               placeholder={'a:2:{s:11:"instruction"; ... }'}
               value={rawDescription}
@@ -232,10 +241,19 @@ const DescriptionGeneratorPage = () => {
                   Скачать ещё раз
                 </Button>
               ) : undefined}
-              description="Файл generated-descriptions.xlsx сохранён в загрузки браузера."
-              message="Таблица готова"
+              description={(
+                <VStack gap="4">
+                  <Text>Файл generated-descriptions.xlsx сохранён в загрузки браузера.</Text>
+                  {report ? (
+                    <Text strong>
+                      Строк с ошибкой: {report.errorRows} / Всего строк: {report.totalRows}
+                    </Text>
+                  ) : null}
+                </VStack>
+              )}
+              message={report?.errorRows ? 'Таблица готова с ошибками' : 'Таблица готова'}
               showIcon
-              type="success"
+              type={report?.errorRows ? 'warning' : 'success'}
             />
           )}
           {error && <Alert message={error} showIcon type="error"/>}

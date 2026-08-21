@@ -24,7 +24,14 @@ class GenerateDescriptionApiTests(unittest.TestCase):
 
     @patch("app.api.routers.generate.DescriptionGenerationUseCase")
     def test_accepts_json_and_returns_xlsx_attachment(self, use_case_class):
-        use_case_class.return_value.execute_request = AsyncMock(return_value=b"xlsx-data")
+        use_case_class.return_value.execute_request_with_report = AsyncMock(
+            return_value=SimpleNamespace(
+                content=b"xlsx-data",
+                total_rows=1,
+                error_rows=0,
+                success_rows=1,
+            )
+        )
 
         response = self.client.post(
             "/generate-description",
@@ -38,7 +45,7 @@ class GenerateDescriptionApiTests(unittest.TestCase):
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
         self.assertIn("attachment", response.headers["content-disposition"])
-        use_case_class.return_value.execute_request.assert_awaited_once()
+        use_case_class.return_value.execute_request_with_report.assert_awaited_once()
 
     @patch("app.api.routers.generate.DescriptionGenerationUseCase")
     def test_returns_generation_report_headers(self, use_case_class):
@@ -64,7 +71,14 @@ class GenerateDescriptionApiTests(unittest.TestCase):
 
     @patch("app.api.routers.generate.DescriptionGenerationUseCase")
     def test_accepts_spreadsheet_upload(self, use_case_class):
-        use_case_class.return_value.execute_request = AsyncMock(return_value=b"xlsx-data")
+        use_case_class.return_value.execute_request_with_report = AsyncMock(
+            return_value=SimpleNamespace(
+                content=b"xlsx-data",
+                total_rows=1,
+                error_rows=0,
+                success_rows=1,
+            )
+        )
 
         response = self.client.post(
             "/generate-description",
@@ -78,7 +92,7 @@ class GenerateDescriptionApiTests(unittest.TestCase):
         )
 
         self.assertEqual(response.status_code, 200)
-        use_case_class.return_value.execute_request.assert_awaited_once()
+        use_case_class.return_value.execute_request_with_report.assert_awaited_once()
 
     def test_rejects_unsupported_content_type(self):
         response = self.client.post(
@@ -122,7 +136,14 @@ class GenerateDescriptionApiTests(unittest.TestCase):
 
     @patch("app.api.routers.generate.DescriptionGenerationUseCase")
     def test_rate_limit_returns_429_and_uses_independent_user_keys(self, use_case_class):
-        use_case_class.return_value.execute_request = AsyncMock(return_value=b"xlsx-data")
+        use_case_class.return_value.execute_request_with_report = AsyncMock(
+            return_value=SimpleNamespace(
+                content=b"xlsx-data",
+                total_rows=1,
+                error_rows=0,
+                success_rows=1,
+            )
+        )
         payload = {"id": "1", "raw_description": "raw"}
 
         responses = [

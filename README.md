@@ -3,7 +3,7 @@
 Монорепозиторий VN1 с frontend, generator, auth-service, api-gateway, Keycloak и skill-сервисами. Внешняя точка входа для контейнерного стенда - root `nginx` из `docker-compose.yml`.
 
 
-для деплоя на удаленном сервере git pull -> sudo make run
+для деплоя использовать CI/CD из https://github.com/deorditse/vn1_bot/actions/workflows/deploy.yml - именно тиам прокидываются ключи и PROXY
 
 ## Текущая Схема
 

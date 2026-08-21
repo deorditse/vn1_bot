@@ -46,9 +46,14 @@ async def generate_description(
         ) from error
 
     return Response(
-        content=result,
+        content=result.content,
         media_type=XLSX_MEDIA_TYPE,
-        headers={"Content-Disposition": 'attachment; filename="generated-descriptions.xlsx"'},
+        headers={
+            "Content-Disposition": 'attachment; filename="generated-descriptions.xlsx"',
+            "X-VN1-Total-Rows": str(result.total_rows),
+            "X-VN1-Error-Rows": str(result.error_rows),
+            "X-VN1-Success-Rows": str(result.success_rows),
+        },
     )
 
 
