@@ -51,12 +51,12 @@ export function AiDescriptionGenerationOption({
                                               }: AiDescriptionGenerationOptionProps) {
     return (
         <GenerationOptionPanel
-            caption="Короткое маркетинговое описание товара. Перед запуском выберите тип товара."
+            caption="Короткий текст для карточки товара на основе исходной инструкции"
             checked={generationOptions.aiDescription}
             disabled={disabled}
             icon={<Sparkles size={18}/>}
             onToggle={(checked) => onOptionsChange({...generationOptions, aiDescription: checked})}
-            title="ИИ-описание"
+            title="Краткое описание"
         >
             {generationOptions.aiDescription && (
                 <VStack

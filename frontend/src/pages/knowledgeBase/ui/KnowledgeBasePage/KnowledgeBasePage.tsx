@@ -334,10 +334,10 @@ function EmptyChat({selectedSkillName}: {selectedSkillName: string}) {
                 <MessageSquareText size={24}/>
             </span>
             <div className={styles.emptyCopy}>
-                <h1>База знаний</h1>
+                <h1>Поиск по внутренним источникам</h1>
                 <p>
-                    Задайте вопрос, а ход обработки и итоговый ответ появятся в этом диалоге.
-                    Сейчас выбран навык: {selectedSkillName}.
+                    Задайте вопрос обычным языком. Сервис найдёт подходящие материалы и покажет ответ здесь.
+                    Текущий режим: {selectedSkillName}. Режим поиска и источники можно изменить в настройках поля ввода.
                 </p>
             </div>
         </div>

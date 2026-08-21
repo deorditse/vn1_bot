@@ -13,8 +13,8 @@ const GENERATION_OPTIONS_STORAGE_KEY = 'vn1:generation-options';
 const INPUT_MODE_STORAGE_KEY = 'vn1:instruction-input-mode';
 
 const DEFAULT_GENERATION_OPTIONS: GenerationOptions = {
-  instruction: false,
-  aiDescription: false,
+  instruction: true,
+  aiDescription: true,
   aiDescriptionProductType: 'medicine',
   nonMedicineCategory: 'dietary_supplement',
 };
@@ -27,10 +27,13 @@ function getStoredGenerationOptions(): GenerationOptions {
       return DEFAULT_GENERATION_OPTIONS;
     }
 
-    return {
+    const stored = {
       ...DEFAULT_GENERATION_OPTIONS,
       ...JSON.parse(value),
     };
+    return !stored.instruction && !stored.aiDescription
+      ? DEFAULT_GENERATION_OPTIONS
+      : stored;
   } catch {
     return DEFAULT_GENERATION_OPTIONS;
   }

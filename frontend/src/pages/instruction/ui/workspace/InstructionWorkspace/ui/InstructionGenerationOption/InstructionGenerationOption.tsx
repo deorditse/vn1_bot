@@ -16,12 +16,12 @@ export function InstructionGenerationOption({
                                             }: InstructionGenerationOptionProps) {
     return (
         <GenerationOptionPanel
-            caption="HTML-меню и контент инструкции"
+            caption="Готовые HTML-меню и разделы для публикации на сайте"
             checked={generationOptions.instruction}
             disabled={disabled}
             icon={<FileText size={18}/>}
             onToggle={(checked) => onOptionsChange({...generationOptions, instruction: checked})}
-            title="Генерация инструкции"
+            title="HTML-инструкция"
         />
     );
 }

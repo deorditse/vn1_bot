@@ -1,0 +1,169 @@
+@import "../../../shared/ui/styles/spacing.less";
+
+.page {
+  align-items: stretch;
+}
+
+.workspace {
+  border-color: var(--app-color-border-secondary);
+}
+
+.workflowIntro {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: @space-8;
+  padding-bottom: @space-18;
+  border-bottom: 1px solid var(--app-color-border-secondary);
+}
+
+.workflowStep {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: @space-10;
+  padding: @space-10;
+  border-radius: 12px;
+  background: #f8fafc;
+
+  > span {
+    display: inline-grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--app-color-primary);
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: inset 0 0 0 1px var(--app-color-border);
+  }
+
+  > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  strong {
+    color: var(--app-color-text);
+    font-size: 13px;
+  }
+
+  small {
+    color: var(--app-color-text-tertiary);
+    font-size: 11px;
+  }
+}
+
+.sourceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @space-16;
+
+  > div:first-child {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  strong {
+    color: var(--app-color-text);
+    font-size: 15px;
+  }
+
+  > div:first-child > span:last-child {
+    color: var(--app-color-text-tertiary);
+    font-size: 13px;
+  }
+}
+
+.modeSwitch {
+  align-self: flex-start;
+}
+
+.dropzone {
+  width: 100%;
+
+  :global(.ant-upload-drag) {
+    min-height: 160px;
+    border: 1px dashed #ccd4df !important;
+    border-radius: 18px !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  }
+}
+
+.dropzoneSelected {
+  :global(.ant-upload-drag) {
+    min-height: 112px;
+    border-style: solid !important;
+    background: #fbfcfd !important;
+  }
+}
+
+.fileState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: @space-14;
+  padding: @space-24;
+  text-align: left;
+
+  > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: @space-4;
+    min-width: 0;
+  }
+
+  strong {
+    overflow: hidden;
+    color: var(--app-color-text);
+    font-size: 16px;
+    text-overflow: ellipsis;
+  }
+
+  span {
+    color: var(--app-color-text-tertiary);
+  }
+}
+
+.fileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  border: 1px solid var(--app-color-border);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--app-color-text-secondary);
+}
+
+.feedback {
+  display: grid;
+  gap: @space-8;
+}
+
+.feedback:empty {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .workflowIntro {
+    grid-template-columns: 1fr;
+  }
+
+  .sourceHeader {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .modeSwitch {
+    align-self: stretch;
+  }
+}

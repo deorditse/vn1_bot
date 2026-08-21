@@ -1,17 +1,55 @@
 import traceback
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+
+from fastapi import APIRouter, Depends, File, HTTPException, Request, UploadFile
+from fastapi.responses import Response
 from starlette import status
 from app.api.dependencies.gateway_auth import require_gateway_user
+from app.api.dependencies.rate_limiting import gateway_user_rate_limit_key, limiter
 from app.api.schemas.generate import GenerateFileRequest, GenerateFileResponse, GenerateInstructionResponse, ShortDescriptionResponse
 from app.use_cases.ai_description.medicine import ShortDescriptionUseCase
 from app.use_cases.ai_description.non_medicine import NonMedicineShortDescriptionUseCase
 from app.use_cases.docx_to_html_graph.docx_to_html import ToHtmlConverterUseCase
 from app.use_cases.generated_file_storage import UploadGeneratedFileUseCase, generated_file_storage
+from app.use_cases.generate_description import DescriptionGenerationUseCase, InvalidDescriptionInput
 from common.enums import AiDescriptionProductType
 from domain.auth import User
 from infrastructure.converters.docx_to_md_converter import DocxToMdConverter
 
 router = APIRouter()
+description_router = APIRouter()
+
+XLSX_MEDIA_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+
+@description_router.post(
+    "/generate-description",
+    response_class=Response,
+    summary="Generate description table from raw markup",
+    description=(
+        "Принимает XLS/XLSX-файл или JSON с полями id и raw_description. "
+        "Возвращает XLSX-таблицу с готовыми описаниями."
+    ),
+    status_code=status.HTTP_200_OK,
+)
+@limiter.limit("5/minute", key_func=gateway_user_rate_limit_key)
+async def generate_description(
+    request: Request,
+    current_user: User = Depends(require_gateway_user),
+) -> Response:
+    del current_user
+    try:
+        result = await DescriptionGenerationUseCase().execute_request(request)
+    except InvalidDescriptionInput as error:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(error),
+        ) from error
+
+    return Response(
+        content=result,
+        media_type=XLSX_MEDIA_TYPE,
+        headers={"Content-Disposition": 'attachment; filename="generated-descriptions.xlsx"'},
+    )
 
 
 @router.post(

@@ -17,7 +17,6 @@ class HttpStreamClient:
         extra_headers: dict[str, str] | None = None,
     ) -> Response:
         url = f"{self.base_url}/{path.lstrip('/')}"
-        body = await request.body()
         headers = self._forward_headers(request)
         if extra_headers:
             headers.update(extra_headers)
@@ -28,7 +27,7 @@ class HttpStreamClient:
                     request.method,
                     url,
                     params=request.query_params,
-                    content=body,
+                    content=request.stream(),
                     headers=headers,
                 )
         except httpx.HTTPError as err:

@@ -122,8 +122,8 @@ export function InstructionUploadPanel({
                 <UploadCloud size={24} />
               </HStack>
               <VStack className={styles.uploadText} gap="4">
-                <strong>Добавьте DOCX-инструкцию</strong>
-                <span>Перетащите файл сюда или выберите вручную.</span>
+                <strong>Загрузите инструкцию в DOCX</strong>
+                <span>Перетащите файл сюда или нажмите для выбора. Максимум один файл.</span>
               </VStack>
             </HStack>
           )}
@@ -135,11 +135,11 @@ export function InstructionUploadPanel({
             className={styles.instructionTextArea}
             disabled={isLoading || instructionReady}
             onChange={(event) => onTextChange(event.target.value)}
-            placeholder="Вставьте текст инструкции"
+            placeholder="Вставьте полный текст инструкции или сведения о товаре"
             value={instructionText}
           />
           <HStack justify="between" max>
-            <span className={styles.textInputMeta}>Текст инструкции</span>
+            <span className={styles.textInputMeta}>Для текста доступно только краткое описание</span>
             <span className={styles.textInputCounter}>{instructionText.trim().length} символов</span>
           </HStack>
         </VStack>

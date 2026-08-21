@@ -8,6 +8,7 @@ import styles from './Page.module.less';
 type PageProps = {
     className?: string;
     children: ReactNode;
+    contentSize?: 'narrow' | 'default' | 'wide' | 'full';
     onScrollEnd?: () => void;
     padding?: BoxSpacing;
     paddingY?: BoxBlockSpacing;
@@ -17,7 +18,7 @@ type PageProps = {
 export const PAGE_ID = 'PAGE_ID';
 
 export const Page = memo((props: PageProps) => {
-    const {className, children, onScrollEnd, padding, paddingY = '24'} = props;
+    const {className, children, contentSize = 'default', onScrollEnd, padding, paddingY = '24'} = props;
     const wrapperRef = useRef<HTMLElement | null>(null);
     const triggerRef = useRef<HTMLDivElement | null>(null);
 
@@ -48,7 +49,7 @@ export const Page = memo((props: PageProps) => {
     return (
         <Box
             as="main"
-            className={classNames(styles.Page, {}, [styles.content, className])}
+            className={classNames(styles.Page, {}, [styles.content, styles[contentSize], className])}
             data-testid={props['data-testid'] ?? 'Page'}
             id={PAGE_ID}
             padding={padding}

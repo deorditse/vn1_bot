@@ -9,8 +9,26 @@
 }
 
 .content {
-  width: 100%;
+  width: calc(100% - @layout-inline-gutter);
+  max-width: @page-width-default;
   margin: 0 auto;
+}
+
+.narrow {
+  max-width: @page-width-narrow;
+}
+
+.default {
+  max-width: @page-width-default;
+}
+
+.wide {
+  max-width: @page-width-wide;
+}
+
+.full {
+  width: 100%;
+  max-width: none;
 }
 
 .trigger {
@@ -20,6 +38,10 @@
 
 @media (max-width: 760px) {
   .content {
+    width: calc(100% - @layout-inline-gutter-mobile);
+  }
+
+  .full {
     width: 100%;
   }
 }

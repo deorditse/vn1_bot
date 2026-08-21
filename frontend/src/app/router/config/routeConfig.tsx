@@ -1,13 +1,15 @@
 import { Navigate } from 'react-router-dom';
-import { BookOpen, FileText } from 'lucide-react';
+import { BookOpen, FileSpreadsheet, FileText } from 'lucide-react';
 
 import { AppLayout } from '@app/layout/AppLayout';
 import { InstructionPage } from '@pages/instruction';
+import { DescriptionGeneratorPage } from '@pages/descriptionGenerator';
 import { KnowledgeBasePage } from '@pages/knowledgeBase';
 import { LoginPage } from '@pages/login';
 import {
   AppRoutes,
   ToolRoutes,
+  getRouteDescriptionGenerator,
   getRouteInstruction,
   getRouteKnowledgeBase,
   getRouteLogin,
@@ -21,9 +23,19 @@ export const toolRouteConfig: Record<ToolRoutes, AppRoutesProps> = {
     element: <InstructionPage />,
     authOnly: true,
     nav: {
-      label: 'Инструкция',
-      description: 'DOCX в HTML и описание',
+      label: 'Инструкции',
+      description: 'DOCX → HTML и краткое описание',
       icon: <FileText size={18} />,
+    },
+  },
+  [ToolRoutes.DESCRIPTION_GENERATOR]: {
+    path: getRouteDescriptionGenerator(),
+    element: <DescriptionGeneratorPage />,
+    authOnly: true,
+    nav: {
+      label: 'Описания товаров',
+      description: 'Разметка → готовая таблица',
+      icon: <FileSpreadsheet size={18} />,
     },
   },
   [ToolRoutes.KNOWLEDGE_BASE]: {
@@ -32,7 +44,7 @@ export const toolRouteConfig: Record<ToolRoutes, AppRoutesProps> = {
     authOnly: true,
     nav: {
       label: 'База знаний',
-      description: 'Поиск и управление материалами',
+      description: 'Поиск по внутренним источникам',
       icon: <BookOpen size={18} />,
     },
   },

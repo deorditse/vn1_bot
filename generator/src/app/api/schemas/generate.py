@@ -1,6 +1,29 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from common.enums import AiDescriptionProductType, NonMedicineCategory
+
+
+class GenerateDescriptionBody(BaseModel):
+    model_config = ConfigDict(strict=True, extra="forbid")
+
+    id: str | int
+    raw_description: str = Field(min_length=1)
+
+    @field_validator("id")
+    @classmethod
+    def validate_id(cls, value: str | int) -> str | int:
+        if isinstance(value, str) and not value.strip():
+            raise ValueError("id не может быть пустым")
+        if len(str(value)) > 128:
+            raise ValueError("id не должен превышать 128 символов")
+        return value
+
+    @field_validator("raw_description")
+    @classmethod
+    def validate_raw_description(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("raw_description не может быть пустым")
+        return value
 
 
 class GenerateFileRequest(BaseModel):

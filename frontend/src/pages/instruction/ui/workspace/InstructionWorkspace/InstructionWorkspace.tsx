@@ -52,7 +52,10 @@ export function InstructionWorkspace({
                     <HStack align="center" className={styles.iconBox} justify="center">
                         <FileText size={22}/>
                     </HStack>
-                    <Text className={styles.kicker}>Генератор</Text>
+                    <div className={styles.sectionHeading}>
+                        <Text strong>1. Добавьте исходную инструкцию</Text>
+                        <Text>Загрузите DOCX или вставьте текст, если нужно только краткое описание.</Text>
+                    </div>
                 </HStack>
 
                 {!instructionReady ? (
@@ -74,6 +77,11 @@ export function InstructionWorkspace({
                         onReset={onReset}
                     />
                 )}
+
+                <div className={styles.sectionHeading}>
+                    <Text strong>2. Выберите результат</Text>
+                    <Text>Можно создать HTML-инструкцию, краткое описание или оба варианта сразу.</Text>
+                </div>
 
                 <GenerationOptionsPicker
                     disabled={isLoading}
@@ -98,7 +106,11 @@ export function InstructionWorkspace({
                         size="large"
                         type="primary"
                     >
-                        Сгенерировать
+                        {generationOptions.instruction && generationOptions.aiDescription
+                            ? 'Создать инструкцию и описание'
+                            : generationOptions.instruction
+                                ? 'Создать HTML-инструкцию'
+                                : 'Создать краткое описание'}
                     </Button>
                 </HStack>
             </VStack>

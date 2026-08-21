@@ -10,7 +10,7 @@ import {AppDrawer} from './AppDrawer';
 import styles from './AppLayout.module.less';
 
 const {Header} = Layout;
-const {Title} = Typography;
+const {Text, Title} = Typography;
 
 export function AppLayout() {
     const [drawerOpen, setDrawerOpen] = useState(true);
@@ -37,8 +37,10 @@ export function AppLayout() {
             />
             <Layout className={styles.mainLayout}>
                 <Header className={styles.topbar}>
+                    <div className={styles.pageIcon}>{active.nav?.icon}</div>
                     <div className={styles.titleBlock}>
                         <Title level={1}>{active.nav?.label}</Title>
+                        {active.nav?.description ? <Text>{active.nav.description}</Text> : null}
                     </div>
                 </Header>
 

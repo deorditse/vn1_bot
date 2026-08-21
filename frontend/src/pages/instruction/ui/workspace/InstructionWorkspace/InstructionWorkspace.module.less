@@ -12,9 +12,19 @@
   color: var(--app-color-text-secondary);
 }
 
-.kicker {
-  color: var(--app-color-text-tertiary) !important;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
+.sectionHeading {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+
+  strong {
+    color: var(--app-color-text);
+    font-size: 15px;
+  }
+
+  > span:last-child {
+    color: var(--app-color-text-tertiary);
+    font-size: 13px;
+  }
 }

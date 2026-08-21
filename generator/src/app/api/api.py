@@ -46,6 +46,7 @@ Routers
 """
 
 app.include_router(generate.router, prefix="/generate", tags=["generate"])
+app.include_router(generate.description_router, tags=["generate"])
 
 """
 ===================================================================================================================

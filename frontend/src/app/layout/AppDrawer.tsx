@@ -7,7 +7,7 @@ import tabletkaLogo from '@shared/assets/tabletka-logo.svg';
 import {navRoutes} from '../router/config/routeConfig';
 import styles from './AppLayout.module.less';
 
-const DRAWER_WIDTH = 328;
+const DRAWER_WIDTH = 304;
 
 type AppDrawerProps = {
     activePath: string;

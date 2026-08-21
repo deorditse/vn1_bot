@@ -8,6 +8,27 @@ from app.use_cases.proxy_generator import ProxyGeneratorUseCase
 from domain.auth import User
 
 router = APIRouter()
+public_router = APIRouter()
+
+
+@public_router.post(
+    "/generate-description",
+    response_class=Response,
+    summary="Генерация описаний из сырой разметки",
+    description=(
+        "Принимает XLS/XLSX-файл или JSON с полями id и raw_description, "
+        "проксирует запрос в generator и возвращает XLSX-файл."
+    ),
+)
+async def generate_description(
+    request: Request,
+    current_user: Annotated[User, Depends(require_auth)],
+) -> Response:
+    return await ProxyGeneratorUseCase().execute(
+        request=request,
+        path="generate-description",
+        current_user=current_user,
+    )
 
 
 @router.api_route(
