@@ -203,6 +203,26 @@ class DescriptionGenerationUseCaseTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(sheet.max_row, 3)
         self.assertEqual(llm.attempts, {"invalid-json": 2, "temporary-error": 2})
 
+    async def test_returns_mini_report_with_failed_and_total_rows(self):
+        class PartiallyFailingLlm:
+            async def ainvoke(self, messages):
+                if messages[1].content == "broken":
+                    return FakeResponse("not json")
+                return FakeResponse(json.dumps(GENERATED_FIELDS, ensure_ascii=False))
+
+        source = workbook_bytes([(10, "ok"), (20, "broken"), (30, "also-ok")])
+        use_case = DescriptionGenerationUseCase(
+            llm=PartiallyFailingLlm(),
+            retry_base_delay_seconds=0,
+        )
+
+        result = await use_case.execute_with_report(file_bytes=source, filename="input.xlsx")
+
+        self.assertIsInstance(result.content, bytes)
+        self.assertEqual(result.total_rows, 3)
+        self.assertEqual(result.error_rows, 1)
+        self.assertEqual(result.success_rows, 2)
+
     async def test_records_row_error_without_failing_other_rows(self):
         class PartiallyFailingLlm:
             def __init__(self) -> None:

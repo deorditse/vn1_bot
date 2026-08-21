@@ -1,4 +1,5 @@
 import unittest
+from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
 
 from fastapi.testclient import TestClient
@@ -38,6 +39,28 @@ class GenerateDescriptionApiTests(unittest.TestCase):
         )
         self.assertIn("attachment", response.headers["content-disposition"])
         use_case_class.return_value.execute_request.assert_awaited_once()
+
+    @patch("app.api.routers.generate.DescriptionGenerationUseCase")
+    def test_returns_generation_report_headers(self, use_case_class):
+        use_case_class.return_value.execute_request_with_report = AsyncMock(
+            return_value=SimpleNamespace(
+                content=b"xlsx-data",
+                total_rows=10,
+                error_rows=2,
+                success_rows=8,
+            )
+        )
+
+        response = self.client.post(
+            "/generate-description",
+            json={"id": "72128", "raw_description": "raw markup"},
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.headers["x-vn1-total-rows"], "10")
+        self.assertEqual(response.headers["x-vn1-error-rows"], "2")
+        self.assertEqual(response.headers["x-vn1-success-rows"], "8")
+        use_case_class.return_value.execute_request_with_report.assert_awaited_once()
 
     @patch("app.api.routers.generate.DescriptionGenerationUseCase")
     def test_accepts_spreadsheet_upload(self, use_case_class):

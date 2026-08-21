@@ -2,6 +2,9 @@
 
 Монорепозиторий VN1 с frontend, generator, auth-service, api-gateway, Keycloak и skill-сервисами. Внешняя точка входа для контейнерного стенда - root `nginx` из `docker-compose.yml`.
 
+
+для деплоя на удаленном сервере git pull -> sudo make run
+
 ## Текущая Схема
 
 ```text
@@ -205,3 +208,4 @@ generator: /generator/generate/*, когда вызывается gateway
 ```
 
 `gitlab-skill` сейчас внутренний сервис и вызывается через `api-gateway`.
+

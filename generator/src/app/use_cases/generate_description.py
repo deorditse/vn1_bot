@@ -2,6 +2,7 @@ import asyncio
 import io
 import json
 from collections.abc import Sequence
+from dataclasses import dataclass
 from itertools import islice
 from pathlib import Path
 from typing import Any
@@ -56,6 +57,17 @@ class InvalidDescriptionInput(ValueError):
     pass
 
 
+@dataclass(frozen=True, slots=True)
+class DescriptionGenerationResult:
+    content: bytes
+    total_rows: int
+    error_rows: int
+
+    @property
+    def success_rows(self) -> int:
+        return self.total_rows - self.error_rows
+
+
 class DescriptionGenerationUseCase:
     ai_information_prompt = load_prompt_text("generation/from_markup.md")
 
@@ -80,6 +92,10 @@ class DescriptionGenerationUseCase:
         self._retry_base_delay_seconds = retry_base_delay_seconds
 
     async def execute_request(self, request: Request) -> bytes:
+        result = await self.execute_request_with_report(request)
+        return result.content
+
+    async def execute_request_with_report(self, request: Request) -> DescriptionGenerationResult:
         self._validate_content_length(request)
         content_type = request.headers.get("content-type", "").lower()
 
@@ -89,7 +105,7 @@ class DescriptionGenerationUseCase:
                 if len(items) != 1 or items[0][0] != "file" or not isinstance(items[0][1], StarletteUploadFile):
                     raise InvalidDescriptionInput("Передайте ровно один XLS/XLSX-файл в поле file")
                 file = items[0][1]
-                return await self.execute(
+                return await self.execute_with_report(
                     file_bytes=await self._read_upload_limited(file),
                     filename=file.filename or "input.xlsx",
                 )
@@ -100,7 +116,7 @@ class DescriptionGenerationUseCase:
                 payload = GenerateDescriptionBody.model_validate(json.loads(body))
             except (json.JSONDecodeError, UnicodeDecodeError, ValidationError) as error:
                 raise InvalidDescriptionInput("Некорректный JSON body") from error
-            return await self.execute(
+            return await self.execute_with_report(
                 item_id=payload.id,
                 raw_description=payload.raw_description,
             )
@@ -117,6 +133,22 @@ class DescriptionGenerationUseCase:
         item_id: str | int | None = None,
         raw_description: str | None = None,
     ) -> bytes:
+        result = await self.execute_with_report(
+            file_bytes=file_bytes,
+            filename=filename,
+            item_id=item_id,
+            raw_description=raw_description,
+        )
+        return result.content
+
+    async def execute_with_report(
+        self,
+        *,
+        file_bytes: bytes | None = None,
+        filename: str | None = None,
+        item_id: str | int | None = None,
+        raw_description: str | None = None,
+    ) -> DescriptionGenerationResult:
         has_file = file_bytes is not None
         has_body = item_id is not None or raw_description is not None
         if has_file == has_body:
@@ -169,7 +201,16 @@ class DescriptionGenerationUseCase:
         )
         indexed_rows.sort(key=lambda row: row[0])
 
-        return self._build_workbook([(row_id, fields) for _, row_id, fields in indexed_rows])
+        generated_rows = [(row_id, fields) for _, row_id, fields in indexed_rows]
+        error_rows = sum(
+            str(fields["Описание"]).startswith(GENERATION_ERROR_PREFIX)
+            for _, fields in generated_rows
+        )
+        return DescriptionGenerationResult(
+            content=self._build_workbook(generated_rows),
+            total_rows=len(generated_rows),
+            error_rows=error_rows,
+        )
 
     async def _generate_fields(
         self,

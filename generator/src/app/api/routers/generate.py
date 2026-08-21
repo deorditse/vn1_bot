@@ -38,7 +38,7 @@ async def generate_description(
 ) -> Response:
     del current_user
     try:
-        result = await DescriptionGenerationUseCase().execute_request(request)
+        result = await DescriptionGenerationUseCase().execute_request_with_report(request)
     except InvalidDescriptionInput as error:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
