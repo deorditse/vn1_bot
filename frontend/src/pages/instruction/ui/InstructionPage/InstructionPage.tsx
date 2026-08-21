@@ -1,4 +1,9 @@
+import {Button} from 'antd';
+import {Square} from 'lucide-react';
 import {Suspense} from 'react';
+
+import dancingCat from '@shared/assets/dancing-cat.gif';
+import {AnimatedLoader} from '@shared/ui';
 import {Page} from '@widgets/Page';
 import {useInstructionGenerator} from '../../model/useInstructionGenerator';
 import {InstructionMarkupResults, InstructionMarkupResultsSkeleton, InstructionResultsSkeleton} from '../results';
@@ -22,6 +27,7 @@ const InstructionPage = () => {
         isInstructionLoading,
         isLoading,
         markupBlocks,
+        cancelGeneration,
         convert,
         copyText,
         generateDescriptionOnly,
@@ -60,7 +66,13 @@ const InstructionPage = () => {
             />
 
             {isResultsVisible && (
-                <Suspense fallback={<InstructionResultsSkeleton/>}>
+                <Suspense
+                    fallback={(
+                        <InstructionResultsSkeleton
+                            title={generationOptions.instruction ? 'Разметка инструкции' : 'ИИ-описание'}
+                        />
+                    )}
+                >
                     {isInstructionSkeletonVisible && <InstructionMarkupResultsSkeleton />}
                     {instruction && (
                         <InstructionMarkupResults blocks={markupBlocks} copiedBlock={copiedBlock} onCopy={copyText}/>
@@ -80,6 +92,25 @@ const InstructionPage = () => {
                     )}
                 </Suspense>
             )}
+
+            {isLoading ? (
+                <AnimatedLoader
+                    action={(
+                        <Button danger icon={<Square size={15}/>} onClick={cancelGeneration}>
+                            Остановить
+                        </Button>
+                    )}
+                    alt="Танцующий белый кот"
+                    description={isFileUploading
+                        ? 'Загружаем DOCX'
+                        : isInstructionLoading
+                            ? 'Создаём HTML-инструкцию'
+                            : 'Создаём краткое описание'}
+                    imageSrc={dancingCat}
+                    placement="bottom"
+                    title="Идет генерация..."
+                />
+            ) : null}
         </Page>
     );
 };

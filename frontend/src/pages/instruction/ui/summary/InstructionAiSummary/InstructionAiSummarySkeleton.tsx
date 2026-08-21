@@ -1,3 +1,6 @@
+import {Typography} from 'antd';
+import {Sparkles} from 'lucide-react';
+
 import {Card, HStack, Skeleton, VStack} from '@shared/ui';
 
 import styles from './InstructionAiSummary.module.less';
@@ -7,8 +10,10 @@ export function InstructionAiSummarySkeleton() {
     <Card className={styles.summary} padding="22">
       <VStack gap="14" max>
         <HStack align="center" gap="10">
-          <Skeleton border="10px" height={20} width={20} />
-          <Skeleton border="12px" height={24} width="150px" />
+          <Sparkles size={20}/>
+          <Typography.Title className={styles.sectionTitle} level={3}>
+            ИИ-описание
+          </Typography.Title>
         </HStack>
         <Card className={styles.summaryPreview} padding="16" variant="light">
           <VStack gap="12" max>

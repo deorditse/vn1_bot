@@ -1,4 +1,4 @@
-import {useMemo, useState} from 'react';
+import {useMemo, useRef, useState} from 'react';
 
 import type {GenerateInstructionResponse} from '../api/types';
 import {
@@ -11,6 +11,11 @@ import type {GenerationOptions, InstructionInputMode} from './types';
 
 const GENERATION_OPTIONS_STORAGE_KEY = 'vn1:generation-options';
 const INPUT_MODE_STORAGE_KEY = 'vn1:instruction-input-mode';
+
+type AbortableRequest<T> = {
+  abort: () => void;
+  unwrap: () => Promise<T>;
+};
 
 const DEFAULT_GENERATION_OPTIONS: GenerationOptions = {
   instruction: true,
@@ -100,6 +105,8 @@ export function useInstructionGenerator() {
   const [generateInstruction, {isLoading: isInstructionLoading}] = useGenerateInstructionMutation();
   const [generateAiDescription, {isLoading: isAiDescriptionLoading}] = useGenerateAiDescriptionMutation();
   const isLoading = isFileUploading || isInstructionLoading || isAiDescriptionLoading;
+  const activeRequestRef = useRef<AbortableRequest<unknown> | null>(null);
+  const cancelRequestedRef = useRef(false);
 
   const markupBlocks = useMemo(() => buildInstructionBlocks(instruction), [instruction]);
   const hasInstructionSource = inputMode === 'file' ? Boolean(file) : Boolean(instructionText.trim());
@@ -175,6 +182,22 @@ export function useInstructionGenerator() {
     window.localStorage.setItem(GENERATION_OPTIONS_STORAGE_KEY, JSON.stringify(normalizedOptions));
   };
 
+  const trackRequest = async <T,>(request: AbortableRequest<T>): Promise<T> => {
+    activeRequestRef.current = request as AbortableRequest<unknown>;
+    try {
+      return await request.unwrap();
+    } finally {
+      if (activeRequestRef.current === request) {
+        activeRequestRef.current = null;
+      }
+    }
+  };
+
+  const cancelGeneration = () => {
+    cancelRequestedRef.current = true;
+    activeRequestRef.current?.abort();
+  };
+
   const ensureFileUploaded = async () => {
     if (fileId) {
       return fileId;
@@ -184,7 +207,7 @@ export function useInstructionGenerator() {
       throw new Error('Выберите DOCX-файл');
     }
 
-    const result = await uploadInstructionFile({file}).unwrap();
+    const result = await trackRequest(uploadInstructionFile({file}));
     setFileId(result.file_id);
 
     return result.file_id;
@@ -203,6 +226,7 @@ export function useInstructionGenerator() {
 
     setError(null);
     setCopiedBlock(null);
+    cancelRequestedRef.current = false;
 
     if (generationOptions.instruction) {
       setInstruction(null);
@@ -220,23 +244,23 @@ export function useInstructionGenerator() {
           setError('Генерация HTML-инструкции доступна только для DOCX-файла');
           return;
         }
-        const result = await generateInstruction({fileId: uploadedFileId}).unwrap();
+        const result = await trackRequest(generateInstruction({fileId: uploadedFileId}));
         setInstruction(result);
       }
 
       if (generationOptions.aiDescription) {
-        const result = await generateAiDescription({
+        const result = await trackRequest(generateAiDescription({
           fileId: uploadedFileId ?? undefined,
           instructionText: inputMode === 'text' ? instructionText : undefined,
           productType: generationOptions.aiDescriptionProductType,
           nonMedicineCategory: generationOptions.aiDescriptionProductType === 'non_medicine'
             ? generationOptions.nonMedicineCategory
             : undefined,
-        }).unwrap();
+        }));
         setAiDescription(result.description);
       }
     } catch (err) {
-      setError(getGenerationErrorMessage(err, 'Не удалось выполнить генерацию'));
+      setError(cancelRequestedRef.current ? 'Генерация остановлена' : getGenerationErrorMessage(err, 'Не удалось выполнить генерацию'));
     }
   };
 
@@ -249,20 +273,21 @@ export function useInstructionGenerator() {
     setError(null);
     setCopiedBlock(null);
     setAiDescription('');
+    cancelRequestedRef.current = false;
 
     try {
       const uploadedFileId = inputMode === 'file' ? await ensureFileUploaded() : null;
-      const result = await generateAiDescription({
+      const result = await trackRequest(generateAiDescription({
         fileId: uploadedFileId ?? undefined,
         instructionText: inputMode === 'text' ? instructionText : undefined,
         productType: generationOptions.aiDescriptionProductType,
         nonMedicineCategory: generationOptions.aiDescriptionProductType === 'non_medicine'
           ? generationOptions.nonMedicineCategory
           : undefined,
-      }).unwrap();
+      }));
       setAiDescription(result.description);
     } catch (err) {
-      setError(getGenerationErrorMessage(err, 'Не удалось сформировать ИИ-описание'));
+      setError(cancelRequestedRef.current ? 'Генерация остановлена' : getGenerationErrorMessage(err, 'Не удалось сформировать ИИ-описание'));
     }
   };
 
@@ -288,6 +313,7 @@ export function useInstructionGenerator() {
     isInstructionLoading,
     isLoading,
     markupBlocks,
+    cancelGeneration,
     convert,
     copyText,
     generateDescriptionOnly,

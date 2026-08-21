@@ -286,7 +286,7 @@ const DescriptionGeneratorPage = () => {
           description="Обрабатываем строки и собираем XLSX"
           imageSrc={dancingCat}
           placement="bottom"
-          title="Генерируем таблицу"
+          title="Идет генерация таблицы..."
         />
       ) : null}
     </Page>
