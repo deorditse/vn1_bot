@@ -12,10 +12,18 @@ jobs:
     environment: OPENAI_API_KEY
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_DESCRIPTION_API_KEY: ${{ secrets.OPENAI_DESCRIPTION_API_KEY }}
       GITLAB_AVGR_TOKEN: ${{ secrets.GITLAB_AVGR_TOKEN }}
       ALL_PROXY: ${{ vars.ALL_PROXY }}
 
     steps:
+      - name: Validate secrets
+        run: |
+          test -n "$OPENAI_DESCRIPTION_API_KEY" || {
+            echo "OPENAI_DESCRIPTION_API_KEY secret is not configured"
+            exit 1
+          }
+
       - name: Deploy
         run: |
           cd /opt/docker/vn1_bot

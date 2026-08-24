@@ -1,9 +1,10 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { PropsWithChildren } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { useLazyGetMeQuery, useLoginMutation, useLogoutMutation } from '../api/authApi';
 import type { UserProfile } from '../api/types';
-import { AUTH_REQUIRED_EVENT } from '@shared/api';
+import { AUTH_REQUIRED_EVENT, baseApiSlice } from '@shared/api';
 
 type AuthContextValue = {
   isAuthenticated: boolean;
@@ -23,9 +24,15 @@ const devUser: UserProfile = {
 };
 
 const isDevAuthDisabled = import.meta.env.DEV;
+const DEV_LOGGED_OUT_STORAGE_KEY = 'vn1:dev-auth-logged-out';
+
+function getDevUser(): UserProfile | null {
+  return window.sessionStorage.getItem(DEV_LOGGED_OUT_STORAGE_KEY) ? null : devUser;
+}
 
 export function AuthProvider({ children }: PropsWithChildren) {
-  const [user, setUser] = useState<UserProfile | null>(isDevAuthDisabled ? devUser : null);
+  const dispatch = useDispatch();
+  const [user, setUser] = useState<UserProfile | null>(isDevAuthDisabled ? getDevUser : null);
   const [isLoading, setIsLoading] = useState(!isDevAuthDisabled);
   const [getMe] = useLazyGetMeQuery();
   const [login] = useLoginMutation();
@@ -33,7 +40,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
   const loadProfile = useCallback(async () => {
     if (isDevAuthDisabled) {
-      setUser(devUser);
+      setUser(getDevUser());
       setIsLoading(false);
       return;
     }
@@ -64,6 +71,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
   const signIn = useCallback(async (username: string, password: string) => {
     if (isDevAuthDisabled) {
+      window.sessionStorage.removeItem(DEV_LOGGED_OUT_STORAGE_KEY);
       setUser(devUser);
       return;
     }
@@ -74,7 +82,9 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
   const signOut = useCallback(async () => {
     if (isDevAuthDisabled) {
+      window.sessionStorage.setItem(DEV_LOGGED_OUT_STORAGE_KEY, '1');
       setUser(null);
+      dispatch(baseApiSlice.util.resetApiState());
       return;
     }
 
@@ -82,8 +92,9 @@ export function AuthProvider({ children }: PropsWithChildren) {
       await logout().unwrap();
     } finally {
       setUser(null);
+      dispatch(baseApiSlice.util.resetApiState());
     }
-  }, [logout]);
+  }, [dispatch, logout]);
 
   const value = useMemo<AuthContextValue>(
     () => ({

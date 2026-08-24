@@ -4,6 +4,7 @@ import {ChevronDown, ChevronLeft, LogOut} from 'lucide-react';
 import {useMemo} from 'react';
 
 import tabletkaLogo from '@shared/assets/tabletka-logo.svg';
+import {HStack} from '@shared/ui';
 import {navRoutes} from '../router/config/routeConfig';
 import styles from './AppLayout.module.less';
 
@@ -99,9 +100,10 @@ export function AppDrawer({activePath, onClose, onLogout, onSelectPath, open, pr
 
 function Brand() {
     return (
-        <div className={styles.brand}>
+        <HStack className={styles.brand} gap="6" max>
             <img alt="Таблетка.ру" src={tabletkaLogo}/>
-            <small>| Bot-api</small>
-        </div>
+            <span aria-hidden="true" className={styles.brandSeparator}>|</span>
+            <small>Bot-api</small>
+        </HStack>
     );
 }

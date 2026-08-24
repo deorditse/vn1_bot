@@ -112,9 +112,13 @@ cp generator/.env.example generator/.env
 
 ```env
 OPENAI_API_KEY=...
+OPENAI_DESCRIPTION_API_KEY=...
 DEEPSEEK_API_KEY=
 GIGACHAT_API_KEY=
 ```
+
+Для автодеплоя `OPENAI_DESCRIPTION_API_KEY` должен быть добавлен в GitHub Secrets
+того же Environment, который использует workflow `Deploy`.
 
 Для GitLab skill:
 
@@ -208,4 +212,3 @@ generator: /generator/generate/*, когда вызывается gateway
 ```
 
 `gitlab-skill` сейчас внутренний сервис и вызывается через `api-gateway`.
-

@@ -18,6 +18,7 @@ from starlette.datastructures import UploadFile as StarletteUploadFile
 
 from app.api.schemas.generate import GenerateDescriptionBody
 from app.policies.policies_loader import load_prompt_text
+from common.env import api_key_openai_description
 from infrastructure.llm.llm import LLMService
 
 OUTPUT_FIELDS = [
@@ -32,9 +33,9 @@ OUTPUT_FIELDS = [
 ]
 OUTPUT_COLUMNS = ["id", *OUTPUT_FIELDS]
 MAX_FILE_BYTES = 10 * 1024 * 1024
-MAX_ROWS = 100
+MAX_ROWS = 1_000
 MAX_MARKUP_CHARS = 100_000
-MAX_TOTAL_MARKUP_CHARS = 1_000_000
+MAX_TOTAL_MARKUP_CHARS = 10_000_000
 MAX_REQUEST_BYTES = MAX_FILE_BYTES + 64 * 1024
 MAX_JSON_BYTES = MAX_MARKUP_CHARS + 2048
 DEFAULT_MAX_CONCURRENCY = 4
@@ -86,7 +87,7 @@ class DescriptionGenerationUseCase:
         if retry_base_delay_seconds < 0:
             raise ValueError("retry_base_delay_seconds не может быть отрицательным")
 
-        self._llm = llm or LLMService().openai()
+        self._llm = llm
         self._max_concurrency = max_concurrency
         self._max_attempts = max_attempts
         self._retry_base_delay_seconds = retry_base_delay_seconds
@@ -180,6 +181,8 @@ class DescriptionGenerationUseCase:
         if total_markup_chars > MAX_TOTAL_MARKUP_CHARS:
             raise InvalidDescriptionInput("Общий объем сырой разметки слишком большой")
 
+        self._ensure_llm()
+
         # Семафор пропускает к LLM не больше заданного количества строк одновременно.
         semaphore = asyncio.Semaphore(self._max_concurrency)
 
@@ -211,6 +214,10 @@ class DescriptionGenerationUseCase:
             total_rows=len(generated_rows),
             error_rows=error_rows,
         )
+
+    def _ensure_llm(self) -> None:
+        if self._llm is None:
+            self._llm = LLMService().openai(api_key=api_key_openai_description())
 
     async def _generate_fields(
         self,

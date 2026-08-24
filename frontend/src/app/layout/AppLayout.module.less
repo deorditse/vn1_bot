@@ -18,20 +18,31 @@
   align-items: center;
   justify-content: center;
   min-width: 0;
+  flex: 1 1 auto;
   gap: @space-6;
+  white-space: nowrap;
 
   img {
     display: block;
     width: 150px;
+    min-width: 0;
+    max-width: 100%;
     height: auto;
+    flex: 1 1 150px;
   }
 
   small {
     display: block;
+    flex: 0 0 auto;
     color: var(--app-color-text-tertiary);
     font-size: 12px;
     font-weight: 760;
   }
+}
+
+.brandSeparator {
+  flex: 0 0 auto;
+  color: var(--app-color-text-tertiary);
 }
 
 .menu {

@@ -3,6 +3,7 @@ import os
 
 from . import ApiMode
 from .config import settings
+from .exceptions import ConfigurationError
 from .utils import get_env
 
 """
@@ -50,6 +51,18 @@ def generated_file_ttl_seconds() -> int:
 # LLM keys
 def api_key_openai() -> str:
     return get_env('OPENAI_API_KEY', settings.openai_api_key)
+
+
+def api_key_openai_description() -> str:
+    value = get_env(
+        'OPENAI_DESCRIPTION_API_KEY',
+        settings.openai_description_api_key,
+    )
+    if not value:
+        raise ConfigurationError(
+            "OPENAI_DESCRIPTION_API_KEY is required for description generation"
+        )
+    return value
 
 
 def proxy_url() -> str | None:

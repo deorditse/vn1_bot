@@ -34,6 +34,10 @@ class AppSettings(BaseModel):
     rate_limit_default: str = Field(alias="RATE_LIMIT_DEFAULT")
 
     openai_api_key: str | None = Field(default=None, alias="OPENAI_API_KEY")
+    openai_description_api_key: str | None = Field(
+        default=None,
+        alias="OPENAI_DESCRIPTION_API_KEY",
+    )
     deepseek_api_key: str | None = Field(default=None, alias="DEEPSEEK_API_KEY")
     gigachat_api_key: str | None = Field(default=None, alias="GIGACHAT_API_KEY")
     proxy: str | None = Field(default=None, alias="PROXY")

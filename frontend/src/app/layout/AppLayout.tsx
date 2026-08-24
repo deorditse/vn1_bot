@@ -23,8 +23,11 @@ export function AppLayout() {
     const profileName = username || email || 'Профиль';
 
     const logout = async () => {
-        await signOut();
-        navigate('/login', {replace: true});
+        try {
+            await signOut();
+        } finally {
+            navigate('/login', {replace: true});
+        }
     };
 
     return (

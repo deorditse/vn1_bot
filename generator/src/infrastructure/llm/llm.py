@@ -21,11 +21,16 @@ class LLMService:
     #         streaming=True
     #     )
 
-    def openai(self, model: str = "gpt-4.1") -> ChatOpenAI:
+    def openai(
+        self,
+        model: str = "gpt-4.1",
+        *,
+        api_key: str | None = None,
+    ) -> ChatOpenAI:
         from common.env import api_key_openai
 
         return ChatOpenAI(
-            api_key=api_key_openai(),
+            api_key=api_key or api_key_openai(),
             http_async_client=make_async_http_client(),
             model=model,
             max_tokens=32000,

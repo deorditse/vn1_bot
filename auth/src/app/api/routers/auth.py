@@ -1,3 +1,5 @@
+import logging
+
 from fastapi import APIRouter, Header, HTTPException, Request, Response
 from starlette import status
 
@@ -101,11 +103,15 @@ def clear_auth_cookies(response: Response) -> None:
     response.delete_cookie(
         AUTH_ACCESS_COOKIE,
         path="/",
+        secure=settings.auth_cookie_secure,
+        httponly=True,
         samesite=settings.auth_cookie_samesite,
     )
     response.delete_cookie(
         AUTH_REFRESH_COOKIE,
         path="/",
+        secure=settings.auth_cookie_secure,
+        httponly=True,
         samesite=settings.auth_cookie_samesite,
     )
 
@@ -219,7 +225,11 @@ async def logout(
         AUTH_REFRESH_COOKIE
     )
     if not is_auth_bypass_enabled():
-        await KeycloakAuthProvider().logout(refresh_token_value)
+        try:
+            await KeycloakAuthProvider().logout(refresh_token_value)
+        except Exception:
+            # Локальная сессия должна завершиться, даже если Keycloak временно недоступен.
+            logging.exception("Failed to revoke refresh token in Keycloak")
     clear_auth_cookies(response)
     return AuthResponse(authenticated=False)
 

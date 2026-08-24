@@ -2,6 +2,7 @@ import asyncio
 import io
 import json
 import unittest
+from unittest.mock import patch
 
 from openpyxl import Workbook, load_workbook
 
@@ -51,6 +52,23 @@ def workbook_bytes(rows: list[tuple[object, object]]) -> bytes:
 
 
 class DescriptionGenerationUseCaseTests(unittest.IsolatedAsyncioTestCase):
+    async def test_uses_dedicated_openai_key_by_default(self):
+        llm = FakeLlm()
+        with (
+            patch(
+                "app.use_cases.generate_description.api_key_openai_description",
+                return_value="description-key",
+            ),
+            patch("app.use_cases.generate_description.LLMService") as llm_service,
+        ):
+            llm_service.return_value.openai.return_value = llm
+            await DescriptionGenerationUseCase().execute(
+                item_id="1",
+                raw_description="raw",
+            )
+
+        llm_service.return_value.openai.assert_called_once_with(api_key="description-key")
+
     async def test_generates_xlsx_from_body(self):
         llm = FakeLlm()
         use_case = DescriptionGenerationUseCase(llm=llm)
@@ -150,6 +168,19 @@ class DescriptionGenerationUseCaseTests(unittest.IsolatedAsyncioTestCase):
                 file_bytes=source,
                 filename="input.xlsx",
             )
+
+    async def test_accepts_workbook_with_maximum_rows(self):
+        llm = FakeLlm()
+        source = workbook_bytes([(index, "raw") for index in range(MAX_ROWS)])
+
+        result = await DescriptionGenerationUseCase(llm=llm).execute(
+            file_bytes=source,
+            filename="input.xlsx",
+        )
+
+        sheet = load_workbook(io.BytesIO(result), read_only=True).active
+        self.assertEqual(sheet.max_row, MAX_ROWS + 1)
+        self.assertEqual(len(llm.calls), MAX_ROWS)
 
     async def test_limits_concurrency_and_preserves_input_order(self):
         class ConcurrentLlm:
