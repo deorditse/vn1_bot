@@ -1,6 +1,6 @@
 # vn1_bot
 
-Монорепозиторий VN1 с frontend, generator, auth-service, api-gateway, Keycloak и skill-сервисами. Внешняя точка входа для контейнерного стенда - root `nginx` из `docker-compose.yml`.
+Монорепозиторий VN1 с frontend, generator, auth-service, api-gateway и Keycloak. Внешняя точка входа для контейнерного стенда - root `nginx` из `docker-compose.yml`.
 
 
 для деплоя использовать CI/CD из https://github.com/deorditse/vn1_bot/actions/workflows/deploy.yml - именно тиам прокидываются ключи и PROXY
@@ -27,7 +27,6 @@ root nginx :80/:443
   |                         - единая backend-точка для frontend
   |                         - принимает Authorization Bearer или cookie vn1_access_token
   |                         - проксирует /generator/* в generator
-  |                         - вызывает skills
   |
   +-- /keycloak/*        -> keycloak:8080/keycloak/*
                             Keycloak realm vn1
@@ -36,16 +35,11 @@ api-gateway:8000
   |
   +-- auth-service:8030/v1/auth/context
   +-- backend-vn1:8010
-  +-- gitlab-skill:8022
 
 backend-vn1:8010
   |
   +-- auth-service:8030/v1/auth/context
   +-- OpenAI / other LLM providers
-
-gitlab-skill:8022
-  |
-  +-- GitLab API
 ```
 
 ## Публичные Адреса
@@ -67,7 +61,6 @@ frontend:80
 backend-vn1:8010
 auth-service:8030
 api-gateway:8000
-gitlab-skill:8022
 keycloak:8080
 ```
 
@@ -77,10 +70,8 @@ keycloak:8080
 frontend/          React/Vite frontend
 generator/         текущий generator backend, compose service backend-vn1
 auth/              auth-service и Keycloak realm export
-api-gateway/       gateway для /api и skills
+api-gateway/       gateway для /api
 api-gateway/docs/  runbooks и specs gateway-слоя
-skills/            skill-сервисы, сейчас gitlab-skill
-skills/docs/       specs skill-слоя и candidates для будущих skills
 shared/            certbot, общая инфраструктура, shared/python protocol contracts
 shared/docs/       межсервисные protocol contracts и shared specs
 nginx.conf         root nginx routing
@@ -119,13 +110,6 @@ GIGACHAT_API_KEY=
 
 Для автодеплоя `OPENAI_DESCRIPTION_API_KEY` должен быть добавлен в GitHub Secrets
 того же Environment, который использует workflow `Deploy`.
-
-Для GitLab skill:
-
-```env
-GITLAB_BASE_URL=https://gitlab.com
-GITLAB_TOKEN=...
-```
 
 ## Запуск
 
@@ -210,5 +194,3 @@ auth-service: /me, /context, /userinfo
 api-gateway: /api/*
 generator: /generator/generate/*, когда вызывается gateway
 ```
-
-`gitlab-skill` сейчас внутренний сервис и вызывается через `api-gateway`.

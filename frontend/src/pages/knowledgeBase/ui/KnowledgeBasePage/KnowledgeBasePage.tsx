@@ -35,8 +35,37 @@ const {Text} = Typography;
 const {TextArea} = Input;
 type MessageReaction = 'like' | 'dislike';
 const AUTO_SKILLS_VALUE = '__auto__';
+const TELEGRAM_BOT_URL = 'https://t.me/tabletka_search_bot';
 
 const KnowledgeBasePage = () => {
+    return (
+        <Page className={styles.placeholderPage}>
+            <section className={styles.placeholderCard}>
+                <span className={styles.placeholderIcon}>
+                    <Bot size={32}/>
+                </span>
+                <div className={styles.placeholderCopy}>
+                    <h1>База знаний</h1>
+                    <p>
+                        Доступ к базе знаний пока организован через Telegram-бота.
+                    </p>
+                </div>
+                <Button
+                    href={TELEGRAM_BOT_URL}
+                    rel="noreferrer"
+                    size="large"
+                    target="_blank"
+                    type="primary"
+                >
+                    Открыть @tabletka_search_bot
+                </Button>
+            </section>
+        </Page>
+    );
+};
+
+// Старая реализация сохранена до переноса базы знаний в отдельный сервис.
+const LegacyKnowledgeBasePage = () => {
     const initialSettings = useMemo(() => loadKnowledgeBaseChatSettings(), []);
     const [settings, setSettings] = useState<KnowledgeBaseChatSettings>(initialSettings);
     const [settingsModalOpen, setSettingsModalOpen] = useState(false);

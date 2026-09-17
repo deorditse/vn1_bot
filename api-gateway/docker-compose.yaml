@@ -24,7 +24,6 @@ services:
     depends_on:
       - auth-service
       - backend-vn1
-      - gitlab-skill
     networks:
       - vn1
     logging:

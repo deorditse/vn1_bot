@@ -17,7 +17,7 @@ import {
 } from '@shared/const/router';
 import type { AppRoutesProps } from '@shared/types/router';
 
-export const toolRouteConfig: Record<ToolRoutes, AppRoutesProps> = {
+export const toolRouteConfig = {
   [ToolRoutes.INSTRUCTION]: {
     path: getRouteInstruction(),
     element: <InstructionPage />,
@@ -44,11 +44,11 @@ export const toolRouteConfig: Record<ToolRoutes, AppRoutesProps> = {
     authOnly: true,
     nav: {
       label: 'База знаний',
-      description: 'Поиск по внутренним источникам',
+      description: 'Доступ через Telegram-бота',
       icon: <BookOpen size={18} />,
     },
   },
-};
+} satisfies Record<ToolRoutes, AppRoutesProps>;
 
 const toolRoutes = Object.values(toolRouteConfig);
 

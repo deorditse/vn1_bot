@@ -59,7 +59,6 @@ docker compose \
   -f auth/docker-compose.yaml \
   -f frontend/docker-compose.yaml \
   -f generator/docker-compose.yaml \
-  -f skills/docker-compose.yaml \
   -f api-gateway/docker-compose.yaml \
   ps
 ```
@@ -82,7 +81,6 @@ docker compose \
   -f auth/docker-compose.yaml \
   -f frontend/docker-compose.yaml \
   -f generator/docker-compose.yaml \
-  -f skills/docker-compose.yaml \
   -f api-gateway/docker-compose.yaml \
   ps
 ```
@@ -93,17 +91,16 @@ docker compose \
 
 ```bash
 git pull
-git status --short .dockerignore generator/src skills/gitlab-skill/src
+git status --short .dockerignore generator/src
 ```
 
 После обновления `.dockerignore` пересобери сервисы:
 
 ```bash
 make restart SERVICE=backend-vn1
-make restart SERVICE=gitlab-skill
 ```
 
-Если прямой переход на `/instruction`, `/knowledge-base` или обновление страницы внутри SPA отдает `404 Not Found nginx`, нужен React SPA fallback на `index.html`. После обновления `nginx.conf`:
+Если прямой переход на `/instruction`, `/description-generator` или обновление страницы внутри SPA отдает `404 Not Found nginx`, нужен React SPA fallback на `index.html`. После обновления `nginx.conf`:
 
 ```bash
 git pull

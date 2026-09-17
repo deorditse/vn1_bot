@@ -10,7 +10,6 @@ COMPOSE_FILES = \
 	-f auth/docker-compose.yaml \
 	-f frontend/docker-compose.yaml \
 	-f generator/docker-compose.yaml \
-	-f skills/docker-compose.yaml \
 	-f api-gateway/docker-compose.yaml
 
 COMPOSE = REPO_ROOT=$(REPO_ROOT) $(DOCKER) compose $(COMPOSE_FILES)

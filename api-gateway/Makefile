@@ -12,8 +12,6 @@ run:
 	API_PORT=$(PORT) \
 	GENERATOR_BASE_URL=$${GENERATOR_BASE_URL:-http://localhost:8010} \
 	AUTH_CONTEXT_URL=$${AUTH_CONTEXT_URL:-http://localhost:8030/v1/auth/context} \
-	ORCHESTRATOR_SKILL_BASE_URL=$${ORCHESTRATOR_SKILL_BASE_URL:-http://localhost:8020} \
-	GITLAB_SKILL_BASE_URL=$${GITLAB_SKILL_BASE_URL:-http://localhost:8022} \
 	uv run python src/app/run.py
 
 run-prod:
